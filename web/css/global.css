@@ -7,22 +7,28 @@
     font-family: "Segoe UI", "Microsoft Yahei";
 }
 
-html,
-body {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+html {
+    height: 100%;
+    width: 100%;
+    transform: translateZ(0);
+    /* This is 100% */
+    font-size: 2vh;
 }
 
 body {
-    background-color: #6090C0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
     padding-top: 2.5vw;
     padding-bottom: 2.5vw;
+    background-color: #EEE;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
 }
 
 body > table {
@@ -35,5 +41,27 @@ body > table > tbody > tr > td {
     height: 10vw;
     width: 10vw;
     background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body > table > tbody > tr > td[rowspan="2"] {
+    height: 20.5vw;
+}
+
+body > table > tbody > tr > td[rowspan="3"] {
+    height: 31vw;
+}
+
+body > table > tbody > tr > td[colspan="2"] {
+    width: 20.5vw;
+}
+
+body > table > tbody > tr > td[colspan="3"] {
+    width: 31vw;
+}
+
+body > table > tbody > tr > td[colspan="4"] {
+    width: 41.5vw;
 }
