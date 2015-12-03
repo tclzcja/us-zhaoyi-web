@@ -1,0 +1,24 @@
+#logo {
+	background-image: url("../img/bg/panel.jpg");
+	vertical-align: top;
+}
+
+#logo > header {
+	font-size: 200%;
+	position: absolute;
+	top: 1.5vw;
+	left: 0px;
+	line-height: 100%;
+	border-left: solid 2vw rgba(0, 0, 0, 0.5);
+	padding-left: 1vw;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#user {
+	background-image: url("../img/icon/white/user.png");
+	background-color: #666;
+}
+
+#search {
+	background-image: url("../img/icon/black/search.png");
+}
