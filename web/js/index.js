@@ -8,7 +8,7 @@
             i = 0;
 
         for (i = 0; i < pl.length; i += 1) {
-            pl[i].style.backgroundImage = "url(../img/portrait/" + Math.randomRange(1, 10) + ".jpg)";
+            pl[i].style.backgroundImage = "url(../img/portrait/" + Math.randomRange(1, 15) + ".jpg)";
         }
 
     }
