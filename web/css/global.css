@@ -22,7 +22,7 @@ body {
     width: 100%;
     padding-top: 3vw;
     padding-bottom: 3vw;
-    background-color: #EEE;
+    background-color: white;
     overflow-y: scroll;
 }
 
@@ -41,14 +41,8 @@ body > table > tbody > tr > td {
     height: 5vw;
     width: 5vw;
     background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: box-shadow 0.2s;
     position: relative;
-}
-
-body > table > tbody > tr > td:active {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
 }
 
 body > table > tbody > tr > td[rowspan="2"] {
@@ -71,6 +65,7 @@ body > table > tbody > tr > td[colspan="4"] {
     width: 21.5vw;
 }
 
+
 /* Panel */
 
 .roll {
@@ -87,23 +82,20 @@ body > table > tbody > tr > td[colspan="4"] {
     0% {
         background-position: left center;
     }
-
     10% {
         background-position: right center;
     }
-
     50% {
         background-position: right center;
     }
-
     60% {
         background-position: left center;
     }
-
     100% {
         background-position: left center;
     }
 }
+
 
 /* Icon */
 
@@ -112,6 +104,7 @@ body > table > tbody > tr > td[colspan="4"] {
     background-size: 2.4vw 2.4vw;
     background-position: 1.3vw center;
 }
+
 
 /* Input */
 
