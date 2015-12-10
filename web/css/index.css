@@ -8,16 +8,21 @@
     background-size: 2vw 2vw;
     background-position: 1.5vw 1.5vw, right 1.5vw bottom 1.5vw;
     background-image: url("../img/icon/blue/doctor.png"), url("../img/icon/blue/stethoscope.png");
+    border-top: solid 0.25vw #69F;
+    border-bottom: solid 0.25vw #69F;
 }
 
 #user {
     background-image: url("../img/icon/white/user.png");
-    background-color: #666;
+    background-color: #69F;
+    cursor: pointer;
 }
 
 #search {
-    background-image: url("../img/icon/black/search.png");
-    background-color: #FC3;
+    background-image: url("../img/icon/blue/search.png");
+    background-color: #DEF;
+    color: #69F;
+    border-top: solid 0.25vw #69F;
 }
 
 .portrait {
@@ -25,4 +30,62 @@
     background-position: center center;
     background-size: 100% 100%;
     opacity: 0.5;
+}
+
+#number-hospital {
+    color: #69F;
+    background-color: #DEF;
+}
+
+#number-doctor {
+    color: #F90;
+    background-color: #FED;
+}
+
+#number-item {
+    color: #690;
+    background-color: #EFD;
+}
+
+#number-comment {
+    color: #F66;
+    background-color: #FEE;
+}
+
+.desc {
+    vertical-align: top;
+}
+
+.desc > header {
+    margin-top: 5.5vw;
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    background-position: center center;
+    height: 5vw;
+    background-color: #DEF;
+    outline: solid 0.5vw rgba(255, 255, 255, 0.25);
+}
+
+#desc-search {
+    background-color: #69F;
+}
+
+#desc-search > header {
+    background-image: url("../img/icon/blue/search.png");
+}
+
+#desc-comment {
+    background-color: #69F;
+}
+
+#desc-comment > header {
+    background-image: url("../img/icon/blue/comment.png");
+}
+
+#desc-service {
+    background-color: #69F;
+}
+
+#desc-service > header {
+    background-image: url("../img/icon/blue/service.png");
 }
