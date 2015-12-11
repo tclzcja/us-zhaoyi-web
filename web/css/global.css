@@ -87,6 +87,7 @@ body > table > tbody > tr > td[colspan="4"] {
     text-align: center;
     font-size: 300%;
     cursor: pointer;
+    color: white;
 }
 
 .number:after {

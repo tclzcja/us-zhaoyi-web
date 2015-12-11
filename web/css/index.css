@@ -1,15 +1,13 @@
 #logo {
     box-shadow: none;
-    background-color: transparent;
     text-align: center;
     font-size: 400%;
-    color: #69F;
+    color: white;
+    background-color: #69F;
     background-repeat: no-repeat;
-    background-size: 2vw 2vw;
-    background-position: 1.5vw 1.5vw, right 1.5vw bottom 1.5vw;
-    background-image: url("../img/icon/blue/doctor.png"), url("../img/icon/blue/stethoscope.png");
-    border-top: solid 0.25vw #69F;
-    border-bottom: solid 0.25vw #69F;
+    background-size: 3vw;
+    background-position: -0.5vw -0.5vw, left -1vw bottom -1vw, right -1vw top -1vw;
+    background-image: url("../img/icon/white/doctor.png"), url("../img/icon/white/search.png"), url("../img/icon/white/stethoscope.png");
 }
 
 #user {
@@ -22,7 +20,6 @@
     background-image: url("../img/icon/blue/search.png");
     background-color: #DEF;
     color: #69F;
-    border-top: solid 0.25vw #69F;
 }
 
 .portrait {
@@ -33,23 +30,19 @@
 }
 
 #number-hospital {
-    color: #69F;
-    background-color: #DEF;
+    background-color: #69F;
 }
 
 #number-doctor {
-    color: #F90;
-    background-color: #FED;
+    background-color: #F90;
 }
 
 #number-item {
-    color: #690;
-    background-color: #EFD;
+    background-color: #690;
 }
 
 #number-comment {
-    color: #F66;
-    background-color: #FEE;
+    background-color: #F66;
 }
 
 .desc {
