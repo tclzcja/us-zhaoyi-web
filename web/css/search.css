@@ -4,6 +4,7 @@
     color: white;
     background-color: #69F;
     font-size: 400%;
+    background-image: url("../img/icon/white/logo.png");
 }
 
 #logo > footer {
@@ -121,96 +122,14 @@
     background-image: url("../img/icon/blue/search.png");
 }
 
-.portrait {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
-    opacity: 0.5;
+#star {
+    background-image: url("../img/icon/blue/star.png");
 }
 
-#number-hospital {
-    background-color: #69F;
+#insurance {
+    background-image: url("../img/icon/blue/insurance.png");
 }
 
-#number-doctor {
-    background-color: #F90;
-}
-
-#number-item {
-    background-color: #390;
-}
-
-#number-comment {
-    background-color: #F66;
-}
-
-.desc {
-    vertical-align: top;
-}
-
-.desc > aside {
-    position: absolute;
-    top: 5.5vw;
-    left: 0vw;
-    right: 0vw;
-    background-repeat: no-repeat;
-    background-size: 3vw;
-    background-position: center center;
-    height: 5vw;
-    background-color: #DEF;
-    outline: solid 0.5vw rgba(255, 255, 255, 0.25);
-}
-
-#desc-search {
-    background-color: #69F;
-}
-
-#desc-search > aside {
-    background-image: url("../img/icon/blue/search.png");
-}
-
-#desc-comment {
-    background-color: #69F;
-}
-
-#desc-comment > aside {
-    background-image: url("../img/icon/blue/comment.png");
-}
-
-#desc-service {
-    background-color: #69F;
-}
-
-#desc-service > aside {
-    background-image: url("../img/icon/blue/service.png");
-}
-
-.desc > header {
-    position: absolute;
-    top: 11vw;
-    left: 0vw;
-    right: 0vw;
-    height: 5vw;
-    line-height: 5vw;
-    text-align: center;
-    color: white;
-    font-size: 200%;
-}
-
-.desc > main {
-    position: absolute;
-    top: 16.5vw;
-    left: 0vw;
-    right: 0vw;
-    bottom: 0vw;
-    vertical-align: top;
-    color: white;
-}
-
-.desc > main > div {
-    font-size: 100%;
-    line-height: 100%;
-    color: #DEF;
-    text-align: center;
-    margin-bottom: 1vw;
+#distance {
+    background-image: url("../img/icon/blue/distance.png");
 }

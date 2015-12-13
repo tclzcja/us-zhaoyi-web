@@ -27,8 +27,11 @@ body {
 }
 
 a {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100%;
     color: inherit;
     text-decoration: none;
 }
@@ -39,12 +42,17 @@ a:hover {
 
 ::-webkit-input-placeholder {
     color: inherit;
-    opacity: 0.5;
 }
 
 ::-webkit-scrollbar {
     height: 0px;
     width: 0px;
+}
+
+select {
+    margin-left: -4px;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 body > table {
@@ -148,9 +156,11 @@ body > table > tbody > tr > td[colspan="4"] {
 .input {
     outline: none;
     cursor: pointer;
+    background-color: #DEF;
+    color: #69F;
 }
 
-.input > input {
+.input > * {
     height: 100%;
     width: 100%;
     background-color: transparent;
