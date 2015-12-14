@@ -11,7 +11,6 @@ html {
     height: 100%;
     width: 100%;
     transform: translateZ(0);
-    /* This is 100% */
     font-size: 1vw;
 }
 
@@ -55,6 +54,13 @@ select {
     -webkit-appearance: none;
 }
 
+select > option {
+    color: black;
+}
+
+
+/* ============================================================================================================= */
+
 body > table {
     table-layout: fixed;
     border-spacing: 0.5vw;
@@ -66,6 +72,7 @@ body > table > tbody > tr > td {
     width: 5vw;
     background-color: white;
     position: relative;
+    transition: background-color 0.2s, background-image 0.2s, color 0.2s;
 }
 
 body > table > tbody > tr > td[rowspan="2"] {
@@ -78,14 +85,20 @@ body > table > tbody > tr > td[rowspan="3"] {
 
 body > table > tbody > tr > td[colspan="2"] {
     width: 10.5vw;
+    min-width: 10.5vw;
+    max-width: 10.5vw;
 }
 
 body > table > tbody > tr > td[colspan="3"] {
     width: 16vw;
+    min-width: 16vw;
+    max-width: 16vw;
 }
 
 body > table > tbody > tr > td[colspan="4"] {
     width: 21.5vw;
+    min-width: 21.5vw;
+    max-width: 21.5vw;
 }
 
 

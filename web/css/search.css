@@ -5,6 +5,7 @@
     background-color: #69F;
     font-size: 400%;
     background-image: url("../img/icon/white/logo.png");
+    background-position: center;
 }
 
 #logo > footer {
@@ -118,6 +119,22 @@
     cursor: pointer;
 }
 
+#type[data-selected="any"] {
+    background-image: url("../img/icon/blue/down.png");
+}
+
+#type[data-selected="doctor"] {
+    background-image: url("../img/icon/white/doctor.png");
+    background-color: #69F;
+    color: white;
+}
+
+#type[data-selected="hospital"] {
+    background-image: url("../img/icon/white/hospital.png");
+    background-color: #F90;
+    color: white;
+}
+
 #search {
     background-image: url("../img/icon/blue/search.png");
 }
@@ -132,4 +149,8 @@
 
 #distance {
     background-image: url("../img/icon/blue/distance.png");
+}
+
+#item {
+    background-image: url("../img/icon/blue/item.png");
 }
