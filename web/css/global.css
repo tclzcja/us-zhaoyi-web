@@ -116,6 +116,15 @@ body > table > tbody > tr > td[colspan="4"] {
     max-width: 21.5vw;
 }
 
+body > table > tfoot > tr > td{
+    height: 5vw;
+    width: 5vw;
+    background-color: #EEE;
+    position: relative;
+    transition: background-color 0.2s, background-image 0.2s, color 0.2s;
+    border-radius: 0.5vw;    
+}
+
 
 /* Number */
 
