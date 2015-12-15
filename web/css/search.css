@@ -154,3 +154,33 @@
 #item {
     background-image: url("../img/icon/blue/item.png");
 }
+
+.portrait {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    opacity: 0.5;
+}
+
+.doctor {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-top: solid 0.5vw #69F;
+}
+
+.doctor:after {
+    content: attr(data-name);
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    padding-right: 10px;
+    font-size: 90%;
+    line-height: 200%;
+    color: white;
+    background-color: #69F;
+    text-align: right;
+    border-radius: 0 0 0.5vw 0.5vw;
+}

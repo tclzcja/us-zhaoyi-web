@@ -70,9 +70,10 @@ body > table {
 body > table > tbody > tr > td {
     height: 5vw;
     width: 5vw;
-    background-color: white;
+    background-color: #EEE;
     position: relative;
     transition: background-color 0.2s, background-image 0.2s, color 0.2s;
+    border-radius: 0.5vw;
 }
 
 body > table > tbody > tr > td[rowspan="2"] {
@@ -81,6 +82,10 @@ body > table > tbody > tr > td[rowspan="2"] {
 
 body > table > tbody > tr > td[rowspan="3"] {
     height: 16vw;
+}
+
+body > table > tbody > tr > td[rowspan="4"] {
+    height: 21.5vw;
 }
 
 body > table > tbody > tr > td[colspan="2"] {
