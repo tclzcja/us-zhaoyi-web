@@ -139,7 +139,13 @@
     background-image: url("../img/icon/blue/search.png");
 }
 
-#star {
+#star:not([data-selected="0"]) {
+    background-image: url("../img/icon/white/star.png");
+    background-color: #69F;
+    color: white;
+}
+
+#star[data-selected="0"] {
     background-image: url("../img/icon/blue/star.png");
 }
 
@@ -155,32 +161,38 @@
     background-image: url("../img/icon/blue/item.png");
 }
 
-.portrait {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
-    opacity: 0.5;
-}
-
 .doctor {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    border-top: solid 0.5vw #69F;
+    cursor: pointer;
 }
 
 .doctor:after {
-    content: attr(data-name);
+    content: "";
     display: block;
     position: absolute;
-    bottom: 0px;
+    top: 0px;
     right: 0px;
+    height: 3vw;
+    width: 3vw;
+    background-color: rgba(128, 192, 255, 0.5);
+    border-radius: 0 0.5vw 0 0.5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-image: url("../img/icon/blue/doctor.png");
+}
+
+.doctor > footer {
+    position: absolute;
+    bottom: 0px;
     left: 0px;
-    padding-right: 10px;
-    font-size: 90%;
+    right: 0px;
+    font-size: 100%;
     line-height: 200%;
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    background-color: #69F;
-    text-align: right;
+    text-align: center;
     border-radius: 0 0 0.5vw 0.5vw;
 }

@@ -29,8 +29,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
     color: inherit;
     text-decoration: none;
 }
@@ -78,14 +82,20 @@ body > table > tbody > tr > td {
 
 body > table > tbody > tr > td[rowspan="2"] {
     height: 10.5vw;
+    min-height: 10.5vw;
+    max-height: 10.5vw;
 }
 
 body > table > tbody > tr > td[rowspan="3"] {
     height: 16vw;
+    min-height: 16vw;
+    max-height: 16vw;
 }
 
 body > table > tbody > tr > td[rowspan="4"] {
     height: 21.5vw;
+    min-height: 21.5vw;
+    max-height: 21.5vw;
 }
 
 body > table > tbody > tr > td[colspan="2"] {
