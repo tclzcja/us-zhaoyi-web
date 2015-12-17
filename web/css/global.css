@@ -71,7 +71,7 @@ body > table {
     border-collapse: separate;
 }
 
-body > table > tbody > tr > td {
+body > table > * > tr > td {
     height: 5vw;
     width: 5vw;
     background-color: #EEE;
@@ -80,49 +80,40 @@ body > table > tbody > tr > td {
     border-radius: 0.5vw;
 }
 
-body > table > tbody > tr > td[rowspan="2"] {
+body > table > * > tr > td[rowspan="2"] {
     height: 10.5vw;
     min-height: 10.5vw;
     max-height: 10.5vw;
 }
 
-body > table > tbody > tr > td[rowspan="3"] {
+body > table > * > tr > td[rowspan="3"] {
     height: 16vw;
     min-height: 16vw;
     max-height: 16vw;
 }
 
-body > table > tbody > tr > td[rowspan="4"] {
+body > table > * > tr > td[rowspan="4"] {
     height: 21.5vw;
     min-height: 21.5vw;
     max-height: 21.5vw;
 }
 
-body > table > tbody > tr > td[colspan="2"] {
+body > table > * > tr > td[colspan="2"] {
     width: 10.5vw;
     min-width: 10.5vw;
     max-width: 10.5vw;
 }
 
-body > table > tbody > tr > td[colspan="3"] {
+body > table > * > tr > td[colspan="3"] {
     width: 16vw;
     min-width: 16vw;
     max-width: 16vw;
 }
 
-body > table > tbody > tr > td[colspan="4"] {
+body > table > * > tr > td[colspan="4"] {
     width: 21.5vw;
     min-width: 21.5vw;
     max-width: 21.5vw;
-}
-
-body > table > tfoot > tr > td{
-    height: 5vw;
-    width: 5vw;
-    background-color: #EEE;
-    position: relative;
-    transition: background-color 0.2s, background-image 0.2s, color 0.2s;
-    border-radius: 0.5vw;    
 }
 
 

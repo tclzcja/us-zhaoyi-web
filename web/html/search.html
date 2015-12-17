@@ -9,7 +9,7 @@
 
 <body>
     <table>
-        <tbody>
+        <thead>
             <tr>
                 <td id="logo" class="icon">
                     <footer></footer>
@@ -26,22 +26,21 @@
                     <footer></footer>
                     <a href="index.html"></a>
                 </td>
-                <td id="search" colspan="15" class="input icon">
-                    <input type="search" placeholder="关键字，用空格分隔开" />
-                </td>
+                <td colspan="15"></td>
                 <td id="user" class="icon"></td>
             </tr>
             <tr>
-                <td></td>
-                <td id="type" colspan="3" class="input icon" data-selected="any">
+                <td id="type" colspan="2" class="input icon any">
                     <select>
                         <option value="any">任意</option>
                         <option value="doctor">医生</option>
                         <option value="hospital">医院</option>
-                        <option value="item">保险</option>
                     </select>
                 </td>
-                <td id="star" class="input icon" colspan="3" data-selected="0">
+                <td id="name" colspan="4" class="input icon">
+                    <input type="search" placeholder="姓名" />
+                </td>
+                <td id="star" class="input icon" colspan="2">
                     <select>
                         <option selected="true" value="0">任意星级</option>
                         <option value="1">最少1星</option>
@@ -50,9 +49,18 @@
                         <option value="4">最少4星</option>
                     </select>
                 </td>
+                <td id="item" class="input icon" colspan="3">
+                    <select>
+                        <option value="any" selected="true">任意检查项目</option>
+                        <option value="chiropractic">脊椎矫正</option>
+                        <option value="dentist">牙医</option>
+                        <option value="orthodontics">牙齿校正</option>
+                        <option value="surgery">手术</option>
+                    </select>
+                </td>
                 <td id="insurance" class="input icon" colspan="3">
                     <select>
-                        <option selected="true">任意保险</option>
+                        <option value="any" selected="true">任意保险</option>
                         <option>Obama Care</option>
                         <option>Anthem</option>
                         <option>Red Cross</option>
@@ -61,44 +69,16 @@
                 </td>
                 <td id="distance" class="input icon" colspan="3">
                     <select>
-                        <option selected="true">任意距离</option>
-                        <option>小于20英里</option>
-                        <option>小于50英里</option>
-                        <option>小于100英里</option>
-                        <option>小于200英里</option>
+                        <option value="99999" selected="true">任意距离</option>
+                        <option value="20">小于20英里</option>
+                        <option value="50">小于50英里</option>
+                        <option value="100">小于100英里</option>
+                        <option value="200">小于200英里</option>
                     </select>
                 </td>
-                <td id="item" class="input icon" colspan="3">
-                    <select>
-                        <option selected="true">任意检查项目</option>
-                        <option>心血管</option>
-                        <option>骨骼</option>
-                        <option>神经</option>
-                        <option>呼吸系统</option>
-                        <option>消化系统</option>
-                    </select>
-                </td>
-                <td></td>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+        </thead>
+        <tbody>
         </tbody>
         <tfoot>
             <tr>
