@@ -218,6 +218,7 @@
         flag = flag && entity.star > filter_star;
         flag = flag && (filter_type === "any" || entity.type === filter_type);
         flag = flag && (filter_item === "any" || entity.items.indexOf(filter_item) > -1);
+        flag = flag && (filter_insurance === "any" || entity.insurances.indexOf(filter_insurance) > -1);
         flag = flag && Math.calculateDistance(current_latitude, current_longitude, entity.position.latitude, entity.position.longitude) <= filter_distance;
         return flag;
     }
@@ -229,8 +230,10 @@
             tr,
             td,
             span,
+            div,
             tbody = document.querySelector("body > table > tbody"),
-            star = 0;
+            star = 0,
+            mile;
 
         tbody.innerHTML = "";
 
@@ -279,6 +282,9 @@
                 for (j = 0; j < dummy_data[i].items.length; j += 1) {
                     span = document.createElement("span");
                     span.classList.add(dummy_data[i].items[j]);
+                    if (filter_item === dummy_data[i].items[j]) {
+                        span.classList.add("highlight");
+                    }
                     span.innerHTML = dummy_data[i].items[j];
                     td.appendChild(span);
                 }
@@ -289,6 +295,9 @@
                 for (j = 0; j < dummy_data[i].insurances.length; j += 1) {
                     span = document.createElement("span");
                     span.classList.add(dummy_data[i].insurances[j]);
+                    if (filter_insurance === dummy_data[i].insurances[j]) {
+                        span.classList.add("highlight");
+                    }
                     span.innerHTML = dummy_data[i].insurances[j];
                     td.appendChild(span);
                 }
@@ -296,7 +305,16 @@
                 // Distance
                 td = document.createElement("td");
                 td.setAttribute("colspan", 3);
-                td.innerHTML = Math.calculateDistance(current_latitude, current_longitude, dummy_data[i].position.latitude, dummy_data[i].position.longitude).toFixed(0);
+                div = document.createElement("div");
+                span = document.createElement("span");
+                mile = Math.calculateDistance(current_latitude, current_longitude, dummy_data[i].position.latitude, dummy_data[i].position.longitude).toFixed(0);
+                div.style.width = (mile > 500 ? 500 : mile) / 500 * 100 + "%";
+                span.innerHTML = mile;
+                if ((mile > 500 ? 500 : mile) / 500 * 100 < 50) {
+                    span.classList.add("otherside");
+                }
+                div.appendChild(span);
+                td.appendChild(div);
                 tr.appendChild(td);
                 // Done
                 tbody.appendChild(tr);

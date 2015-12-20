@@ -240,78 +240,134 @@ body > table > tbody > tr > td:nth-child(4) > span:last-child {
 }
 
 body > table > tbody > tr > td:nth-child(5) {
+    vertical-align: middle;
     text-align: center;
 }
 
 body > table > tbody > tr > td:nth-child(5) > span {
     display: inline-block;
-    vertical-align: middle;
-    height: 2vw;
-    width: 2vw;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: center;
-    border-radius: 0.5vw;
-    transition: background-image 0.2s, width 0.2s, color 0.2s;
-    color: transparent;
+    height: 1.5vw;
+    color: white;
     text-align: center;
-    line-height: 2vw;
-    overflow: hidden;
+    line-height: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    margin: 1px;
+    font-size: 80%;
+    transition: background-color 0.2s;
+    border-radius: 0.35vw;
+}
+
+body > table > tbody > tr > td:nth-child(5) > span:nth-child(2) {
     background-color: rgba(0, 0, 0, 0.15);
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-body > table > tbody > tr > td:nth-child(5) > span.chiropractic {
-    background-image: url("../img/icon/black/chiropractic.png");
-}
-
-body > table > tbody > tr > td:nth-child(5) > span.dentist {
-    background-image: url("../img/icon/black/dentist.png");
-}
-
-body > table > tbody > tr > td:nth-child(5) > span.orthodontics {
-    background-image: url("../img/icon/black/orthodontics.png");
 }
 
 body > table > tbody > tr > td:nth-child(5) > span:hover {
-    width: 8vw;
-    color: #333;
-    background-image: url("../img/transparent/transparent.png");
+    background-color: #666;
 }
 
 body > table > tbody > tr > td:nth-child(6) {
+    vertical-align: middle;
     text-align: center;
 }
 
 body > table > tbody > tr > td:nth-child(6) > span {
     display: inline-block;
-    vertical-align: middle;
-    height: 2vw;
-    width: 2vw;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: center;
-    border-radius: 0.5vw;
-    transition: background-image 0.2s, width 0.2s, color 0.2s;
-    color: transparent;
+    height: 1.5vw;
+    color: white;
     text-align: center;
-    line-height: 2vw;
-    overflow: hidden;
+    line-height: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    margin: 1px;
+    font-size: 80%;
+    transition: background-color 0.2s;
+    border-radius: 0.35vw;
+}
+
+body > table > tbody > tr > td:nth-child(6) > span:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.15);
-    margin-left: 2px;
-    margin-right: 2px;
 }
 
 body > table > tbody > tr > td:nth-child(6) > span:hover {
-    width: 8vw;
-    color: #333;
-    background-image: url("../img/transparent/transparent.png");
+    background-color: #666;
 }
 
 body > table > tbody > tr > td:nth-child(7) {
-    text-align: center;
-    font-size: 200%;
+    overflow: hidden;
+}
+
+body > table > tbody > tr > td:nth-child(7):after {
+    content: "";
+    display: block;
+    background-color: #CCC;
+    position: absolute;
+    height: 1vw;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+body > table > tbody > tr > td:nth-child(7) > div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    font-size: 100%;
+    line-height: 100%;
+    z-index: 2;
+    color: #666;
+    border-bottom: solid 1vw #666;
+    border-top: solid 1vw transparent;
+    padding-left: 1vw;
+}
+
+body > table > tbody > tr > td:nth-child(7) > div:after {
+    content: "";
+    display: block;
+    width: 2vw;
+    height: 3vw;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 2vw auto;
+    background-image: url("../img/icon/black/location.png");
+    position: absolute;
+    right: -1vw;
+    top: 0px;
+}
+
+body > table > tbody > tr > td:nth-child(7) > div > span {
+    display: block;
+    position: absolute;
+    right: 1vw;
+    top: 0.6vw;
+    color: #333;
+}
+
+body > table > tbody > tr > td:nth-child(7) > div > span:after {
+    position: absolute;
+    top: 100%;
+    content: "公里";
+    right: 0px;
+    font-size: 50%;
+    width: 2vw;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body > table > tbody > tr > td:nth-child(7) > div > span.otherside {
+    right: auto;
+    left: 100%;
+    margin-left: 1vw;
+}
+
+body > table > tbody > tr > td:nth-child(7) > div > span.otherside:after {
+    right: auto;
+    left: 0px;
+    text-align: left;
 }
 
 
@@ -339,7 +395,10 @@ body > table > tbody > tr > td:nth-child(7) {
     background-color: #69F;
 }
 
-.doctor > td:nth-child(5) > span {}
+.doctor > td:nth-child(5) > span.highlight,
+.doctor > td:nth-child(6) > span.highlight {
+    background-color: #69F;
+}
 
 
 /* Hospital Row */
@@ -366,4 +425,7 @@ body > table > tbody > tr > td:nth-child(7) {
     background-color: #F90;
 }
 
-.hospital > td:nth-child(5) > span {}
+.hospital > td:nth-child(5) > span.highlight,
+.hospital > td:nth-child(6) > span.highlight {
+    background-color: #F90;
+}
