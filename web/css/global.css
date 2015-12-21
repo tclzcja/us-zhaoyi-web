@@ -62,18 +62,29 @@ select > option {
     color: black;
 }
 
+textarea {
+    resize: none;
+}
+
 
 /* ============================================================================================================= */
 
 body > table {
-    table-layout: fixed;
+    table-layout: auto;
     border-spacing: 0.5vw;
     border-collapse: separate;
+    width: 94vw;
+    max-width: 94vw;
+    min-width: 94vw;
 }
 
 body > table > * > tr > td {
     height: 5vw;
+    min-height: 5vw;
+    max-height: 5vw;
     width: 5vw;
+    min-width: 5vw;
+    max-width: 5vw;
     background-color: #EEE;
     position: relative;
     transition: background-color 0.2s, background-image 0.2s, color 0.2s;
@@ -114,6 +125,12 @@ body > table > * > tr > td[colspan="4"] {
     width: 21.5vw;
     min-width: 21.5vw;
     max-width: 21.5vw;
+}
+
+body > table > tfoot > tr > td {
+    text-align: center;
+    background-color: #69F;
+    color: white;
 }
 
 
@@ -175,7 +192,7 @@ body > table > * > tr > td[colspan="4"] {
 .icon {
     background-repeat: no-repeat;
     background-size: 2.4vw 2.4vw;
-    background-position: 1.3vw center;
+    background-position: 1.3vw 1.3vw;
 }
 
 
@@ -197,4 +214,25 @@ body > table > * > tr > td[colspan="4"] {
     padding-left: 5vw;
     cursor: pointer;
     color: inherit;
+}
+
+.input > textarea {
+    padding-top: 1vw;
+}
+
+.input > input[type="button"] {
+    padding-left: 0px;
+}
+
+
+/* Bg */
+
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.none {
+    opacity: 0;
 }

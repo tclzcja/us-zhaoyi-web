@@ -233,7 +233,8 @@
             div,
             tbody = document.querySelector("body > table > tbody"),
             star = 0,
-            mile;
+            mile,
+            a;
 
         tbody.innerHTML = "";
 
@@ -245,16 +246,25 @@
                 // Type
                 td = document.createElement("td");
                 td.classList.add("icon");
+                a = document.createElement("a");
+                a.href = dummy_data[i].type + ".html";
+                td.appendChild(a);
                 tr.appendChild(td);
                 // Portrait
                 td = document.createElement("td");
                 td.style.backgroundImage = "url('../img/portrait/" + dummy_data[i].type + "." + dummy_data[i].id + ".jpg')";
                 td.classList.add("bg");
+                a = document.createElement("a");
+                a.href = dummy_data[i].type + ".html";
+                td.appendChild(a);
                 tr.appendChild(td);
                 // Name
                 td = document.createElement("td");
-                td.innerHTML = dummy_data[i].name;
                 td.setAttribute("colspan", 4);
+                a = document.createElement("a");
+                a.href = dummy_data[i].type + ".html";
+                a.innerHTML = dummy_data[i].name;
+                td.appendChild(a);
                 tr.appendChild(td);
                 // Star
                 td = document.createElement("td");
