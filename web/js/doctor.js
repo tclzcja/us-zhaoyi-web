@@ -9,7 +9,7 @@
     function submit() {
         var td = document.createElement("td"),
             a = 0;
-        td.setAttribute("colspan", 10);
+        td.setAttribute("colspan", 9);
         td.setAttribute("rowspan", 3);
         td.innerHTML = "您的评论已提交";
         td.classList.add("submitted");
