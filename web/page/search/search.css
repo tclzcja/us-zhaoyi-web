@@ -140,8 +140,8 @@
 }
 
 #name.highlight {
-    background-color: #69F;
     color: white;
+    background-color: #69F;
     background-image: url("../img/icon/white/name.png");
 }
 
@@ -160,8 +160,8 @@
 }
 
 #insurance.highlight {
-    background-color: #69F;
     color: white;
+    background-color: #69F;
     background-image: url("../img/icon/white/insurance.png");
 }
 
@@ -220,7 +220,6 @@ body > table > tbody > tr > td:nth-child(4) > span:nth-child(1) {
     color: white;
     font-size: 150%;
     line-height: 5vw;
-    border-radius: 0.5vw 0 0 0.5vw;
 }
 
 body > table > tbody > tr > td:nth-child(4) > span.full {
@@ -243,9 +242,7 @@ body > table > tbody > tr:hover {
     /* Hover Effect */
 }
 
-body > table > tbody > tr > td:nth-child(4) > span:last-child {
-    border-radius: 0 0.3vw 0.3vw 0;
-}
+body > table > tbody > tr > td:nth-child(4) > span:last-child {}
 
 body > table > tbody > tr > td:nth-child(5) {
     vertical-align: middle;
@@ -264,7 +261,6 @@ body > table > tbody > tr > td:nth-child(5) > span {
     margin: 1px;
     font-size: 80%;
     transition: background-color 0.2s;
-    border-radius: 0.35vw;
 }
 
 body > table > tbody > tr > td:nth-child(5) > span:nth-child(2) {
@@ -292,7 +288,6 @@ body > table > tbody > tr > td:nth-child(6) > span {
     margin: 1px;
     font-size: 80%;
     transition: background-color 0.2s;
-    border-radius: 0.35vw;
 }
 
 body > table > tbody > tr > td:nth-child(6) > span:nth-child(2n) {

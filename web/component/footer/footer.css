@@ -1,0 +1,12 @@
+component-footer {
+    display: block;
+    transform: translateY(0px);
+    opacity: 1;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: #333;
+    color: white;
+    bottom: 0px;
+    top: auto;
+    text-align: center;
+}

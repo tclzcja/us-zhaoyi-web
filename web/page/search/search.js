@@ -1,3 +1,5 @@
+/* jshint browser: true, esnext: true */
+
 (function () {
 
     'use strict';
@@ -260,7 +262,7 @@
                 tr.appendChild(td);
                 // Name
                 td = document.createElement("td");
-                td.setAttribute("colspan", 4);
+                td.setAttribute("colspan", 6);
                 a = document.createElement("a");
                 a.href = dummy_data[i].type + ".html";
                 a.innerHTML = dummy_data[i].name;
@@ -268,7 +270,7 @@
                 tr.appendChild(td);
                 // Star
                 td = document.createElement("td");
-                td.setAttribute("colspan", 2);
+                td.setAttribute("colspan", 4);
                 span = document.createElement("span");
                 span.innerHTML = dummy_data[i].star.toFixed(1);
                 td.appendChild(span);
@@ -288,7 +290,7 @@
                 tr.appendChild(td);
                 // Item
                 td = document.createElement("td");
-                td.setAttribute("colspan", 3);
+                td.setAttribute("colspan", 6);
                 for (j = 0; j < dummy_data[i].items.length; j += 1) {
                     span = document.createElement("span");
                     span.classList.add(dummy_data[i].items[j]);
@@ -301,7 +303,7 @@
                 tr.appendChild(td);
                 // Insurance
                 td = document.createElement("td");
-                td.setAttribute("colspan", 3);
+                td.setAttribute("colspan", 6);
                 for (j = 0; j < dummy_data[i].insurances.length; j += 1) {
                     span = document.createElement("span");
                     span.classList.add(dummy_data[i].insurances[j]);
@@ -314,7 +316,7 @@
                 tr.appendChild(td);
                 // Distance
                 td = document.createElement("td");
-                td.setAttribute("colspan", 3);
+                td.setAttribute("colspan", 5);
                 div = document.createElement("div");
                 span = document.createElement("span");
                 mile = Math.calculateDistance(current_latitude, current_longitude, dummy_data[i].position.latitude, dummy_data[i].position.longitude).toFixed(0);

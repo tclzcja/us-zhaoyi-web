@@ -1,0 +1,113 @@
+page-index {
+    display: block;
+}
+
+page-index > * {
+    position: absolute;
+}
+
+page-index > header {
+    bottom: 45vh;
+    height: 40vh;
+    left: 0px;
+    right: 0px;
+    font-size: 2vh;
+    background-color: #EEE;
+    color: white;
+    vertical-align: top;
+    text-align: left;
+}
+
+page-index > header > input {
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    width: 80vw;
+    height: 10vh;
+    background-color: white;
+    padding-left: 4vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    color: #333;
+}
+
+page-index > header > aside {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: linear-gradient(to bottom, white, transparent);
+}
+
+page-index > header > table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    opacity: 0.25;
+}
+
+page-index > header > table > tbody > tr > td {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+page-index > header > table > tbody > tr > td:nth-child(2n) {
+    background-color: #DDD;
+}
+
+page-index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n+1) {
+    background-color: #CCC;
+}
+
+page-index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
+    background-color: #BBB;
+}
+
+page-index > main {
+    bottom: 5vh;
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vh;
+    color: white;
+}
+
+page-index > main:after {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 0px;
+    right: 0px;
+    font-size: 2vh;
+    line-height: 100%;
+    text-align: center;
+}
+
+page-index > main.doctor {
+    left: 0px;
+    background-color: #FB3;
+}
+
+page-index > main.hospital {
+    left: 20vw;
+    background-color: #F90;
+}
+
+page-index > main.item {
+    left: 40vw;
+    background-color: #0CF;
+}
+
+page-index > main.comment {
+    left: 60vw;
+    background-color: #0AE;
+}
+
+page-index > main.other {
+    left: 80vw;
+    background-color: #F55;
+}
