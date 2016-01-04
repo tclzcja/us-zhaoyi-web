@@ -1,145 +1,55 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Search</title>
-    <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="css/global.css" />
-    <link type="text/css" rel="stylesheet" href="css/search.css" />
-</head>
-
-<body>
-    <table>
-        <thead>
-            <tr>
-                <td id="logo" rowspan="2" colspan="2" class="icon">
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <footer></footer>
-                    <a href="index.html"></a>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td id="user" rowspan="2" colspan="2" class="icon"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td id="type" colspan="2" class="input icon any">
-                    <select>
-                        <option value="any">任意</option>
-                        <option value="doctor">医生</option>
-                        <option value="hospital">医院</option>
-                    </select>
-                </td>
-                <td id="name" colspan="6" class="input icon">
-                    <input type="search" placeholder="姓名" />
-                </td>
-                <td id="star" class="input icon" colspan="4">
-                    <select>
-                        <option selected="true" value="0">任意星级</option>
-                        <option value="1">最少1星</option>
-                        <option value="2">最少2星</option>
-                        <option value="3">最少3星</option>
-                        <option value="4">最少4星</option>
-                    </select>
-                </td>
-                <td id="item" class="input icon" colspan="6">
-                    <select>
-                        <option value="any" selected="true">任意检查项目</option>
-                        <option value="chiropractic">脊椎矫正</option>
-                        <option value="dentist">牙医</option>
-                        <option value="orthodontics">牙齿校正</option>
-                        <option value="surgery">手术</option>
-                    </select>
-                </td>
-                <td id="insurance" class="input icon" colspan="6">
-                    <select>
-                        <option value="any" selected="true">任意保险</option>
-                        <option value="obamacare">Obama Care</option>
-                        <option value="anthem">Anthem</option>
-                        <option value="redcross">Red Cross</option>
-                        <option value="abcmiracle">ABC Miracle</option>
-                    </select>
-                </td>
-                <td id="distance" class="input icon" colspan="5">
-                    <select>
-                        <option value="99999" selected="true">任意距离</option>
-                        <option value="20">小于20英里</option>
-                        <option value="50">小于50英里</option>
-                        <option value="100">小于100英里</option>
-                        <option value="200">小于200英里</option>
-                    </select>
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="29">©2015 北美找医网</td>
-            </tr>
-        </tfoot>
-    </table>
-    <script type="text/javascript" src="js/math.js"></script>
-    <script type="text/javascript" src="js/search.js"></script>
-</body>
-
-</html>
+<template>
+    <main>
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="button prev"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="button next"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <aside>
+        <div class="keyword">
+            <input type="text" />
+        </div>
+        <div class="star">
+            <select>
+                <option value="0">任意</option>
+                <option value="2">至少2星</option>
+                <option value="3">至少3星</option>
+                <option value="4">至少4星</option>
+            </select>
+        </div>
+        <div class="item"></div>
+        <div class="distance"></div>
+    </aside>
+</template>
+<link rel="stylesheet" type="text/css" href="search.css" />
+<script type="text/javascript" src="search.js"></script>

@@ -18,11 +18,21 @@
 
     function active(self) {
         self.innerHTML = document.querySelector("link[data-component='" + key + "']").import.querySelector("template").innerHTML;
-        portraitize();
+        self.querySelector(":scope > header > input").addEventListener("keyup", function () {
+            if (this.value !== "") {
+                self.querySelector(":scope > header > footer").classList.add("on");
+            } else {
+                self.querySelector(":scope > header > footer").classList.remove("on");
+            }
+        });
+        self.querySelector(":scope > header > footer").addEventListener("click", function () {
+            location.hash = "#search";
+        });
+        portraitize(self);
     }
 
-    function portraitize() {
-        var sl = document.querySelectorAll("body > page-index > header > table > tbody > tr > td");
+    function portraitize(self) {
+        var sl = self.querySelectorAll(":scope > header > table > tbody > tr > td");
         for (var i = 0; i < sl.length; i++) {
             sl[i].style.backgroundImage = "url('./page/index/portrait/doctor/" + Math.randomRange(1, 14) + ".jpg')";
         }

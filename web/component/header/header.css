@@ -2,8 +2,9 @@ component-header {
     display: block;
     transform: translateY(0px);
     opacity: 1;
-    bottom: auto;
     height: 8vh;
+    top: 0px;
+    bottom: auto;
 }
 
 component-header > * {

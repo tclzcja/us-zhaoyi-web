@@ -40,6 +40,17 @@ a {
     width: 0px;
 }
 
+input,
+select,
+textarea {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
 select {
     margin-left: -4px;
     appearance: none;
@@ -54,23 +65,15 @@ textarea {
     resize: none;
 }
 
-input {
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    color: inherit;
-    font-size: inherit;
-}
-
 
 /* ============================================================================================================= */
 
 body > * {
     position: fixed;
-    top: 0px;
     left: 0px;
     right: 0px;
-    bottom: 0px;
+    top: 10vh;
+    bottom: 5vh;
     transition: opacity 1s, transform 0.5s;
     transform: translateY(-100vh);
     opacity: 0;

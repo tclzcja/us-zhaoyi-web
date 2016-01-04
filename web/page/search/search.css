@@ -1,434 +1,104 @@
-#logo {
-    box-shadow: none;
-    text-align: center;
-    color: white;
-    background-color: #69F;
-    font-size: 400%;
-    background-image: url("../img/icon/white/logo.png");
-    background-position: center;
-}
-
-#logo > footer {
-    display: block;
+page-search > aside {
     position: absolute;
-    height: 1vw;
-    width: 1vw;
-    animation-name: shine;
-    animation-iteration-count: infinite;
-    background-color: white;
-    opacity: 0;
+    top: 0px;
+    height: 10vh;
+    left: 0px;
+    right: 0px;
+    background-color: #DEF;
 }
 
-#logo > footer:nth-child(1) {
-    top: 0vw;
-    left: 0vw;
-    animation-duration: 2.5s;
+page-search > aside > div {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 25vw;
+    padding-left: 10vh;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 5vh 5vh;
+    background-position: 2.5vh 2.5vh;
+    transition: background-color 0.5s, color 0.5s, background-image 0.5s;
+    color: #69F;
 }
 
-#logo > footer:nth-child(2) {
-    top: 1vw;
-    left: 0vw;
-    animation-delay: 0.2s;
-    animation-duration: 2s;
+page-search > aside > div:nth-child(2n) {
+    background-color: #CDF;
 }
 
-#logo > footer:nth-child(3) {
-    top: 0vw;
-    left: 1vw;
-    animation-delay: 0.75s;
-    animation-duration: 5s;
-}
-
-#logo > footer:nth-child(4) {
-    top: 2vw;
-    left: 0vw;
-    animation-delay: 0.5s;
-    animation-duration: 3.5s;
-}
-
-#logo > footer:nth-child(5) {
-    top: 0vw;
-    left: 2vw;
-    animation-delay: 1s;
-    animation-duration: 7.5s;
-}
-
-#logo > footer:nth-child(6) {
-    top: 1vw;
-    left: 1vw;
-    animation-delay: 0s;
-    animation-duration: 4s;
-}
-
-#logo > footer:nth-child(7) {
-    bottom: 0vw;
-    right: 0vw;
-    animation-duration: 2.5s;
-}
-
-#logo > footer:nth-child(8) {
-    bottom: 1vw;
-    right: 0vw;
-    animation-delay: 0.2s;
-    animation-duration: 2s;
-}
-
-#logo > footer:nth-child(9) {
-    bottom: 0vw;
-    right: 1vw;
-    animation-delay: 0.75s;
-    animation-duration: 5s;
-}
-
-#logo > footer:nth-child(10) {
-    bottom: 2vw;
-    right: 0vw;
-    animation-delay: 0.5s;
-    animation-duration: 3.5s;
-}
-
-#logo > footer:nth-child(11) {
-    bottom: 0vw;
-    right: 2vw;
-    animation-delay: 1s;
-    animation-duration: 7.5s;
-}
-
-#logo > footer:nth-child(12) {
-    bottom: 1vw;
-    right: 1vw;
-    animation-delay: 2s;
-    animation-duration: 4s;
-}
-
-@keyframes shine {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#user {
-    background-image: url("../img/icon/white/user.png");
-    background-color: #69F;
-    cursor: pointer;
-}
-
-#type.any {
-    background-image: url("../img/icon/blue/down.png");
-}
-
-#type.doctor {
-    background-image: url("../img/icon/white/doctor.png");
-    background-color: #69F;
-    color: white;
-}
-
-#type.hospital {
-    background-image: url("../img/icon/white/hospital.png");
-    background-color: #F90;
-    color: white;
-}
-
-#name {
-    background-image: url("../img/icon/blue/name.png");
-}
-
-#name.highlight {
+page-search > aside > div.on {
     color: white;
     background-color: #69F;
-    background-image: url("../img/icon/white/name.png");
 }
 
-#star {
-    background-image: url("../img/icon/blue/star.png");
+page-search > aside > div.keyword {
+    left: 0px;
+    background-image: url("icon/name.blue.png");
 }
 
-#star.highlight {
-    background-image: url("../img/icon/white/star.png");
-    background-color: #69F;
-    color: white;
+page-search > aside > div.keyword.on {
+    background-image: url("icon/name.white.png");
 }
 
-#insurance {
-    background-image: url("../img/icon/blue/insurance.png");
+page-search > aside > div.star {
+    left: 25vw;
+    background-image: url("icon/star.blue.png");
 }
 
-#insurance.highlight {
-    color: white;
-    background-color: #69F;
-    background-image: url("../img/icon/white/insurance.png");
+page-search > aside > div.star.on {
+    background-image: url("icon/star.white.png");
 }
 
-#distance {
-    background-image: url("../img/icon/blue/distance.png");
+page-search > aside > div.item {
+    left: 50vw;
+    background-image: url("icon/item.blue.png");
 }
 
-#distance.highlight {
-    background-image: url("../img/icon/white/distance.png");
-    background-color: #69F;
-    color: white;
+page-search > aside > div.distance {
+    left: 75vw;
+    background-image: url("icon/distance.blue.png");
 }
 
-#item {
-    background-image: url("../img/icon/blue/item.png");
+page-search > main {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 75vh;
+    vertical-align: top;
 }
 
-#item.highlight {
-    background-image: url("../img/icon/white/item.png");
-    background-color: #69F;
-    color: white;
+page-search > main > table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    vertical-align: top;
 }
 
-
-/* Table Body */
-
-body > table > tbody > tr {
-    transition: transform 0.2s;
-    cursor: pointer;
-}
-
-body > table > tbody > tr > td:nth-child(2) {
+page-search > main > table > tbody > tr > td {
+    height: 25vh;
+    width: 12.5vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-body > table > tbody > tr > td:nth-child(3) {
-    font-size: 150%;
-}
-
-body > table > tbody > tr > td:nth-child(3) > a {
-    justify-content: flex-start;
-    padding-left: 1vw;
-}
-
-body > table > tbody > tr > td:nth-child(3) > a:hover {
-    text-decoration: underline;
-}
-
-body > table > tbody > tr > td:nth-child(4) > span:nth-child(1) {
-    display: inline-block;
-    height: 100%;
-    width: 5vw;
-    text-align: center;
-    color: white;
-    font-size: 150%;
-    line-height: 5vw;
-}
-
-body > table > tbody > tr > td:nth-child(4) > span.full {
-    display: inline-block;
-    height: 1vw;
-    width: 1vw;
-    vertical-align: top;
-    margin-top: 2vw;
-}
-
-body > table > tbody > tr > td:nth-child(4) > span.half {
-    display: inline-block;
-    height: 1vw;
-    width: 0.5vw;
-    vertical-align: top;
-    margin-top: 2vw;
-}
-
-body > table > tbody > tr:hover {
-    /* Hover Effect */
-}
-
-body > table > tbody > tr > td:nth-child(4) > span:last-child {}
-
-body > table > tbody > tr > td:nth-child(5) {
-    vertical-align: middle;
-    text-align: center;
-}
-
-body > table > tbody > tr > td:nth-child(5) > span {
-    display: inline-block;
-    height: 1.5vw;
-    color: white;
-    text-align: center;
-    line-height: 1.5vw;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    margin: 1px;
-    font-size: 80%;
-    transition: background-color 0.2s;
-}
-
-body > table > tbody > tr > td:nth-child(5) > span:nth-child(2) {
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-body > table > tbody > tr > td:nth-child(5) > span:hover {
-    background-color: #666;
-}
-
-body > table > tbody > tr > td:nth-child(6) {
-    vertical-align: middle;
-    text-align: center;
-}
-
-body > table > tbody > tr > td:nth-child(6) > span {
-    display: inline-block;
-    height: 1.5vw;
-    color: white;
-    text-align: center;
-    line-height: 1.5vw;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    margin: 1px;
-    font-size: 80%;
-    transition: background-color 0.2s;
-}
-
-body > table > tbody > tr > td:nth-child(6) > span:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-body > table > tbody > tr > td:nth-child(6) > span:hover {
-    background-color: #666;
-}
-
-body > table > tbody > tr > td:nth-child(7) {
-    overflow: hidden;
-}
-
-body > table > tbody > tr > td:nth-child(7):after {
-    content: "";
-    display: block;
-    background-color: #CCC;
-    position: absolute;
-    height: 1vw;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-}
-
-body > table > tbody > tr > td:nth-child(7) > div {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    font-size: 100%;
-    line-height: 100%;
-    z-index: 2;
-    color: #666;
-    border-bottom: solid 1vw #666;
-    border-top: solid 1vw transparent;
-    padding-left: 1vw;
-}
-
-body > table > tbody > tr > td:nth-child(7) > div:after {
-    content: "";
-    display: block;
-    width: 2vw;
-    height: 3vw;
-    position: absolute;
+page-search > main > table > tbody > tr > td.button {
+    background-color: #36C;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 2vw auto;
-    background-image: url("../img/icon/black/location.png");
-    position: absolute;
-    right: -1vw;
-    top: 0px;
+    background-size: 40%;
+    background-position: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
 }
 
-body > table > tbody > tr > td:nth-child(7) > div > span {
-    display: block;
-    position: absolute;
-    right: 1vw;
-    top: 0.6vw;
-    color: #333;
-}
-
-body > table > tbody > tr > td:nth-child(7) > div > span:after {
-    position: absolute;
-    top: 100%;
-    content: "公里";
-    right: 0px;
-    font-size: 50%;
-    width: 2vw;
-    text-align: right;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-body > table > tbody > tr > td:nth-child(7) > div > span.otherside {
-    right: auto;
-    left: 100%;
-    margin-left: 1vw;
-}
-
-body > table > tbody > tr > td:nth-child(7) > div > span.otherside:after {
-    right: auto;
-    left: 0px;
-    text-align: left;
-}
-
-
-/* Doctor Row */
-
-.doctor > td {
-    background-color: #DEF;
-    color: #69F;
-}
-
-.doctor > td:nth-child(1) {
-    background-color: #69F;
-    background-image: url("../img/icon/white/doctor.png");
-}
-
-.doctor > td:nth-child(4) > span:first-child {
+page-search > main > table > tbody > tr > td.button:hover {
     background-color: #69F;
 }
 
-.doctor > td:nth-child(4) > span.full {
-    background-color: #69F;
+page-search > main > table > tbody > tr > td.button.prev {
+    background-image: url("icon/prev.png");
 }
 
-.doctor > td:nth-child(4) > span.half {
-    background-color: #69F;
-}
-
-.doctor > td:nth-child(5) > span.highlight,
-.doctor > td:nth-child(6) > span.highlight {
-    background-color: #69F;
-}
-
-
-/* Hospital Row */
-
-.hospital > td {
-    background-color: #FED;
-    color: #F90;
-}
-
-.hospital > td:nth-child(1) {
-    background-color: #F90;
-    background-image: url("../img/icon/white/hospital.png");
-}
-
-.hospital > td:nth-child(4) > span:nth-child(1) {
-    background-color: #F90;
-}
-
-.hospital > td:nth-child(4) > span.full {
-    background-color: #F90;
-}
-
-.hospital > td:nth-child(4) > span.half {
-    background-color: #F90;
-}
-
-.hospital > td:nth-child(5) > span.highlight,
-.hospital > td:nth-child(6) > span.highlight {
-    background-color: #F90;
+page-search > main > table > tbody > tr > td.button.next {
+    background-image: url("icon/next.png");
 }

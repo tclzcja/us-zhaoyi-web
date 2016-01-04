@@ -7,7 +7,7 @@ page-index > * {
 }
 
 page-index > header {
-    bottom: 45vh;
+    bottom: 40vh;
     height: 40vh;
     left: 0px;
     right: 0px;
@@ -64,8 +64,31 @@ page-index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
     background-color: #BBB;
 }
 
+page-index > header > footer {
+    height: 10vh;
+    width: 0px;
+    background-color: #69F;
+    right: 10vw;
+    bottom: 15vh;
+    position: absolute;
+    transition: width 0.5s, background-color 0.5s;
+    background-repeat: no-repeat;
+    background-size: 5vh 5vh;
+    background-position: center;
+    background-image: url("icon/search.png");
+    cursor: pointer;
+}
+
+page-index > header > footer.on {
+    width: 10vh;
+}
+
+page-index > header > footer:hover {
+    background-color: #36C;
+}
+
 page-index > main {
-    bottom: 5vh;
+    bottom: 0px;
     height: 40vh;
     width: 20vw;
     display: flex;
