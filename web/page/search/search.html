@@ -37,18 +37,32 @@
     </main>
     <aside>
         <div class="keyword">
-            <input type="text" />
+            <input type="text" placeholder="关键字" />
         </div>
         <div class="star">
             <select>
-                <option value="0">任意</option>
+                <option value="0">任意星级</option>
                 <option value="2">至少2星</option>
                 <option value="3">至少3星</option>
                 <option value="4">至少4星</option>
             </select>
         </div>
-        <div class="item"></div>
-        <div class="distance"></div>
+        <div class="item">
+            <select>
+                <option value="">任意科目</option>
+                <option value="dentist">牙医</option>
+                <option value="chiropractic">脊椎矫正</option>
+                <option value="ophthalmology">眼科</option>
+            </select>
+        </div>
+        <div class="distance">
+            <select>
+                <option value="0">任意距离</option>
+                <option value="50">少于50英里</option>
+                <option value="100">少于100英里</option>
+                <option value="200">少于200英里</option>
+            </select>
+        </div>
     </aside>
 </template>
 <link rel="stylesheet" type="text/css" href="search.css" />

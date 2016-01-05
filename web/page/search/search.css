@@ -12,7 +12,6 @@ page-search > aside > div {
     top: 0px;
     bottom: 0px;
     width: 25vw;
-    padding-left: 10vh;
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: 5vh 5vh;
@@ -21,8 +20,16 @@ page-search > aside > div {
     color: #69F;
 }
 
+page-search > aside > div > * {
+    padding-left: 10vh;
+}
+
 page-search > aside > div:nth-child(2n) {
     background-color: #CDF;
+}
+
+page-search > aside > div:hover {
+    background-color: #9CF;
 }
 
 page-search > aside > div.on {
@@ -53,9 +60,17 @@ page-search > aside > div.item {
     background-image: url("icon/item.blue.png");
 }
 
+page-search > aside > div.item.on {
+    background-image: url("icon/item.white.png");
+}
+
 page-search > aside > div.distance {
     left: 75vw;
     background-image: url("icon/distance.blue.png");
+}
+
+page-search > aside > div.distance.on {
+    background-image: url("icon/distance.white.png");
 }
 
 page-search > main {
@@ -80,6 +95,8 @@ page-search > main > table > tbody > tr > td {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url("transparent/transparent.png");
+    transition: background-image 0.5s;
 }
 
 page-search > main > table > tbody > tr > td.button {
@@ -101,4 +118,8 @@ page-search > main > table > tbody > tr > td.button.prev {
 
 page-search > main > table > tbody > tr > td.button.next {
     background-image: url("icon/next.png");
+}
+
+page-search > main > table > tbody > tr > td.on {
+    cursor: pointer;
 }
