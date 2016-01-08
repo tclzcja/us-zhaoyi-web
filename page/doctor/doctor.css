@@ -1,398 +1,258 @@
-#logo {
-    box-shadow: none;
-    text-align: center;
-    color: white;
-    background-color: #69F;
-    font-size: 400%;
-    background-image: url("../img/icon/white/logo.png");
-    background-position: center;
-}
-
-#logo > footer {
-    display: block;
+page-doctor > * {
     position: absolute;
-    height: 1vw;
-    width: 1vw;
-    animation-name: shine;
-    animation-iteration-count: infinite;
-    background-color: white;
-    opacity: 0;
 }
 
-#logo > footer:nth-child(1) {
-    top: 0vw;
-    left: 0vw;
-    animation-duration: 2.5s;
+page-doctor > main.portrait {
+    top: 0px;
+    left: 0px;
+    height: 30vh;
+    width: 30vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("portrait/portrait.jpg");
 }
 
-#logo > footer:nth-child(2) {
-    top: 1vw;
-    left: 0vw;
-    animation-delay: 0.2s;
-    animation-duration: 2s;
+page-doctor > main.name {
+    top: 30vh;
+    left: 0px;
+    height: 10vh;
+    width: 30vw;
+    color: #333;
+    font-size: 4vh;
+    line-height: 10vh;
+    padding-right: 3vh;
+    text-align: right;
+    background-image: url("icon/name.png");
 }
 
-#logo > footer:nth-child(3) {
-    top: 0vw;
-    left: 1vw;
-    animation-delay: 0.75s;
-    animation-duration: 5s;
+page-doctor > main.star {
+    background-color: rgba(255, 192, 0, 0.5);
+    top: 40vh;
+    left: 0px;
+    height: 10vh;
+    width: 30vw;
+    padding-left: 3vh;
 }
 
-#logo > footer:nth-child(4) {
-    top: 2vw;
-    left: 0vw;
-    animation-delay: 0.5s;
-    animation-duration: 3.5s;
+page-doctor > main.star > span {
+    display: inline-block;
+    height: 100%;
+    width: 4vh;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-image: url("icon/star.orange.png");
 }
 
-#logo > footer:nth-child(5) {
-    top: 0vw;
-    left: 2vw;
-    animation-delay: 1s;
-    animation-duration: 7.5s;
+page-doctor > main.star > span.empty {
+    background-image: url("icon/star.orange.empty.png");
 }
 
-#logo > footer:nth-child(6) {
-    top: 1vw;
-    left: 1vw;
-    animation-delay: 0s;
-    animation-duration: 4s;
+page-doctor > main.star:after {
+    content: attr(data-star);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    line-height: 10vh;
+    color: #F90;
+    font-size: 4vh;
+    padding-right: 3vh;
 }
 
-#logo > footer:nth-child(7) {
-    bottom: 0vw;
-    right: 0vw;
-    animation-duration: 2.5s;
-}
-
-#logo > footer:nth-child(8) {
-    bottom: 1vw;
-    right: 0vw;
-    animation-delay: 0.2s;
-    animation-duration: 2s;
-}
-
-#logo > footer:nth-child(9) {
-    bottom: 0vw;
-    right: 1vw;
-    animation-delay: 0.75s;
-    animation-duration: 5s;
-}
-
-#logo > footer:nth-child(10) {
-    bottom: 2vw;
-    right: 0vw;
-    animation-delay: 0.5s;
-    animation-duration: 3.5s;
-}
-
-#logo > footer:nth-child(11) {
-    bottom: 0vw;
-    right: 2vw;
-    animation-delay: 1s;
-    animation-duration: 7.5s;
-}
-
-#logo > footer:nth-child(12) {
-    bottom: 1vw;
-    right: 1vw;
-    animation-delay: 2s;
-    animation-duration: 4s;
-}
-
-@keyframes shine {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#user {
-    background-image: url("../img/icon/white/user.png");
+page-doctor > main.items {
+    top: 50vh;
+    bottom: 0px;
+    left: 0px;
+    width: 15vw;
     background-color: #69F;
+}
+
+page-doctor > main.items > header {
+    padding-right: 2vh;
+    font-size: 3vh;
+    color: white;
+    line-height: 10vh;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: url("icon/stethoscope.png");
+}
+
+page-doctor > main.items > div {
+    text-align: right;
+    color: white;
+    padding-right: 2vh;
+    line-height: 100%;
+    font-size: 2vh;
+    margin-top: 1.5vh;
+}
+
+page-doctor > main.insurances {
+    top: 50vh;
+    bottom: 0px;
+    left: 15vw;
+    width: 15vw;
+    background-color: #9C0;
+}
+
+page-doctor > main.insurances > header {
+    padding-left: 2vh;
+    font-size: 3vh;
+    color: white;
+    line-height: 10vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: url("icon/insurance.png");
+}
+
+page-doctor > main.insurances > header:before {
+    left: auto;
+    right: 0px;
+}
+
+page-doctor > main.insurances > div {
+    color: white;
+    padding-left: 2vh;
+    line-height: 100%;
+    font-size: 2vh;
+    margin-top: 1.5vh;
+}
+
+page-doctor > main.schedule {
+    position: absolute;
+    top: 0px;
+    left: 30vw;
+    bottom: 0px;
+    width: 30vw;
+    background-color: #CDF;
+}
+
+page-doctor > main.schedule > header {
+    text-align: right;
+    color: #69F;
+    padding-right: 3vh;
+    font-size: 3vh;
+    line-height: 10vh;
+}
+
+page-doctor > main.schedule > header > * {
+    transition: background-color 0.5s;
     cursor: pointer;
+    position: absolute;
+    top: 0px;
+    height: 10vh;
+    width: 10vh;
+    text-align: right;
 }
 
-#portrait {
-    background-image: url("../img/portrait/doctor.5.jpg");
+page-doctor > main.schedule > header > header:nth-child(1) {
+    left: 0px;
+    background-image: url("icon/calendar.png");
 }
 
-#name {
-    font-size: 150%;
-    padding-left: 5vw;
-    background-color: #69F;
-    color: white;
-    background-image: url("../img/icon/white/name.png");
+page-doctor > main.schedule > header > header:nth-child(2) {
+    left: 5vh;
+    background-image: url("icon/location.png");
 }
 
-#title {
-    font-size: 120%;
-    padding-left: 5vw;
-    background-color: #9CF;
-    color: white;
-    background-image: url("../img/icon/white/title.png");
+page-doctor > main.schedule > header > div:hover {
+    background-color: #8BF;
 }
 
-#map > iframe {
-    border-radius: 0.5vw;
+page-doctor > main.schedule > header > div:nth-last-child(2) {
+    right: 10vh;
+    background-image: url("icon/prev.png");
+}
+
+page-doctor > main.schedule > header > div:nth-last-child(1) {
+    right: 0px;
+    background-image: url("icon/next.png");
+}
+
+page-doctor > main.schedule > main {
+    position: absolute;
+    top: 10vh;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+
+/* Schedule & Address */
+
+page-doctor > main.schedule > main > section {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 30vw;
+    left: 100%;
+    transition: left 0.5s;
+}
+
+page-doctor > main.schedule > main > section.on {
+    left: 0px;
+}
+
+
+/* Schedule */
+
+page-doctor > main.schedule > main > section > header {
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: 0px;
-    display: block;
+    height: 30vh;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+page-doctor > main.schedule > main > section > header > table {
     height: 100%;
     width: 100%;
+    border-collapse: collapse;
 }
 
-#star {
-    background-color: #FED;
-}
-
-#star > header {
-    position: absolute;
-    top: 0px;
-    left: 1.25vw;
-    bottom: 0px;
-    width: 11vw;
-    background-repeat: repeat-x;
-    background-size: 2.5vw 2.5vw;
-    background-position: left center;
-    background-image: url("../img/icon/orange/star.png");
-    z-index: 2;
-}
-
-#star > footer {
-    position: absolute;
-    top: 0px;
-    left: 1.25vw;
-    bottom: 0px;
-    width: 12.5vw;
-    background-repeat: repeat-x;
-    background-size: 2.5vw 2.5vw;
-    background-position: left center;
-    background-image: url("../img/icon/orange/empty.star.png");
-    z-index: 1;
-}
-
-#star > main {
-    margin-left: 15vw;
-    height: 100%;
-    line-height: 5vw;
-    color: #F90;
-    font-size: 250%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-#star > aside {
-    padding-left: 1vw;
-    height: 100%;
-    font-size: 80%;
-    line-height: 5vw;
-    display: inline-block;
-    vertical-align: top;
-    color: #F90;
-    opacity: 0.75;
-}
-
-#insurance {
-    background-color: #BDF;
-    background-image: url("../img/icon/white/insurance.png");
-    color: white;
-    padding-left: 5vw;
-}
-
-#my {
-    padding-left: 5vw;
-    font-size: 150%;
-    background-color: #69F;
-    color: white;
-    background-image: url("../img/icon/white/down.png");
-}
-
-#addresses {
-    font-size: 150%;
-    padding-right: 5vw;
-    text-align: right;
-    background-position: right 1.25vw center;
+page-doctor > main.schedule > main > section > header > table > thead > tr > td {
+    height: 10vh;
     background-color: #666;
     color: white;
-    background-image: url("../img/icon/white/down.png");
-}
-
-.address {
-    padding-right: 5vw;
-    text-align: right;
-    background-color: #999;
-    color: white;
-    font-size: 120%;
-    background-position: right 1.25vw center;
-    background-image: url("../img/icon/white/address.png");
-}
-
-#mystar {
-    background-image: url("../img/icon/blue/star.png");
-}
-
-#mystar:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 5vw;
-    width: 5vw;
-    background-repeat: no-repeat;
-    background-size: 2.5vw;
-    background-position: center;
-    background-image: url("../img/icon/white/tick.png");
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
-#mystar.highlight {
-    background-image: url("../img/icon/white/star.png");
-    color: white;
-    background-color: #69F;
-}
-
-#mystar.highlight:after {
-    opacity: 1;
-}
-
-#mycomment {
-    background-image: url("../img/icon/blue/comment.png");
-}
-
-#mycomment:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 5vw;
-    height: 5vw;
-    background-repeat: no-repeat;
-    background-size: 2.5vw;
-    background-position: center;
-    background-image: url("../img/icon/white/tick.png");
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
-#mycomment.highlight {
-    background-image: url("../img/icon/white/comment.png");
-    color: white;
-    background-color: #69F;
-}
-
-#mycomment.highlight:after {
-    opacity: 1;
-}
-
-#mysubmit {
     text-align: center;
-    background-repeat: no-repeat;
-    background-size: 5vw;
-    background-position: center;
-    background-image: url("../img/transparent/transparent.png");
-    transition: background 0.2s, color 0.2s, padding 0.2s;
 }
 
-#mysubmit.highlight {
-    padding-top: 9vw;
-    background-color: #69F;
-    color: white;
-    background-image: url("../img/icon/white/tick.png");
+page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(2n) {
+    background-color: #777;
 }
 
-.submitted {
-    text-align: center;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.submitted.highlight {
-    background-color: #69F;
-    color: white;
-}
-
-.weekday {
-    text-align: center;
-    font-size: 80%;
-    color: white;
-    background-color: #999;
-}
-
-.saturday {
-    text-align: center;
-    font-size: 80%;
-    color: white;
+page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(6) {
     background-color: #FC3;
 }
 
-.sunday {
-    text-align: center;
-    font-size: 80%;
-    color: white;
-    background-color: #F99;
+page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(7) {
+    background-color: #F66;
 }
 
-.morning {
-    background-image: url("../img/icon/white/morning.png");
-    background-color: #DDD;
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(1) > td {
+    height: 10vh;
 }
 
-.afternoon {
-    background-image: url("../img/icon/white/afternoon.png");
-    background-color: #DDD;
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(1) > td:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.available {
-    background-color: #6C0;
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(2) > td {
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-#comments {
-    background-color: #F90;
-    padding-left: 5vw;
-    font-size: 150%;
-    color: white;
-    background-image: url("../img/icon/white/down.png");
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(2) > td:nth-child(2n) {
+    background-color: transparent;
 }
 
-.userstar {
-    background-color: #FED;
-    vertical-align: middle;
-    text-align: center;
-    padding: 0.5vw;
-}
-
-.userstar > span {
-    display: inline-block;
-    height: 1vw;
-    width: 1vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    background-image: url("../img/icon/orange/star.png");
-}
-
-.username {
-    background-color: #FED;
-    padding-left: 1.25vw;
-    color: #333;
-}
-
-.usertext {
-    background-color: #FED;
-    padding-left: 1.25vw;
-    border-right: solid 1.25vw transparent;
-    color: #333;
-    overflow: hidden;
+page-doctor > main.comment {
+    position: absolute;
+    top: 0px;
+    left: 60vw;
+    bottom: 0px;
+    right: 0px;
+    background-color: #BCF;
 }

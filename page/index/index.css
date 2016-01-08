@@ -1,7 +1,3 @@
-page-index {
-    display: block;
-}
-
 page-index > * {
     position: absolute;
 }

@@ -4,7 +4,6 @@ page-search > aside {
     height: 10vh;
     left: 0px;
     right: 0px;
-    background-color: #DEF;
 }
 
 page-search > aside > div {
@@ -12,7 +11,7 @@ page-search > aside > div {
     top: 0px;
     bottom: 0px;
     width: 25vw;
-    background-color: transparent;
+    background-color: #DEF;
     background-repeat: no-repeat;
     background-size: 5vh 5vh;
     background-position: 2.5vh 2.5vh;
@@ -25,7 +24,7 @@ page-search > aside > div > * {
 }
 
 page-search > aside > div:nth-child(2n) {
-    background-color: #CDF;
+    background-color: #EEF3FF;
 }
 
 page-search > aside > div:hover {
@@ -96,7 +95,14 @@ page-search > main > table > tbody > tr > td {
     background-size: cover;
     background-position: center;
     background-image: url("transparent/transparent.png");
-    transition: background-image 0.5s;
+    background-color: white;
+    transition: background-image 0.5s, opacity 0.1s;
+    position: relative;
+    opacity: 1;
+}
+
+page-search > main > table > tbody > tr > td:active {
+    opacity: 0.9;
 }
 
 page-search > main > table > tbody > tr > td.button {
@@ -120,6 +126,104 @@ page-search > main > table > tbody > tr > td.button.next {
     background-image: url("icon/next.png");
 }
 
+page-search > main > table > tbody > tr > td.button.off {
+    background-color: #EEE;
+}
+
 page-search > main > table > tbody > tr > td.on {
     cursor: pointer;
+}
+
+page-search > main > table > tbody > tr > td > a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    transition: height 0.5s, background-color 0.5s;
+    overflow: hidden;
+}
+
+page-search > main > table > tbody > tr > td:hover > a {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+page-search > main > table > tbody > tr > td > a > header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    font-size: 2vh;
+    line-height: 4vh;
+    padding-left: 1vh;
+}
+
+page-search > main > table > tbody > tr > td > a > aside {
+    position: absolute;
+    top: 4vh;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    padding-left: 1vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+page-search > main > table > tbody > tr > td > a > aside > span {
+    display: inline-block;
+    height: 4vh;
+    width: 2vh;
+    background-repeat: no-repeat;
+    background-size: 2vh;
+    background-position: center center;
+    background-image: url("icon/star.orange.png");
+}
+
+page-search > main > table > tbody > tr > td > a > aside > span.empty {
+    background-image: url("icon/star.orange.empty.png");
+}
+
+page-search > main > table > tbody > tr > td > a > aside:after {
+    content: attr(data-star);
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-right: 1vh;
+    color: #F90;
+    font-size: 2vh;
+    line-height: 4vh;
+}
+
+page-search > main > table > tbody > tr > td > a > main {
+    position: absolute;
+    top: 8vh;
+    left: 0px;
+    right: 0px;
+    bottom: 3vh;
+}
+
+page-search > main > table > tbody > tr > td > a > main > div {
+    color: #69F;
+    font-size: 2vh;
+    line-height: 100%;
+    margin-top: 1vh;
+    padding-left: 1vh;
+}
+
+page-search > main > table > tbody > tr > td > a > footer {
+    position: absolute;
+    top: 21vh;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    line-height: 4vh;
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
 }
