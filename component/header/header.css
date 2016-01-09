@@ -2,9 +2,13 @@ component-header {
     display: block;
     transform: translateY(0px);
     opacity: 1;
-    height: 8vh;
+    height: 10vh;
     top: 0px;
     bottom: auto;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    z-index: 5;
 }
 
 component-header > * {

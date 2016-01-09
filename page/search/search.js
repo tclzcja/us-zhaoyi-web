@@ -77,7 +77,7 @@
             render();
         });
         self.querySelector(":scope > aside > div.distance > select").addEventListener("change", function () {
-            if (this.value !== "0") {
+            if (this.value !== "9999") {
                 this.parentNode.classList.add("on");
             } else {
                 this.parentNode.classList.remove("on");

@@ -43,12 +43,16 @@ a {
 input,
 select,
 textarea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     height: 100%;
     width: 100%;
     background-color: transparent;
     color: inherit;
     font-size: inherit;
     cursor: pointer;
+    z-index: 999;
 }
 
 select {
@@ -104,4 +108,5 @@ body > *:target {
     background-size: 4vh;
     background-position: center;
     background-image: inherit;
+    z-index: 999;
 }

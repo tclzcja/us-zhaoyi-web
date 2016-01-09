@@ -11,20 +11,17 @@ page-search > aside > div {
     top: 0px;
     bottom: 0px;
     width: 25vw;
-    background-color: #DEF;
-    background-repeat: no-repeat;
-    background-size: 5vh 5vh;
-    background-position: 2.5vh 2.5vh;
     transition: background-color 0.5s, color 0.5s, background-image 0.5s;
-    color: #69F;
+    color: white;
+    background-color: #69F;
+}
+
+page-search > aside > div:nth-child(2n) {
+    background-color: #7AF;
 }
 
 page-search > aside > div > * {
     padding-left: 10vh;
-}
-
-page-search > aside > div:nth-child(2n) {
-    background-color: #EEF3FF;
 }
 
 page-search > aside > div:hover {
@@ -33,12 +30,14 @@ page-search > aside > div:hover {
 
 page-search > aside > div.on {
     color: white;
-    background-color: #69F;
+    background-color: #333;
+    border-top: solid 4px transparent;
+    border-bottom: solid 4px #F90;
 }
 
 page-search > aside > div.keyword {
     left: 0px;
-    background-image: url("icon/name.blue.png");
+    background-image: url("icon/name.white.png");
 }
 
 page-search > aside > div.keyword.on {
@@ -47,7 +46,7 @@ page-search > aside > div.keyword.on {
 
 page-search > aside > div.star {
     left: 25vw;
-    background-image: url("icon/star.blue.png");
+    background-image: url("icon/star.white.png");
 }
 
 page-search > aside > div.star.on {
@@ -56,7 +55,7 @@ page-search > aside > div.star.on {
 
 page-search > aside > div.item {
     left: 50vw;
-    background-image: url("icon/item.blue.png");
+    background-image: url("icon/item.white.png");
 }
 
 page-search > aside > div.item.on {
@@ -65,7 +64,7 @@ page-search > aside > div.item.on {
 
 page-search > aside > div.distance {
     left: 75vw;
-    background-image: url("icon/distance.blue.png");
+    background-image: url("icon/distance.white.png");
 }
 
 page-search > aside > div.distance.on {

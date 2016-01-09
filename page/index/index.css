@@ -1,10 +1,14 @@
+page-index {
+    z-index: 6;
+}
+
 page-index > * {
     position: absolute;
 }
 
 page-index > header {
-    bottom: 40vh;
-    height: 40vh;
+    top: 0px;
+    height: 45vh;
     left: 0px;
     right: 0px;
     font-size: 2vh;
