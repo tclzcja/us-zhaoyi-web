@@ -362,3 +362,12 @@ page-doctor > main.comment {
     background-color: #BCF;
     z-index: 5;
 }
+
+page-doctor > main.comment > header {
+    position: absolute;
+    top: 0px;
+    height: 10vh;
+    left: 0px;
+    right: 0px;
+    background-image: url("icon/blue/comment.png");
+}
