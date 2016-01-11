@@ -11,6 +11,7 @@ page-doctor > main.portrait {
     background-size: cover;
     background-position: center;
     background-image: url("portrait/portrait.jpg");
+    z-index: 5;
 }
 
 page-doctor > main.name {
@@ -23,8 +24,9 @@ page-doctor > main.name {
     line-height: 10vh;
     padding-right: 3vh;
     text-align: right;
-    background-image: url("icon/name.png");
+    background-image: url("icon/black/name.png");
     background-color: rgba(255, 255, 255, 0.5);
+    z-index: 6;
 }
 
 page-doctor > main.star {
@@ -42,11 +44,11 @@ page-doctor > main.star > span {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    background-image: url("icon/star.orange.png");
+    background-image: url("icon/orange/star.png");
 }
 
 page-doctor > main.star > span.empty {
-    background-image: url("icon/star.orange.empty.png");
+    background-image: url("icon/orange/star.empty.png");
 }
 
 page-doctor > main.star:after {
@@ -76,7 +78,7 @@ page-doctor > main.items > header {
     line-height: 10vh;
     text-align: right;
     background-color: rgba(255, 255, 255, 0.1);
-    background-image: url("icon/stethoscope.png");
+    background-image: url("icon/white/stethoscope.png");
 }
 
 page-doctor > main.items > div {
@@ -102,7 +104,7 @@ page-doctor > main.insurances > header {
     color: white;
     line-height: 10vh;
     background-color: rgba(255, 255, 255, 0.1);
-    background-image: url("icon/insurance.png");
+    background-image: url("icon/white/insurance.png");
 }
 
 page-doctor > main.insurances > header:before {
@@ -124,49 +126,26 @@ page-doctor > main.schedule {
     left: 30vw;
     bottom: 0px;
     width: 30vw;
-    background-color: #CDF;
+    z-index: 1;
 }
 
 page-doctor > main.schedule > header {
-    text-align: right;
-    color: #69F;
-    padding-right: 3vh;
+    text-align: center;
     font-size: 3vh;
     line-height: 10vh;
-}
-
-page-doctor > main.schedule > header > * {
-    transition: background-color 0.5s;
-    cursor: pointer;
     position: absolute;
     top: 0px;
-    height: 10vh;
-    width: 10vh;
-    text-align: right;
-}
-
-page-doctor > main.schedule > header > header:nth-child(1) {
     left: 0px;
-    background-image: url("icon/calendar.png");
-}
-
-page-doctor > main.schedule > header > header:nth-child(2) {
-    left: 5vh;
-    background-image: url("icon/location.png");
-}
-
-page-doctor > main.schedule > header > div:hover {
-    background-color: #8BF;
-}
-
-page-doctor > main.schedule > header > div:nth-last-child(2) {
-    right: 10vh;
-    background-image: url("icon/prev.png");
-}
-
-page-doctor > main.schedule > header > div:nth-last-child(1) {
     right: 0px;
-    background-image: url("icon/next.png");
+    height: 10vh;
+    z-index: 5;
+    background-color: #FFF;
+    color: #333;
+}
+
+page-doctor > main.schedule > header > span {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 page-doctor > main.schedule > main {
@@ -176,6 +155,7 @@ page-doctor > main.schedule > main {
     right: 0px;
     bottom: 0px;
     overflow: hidden;
+    z-index: 3;
 }
 
 
@@ -202,8 +182,6 @@ page-doctor > main.schedule > main > section > header {
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 30vh;
-    background-color: rgba(255, 255, 255, 0.25);
 }
 
 page-doctor > main.schedule > main > section > header > table {
@@ -213,14 +191,14 @@ page-doctor > main.schedule > main > section > header > table {
 }
 
 page-doctor > main.schedule > main > section > header > table > thead > tr > td {
-    height: 10vh;
+    height: 3.75vw;
     background-color: #666;
     color: white;
     text-align: center;
 }
 
 page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(2n) {
-    background-color: #777;
+    background-color: #555;
 }
 
 page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(6) {
@@ -231,21 +209,148 @@ page-doctor > main.schedule > main > section > header > table > thead > tr > td:
     background-color: #F66;
 }
 
+page-doctor > main.schedule > main > section > header > table > tbody > tr > td {
+    color: white;
+    text-align: center;
+}
+
 page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(1) > td {
-    height: 10vh;
+    height: 3.75vw;
+    background-color: #555;
 }
 
 page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(1) > td:nth-child(2n) {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #666;
 }
 
 page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(2) > td {
-    height: 10vh;
-    background-color: rgba(255, 255, 255, 0.2);
+    height: 3.75vw;
+    background-color: #666;
 }
 
 page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(2) > td:nth-child(2n) {
-    background-color: transparent;
+    background-color: #555;
+}
+
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(1) > td.on {
+    background-color: #6C0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    background-image: url("icon/white/tick.png");
+}
+
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(1) > td:nth-child(2n).on {
+    background-color: #5B0;
+}
+
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(2) > td.on {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    background-color: #5B0;
+    background-image: url("icon/white/tick.png");
+}
+
+page-doctor > main.schedule > main > section > header > table > tbody > tr:nth-child(2) > td:nth-child(2n).on {
+    background-color: #6C0;
+}
+
+page-doctor > main.schedule > main > section > main {
+    position: absolute;
+    background-color: #444;
+    top: 11.25vw;
+    left: 0px;
+    right: 0px;
+    bottom: 35vh;
+    overflow: visible;
+    z-index: 10;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+page-doctor > main.schedule > main > section > main:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 0px;
+    right: 15.5%;
+    border-top: solid 1vw #666;
+    border-left: solid 1vw transparent;
+    border-right: solid 1vw transparent;
+}
+
+page-doctor > main.schedule > main > section > main:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 100%;
+    right: 15.5%;
+    border-top: solid 1vw #444;
+    border-left: solid 1vw transparent;
+    border-right: solid 1vw transparent;
+}
+
+page-doctor > main.schedule > main > section > main > div {
+    font-size: 3vh;
+    line-height: 100%;
+    margin-left: 2.5vh;
+    margin-right: 2.5vh;
+    color: white;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+page-doctor > main.schedule > main > section > main > div:last-child {
+    margin-top: 2vh;
+}
+
+page-doctor > main.schedule > main > section > footer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 35vh;
+}
+
+page-doctor > main.schedule > main > section > footer > iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+page-doctor > main.schedule > aside {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    top: 0px;
+    z-index: 15;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+page-doctor > main.schedule > aside:nth-of-type(1) {
+    left: 0px;
+    background-image: url("icon/black/prev.png");
+}
+
+page-doctor > main.schedule > aside:nth-of-type(2) {
+    right: 0px;
+    background-image: url("icon/black/next.png");
+}
+
+page-doctor > main.schedule > aside:hover {
+    background-color: #FC3;
 }
 
 page-doctor > main.comment {
@@ -255,5 +360,5 @@ page-doctor > main.comment {
     bottom: 0px;
     right: 0px;
     background-color: #BCF;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    z-index: 5;
 }

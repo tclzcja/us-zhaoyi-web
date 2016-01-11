@@ -82,6 +82,7 @@ body > * {
     transition: opacity 1s, transform 0.5s;
     transform: translateY(-100vh);
     opacity: 0;
+    z-index: 4;
 }
 
 body > *:target {
@@ -109,4 +110,11 @@ body > *:target {
     background-position: center;
     background-image: inherit;
     z-index: 999;
+}
+
+
+/* ============================================================================================================= */
+
+.shadow {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
