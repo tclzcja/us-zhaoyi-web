@@ -18,16 +18,40 @@ page-index > header {
     text-align: left;
 }
 
-page-index > header > input {
+page-index > header > main {
     position: absolute;
     top: 15vh;
     left: 10vw;
     width: 80vw;
     height: 10vh;
     background-color: white;
-    padding-left: 4vh;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    background-image: url("icon/black/search.png");
     color: #333;
+    overflow: hidden;
+}
+
+page-index > header > main > footer {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 10vh;
+    background-color: #69F;
+    right: -10vh;
+    transition: right 0.5s, background-color 0.5s;
+    background-repeat: no-repeat;
+    background-size: 5vh 5vh;
+    background-position: center;
+    background-image: url("icon/white/search.png");
+    cursor: pointer;
+    z-index: 1000;
+}
+
+page-index > header > main > footer.on {
+    right: 0px;
+}
+
+page-index > header > main > footer:hover {
+    background-color: #36C;
 }
 
 page-index > header > aside {
@@ -62,29 +86,6 @@ page-index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n+1) {
 
 page-index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
     background-color: #BBB;
-}
-
-page-index > header > footer {
-    height: 10vh;
-    width: 0px;
-    background-color: #69F;
-    right: 10vw;
-    bottom: 15vh;
-    position: absolute;
-    transition: width 0.5s, background-color 0.5s;
-    background-repeat: no-repeat;
-    background-size: 5vh 5vh;
-    background-position: center;
-    background-image: url("icon/search.png");
-    cursor: pointer;
-}
-
-page-index > header > footer.on {
-    width: 10vh;
-}
-
-page-index > header > footer:hover {
-    background-color: #36C;
 }
 
 page-index > main {

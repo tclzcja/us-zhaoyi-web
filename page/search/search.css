@@ -20,10 +20,6 @@ page-search > aside > div:nth-child(2n) {
     background-color: #7AF;
 }
 
-page-search > aside > div > * {
-    padding-left: 10vh;
-}
-
 page-search > aside > div:hover {
     background-color: #9CF;
 }

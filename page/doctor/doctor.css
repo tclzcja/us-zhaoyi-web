@@ -29,40 +29,6 @@ page-doctor > main.name {
     z-index: 6;
 }
 
-page-doctor > main.star {
-    top: 40vh;
-    left: 0px;
-    height: 10vh;
-    width: 30vw;
-    padding-left: 3vh;
-}
-
-page-doctor > main.star > span {
-    display: inline-block;
-    height: 100%;
-    width: 4vh;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-    background-image: url("icon/orange/star.png");
-}
-
-page-doctor > main.star > span.empty {
-    background-image: url("icon/orange/star.empty.png");
-}
-
-page-doctor > main.star:after {
-    content: attr(data-star);
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    line-height: 10vh;
-    color: #F90;
-    font-size: 4vh;
-    padding-right: 3vh;
-}
-
 page-doctor > main.items {
     top: 50vh;
     bottom: 0px;
@@ -353,21 +319,81 @@ page-doctor > main.schedule > aside:hover {
     background-color: #FC3;
 }
 
+
+/* Comment */
+
 page-doctor > main.comment {
     position: absolute;
     top: 0px;
     left: 60vw;
     bottom: 0px;
     right: 0px;
-    background-color: #BCF;
     z-index: 5;
+    background-color: #7AF;
 }
 
 page-doctor > main.comment > header {
     position: absolute;
     top: 0px;
-    height: 10vh;
     left: 0px;
     right: 0px;
-    background-image: url("icon/blue/comment.png");
+    height: 10vh;
+    z-index: 15;
+}
+
+page-doctor > main.comment > header > header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding-left: 3vh;
+    line-height: 10vh;
+    color: #FFF;
+    font-size: 4vh;
+}
+
+page-doctor > main.comment > header > header > span {
+    opacity: 0.5;
+}
+
+page-doctor > main.comment > header > footer {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 3vh;
+}
+
+page-doctor > main.comment > header > footer > span {
+    display: inline-block;
+    height: 100%;
+    width: 4vh;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-image: url("icon/white/star.png");
+}
+
+page-doctor > main.comment > header > footer > span.empty {
+    background-image: url("icon/white/star.empty.png");
+}
+
+page-doctor > main.comment > main {
+    position: absolute;
+    top: 10vh;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+page-doctor > main.comment > main > div {
+    height: 5vh;
+    line-height: 5vh;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 3vh;
+    color: white;
+}
+
+page-doctor > main.comment > main > div:nth-child(2n+1) {
+    background-color: #69F;
 }

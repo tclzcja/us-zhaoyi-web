@@ -18,14 +18,14 @@
 
     function active(self) {
         self.innerHTML = document.querySelector("link[data-component='" + key + "']").import.querySelector("template").innerHTML;
-        self.querySelector(":scope > header > input").addEventListener("keyup", function () {
+        self.querySelector(":scope > header > main > input").addEventListener("keyup", function () {
             if (this.value !== "") {
-                self.querySelector(":scope > header > footer").classList.add("on");
+                self.querySelector(":scope > header > main > footer").classList.add("on");
             } else {
-                self.querySelector(":scope > header > footer").classList.remove("on");
+                self.querySelector(":scope > header > main > footer").classList.remove("on");
             }
         });
-        self.querySelector(":scope > header > footer").addEventListener("click", function () {
+        self.querySelector(":scope > header > main > footer").addEventListener("click", function () {
             location.hash = "#search";
         });
         portraitize(self);
