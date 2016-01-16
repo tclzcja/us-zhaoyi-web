@@ -31,21 +31,7 @@ component-header > header > a > span:last-child {
 }
 
 component-header > footer {
-    box-sizing: content-box;
-    top: 0px;
     right: 2vh;
-    width: 6vh;
-    height: 6vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-    background-image: url("./img/user.png");
-    background-color: #69F;
-    border-bottom: solid 2px #36F;
-}
-
-component-header > aside {
-    right: 8vh;
     top: 2vh;
     font-size: 2vh;
     line-height: 100%;
@@ -54,6 +40,10 @@ component-header > aside {
     text-align: right;
 }
 
-component-header > aside > a {
-    padding-right: 3vh;
+component-header > footer > a {
+    padding-left: 3vh;
+}
+
+component-header > footer > a:last-child {
+    color: #F90;
 }

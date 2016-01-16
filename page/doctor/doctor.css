@@ -167,11 +167,11 @@ page-doctor > main.schedule > main > section > header > table > thead > tr > td:
     background-color: #555;
 }
 
-page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(6) {
+page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(7) {
     background-color: #FC3;
 }
 
-page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(7) {
+page-doctor > main.schedule > main > section > header > table > thead > tr > td:nth-child(8) {
     background-color: #F66;
 }
 

@@ -1,0 +1,27 @@
+page-register {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+page-register > main {
+    height: 32vh;
+    width: 50vh;
+}
+
+page-register > main > * {
+    display: block;
+    height: 10vh;
+    margin-bottom: 1vh;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 10vh;
+    color: white;
+}
+
+page-register > main > footer {
+    background-color: #FC3;
+    color: #333;
+    margin-bottom: 0px;
+}
