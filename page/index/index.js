@@ -6,6 +6,9 @@
 
     const key = "page-index";
 
+    var Api = window.Api;
+    var Auth = window.Auth;
+
     function init() {
         var proto = Object.create(HTMLElement.prototype);
         proto.createdCallback = function () {
@@ -17,6 +20,11 @@
     }
 
     function active(self) {
+
+        if (!Auth.Test()) {
+            Api.Reset();
+        }
+
         self.innerHTML = document.querySelector("link[data-component='" + key + "']").import.querySelector("template").innerHTML;
         self.querySelector(":scope > header > main > input").addEventListener("keyup", function () {
             if (this.value !== "") {

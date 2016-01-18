@@ -96,10 +96,6 @@ page-search > main > table > tbody > tr > td {
     opacity: 1;
 }
 
-page-search > main > table > tbody > tr > td:active {
-    opacity: 0.9;
-}
-
 page-search > main > table > tbody > tr > td.button {
     background-color: #36C;
     background-repeat: no-repeat;

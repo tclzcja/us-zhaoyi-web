@@ -131,3 +131,25 @@ body > *:target {
 .shadow {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
+
+/* ========================================================================================= */
+
+.processing {
+    animation-name: processing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes processing {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
