@@ -1,0 +1,204 @@
+body > #search > aside {
+    position: absolute;
+    top: 0px;
+    height: 10vh;
+    left: 0px;
+    right: 0px;
+}
+
+body > #search > aside > div {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 25vw;
+    transition: background-color 0.5s, color 0.5s, background-image 0.5s;
+    color: white;
+    background-color: #69F;
+}
+
+body > #search > aside > div:nth-child(2n) {
+    background-color: #7AF;
+}
+
+body > #search > aside > div:hover {
+    background-color: #9CF;
+}
+
+body > #search > aside > div.on {
+    color: white;
+    background-color: #333;
+    border-top: solid 4px transparent;
+    border-bottom: solid 4px #F90;
+}
+
+body > #search > aside > div.keyword {
+    left: 0px;
+    background-image: url("../../img/icon/white/name.png");
+}
+
+body > #search > aside > div.star {
+    left: 25vw;
+    background-image: url("../../img/icon/white/star.png");
+}
+
+body > #search > aside > div.item {
+    left: 50vw;
+    background-image: url("../../img/icon/white/item.png");
+}
+
+body > #search > aside > div.distance {
+    left: 75vw;
+    background-image: url("../../img/icon/white/distance.png");
+}
+
+body > #search > main {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 75vh;
+    vertical-align: top;
+}
+
+body > #search > main > table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+body > #search > main > table > tbody > tr > td {
+    height: 25vh;
+    width: 12.5vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../img/transparent/transparent.png");
+    background-color: white;
+    transition: background-image 0.5s, opacity 0.1s;
+    position: relative;
+    opacity: 1;
+}
+
+body > #search > main > table > tbody > tr > td.button {
+    background-color: #36C;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+body > #search > main > table > tbody > tr > td.button:hover {
+    background-color: #69F;
+}
+
+body > #search > main > table > tbody > tr > td.button.prev {
+    background-image: url("../../img/icon/white/prev.png");
+}
+
+body > #search > main > table > tbody > tr > td.button.next {
+    background-image: url("../../img/icon/white/next.png");
+}
+
+body > #search > main > table > tbody > tr > td.button.off {
+    background-color: #EEE;
+}
+
+body > #search > main > table > tbody > tr > td.on {
+    cursor: pointer;
+}
+
+body > #search > main > table > tbody > tr > td > a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    transition: height 0.5s, background-color 0.5s;
+    overflow: hidden;
+}
+
+body > #search > main > table > tbody > tr > td:hover > a {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+body > #search > main > table > tbody > tr > td > a > header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    font-size: 2vh;
+    line-height: 4vh;
+    padding-left: 1vh;
+}
+
+body > #search > main > table > tbody > tr > td > a > aside {
+    position: absolute;
+    top: 4vh;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    padding-left: 1vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body > #search > main > table > tbody > tr > td > a > aside > span {
+    display: inline-block;
+    height: 4vh;
+    width: 2vh;
+    background-repeat: no-repeat;
+    background-size: 2vh;
+    background-position: center center;
+    background-image: url("../../img/icon/orange/star.png");
+}
+
+body > #search > main > table > tbody > tr > td > a > aside > span.empty {
+    background-image: url("../../img/icon/orange/star.empty.png");
+}
+
+body > #search > main > table > tbody > tr > td > a > aside:after {
+    content: attr(data-star);
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-right: 1vh;
+    color: #F90;
+    font-size: 2vh;
+    line-height: 4vh;
+}
+
+body > #search > main > table > tbody > tr > td > a > main {
+    position: absolute;
+    top: 8vh;
+    left: 0px;
+    right: 0px;
+    bottom: 3vh;
+}
+
+body > #search > main > table > tbody > tr > td > a > main > div {
+    color: #69F;
+    font-size: 2vh;
+    line-height: 100%;
+    margin-top: 1vh;
+    padding-left: 1vh;
+}
+
+body > #search > main > table > tbody > tr > td > a > footer {
+    position: absolute;
+    top: 21vh;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    line-height: 4vh;
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}

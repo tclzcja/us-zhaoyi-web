@@ -4,26 +4,362 @@
 <head>
     <title>北美找医网</title>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="lib/math.js"></script>
-    <script type="text/javascript" src="lib/auth.js"></script>
-    <script type="text/javascript" src="lib/api.js"></script>
-    <link type="text/css" rel="stylesheet" href="main.css" />
-    <link type="text/html" rel="import" href="component/header/header.html" data-component="component-header" />
-    <link type="text/html" rel="import" href="component/footer/footer.html" data-component="component-footer" />
-    <link type="text/html" rel="import" href="page/index/index.html" data-component="page-index" />
-    <link type="text/html" rel="import" href="page/search/search.html" data-component="page-search" />
-    <link type="text/html" rel="import" href="page/doctor/doctor.html" data-component="page-doctor" />
-    <link type="text/html" rel="import" href="page/register/register.html" data-component="page-register" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/header.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/footer.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/index.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/search.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/doctor.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/register.css" />
 </head>
 
 <body>
-    <page-index id="index"></page-index>
-    <page-search id="search"></page-search>
-    <page-doctor id="doctor"></page-doctor>
-    <page-register id="register"></page-register>
-    <component-header class="shadow"></component-header>
-    <component-footer>北美找医网 2015 Copyright</component-footer>
-    <script type="text/javascript" src="main.js"></script>
+    <main id="index">
+        <header>
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <aside></aside>
+            <main class="icon shadow">
+                <input type="search" placeholder="输入关键字查找医生、医院、检查项目……" />
+                <footer></footer>
+            </main>
+        </header>
+        <main class="doctor" data-title="位医生">1755</main>
+        <main class="hospital" data-title="间医院">214</main>
+        <main class="item" data-title="个医疗项目">175</main>
+        <main class="comment" data-title="条评论">50000+</main>
+        <main class="other" data-title="位用户正在使用">126</main>
+    </main>
+    <main id="search">
+        <main>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="button prev"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="button next"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <template>
+                <a href="#doctor">
+                    <header></header>
+                    <aside></aside>
+                    <main></main>
+                    <footer></footer>
+                </a>
+            </template>
+        </main>
+        <aside>
+            <div class="icon keyword">
+                <input type="text" placeholder="关键字" />
+            </div>
+            <div class="icon star">
+                <select>
+                    <option value="0">任意星级</option>
+                    <option value="2">至少2星</option>
+                    <option value="3">至少3星</option>
+                    <option value="4">至少4星</option>
+                </select>
+            </div>
+            <div class="icon item">
+                <select>
+                    <option value="">任意科目</option>
+                    <option value="dentist">牙医</option>
+                    <option value="chiropractic">脊椎矫正</option>
+                    <option value="ophthalmology">眼科</option>
+                </select>
+            </div>
+            <div class="icon distance">
+                <select>
+                    <option value="9999">任意距离</option>
+                    <option value="50">少于50英里</option>
+                    <option value="100">少于100英里</option>
+                    <option value="200">少于200英里</option>
+                </select>
+            </div>
+        </aside>
+    </main>
+    <main id="doctor">
+        <main class="portrait"></main>
+        <main class="name icon">George Noah</main>
+        <main class="items">
+            <header class="icon">检查项目</header>
+            <div>眼科</div>
+            <div>心胸外科</div>
+            <div>验光检查</div>
+        </main>
+        <main class="insurances">
+            <header class="icon">接受保险</header>
+            <div>Obamacare</div>
+            <div>Anthem</div>
+        </main>
+        <main class="schedule">
+            <header class="icon shadow">第<span>1</span>/<span>2</span>个日期和地点</header>
+            <aside class="icon"></aside>
+            <aside class="icon"></aside>
+            <main>
+                <section class="on">
+                    <header class="icon">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>周一</td>
+                                    <td>周二</td>
+                                    <td>周三</td>
+                                    <td>周四</td>
+                                    <td>周五</td>
+                                    <td>周六</td>
+                                    <td>周日</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>上午</td>
+                                    <td class="on"></td>
+                                    <td></td>
+                                    <td class="on"></td>
+                                    <td class="on"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>下午</td>
+                                    <td></td>
+                                    <td class="on"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </header>
+                    <main>
+                        <div>1900 Broadway</div>
+                        <div>New York</div>
+                        <div>NY 10023</div>
+                        <div>347-634-7159</div>
+                    </main>
+                    <footer>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12090.775276469147!2d-73.9722413!3d40.7467623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ec0d89ff784e14f!2sCenter+for+Musculoskeletal+Care!5e0!3m2!1sen!2sus!4v1452361549872" allowfullscreen></iframe>
+                    </footer>
+                </section>
+                <section>
+                    <header class="icon">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>周一</td>
+                                    <td>周二</td>
+                                    <td>周三</td>
+                                    <td>周四</td>
+                                    <td>周五</td>
+                                    <td>周六</td>
+                                    <td>周日</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>上午</td>
+                                    <td></td>
+                                    <td class="on"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>下午</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="on"></td>
+                                    <td class="on"></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </header>
+                    <main>
+                        <div>2 MetroTech Center</div>
+                        <div>Brooklyn</div>
+                        <div>NY 11201</div>
+                        <div>347-634-7188</div>
+                    </main>
+                    <footer>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48437.615556657234!2d-74.01078305364543!3d40.644193137233586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a4afe20f039%3A0xc6d305f925705ab3!2s2+MetroTech+Center%2C+Brooklyn%2C+NY+11201!5e0!3m2!1sen!2sus!4v1452526708785" allowfullscreen></iframe>
+                    </footer>
+                </section>
+            </main>
+        </main>
+        <main class="shadow comment scrollbar">
+            <header>
+                <header>4.7<span>/5.0</span></header>
+                <footer>
+                    <span class="empty"></span><span></span><span></span><span></span><span></span>
+                </footer>
+            </header>
+            <main>
+                <div class="">我很喜欢这位医生，我认为他的态度非常耐心！</div>
+                <div class="">他开的药很有效果，两天我就全好了。</div>
+                <div>前后六个疗程治好了我三年没治好的病，很棒！</div>
+                <div>开的药很棒！</div>
+                <div>感觉态度不太好，五分钟就打发我走了。</div>
+                <div>很难说他的治疗到底有没有效果，很长时间然后我自己好了。</div>
+            </main>
+        </main>
+    </main>
+    <main id="register">
+        <main>
+            <header class="icon email">
+                <input type="email" placeholder="您的邮箱" />
+            </header>
+            <header class="icon password">
+                <input type="password" placeholder="您的密码" />
+            </header>
+            <header class="icon password2">
+                <input type="password" placeholder="确认您的密码" />
+            </header>
+            <footer class="icon">注册成为用户</footer>
+        </main>
+    </main>
+    <header class="shadow">
+        <header>
+            <a href="#index">
+                <span>北美</span><span>找医网</span>
+            </a>
+        </header>
+        <footer>
+            <a href="#principle">条款</a><a href="#search">搜索</a><a href="#about">关于我们</a><a href="#register">注册</a><a href="#login">登陆</a>
+        </footer>
+    </header>
+    <footer>北美找医网 2015 Copyright</footer>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/lib/math.js"></script>
+    <script type="text/javascript" src="js/lib/auth.js"></script>
+    <script type="text/javascript" src="js/lib/api.js"></script>
+    <script type="text/javascript" src="js/page/index.js"></script>
+    <script type="text/javascript" src="js/page/search.js" async></script>
+    <script type="text/javascript" src="js/page/doctor.js" async></script>
+    <script type="text/javascript" src="js/page/register.js" async></script>
 </body>
 
 </html>

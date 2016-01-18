@@ -1,0 +1,62 @@
+body > #register {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > #register > main {
+    height: 40vh;
+    width: 50vh;
+}
+
+body > #register > main > * {
+    display: block;
+    height: 10vh;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 10vh;
+    color: white;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+body > #register > main > header:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body > #register > main > header:hover {
+    background-color: #222;
+}
+
+body > #register > main > header.email {
+    background-image: url("../../img/icon/white/email.png");
+}
+
+body > #register > main > header.password,
+body > #register > main > header.password2 {
+    background-image: url("../../img/icon/white/password.png");
+}
+
+body > #register > main > footer {
+    background-color: #FC3;
+    color: #333;
+    background-image: url("../../img/icon/black/go.png");
+    line-height: 10vh;
+}
+
+body > #register > main > footer:hover {
+    background-color: #F90;
+}
+
+body > #register > main > footer.correct {
+    background-color: #6C0;
+}
+
+body > #register > main > footer.wrong {
+    background-color: #F66;
+}
+
+body > #register > aside {
+    position: absolute;
+}

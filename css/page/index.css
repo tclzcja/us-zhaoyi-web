@@ -1,0 +1,137 @@
+body > #index {
+    z-index: 6;
+}
+
+body > #index > * {
+    position: absolute;
+}
+
+body > #index > header {
+    top: 0px;
+    bottom: 39.5vh;
+    left: 0px;
+    right: 0px;
+    font-size: 2vh;
+    background-color: #EEE;
+    color: white;
+    vertical-align: top;
+    text-align: left;
+}
+
+body > #index > header > main {
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    width: 80vw;
+    height: 10vh;
+    background-color: white;
+    background-image: url("../../img/icon/black/search.png");
+    color: #333;
+    overflow: hidden;
+}
+
+body > #index > header > main > footer {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 10vh;
+    background-color: #69F;
+    right: -10vh;
+    transition: right 0.5s, background-color 0.5s;
+    background-repeat: no-repeat;
+    background-size: 5vh 5vh;
+    background-position: center;
+    background-image: url("../../img/icon/white/search.png");
+    cursor: pointer;
+    z-index: 1000;
+}
+
+body > #index > header > main > footer.on {
+    right: 0px;
+}
+
+body > #index > header > main > footer:hover {
+    background-color: #36C;
+}
+
+body > #index > header > aside {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: linear-gradient(to bottom, white, transparent);
+}
+
+body > #index > header > table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    opacity: 0.25;
+}
+
+body > #index > header > table > tbody > tr > td {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body > #index > header > table > tbody > tr > td:nth-child(2n) {
+    background-color: #DDD;
+}
+
+body > #index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n+1) {
+    background-color: #CCC;
+}
+
+body > #index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
+    background-color: #BBB;
+}
+
+body > #index > main {
+    bottom: 0px;
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vh;
+    color: white;
+}
+
+body > #index > main:after {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 0px;
+    right: 0px;
+    font-size: 2vh;
+    line-height: 100%;
+    text-align: center;
+}
+
+body > #index > main.doctor {
+    left: 0px;
+    background-color: #FB3;
+}
+
+body > #index > main.hospital {
+    left: 20vw;
+    background-color: #F90;
+}
+
+body > #index > main.item {
+    left: 40vw;
+    background-color: #0CF;
+}
+
+body > #index > main.comment {
+    left: 60vw;
+    background-color: #0AE;
+}
+
+body > #index > main.other {
+    left: 80vw;
+    background-color: #F55;
+}
