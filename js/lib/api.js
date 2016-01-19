@@ -4,7 +4,7 @@
 
     'use strict';
 
-    var Auth = window.Auth;
+    const Auth = window.Auth;
 
     const Session_Name_Address_Api = "api address api";
     const Session_Name_Address_Storage = "api address storage";
@@ -27,7 +27,7 @@
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     callback_correct(xhr.response);
-                } else {
+                } else if (xhr.status !== 200) {
                     callback_wrong(xhr.statusText);
                 }
             };

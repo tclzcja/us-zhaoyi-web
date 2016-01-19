@@ -5,7 +5,9 @@
     'use strict';
 
     const self = document.querySelector("body > #register");
-    var Api = window.Api;
+
+    const Api = window.Api;
+    const Auth = window.Auth;
 
     function init() {
         self.querySelector(":scope > main > footer").addEventListener("click", function () {
@@ -16,12 +18,16 @@
                 password: self.querySelector(":scope > main > header.password > input").value
             };
             Api.Core("user", "insert", data, function () {
-                footer.classList.remove("processing");
                 footer.classList.remove("wrong");
                 footer.classList.add("correct");
                 footer.innerHTML = "注册成功，登陆中";
                 setTimeout(function () {
-                    location.hash = "profile";
+                    Api.Core("user", "login", data, function (info) {
+                        Auth.Login(info.access_token, info.user);
+                        location.hash = "#profile";
+                    }, function () {
+                        console.error("登陆时出错");
+                    });
                 }, 1000);
             }, function (text) {
                 footer.classList.remove("processing");

@@ -6,8 +6,8 @@
 
     const self = document.querySelector("body > #index");
 
-    var Api = window.Api;
-    var Auth = window.Auth;
+    const Api = window.Api;
+    const Auth = window.Auth;
 
     function init() {
 

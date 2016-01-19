@@ -44,6 +44,19 @@ body > header > footer > a {
     padding-left: 3vh;
 }
 
-body > header > footer > a:last-child {
+body > header > footer > a[href="#login"] {
     color: #F90;
+    display: none;
+}
+
+body > header > footer > a[href="#login"].on {
+    display: inline-block;
+}
+
+body > header > footer > a[href="#profile"] {
+    display: none;
+}
+
+body > header > footer > a[href="#profile"].on {
+    display: inline-block;
 }

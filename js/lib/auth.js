@@ -25,20 +25,14 @@
             sessionStorage.removeItem(Session_Name_Current_User);
             sessionStorage.removeItem(Session_Name_Current_Universe);
         },
-        //Put in Token and get user info
-        Auth: function (token, info) {
+        //Put in Token and User info
+        Login: function (token, info) {
             sessionStorage.setItem(Session_Name_Pass, "1");
             sessionStorage.setItem(Session_Name_Current_Token, "Bearer " + token);
             sessionStorage.setItem(Session_Name_Current_User, JSON.stringify(info));
-        },
-        //Reload user info
-        Reload: function (callback) {
-            /*
-            Api.Core("management", "user", "single/email", { Email: _body.Current.User().Email }, function (data) {
-                sessionStorage.setItem(Session_Name_Current_User, JSON.stringify(data));
-                _body.Jump(_body.Current.Universe().ID);
-                callback();
-            });*/
+            document.querySelector("body > header").setAttribute("data-user", JSON.stringify(info));
+            var Login = new Event("login");
+            document.querySelector("body > header").dispatchEvent(Login);
         },
         Current: {
             //Get the current Header
@@ -48,15 +42,7 @@
             //Get the current User
             User: function () {
                 return JSON.parse(sessionStorage.getItem(Session_Name_Current_User));
-            },
-            //Get the current Universe
-            Universe: function () {
-                return JSON.parse(sessionStorage.getItem(Session_Name_Current_Universe));
             }
-        },
-        //Jump to universe
-        Jump: function (universe) {
-            sessionStorage.setItem(Session_Name_Current_Universe, JSON.stringify(universe));
         }
     };
 

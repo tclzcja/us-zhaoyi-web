@@ -11,6 +11,8 @@
     <link type="text/css" rel="stylesheet" href="css/page/search.css" />
     <link type="text/css" rel="stylesheet" href="css/page/doctor.css" />
     <link type="text/css" rel="stylesheet" href="css/page/register.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/login.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/profile.css" />
 </head>
 
 <body>
@@ -108,7 +110,7 @@
             <aside></aside>
             <main class="icon shadow">
                 <input type="search" placeholder="输入关键字查找医生、医院、检查项目……" />
-                <footer class="shadow"></footer>
+                <footer class="icon"></footer>
             </main>
         </header>
         <main class="doctor" data-title="位医生">1755</main>
@@ -342,6 +344,22 @@
             <footer class="icon">注册成为用户</footer>
         </main>
     </main>
+    <main id="login">
+        <main>
+            <header class="icon email">
+                <input type="email" placeholder="您的邮箱" />
+            </header>
+            <header class="icon password">
+                <input type="password" placeholder="您的密码" />
+            </header>
+            <footer class="icon">登陆</footer>
+        </main>
+    </main>
+    <main id="profile">
+        <main class="info">
+            <main class="icon email"></main>
+        </main>
+    </main>
     <!-- Header & Footer -->
     <header class="shadow">
         <header>
@@ -350,19 +368,21 @@
             </a>
         </header>
         <footer>
-            <a href="#principle">条款</a><a href="#search">搜索</a><a href="#about">关于我们</a><a href="#register">注册</a><a href="#login">登陆</a>
+            <a href="#principle">条款</a><a href="#search">搜索</a><a href="#about">关于我们</a><a href="#register">注册</a><a href="#login" class="on">登陆</a><a href="#profile">fdsa</a>
         </footer>
     </header>
     <footer>北美找医网 2015 Copyright</footer>
     <!-- -->
-    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/lib/math.js"></script>
     <script type="text/javascript" src="js/lib/auth.js"></script>
     <script type="text/javascript" src="js/lib/api.js"></script>
+    <script type="text/javascript" src="js/component/header.js"></script>
     <script type="text/javascript" src="js/page/index.js"></script>
     <script type="text/javascript" src="js/page/search.js" async></script>
     <script type="text/javascript" src="js/page/doctor.js" async></script>
     <script type="text/javascript" src="js/page/register.js" async></script>
+    <script type="text/javascript" src="js/page/login.js" async></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

@@ -38,9 +38,6 @@ body > #index > header > main > footer {
     background-color: #69F;
     right: -10vh;
     transition: right 0.5s, background-color 0.5s;
-    background-repeat: no-repeat;
-    background-size: 5vh 5vh;
-    background-position: center;
     background-image: url("../../img/icon/white/search.png");
     cursor: pointer;
     z-index: 1000;
