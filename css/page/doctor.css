@@ -1,12 +1,16 @@
+body > #doctor {
+    background-color: #69F;
+}
+
 body > #doctor > * {
     position: absolute;
 }
 
 body > #doctor > main.portrait {
-    top: 0px;
-    left: 0px;
-    height: 50vh;
-    width: 30vw;
+    top: 5vh;
+    left: 5vh;
+    height: 40vh;
+    width: 25vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -15,10 +19,10 @@ body > #doctor > main.portrait {
 }
 
 body > #doctor > main.name {
-    top: 0px;
-    left: 0px;
+    top: 35vh;
+    left: 5vh;
     height: 10vh;
-    width: 30vw;
+    width: 25vw;
     color: #333;
     font-size: 4vh;
     line-height: 10vh;
@@ -30,11 +34,11 @@ body > #doctor > main.name {
 }
 
 body > #doctor > main.items {
-    top: 50vh;
-    bottom: 0px;
-    left: 0px;
-    width: 15vw;
-    background-color: #69F;
+    top: 45vh;
+    bottom: 5vh;
+    left: 5vh;
+    width: 12.5vw;
+    background-color: #F90;
 }
 
 body > #doctor > main.items > header {
@@ -57,10 +61,10 @@ body > #doctor > main.items > div {
 }
 
 body > #doctor > main.insurances {
-    top: 50vh;
-    bottom: 0px;
-    left: 15vw;
-    width: 15vw;
+    top: 45vh;
+    bottom: 5vh;
+    left: calc(5vh + 12.5vw);
+    width: 12.5vw;
     background-color: #9C0;
 }
 
@@ -88,9 +92,9 @@ body > #doctor > main.insurances > div {
 
 body > #doctor > main.schedule {
     position: absolute;
-    top: 0px;
-    left: 30vw;
-    bottom: 0px;
+    top: 5vh;
+    left: 34vw;
+    bottom: 5vh;
     width: 30vw;
     z-index: 1;
 }
@@ -324,10 +328,10 @@ body > #doctor > main.schedule > aside:hover {
 
 body > #doctor > main.comment {
     position: absolute;
-    top: 0px;
-    left: 60vw;
-    bottom: 0px;
-    right: 0px;
+    top: 5vh;
+    left: 66vw;
+    bottom: 5vh;
+    right: 5vh;
     z-index: 5;
     background-color: #7AF;
 }

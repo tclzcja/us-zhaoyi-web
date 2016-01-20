@@ -1,3 +1,25 @@
 body > #profile {
-    background-color: #CCC;
+    background-color: #69F;
+}
+
+body > #profile > * {
+    position: absolute;
+}
+
+body > #profile > main.info {
+    top: 4vh;
+    left: 4vh;
+    width: 30vw;
+    bottom: 4vh;
+    background-color: white;
+}
+
+body > #profile > main.info > * {
+    display: block;
+    height: 10vh;
+    width: 100%;
+}
+
+body > #profile > main.info > *:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.1);
 }
