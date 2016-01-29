@@ -1,27 +1,27 @@
+body > #search {}
+
 body > #search > aside {
     position: absolute;
-    top: 0px;
-    height: 10vh;
-    left: 0px;
-    right: 0px;
+    top: 10vh;
+    right: 5vh;
+    height: 40vh;
+    width: 20vw;
 }
 
 body > #search > aside > div {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 25vw;
+    height: 10vh;
+    position: relative;
     transition: background-color 0.5s, color 0.5s, background-image 0.5s;
-    color: white;
-    background-color: #69F;
+    color: #333;
+    background-color: #FFF;
 }
 
 body > #search > aside > div:nth-child(2n) {
-    background-color: #7AF;
+    background-color: #EEE;
 }
 
 body > #search > aside > div:hover {
-    background-color: #9CF;
+    background-color: #CCC;
 }
 
 body > #search > aside > div.on {
@@ -32,31 +32,27 @@ body > #search > aside > div.on {
 }
 
 body > #search > aside > div.keyword {
-    left: 0px;
-    background-image: url("../../img/icon/white/name.png");
+    background-image: url("../../img/icon/black/name.png");
 }
 
 body > #search > aside > div.star {
-    left: 25vw;
-    background-image: url("../../img/icon/white/star.png");
+    background-image: url("../../img/icon/black/star.png");
 }
 
 body > #search > aside > div.item {
-    left: 50vw;
-    background-image: url("../../img/icon/white/item.png");
+    background-image: url("../../img/icon/black/item.png");
 }
 
 body > #search > aside > div.distance {
-    left: 75vw;
-    background-image: url("../../img/icon/white/distance.png");
+    background-image: url("../../img/icon/black/distance.png");
 }
 
 body > #search > main {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 75vh;
+    top: 10vh;
+    left: 5vh;
+    bottom: 5vh;
+    width: calc(100vw - 20vw - 15vh);
     vertical-align: top;
 }
 

@@ -1,13 +1,11 @@
-body > #doctor {
-    background-color: #69F;
-}
+body > #doctor {}
 
 body > #doctor > * {
     position: absolute;
 }
 
 body > #doctor > main.portrait {
-    top: 5vh;
+    top: 10vh;
     left: 5vh;
     height: 40vh;
     width: 25vw;
@@ -19,7 +17,7 @@ body > #doctor > main.portrait {
 }
 
 body > #doctor > main.name {
-    top: 35vh;
+    top: 10vh;
     left: 5vh;
     height: 10vh;
     width: 25vw;
@@ -34,7 +32,7 @@ body > #doctor > main.name {
 }
 
 body > #doctor > main.items {
-    top: 45vh;
+    top: 55vh;
     bottom: 5vh;
     left: 5vh;
     width: 12.5vw;
@@ -61,7 +59,7 @@ body > #doctor > main.items > div {
 }
 
 body > #doctor > main.insurances {
-    top: 45vh;
+    top: 55vh;
     bottom: 5vh;
     left: calc(5vh + 12.5vw);
     width: 12.5vw;
@@ -92,7 +90,7 @@ body > #doctor > main.insurances > div {
 
 body > #doctor > main.schedule {
     position: absolute;
-    top: 5vh;
+    top: 10vh;
     left: 34vw;
     bottom: 5vh;
     width: 30vw;
@@ -328,7 +326,7 @@ body > #doctor > main.schedule > aside:hover {
 
 body > #doctor > main.comment {
     position: absolute;
-    top: 5vh;
+    top: 10vh;
     left: 66vw;
     bottom: 5vh;
     right: 5vh;

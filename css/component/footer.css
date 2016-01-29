@@ -4,8 +4,9 @@ body > footer {
     opacity: 1;
     height: 5vh;
     line-height: 5vh;
-    color: white;
     bottom: 0px;
     top: auto;
     text-align: center;
+    background-color: #333;
+    color: white;
 }

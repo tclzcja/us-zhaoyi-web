@@ -84,16 +84,16 @@ body > * {
     position: fixed;
     left: 0px;
     right: 0px;
-    top: 10vh;
+    top: 0px;
     bottom: 0px;
     transition: opacity 1s, transform 0.5s;
-    transform: translateY(-100vh);
+    transform: translateX(-100vw);
     opacity: 0;
     z-index: 4;
 }
 
 body > *:target {
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
 }
 

@@ -1,14 +1,12 @@
-body > #index {
-    z-index: 6;
-}
+body > #index {}
 
 body > #index > * {
     position: absolute;
 }
 
 body > #index > header {
-    top: 0px;
-    bottom: 39.5vh;
+    top: 10vh;
+    bottom: calc(20vw + 5vh);
     left: 0px;
     right: 0px;
     font-size: 2vh;
@@ -86,8 +84,8 @@ body > #index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
 }
 
 body > #index > main {
-    bottom: 0px;
-    height: 40vh;
+    bottom: 5vh;
+    height: 20vw;
     width: 20vw;
     display: flex;
     justify-content: center;
