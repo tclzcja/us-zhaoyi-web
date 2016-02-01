@@ -11,7 +11,6 @@
 
     window.Api = {
         Reset: function () {
-            sessionStorage.clear();
             //sessionStorage.setItem(Session_Name_Address_Api, "http://taleland.mod.bz");
             sessionStorage.setItem(Session_Name_Address_Api, "http://localhost:1337");
         },

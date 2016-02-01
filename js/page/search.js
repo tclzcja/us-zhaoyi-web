@@ -13,7 +13,7 @@
     var current_latitude = 0;
     var current_longitude = 0;
     var current_data_last = false;
-    var filter_keyword = "";
+    var filter_name = "";
     var filter_star = 0;
     var filter_item = "";
     var filter_distance = 9999;
@@ -44,7 +44,7 @@
             } else {
                 this.parentNode.classList.remove("on");
             }
-            filter_keyword = this.value;
+            filter_name = this.value;
             render();
         });
         self.querySelector(":scope > table > thead > tr > td.star > select").addEventListener("change", function () {
@@ -95,7 +95,7 @@
 
     function validate(data_piece) {
         var flag = true;
-        flag = flag && data_piece.name.indexOf(filter_keyword) > -1;
+        flag = flag && data_piece.name.indexOf(filter_name) > -1;
         flag = flag && data_piece.star > filter_star;
         flag = flag && data_piece.items.indexOf(filter_item) > -1;
         if (!data_piece.distance) {
@@ -106,21 +106,26 @@
     }
 
     function render() {
-        self.querySelector(":scope > table > tbody").innerHTML = "";
-        var pointer_data = 0;
 
-        for (var i = 0; i < 10; i++) {
-            self.querySelector(":scope > table > tbody").innerHTML += self.querySelector(":scope > template").innerHTML;
-            var tr = self.querySelector(":scope > table > tbody > tr:last-child");
-            if (pointer_data + current_page * 10 < dummy_data.length) {
-                var entity = dummy_data[pointer_data + current_page * 10];
-                if (validate(entity)) {
-                    tr.querySelector(":scope > td:nth-child(1) > a").innerHTML = entity.name;
-                    tr.querySelector(":scope > td:nth-child(2) > a").innerHTML = entity.star;
-                    pointer_data++;
-                }
-            }
+        var al = self.querySelectorAll(":scope > table > tbody > tr > td > a");
+        for (var i = 0; i < al.length; i++) {
+            al[i].innerHTML = "";
         }
+
+        var pointer_data = 0;
+        var pointer_tr = 0;
+
+        while (pointer_tr < 10 && pointer_data + current_page * 10 < dummy_data.length) {
+            var entity = dummy_data[pointer_data + current_page * 10];
+            if (validate(entity)) {
+                var tr = self.querySelector(":scope > table > tbody > tr:nth-child(" + (pointer_tr + 1) + ")");
+                tr.querySelector(":scope > td:nth-child(1) > a").innerHTML = entity.name;
+                tr.querySelector(":scope > td:nth-child(2) > a").innerHTML = entity.star;
+                pointer_tr++;
+            }
+            pointer_data++;
+        }
+
         current_data_last = pointer_data + current_page * 10 >= dummy_data.length;
         if (current_page === 0) {
             self.querySelector(":scope > aside.prev").classList.add("off");

@@ -1,12 +1,10 @@
-body > #register {
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../img/image/register.jpg");
+body > #register {display: flex;
+justify-content: center;
+align-items: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-image: url("../../img/image/register.jpg");
 }
 
 body > #register > main {

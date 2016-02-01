@@ -102,6 +102,7 @@ body > main:target {
 
 .icon {
     background-size: 0px 0px;
+    line-height: 10vh;
 }
 
 .icon > input,

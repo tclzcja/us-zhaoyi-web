@@ -8,9 +8,9 @@
     const Auth = window.Auth;
 
     Api.Reset();
-    if (!Auth.Test()) {
-        Auth.Reset();
-    }
+    Auth.Test(function () {
+        document.querySelector("body > header").dispatchEvent(new Event("login"));
+    }, Auth.Reset);
 
     if (location.hash === "") {
         location.hash = "#index";

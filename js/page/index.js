@@ -11,10 +11,6 @@
 
     function init() {
 
-        if (!Auth.Test()) {
-            Api.Reset();
-        }
-
         self.querySelector(":scope > header > main > input").addEventListener("keyup", function () {
             if (this.value !== "") {
                 self.querySelector(":scope > header > main > footer").classList.add("on");

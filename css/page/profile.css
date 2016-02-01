@@ -1,25 +1,108 @@
 body > #profile {
-    background-color: #69F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../img/image/0.jpg");
+    perspective: 3000px;
+    perspective-origin: center center;
 }
 
-body > #profile > * {
-    position: absolute;
+body > #profile > main {
+    width: 30vw;
+    height: 60vh;
+    font-size: 2vh;
+    background-color: white;
+    position: relative;
+    transition: transform 0.2s;
+    transform-origin: center center;
 }
 
 body > #profile > main.info {
-    top: 4vh;
-    left: 4vh;
-    width: 30vw;
-    bottom: 4vh;
-    background-color: white;
+    transform: rotateY(20deg);
+}
+
+body > #profile > main.info:hover {
+    transform: rotateY(0deg);
 }
 
 body > #profile > main.info > * {
     display: block;
     height: 10vh;
     width: 100%;
+    position: relative;
 }
 
-body > #profile > main.info > *:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.1);
+body > #profile > main.info > main.email {
+    padding-left: 10vh;
+    color: black;
+    background-image: url("../../img/icon/black/email.png");
+    background-color: #EEE;
+}
+
+body > #profile > main.info > main.name {
+    color: black;
+    background-image: url("../../img/icon/black/name.png");
+    background-color: white;
+}
+
+body > #profile > main.insurance {
+    transform: scale(0.96);
+}
+
+body > #profile > main.insurance:hover {
+    transform: scale(1);
+}
+
+body > #profile > main.insurance > main {
+    position: relative;
+    height: 10vh;
+}
+
+body > #profile > main.insurance > main.insurance {
+    background-color: white;
+    background-image: url("../../img/icon/black/insurance.png");
+}
+
+body > #profile > main.insurance > main.sub {
+    background-color: #EEE;
+    background-image: url("../../img/icon/black/insurance.png");
+}
+
+body > #profile > main.operation {
+    transform: rotateY(-20deg);
+}
+
+body > #profile > main.operation:hover {
+    transform: rotateY(0deg);
+}
+
+body > #profile > footer {
+    height: 10vh;
+    width: 20vw;
+    margin: 2.5vh;
+    text-align: center;
+    line-height: 10vh;
+    color: white;
+    cursor: pointer;
+    transform-origin: center center;
+    transition: transform 0.2s;
+}
+
+body > #profile > footer.update {
+    background-color: #F90;
+    transform: rotateY(20deg) rotateX(10deg);
+}
+
+body > #profile > footer.logout {
+    background-color: #F33;
+    transform: rotateY(-20deg) rotateX(10deg);
+}
+
+body > #profile > footer:hover {
+    transform: none;
 }
