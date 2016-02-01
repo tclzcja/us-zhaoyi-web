@@ -1,200 +1,105 @@
-body > #search {}
-
-body > #search > aside {
-    position: absolute;
-    top: 10vh;
-    right: 5vh;
-    height: 40vh;
-    width: 20vw;
-}
-
-body > #search > aside > div {
-    height: 10vh;
-    position: relative;
-    transition: background-color 0.5s, color 0.5s, background-image 0.5s;
-    color: #333;
-    background-color: #FFF;
-}
-
-body > #search > aside > div:nth-child(2n) {
-    background-color: #EEE;
-}
-
-body > #search > aside > div:hover {
-    background-color: #CCC;
-}
-
-body > #search > aside > div.on {
-    color: white;
-    background-color: #333;
-    border-top: solid 4px transparent;
-    border-bottom: solid 4px #F90;
-}
-
-body > #search > aside > div.keyword {
-    background-image: url("../../img/icon/black/name.png");
-}
-
-body > #search > aside > div.star {
-    background-image: url("../../img/icon/black/star.png");
-}
-
-body > #search > aside > div.item {
-    background-image: url("../../img/icon/black/item.png");
-}
-
-body > #search > aside > div.distance {
-    background-image: url("../../img/icon/black/distance.png");
-}
-
-body > #search > main {
-    position: absolute;
-    top: 10vh;
-    left: 5vh;
-    bottom: 5vh;
-    width: calc(100vw - 20vw - 15vh);
-    vertical-align: top;
-}
-
-body > #search > main > table {
-    height: 100%;
-    width: 100%;
-    border-collapse: collapse;
-    vertical-align: top;
-}
-
-body > #search > main > table > tbody > tr > td {
-    height: 25vh;
-    width: 12.5vw;
+body > #search {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("../../img/transparent/transparent.png");
-    background-color: white;
-    transition: background-image 0.5s, opacity 0.1s;
+    background-image: url("../../img/image/search.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > #search > table {
+    height: auto;
+    width: 90vw;
+    border-collapse: collapse;
+}
+
+body > #search > table > thead > tr > td {
+    background-color: #555;
+    color: white;
+    height: 10vh;
+    font-size: 2vh;
     position: relative;
+}
+
+body > #search > table > thead > tr > td:nth-child(2n) {
+    background-color: #666;
+}
+
+body > #search > table > thead > tr > td.name {
+    background-image: url("../../img/icon/white/name.png");
+}
+
+body > #search > table > thead > tr > td.star {
+    background-image: url("../../img/icon/white/star.png");
+    width: 15vw;
+}
+
+body > #search > table > thead > tr > td.item {
+    background-image: url("../../img/icon/white/item.png");
+    width: 15vw;
+}
+
+body > #search > table > thead > tr > td.insurance {
+    background-image: url("../../img/icon/white/insurance.png");
+    width: 15vw;
+}
+
+body > #search > table > thead > tr > td.distance {
+    background-image: url("../../img/icon/white/distance.png");
+    width: 15vw;
+}
+
+body > #search > table > thead > tr > td.compare {
+    width: 10vh;
+    text-align: center;
+}
+
+body > #search > table > tbody > tr > td {
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-left: 2vh;
+    font-size: 2vh;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    line-height: 5vh;
+}
+
+body > #search > table > tbody > tr:nth-child(2n) > td {
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body > #search > table > tbody > tr > td > a {
+    width: 100%;
+}
+
+body > #search > table > tbody > tr:hover > td {
+    background-color: #666;
+    color: white;
+}
+
+body > #search > aside {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    top: 50%;
+    margin-top: -5vh;
+    cursor: pointer;
     opacity: 1;
+    transition: opacity 0.5s;
 }
 
-body > #search > main > table > tbody > tr > td.button {
-    background-color: #36C;
-    background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: center;
-    cursor: pointer;
-    transition: background-color 0.5s;
+body > #search > aside.off {
+    opacity: 0.25;
 }
 
-body > #search > main > table > tbody > tr > td.button:hover {
-    background-color: #69F;
-}
-
-body > #search > main > table > tbody > tr > td.button.prev {
-    background-image: url("../../img/icon/white/prev.png");
-}
-
-body > #search > main > table > tbody > tr > td.button.next {
-    background-image: url("../../img/icon/white/next.png");
-}
-
-body > #search > main > table > tbody > tr > td.button.off {
-    background-color: #EEE;
-}
-
-body > #search > main > table > tbody > tr > td.on {
-    cursor: pointer;
-}
-
-body > #search > main > table > tbody > tr > td > a {
-    position: absolute;
-    top: 0px;
+body > #search > aside.prev {
     left: 0px;
+    background-image: url("../../img/icon/black/prev.png");
+}
+
+body > #search > aside.next {
     right: 0px;
-    height: 4vh;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: white;
-    transition: height 0.5s, background-color 0.5s;
-    overflow: hidden;
-}
-
-body > #search > main > table > tbody > tr > td:hover > a {
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-body > #search > main > table > tbody > tr > td > a > header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 4vh;
-    font-size: 2vh;
-    line-height: 4vh;
-    padding-left: 1vh;
-}
-
-body > #search > main > table > tbody > tr > td > a > aside {
-    position: absolute;
-    top: 4vh;
-    left: 0px;
-    right: 0px;
-    height: 4vh;
-    padding-left: 1vh;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-body > #search > main > table > tbody > tr > td > a > aside > span {
-    display: inline-block;
-    height: 4vh;
-    width: 2vh;
-    background-repeat: no-repeat;
-    background-size: 2vh;
-    background-position: center center;
-    background-image: url("../../img/icon/orange/star.png");
-}
-
-body > #search > main > table > tbody > tr > td > a > aside > span.empty {
-    background-image: url("../../img/icon/orange/star.empty.png");
-}
-
-body > #search > main > table > tbody > tr > td > a > aside:after {
-    content: attr(data-star);
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    padding-right: 1vh;
-    color: #F90;
-    font-size: 2vh;
-    line-height: 4vh;
-}
-
-body > #search > main > table > tbody > tr > td > a > main {
-    position: absolute;
-    top: 8vh;
-    left: 0px;
-    right: 0px;
-    bottom: 3vh;
-}
-
-body > #search > main > table > tbody > tr > td > a > main > div {
-    color: #69F;
-    font-size: 2vh;
-    line-height: 100%;
-    margin-top: 1vh;
-    padding-left: 1vh;
-}
-
-body > #search > main > table > tbody > tr > td > a > footer {
-    position: absolute;
-    top: 21vh;
-    left: 0px;
-    right: 0px;
-    height: 4vh;
-    line-height: 4vh;
-    padding-left: 1vh;
-    font-size: 1.5vh;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-image: url("../../img/icon/black/next.png");
 }

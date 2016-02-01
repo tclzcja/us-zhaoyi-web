@@ -6,6 +6,8 @@
 
     const self = document.querySelector("body > #search");
 
+    const Template = window.Template;
+
     var dummy_data;
     var current_page = 0;
     var current_latitude = 0;
@@ -36,7 +38,7 @@
     }
 
     function init() {
-        self.querySelector(":scope > aside > div.keyword > input").addEventListener("keyup", function () {
+        self.querySelector(":scope > table > thead > tr > td.name > input").addEventListener("keyup", function () {
             if (this.value !== "") {
                 this.parentNode.classList.add("on");
             } else {
@@ -45,7 +47,7 @@
             filter_keyword = this.value;
             render();
         });
-        self.querySelector(":scope > aside > div.star > select").addEventListener("change", function () {
+        self.querySelector(":scope > table > thead > tr > td.star > select").addEventListener("change", function () {
             if (this.value !== "0") {
                 this.parentNode.classList.add("on");
             } else {
@@ -54,7 +56,7 @@
             filter_star = parseInt(this.value, 10);
             render();
         });
-        self.querySelector(":scope > aside > div.item > select").addEventListener("change", function () {
+        self.querySelector(":scope > table > thead > tr > td.item > select").addEventListener("change", function () {
             if (this.value !== "") {
                 this.parentNode.classList.add("on");
             } else {
@@ -63,7 +65,7 @@
             filter_item = this.value;
             render();
         });
-        self.querySelector(":scope > aside > div.distance > select").addEventListener("change", function () {
+        self.querySelector(":scope > table > thead > tr > td.distance > select").addEventListener("change", function () {
             if (this.value !== "9999") {
                 this.parentNode.classList.add("on");
             } else {
@@ -72,13 +74,13 @@
             filter_distance = parseInt(this.value, 10);
             render();
         });
-        self.querySelector(":scope > main > table > tbody > tr > td.button.prev").addEventListener("click", function () {
+        self.querySelector(":scope > aside.prev").addEventListener("click", function () {
             if (current_page > 0) {
                 current_page--;
                 render();
             }
         });
-        self.querySelector(":scope > main > table > tbody > tr > td.button.next").addEventListener("click", function () {
+        self.querySelector(":scope > aside.next").addEventListener("click", function () {
             if (!current_data_last) {
                 current_page++;
                 render();
@@ -104,53 +106,31 @@
     }
 
     function render() {
-        var td_innerHTML = self.querySelector(":scope > main > template").innerHTML;
-        var sl = self.querySelectorAll(":scope > main > table > tbody > tr > td:not(.button)");
-
-        for (var i = 0; i < sl.length; i++) {
-            sl[i].innerHTML = "";
-            sl[i].style.backgroundImage = "";
-            sl[i].classList.remove("on");
-        }
+        self.querySelector(":scope > table > tbody").innerHTML = "";
         var pointer_data = 0;
-        var pointer_sl = 0;
-        while (pointer_data + current_page * sl.length < dummy_data.length && pointer_sl < sl.length) {
-            var entity = dummy_data[pointer_data + current_page * sl.length];
-            if (validate(entity)) {
-                sl[pointer_sl].style.backgroundImage = "url('img/portrait/doctor/" + entity.id + ".jpg')";
-                sl[pointer_sl].classList.add("on");
-                sl[pointer_sl].innerHTML = td_innerHTML;
-                sl[pointer_sl].querySelector(":scope > a > header").innerHTML = entity.name;
-                for (var j = 0; j < Math.floor(entity.star); j++) {
-                    sl[pointer_sl].querySelector(":scope > a > aside").appendChild(document.createElement("span"));
+
+        for (var i = 0; i < 10; i++) {
+            self.querySelector(":scope > table > tbody").innerHTML += self.querySelector(":scope > template").innerHTML;
+            var tr = self.querySelector(":scope > table > tbody > tr:last-child");
+            if (pointer_data + current_page * 10 < dummy_data.length) {
+                var entity = dummy_data[pointer_data + current_page * 10];
+                if (validate(entity)) {
+                    tr.querySelector(":scope > td:nth-child(1) > a").innerHTML = entity.name;
+                    tr.querySelector(":scope > td:nth-child(2) > a").innerHTML = entity.star;
+                    pointer_data++;
                 }
-                if (entity.star > Math.floor(entity.star) && entity.star < Math.floor(entity.star) + 1) {
-                    sl[pointer_sl].querySelector(":scope > a > aside").appendChild(document.createElement("span"));
-                    sl[pointer_sl].querySelector(":scope > a > aside > span:last-child").classList.add("empty");
-                }
-                sl[pointer_sl].querySelector(":scope > a > aside").setAttribute("data-star", entity.star);
-                sl[pointer_sl].querySelector(":scope > a > footer").innerHTML = entity.distance.toFixed(0) + "公里";
-                for (var k = 0; k < entity.items.length; k++) {
-                    if (entity.items[k] !== "") {
-                        var item = document.createElement("div");
-                        item.innerHTML = dictionary_item[entity.items[k]];
-                        sl[pointer_sl].querySelector(":scope > a > main").appendChild(item);
-                    }
-                }
-                pointer_sl++;
             }
-            pointer_data++;
         }
-        current_data_last = pointer_data + current_page * sl.length >= dummy_data.length;
+        current_data_last = pointer_data + current_page * 10 >= dummy_data.length;
         if (current_page === 0) {
-            self.querySelector(":scope > main > table > tbody > tr > td.prev").classList.add("off");
+            self.querySelector(":scope > aside.prev").classList.add("off");
         } else {
-            self.querySelector(":scope > main > table > tbody > tr > td.prev").classList.remove("off");
+            self.querySelector(":scope > aside.prev").classList.remove("off");
         }
         if (current_data_last) {
-            self.querySelector(":scope > main > table > tbody > tr > td.next").classList.add("off");
+            self.querySelector(":scope > aside.next").classList.add("off");
         } else {
-            self.querySelector(":scope > main > table > tbody > tr > td.next").classList.remove("off");
+            self.querySelector(":scope > aside.next").classList.remove("off");
         }
     }
 

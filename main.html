@@ -108,7 +108,7 @@
                 </tbody>
             </table>
             <aside></aside>
-            <main class="icon">
+            <main class="icon shadow">
                 <input type="search" placeholder="输入关键字查找医生、医院、检查项目……" />
                 <footer class="icon"></footer>
             </main>
@@ -120,96 +120,90 @@
         <main class="other" data-title="位用户正在使用">126</main>
     </main>
     <main id="search">
-        <main>
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="button prev"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="button next"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <template>
-                <a href="#doctor">
-                    <header></header>
-                    <aside></aside>
-                    <main></main>
-                    <footer></footer>
-                </a>
-            </template>
-        </main>
-        <aside class="shadow">
-            <div class="icon keyword">
-                <input type="text" placeholder="关键字" />
-            </div>
-            <div class="icon star">
-                <select>
-                    <option value="0">任意星级</option>
-                    <option value="2">至少2星</option>
-                    <option value="3">至少3星</option>
-                    <option value="4">至少4星</option>
-                </select>
-            </div>
-            <div class="icon item">
-                <select>
-                    <option value="">任意科目</option>
-                    <option value="dentist">牙医</option>
-                    <option value="chiropractic">脊椎矫正</option>
-                    <option value="ophthalmology">眼科</option>
-                </select>
-            </div>
-            <div class="icon distance">
-                <select>
-                    <option value="9999">任意距离</option>
-                    <option value="50">少于50英里</option>
-                    <option value="100">少于100英里</option>
-                    <option value="200">少于200英里</option>
-                </select>
-            </div>
-        </aside>
+        <table class="shadow">
+            <thead>
+                <tr>
+                    <td class="icon name">
+                        <input type="text" placeholder="姓名" />
+                    </td>
+                    <td class="icon star">
+                        <select>
+                            <option value="0">任意星级</option>
+                            <option value="2">至少2星</option>
+                            <option value="3">至少3星</option>
+                            <option value="4">至少4星</option>
+                        </select>
+                    </td>
+                    <td class="icon item">
+                        <select>
+                            <option value="">任意科目</option>
+                            <option value="dentist">牙医</option>
+                            <option value="chiropractic">脊椎矫正</option>
+                            <option value="ophthalmology">眼科</option>
+                        </select>
+                    </td>
+                    <td class="icon insurance">
+                        <select>
+                            <option value="">任意保险</option>
+                            <option value="Bluecross">Blue Cross</option>
+                            <option value="Anthem">Anthem</option>
+                        </select>
+                    </td>
+                    <td class="icon distance">
+                        <select>
+                            <option value="9999">任意距离</option>
+                            <option value="50">少于50英里</option>
+                            <option value="100">少于100英里</option>
+                            <option value="200">少于200英里</option>
+                        </select>
+                    </td>
+                    <td class="compare"></td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <template>
+            <tr>
+                <td>
+                    <a href="#doctor"></a>
+                </td>
+                <td>
+                    <a href="#doctor"></a>
+                </td>
+                <td>
+                    <a href="#doctor"></a>
+                </td>
+                <td>
+                    <a href="#doctor"></a>
+                </td>
+                <td>
+                    <a href="#doctor"></a>
+                </td>
+                <td></td>
+            </tr>
+        </template>
+        <aside class="icon prev"></aside>
+        <aside class="icon next"></aside>
     </main>
     <main id="doctor">
-        <main class="portrait"></main>
-        <main class="name icon">George Noah</main>
-        <main class="items">
-            <header class="icon">检查项目</header>
-            <div>眼科</div>
-            <div>心胸外科</div>
-            <div>验光检查</div>
+        <main class="shadow info">
+            <main class="portrait"></main>
+            <main class="name icon">George Noah</main>
+            <main class="items">
+                <header class="icon">检查项目</header>
+                <div>眼科</div>
+                <div>心胸外科</div>
+                <div>验光检查</div>
+            </main>
+            <main class="insurances">
+                <header class="icon">接受保险</header>
+                <div>Obamacare</div>
+                <div>Anthem</div>
+            </main>
         </main>
-        <main class="insurances">
-            <header class="icon">接受保险</header>
-            <div>Obamacare</div>
-            <div>Anthem</div>
-        </main>
-        <main class="schedule">
-            <header class="icon shadow">第<span>1</span>/<span>2</span>个日期和地点</header>
+        <main class="shadow schedule">
+            <header class="icon">第<span>1</span>/<span>2</span>个日期和地点</header>
             <aside class="icon"></aside>
             <aside class="icon"></aside>
             <main>
@@ -346,20 +340,20 @@
     </main>
     <main id="login">
         <main class="shadow">
-            <header class=" icon email ">
-                <input type="email " placeholder="您的邮箱 " />
+            <header class="icon email">
+                <input type="email" placeholder="您的邮箱" />
             </header>
-            <header class="icon password ">
-                <input type="password " placeholder="您的密码 " />
+            <header class="icon password">
+                <input type="password" placeholder="您的密码" />
             </header>
-            <footer class="icon ">登陆</footer>
+            <footer class="icon">登陆</footer>
         </main>
     </main>
-    <main id="profile ">
-        <main class="info shadow ">
-            <main class="icon email "></main>
-            <main class="icon name ">
-                <input type="text " />
+    <main id="profile">
+        <main class="info shadow">
+            <main class="icon email"></main>
+            <main class="icon name">
+                <input type="text" />
             </main>
         </main>
     </main>
@@ -371,7 +365,7 @@
             </a>
         </header>
         <footer>
-            <a href="#principle ">条款</a><a href="#search ">搜索</a><a href="#about ">关于我们</a><a href="#register ">注册</a><a href="#login " class="on ">登陆</a><a href="#profile ">fdsa</a>
+            <a href="#principle">条款</a><a href="#search">搜索</a><a href="#about">关于我们</a><a href="#register">注册</a><a href="#login" class="on">登陆</a><a href="#profile">fdsa</a>
         </footer>
     </header>
     <footer>北美找医网 2015 Copyright</footer>
@@ -379,6 +373,7 @@
     <script type="text/javascript " src="js/lib/math.js "></script>
     <script type="text/javascript " src="js/lib/auth.js "></script>
     <script type="text/javascript " src="js/lib/api.js "></script>
+    <script type="text/javascript " src="js/lib/template.js"></script>
     <script type="text/javascript " src="js/component/header.js "></script>
     <script type="text/javascript " src="js/component/footer.js "></script>
     <script type="text/javascript " src="js/page/index.js "></script>

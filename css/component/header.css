@@ -5,8 +5,11 @@ body > header {
     height: 10vh;
     top: 0px;
     bottom: auto;
-    z-index: 5;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
     background-color: transparent;
+    position: fixed;
 }
 
 body > header > * {

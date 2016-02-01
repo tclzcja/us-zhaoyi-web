@@ -1,14 +1,40 @@
-body > #doctor {}
+body > #doctor {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../img/image/2.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 3000px;
+    perspective-origin: center center;
+}
 
-body > #doctor > * {
+body > #doctor > main {
+    height: 80vh;
+    width: 30vw;
+    position: relative;
+    transition: transform 0.2s;
+    transform-origin: center center;
+}
+
+body > #doctor > main.info {
+    transform: rotateY(20deg);
+}
+
+body > #doctor > main.info:hover {
+    transform: rotateY(0deg);
+}
+
+body > #doctor > main.info > * {
     position: absolute;
 }
 
-body > #doctor > main.portrait {
-    top: 10vh;
-    left: 5vh;
-    height: 40vh;
-    width: 25vw;
+body > #doctor > main.info > main.portrait {
+    top: 0px;
+    left: 0px;
+    height: 45vh;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,11 +42,11 @@ body > #doctor > main.portrait {
     z-index: 5;
 }
 
-body > #doctor > main.name {
-    top: 10vh;
-    left: 5vh;
+body > #doctor > main.info > main.name {
+    top: 35vh;
+    left: 0px;
+    right: 0px;
     height: 10vh;
-    width: 25vw;
     color: #333;
     font-size: 4vh;
     line-height: 10vh;
@@ -31,15 +57,15 @@ body > #doctor > main.name {
     z-index: 6;
 }
 
-body > #doctor > main.items {
-    top: 55vh;
-    bottom: 5vh;
-    left: 5vh;
-    width: 12.5vw;
+body > #doctor > main.info > main.items {
+    top: 45vh;
+    bottom: 0px;
+    left: 0px;
+    width: 15vw;
     background-color: #F90;
 }
 
-body > #doctor > main.items > header {
+body > #doctor > main.info > main.items > header {
     padding-right: 2vh;
     font-size: 3vh;
     color: white;
@@ -49,7 +75,7 @@ body > #doctor > main.items > header {
     background-image: url("../../img/icon/white/stethoscope.png");
 }
 
-body > #doctor > main.items > div {
+body > #doctor > main.info > main.items > div {
     text-align: right;
     color: white;
     padding-right: 2vh;
@@ -58,15 +84,15 @@ body > #doctor > main.items > div {
     margin-top: 1.5vh;
 }
 
-body > #doctor > main.insurances {
-    top: 55vh;
-    bottom: 5vh;
-    left: calc(5vh + 12.5vw);
-    width: 12.5vw;
+body > #doctor > main.info > main.insurances {
+    top: 45vh;
+    bottom: 0px;
+    left: 15vw;
+    width: 15vw;
     background-color: #9C0;
 }
 
-body > #doctor > main.insurances > header {
+body > #doctor > main.info > main.insurances > header {
     padding-left: 2vh;
     font-size: 3vh;
     color: white;
@@ -75,12 +101,12 @@ body > #doctor > main.insurances > header {
     background-image: url("../../img/icon/white/insurance.png");
 }
 
-body > #doctor > main.insurances > header:before {
+body > #doctor > main.info > main.insurances > header:before {
     left: auto;
     right: 0px;
 }
 
-body > #doctor > main.insurances > div {
+body > #doctor > main.info > main.insurances > div {
     color: white;
     padding-left: 2vh;
     line-height: 100%;
@@ -89,12 +115,12 @@ body > #doctor > main.insurances > div {
 }
 
 body > #doctor > main.schedule {
-    position: absolute;
-    top: 10vh;
-    left: 34vw;
-    bottom: 5vh;
-    width: 30vw;
-    z-index: 1;
+    z-index: 11;
+    transform: scale(0.96);
+}
+
+body > #doctor > main.schedule:hover {
+    transform: scale(1);
 }
 
 body > #doctor > main.schedule > header {
@@ -267,7 +293,7 @@ body > #doctor > main.schedule > main > section > main:after {
 }
 
 body > #doctor > main.schedule > main > section > main > div {
-    font-size: 3vh;
+    font-size: 2.5vh;
     line-height: 100%;
     margin-left: 2.5vh;
     margin-right: 2.5vh;
@@ -275,10 +301,6 @@ body > #doctor > main.schedule > main > section > main > div {
     width: 100%;
     display: block;
     text-align: center;
-}
-
-body > #doctor > main.schedule > main > section > main > div:last-child {
-    margin-top: 2vh;
 }
 
 body > #doctor > main.schedule > main > section > footer {
@@ -325,13 +347,13 @@ body > #doctor > main.schedule > aside:hover {
 /* Comment */
 
 body > #doctor > main.comment {
-    position: absolute;
-    top: 10vh;
-    left: 66vw;
-    bottom: 5vh;
-    right: 5vh;
     z-index: 5;
     background-color: #7AF;
+    transform: rotateY(-20deg);
+}
+
+body > #doctor > main.comment:hover {
+    transform: rotateY(0deg);
 }
 
 body > #doctor > main.comment > header {
