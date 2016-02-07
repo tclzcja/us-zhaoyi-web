@@ -18,7 +18,7 @@
                 password: self.querySelector(":scope > main > header.password > input").value
             };
             Api.Core("user", "login", data, function (info) {
-                Auth.Login(info.access_token, info.user);
+                Auth.Login(info.token, info);
                 location.hash = "#profile";
             }, function () {
                 console.error("登陆时出错");
