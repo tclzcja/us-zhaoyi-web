@@ -19,7 +19,7 @@
             }
         });
         self.querySelector(":scope > header > main > footer").addEventListener("click", function () {
-            location.hash = "#search";
+            location.hash = "#l=search";
         });
         portraitize(self);
     }

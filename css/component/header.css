@@ -22,7 +22,7 @@ body > header > header {
     font-size: 4vh;
     line-height: 100%;
     height: 4vh;
-    width: 30%;
+    width: 50%;
 }
 
 body > header > header > a > span:first-child {
@@ -39,7 +39,7 @@ body > header > footer {
     font-size: 2vh;
     line-height: 100%;
     color: #69F;
-    width: 30%;
+    width: 50%;
     text-align: right;
 }
 
@@ -47,19 +47,19 @@ body > header > footer > a {
     padding-left: 3vh;
 }
 
-body > header > footer > a[href="#login"] {
+body > header > footer > a[href="#l=login"] {
     color: #F90;
     display: none;
 }
 
-body > header > footer > a[href="#login"].on {
+body > header > footer > a[href="#l=login"].on {
     display: inline-block;
 }
 
-body > header > footer > a[href="#profile"] {
+body > header > footer > a[href="#l=profile"] {
     display: none;
 }
 
-body > header > footer > a[href="#profile"].on {
+body > header > footer > a[href="#l=profile"].on {
     display: inline-block;
 }

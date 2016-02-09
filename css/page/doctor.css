@@ -3,30 +3,14 @@ body > #doctor {
     background-size: cover;
     background-position: center;
     background-image: url("../../img/image/2.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 3000px;
-    perspective-origin: center center;
 }
 
 body > #doctor > main {
     height: 80vh;
-    width: 30vw;
     position: relative;
-    transition: transform 0.2s;
-    transform-origin: center center;
 }
 
-body > #doctor > main.info {
-    transform: rotateY(20deg);
-}
-
-body > #doctor > main.info:hover {
-    transform: rotateY(0deg);
-}
-
-body > #doctor > main.info > * {
+body > #doctor > main > main {
     position: absolute;
 }
 
@@ -63,6 +47,7 @@ body > #doctor > main.info > main.items {
     left: 0px;
     width: 15vw;
     background-color: #F90;
+    height: auto;
 }
 
 body > #doctor > main.info > main.items > header {
@@ -90,6 +75,7 @@ body > #doctor > main.info > main.insurances {
     left: 15vw;
     width: 15vw;
     background-color: #9C0;
+    height: auto;
 }
 
 body > #doctor > main.info > main.insurances > header {
@@ -112,15 +98,6 @@ body > #doctor > main.info > main.insurances > div {
     line-height: 100%;
     font-size: 2vh;
     margin-top: 1.5vh;
-}
-
-body > #doctor > main.schedule {
-    z-index: 11;
-    transform: scale(0.96);
-}
-
-body > #doctor > main.schedule:hover {
-    transform: scale(1);
 }
 
 body > #doctor > main.schedule > header {
@@ -148,8 +125,10 @@ body > #doctor > main.schedule > main {
     left: 0px;
     right: 0px;
     bottom: 0px;
+    height: auto;
     overflow: hidden;
     z-index: 3;
+    background-color: #666;
 }
 
 
@@ -347,13 +326,7 @@ body > #doctor > main.schedule > aside:hover {
 /* Comment */
 
 body > #doctor > main.comment {
-    z-index: 5;
     background-color: #7AF;
-    transform: rotateY(-20deg);
-}
-
-body > #doctor > main.comment:hover {
-    transform: rotateY(0deg);
 }
 
 body > #doctor > main.comment > header {
@@ -407,6 +380,8 @@ body > #doctor > main.comment > main {
     left: 0px;
     right: 0px;
     bottom: 0px;
+    background-color: transparent;
+    height: auto;
 }
 
 body > #doctor > main.comment > main > div {

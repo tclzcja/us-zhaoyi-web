@@ -19,9 +19,7 @@
             };
             Api.Core("user", "login", data, function (info) {
                 Auth.Login(info.token, info);
-                location.hash = "#profile";
-            }, function () {
-                console.error("登陆时出错");
+                location.hash = "#l=profile";
             });
         });
     }

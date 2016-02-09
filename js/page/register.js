@@ -17,7 +17,7 @@
                 email: self.querySelector(":scope > main > header.email > input").value,
                 password: self.querySelector(":scope > main > header.password > input").value
             };
-            Api.Core("user", "insert", data, function () {
+            Api.Core("user", "create", data, function () {
                 footer.classList.remove("wrong");
                 footer.classList.add("correct");
                 footer.innerHTML = "注册成功，登陆中";
