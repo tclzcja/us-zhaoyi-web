@@ -14,7 +14,7 @@
             //sessionStorage.setItem(Session_Name_Address_Api, "http://taleland.mod.bz");
             sessionStorage.setItem(Session_Name_Address_Api, "http://localhost:1337");
         },
-        Core: function (target, action, data, callback_correct, callback_wrong) {
+        Core: function (target, action, data, callback_correct) {
             data = data || {};
             let xhr = new XMLHttpRequest();
             xhr.open("POST", sessionStorage.getItem(Session_Name_Address_Api) + "/" + target + "/" + action, true);
@@ -27,7 +27,7 @@
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     callback_correct(xhr.response);
                 } else if (xhr.status !== 200) {
-                    callback_wrong(xhr.statusText);
+                    // Centralized error processing component
                 }
             };
             xhr.send(JSON.stringify(data));

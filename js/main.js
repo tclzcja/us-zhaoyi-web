@@ -8,27 +8,35 @@
     const Cache = window.Cache;
     const Param = window.Param;
 
+    var fire_count = 0;
+
     Api.Reset();
     Auth.Test(function () {
         document.querySelector("body > header").dispatchEvent(new Event("login"));
     }, Auth.Reset);
-    Cache.Update("item");
-    Cache.Update("hospital");
-    Cache.Update("insurance");
-    Cache.Update("doctor");
+    Cache.Update("item", fire);
+    Cache.Update("hospital", fire);
+    Cache.Update("insurance", fire);
+    Cache.Update("doctor", fire);
+    Cache.Count("user", fire);
+    Cache.Count("comment", fire);
 
-    window.addEventListener("hashchange", function () {
-        if (document.querySelector("body > main#" + Param.Get("l"))) {
-            document.querySelector("body > main.on").classList.remove("on");
-            document.querySelector("body > main#" + Param.Get("l")).dispatchEvent(new Event("hey"));
-            document.querySelector("body > main#" + Param.Get("l")).classList.add("on");
+    function fire() {
+        fire_count++;
+        if (fire_count >= 6) {
+            window.addEventListener("hashchange", function () {
+                if (document.querySelector("body > main#" + Param.Get("l"))) {
+                    document.querySelector("body > main.on").classList.remove("on");
+                    document.querySelector("body > main#" + Param.Get("l")).dispatchEvent(new Event("hey"));
+                    document.querySelector("body > main#" + Param.Get("l")).classList.add("on");
+                }
+            });
+            if (location.hash === "") {
+                location.hash = "#l=index";
+            } else {
+                window.dispatchEvent(new Event("hashchange"));
+            }
         }
-    });
-
-    if (location.hash === "") {
-        location.hash = "#l=index";
-    } else {
-        window.dispatchEvent(new Event("hashchange"));
     }
 
 }());
