@@ -58,7 +58,6 @@ body > #search > table > thead > tr > td.compare {
 body > #search > table > tbody > tr > td {
     height: 5vh;
     background-color: rgba(0, 0, 0, 0.1);
-    padding-left: 2vh;
     font-size: 2vh;
     transition: background-color 0.2s, color 0.2s;
     cursor: pointer;
@@ -72,6 +71,7 @@ body > #search > table > tbody > tr:nth-child(2n) > td {
 
 body > #search > table > tbody > tr > td > a {
     width: 100%;
+    padding-left: 2.5vh;
 }
 
 body > #search > table > tbody > tr:hover > td {

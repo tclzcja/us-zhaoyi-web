@@ -5,6 +5,7 @@
     'use strict';
 
     const Api = window.Api;
+    const Auth = window.Auth;
     const Cache = window.Cache;
     const Param = window.Param;
 
