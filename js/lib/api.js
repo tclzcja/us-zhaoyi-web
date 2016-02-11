@@ -7,7 +7,7 @@
     const Auth = window.Auth;
 
     const Session_Name_Address_Api = "api address api";
-    const Session_Name_Address_Storage = "api address storage";
+    const Storage_Address = "https://s3-us-west-1.amazonaws.com/us-zhaoyi/";
 
     window.Api = {
         Reset: function () {
@@ -54,7 +54,7 @@
 
         },
         Storage: function (id, extension) {
-            return sessionStorage.getItem(Session_Name_Address_Storage) + "/" + id + "." + extension;
+            return Storage_Address + id + "." + extension;
         }
     };
 

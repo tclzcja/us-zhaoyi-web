@@ -1,13 +1,9 @@
 body > #doctor {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-image: url("../../img/image/2.jpg");
 }
 
 body > #doctor > main {
     height: 80vh;
-    position: relative;
 }
 
 body > #doctor > main > main {
@@ -22,7 +18,6 @@ body > #doctor > main.info > main.portrait {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("../../img/portrait/doctor/1.jpg");
     z-index: 5;
 }
 
@@ -33,7 +28,6 @@ body > #doctor > main.info > main.name {
     height: 10vh;
     color: #333;
     font-size: 4vh;
-    line-height: 10vh;
     padding-right: 3vh;
     text-align: right;
     background-image: url("../../img/icon/black/name.png");
@@ -155,6 +149,7 @@ body > #doctor > main.schedule > main > section > header {
     top: 0px;
     left: 0px;
     right: 0px;
+    background-color: #666;
 }
 
 body > #doctor > main.schedule > main > section > header > table {
@@ -243,6 +238,7 @@ body > #doctor > main.schedule > main > section > main {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 3vh;
 }
 
 body > #doctor > main.schedule > main > section > main:before {
@@ -269,17 +265,6 @@ body > #doctor > main.schedule > main > section > main:after {
     border-top: solid 1vw #444;
     border-left: solid 1vw transparent;
     border-right: solid 1vw transparent;
-}
-
-body > #doctor > main.schedule > main > section > main > div {
-    font-size: 2.5vh;
-    line-height: 100%;
-    margin-left: 2.5vh;
-    margin-right: 2.5vh;
-    color: white;
-    width: 100%;
-    display: block;
-    text-align: center;
 }
 
 body > #doctor > main.schedule > main > section > footer {
@@ -349,7 +334,7 @@ body > #doctor > main.comment > header > header {
     font-size: 4vh;
 }
 
-body > #doctor > main.comment > header > header > span {
+body > #doctor > main.comment > header > header > span:last-child {
     opacity: 0.5;
 }
 
@@ -395,4 +380,89 @@ body > #doctor > main.comment > main > div {
 
 body > #doctor > main.comment > main > div:nth-child(2n+1) {
     background-color: #69F;
+}
+
+body > #doctor > main.comment > footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+body > #doctor > main.comment > footer > main {
+    position: absolute;
+    bottom: 0px;
+    width: 10vh;
+    height: 10vh;
+    cursor: pointer;
+    transition: opacity 0.2s, height 0.5s, width 0.5s, background-color 0.5s;
+}
+
+body > #doctor > main.comment > footer > main.like {
+    right: 10vh;
+    background-image: url("../../img/icon/white/like.png");
+    z-index: 1;
+}
+
+body > #doctor > main.comment > footer > main.comment {
+    right: 0px;
+    background-image: url("../../img/icon/white/comment.png");
+    z-index: 5;
+}
+
+body > #doctor > main.comment > footer > main.comment > div {
+    background-image: url("../../img/icon/white/delete.png");
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 10vh;
+    width: 10vh;
+    visibility: hidden;
+}
+
+body > #doctor > main.comment > footer > main.comment > header {
+    position: absolute;
+    height: 10vh;
+    left: 3vh;
+    right: 10vh;
+    top: 0px;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+body > #doctor > main.comment > footer > main.comment > header > span {
+    display: inline-block;
+    height: 100%;
+    width: 4vh;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-image: url("../../img/icon/white/star.png");
+}
+
+body > #doctor > main.comment > footer > main.comment > header > span.empty {
+    background-image: url("../../img/icon/white/star.empty.png");
+}
+
+body > #doctor > main.comment > footer > main.comment > main {
+    position: absolute;
+    top: 10vh;
+    left: 0px;
+    right: 0px;
+    height: 10vh;
+    background-color: #444;
+    color: white;
+    background-image: url("../../img/icon/white/comment.png");
+    visibility: hidden;
+}
+
+body > #doctor > main.comment > footer > main.comment.on {
+    background-color: #333;
+    height: 30vh;
+    width: 100%;
+    background-image: none;
+}
+
+body > #doctor > main.comment > footer > main.comment.on > * {
+    visibility: visible;
 }

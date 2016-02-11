@@ -4,14 +4,35 @@
 
     'use strict';
 
-    const Session_Cache_Prefix = "cache ";
+    const list = {
+        "doctor": [],
+        "hospital": [],
+        "item": [],
+        "insurance": [],
+        "user": [],
+        "comment": []
+    };
+
+    const hash = {
+        "doctor": [],
+        "hospital": [],
+        "item": [],
+        "insurance": [],
+        "user": []
+    };
 
     const Api = window.Api;
 
     window.Cache = {
         Update: function (type, callback) {
             Api.Core(type, "multiple", null, function (data) {
-                sessionStorage.setItem(Session_Cache_Prefix + type, JSON.stringify(data));
+                list[type] = data;
+                if (data.length) {
+                    hash[type] = [];
+                    for (var i = 0; i < data.length; i++) {
+                        hash[type][data[i].id] = data[i];
+                    }
+                }
                 if (callback) {
                     callback();
                 }
@@ -19,11 +40,14 @@
             return;
         },
         Get: function (type) {
-            return JSON.parse(sessionStorage.getItem(Session_Cache_Prefix + type));
+            return list[type];
+        },
+        Hash: function (type, id) {
+            return hash[type][id];
         },
         Count: function (type, callback) {
             Api.Core(type, "count", null, function (data) {
-                sessionStorage.setItem(Session_Cache_Prefix + type, JSON.stringify(data));
+                list[type] = data;
                 if (callback) {
                     callback();
                 }
