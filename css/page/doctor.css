@@ -423,10 +423,12 @@ body > #doctor > main.comment > footer > main.comment > div {
 body > #doctor > main.comment > footer > main.comment > header {
     position: absolute;
     height: 10vh;
-    left: 3vh;
-    right: 10vh;
-    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 10vh;
+    padding-left: 3vh;
     visibility: hidden;
+    background-color: #111;
     z-index: 1000;
 }
 
@@ -444,21 +446,48 @@ body > #doctor > main.comment > footer > main.comment > header > span.empty {
     background-image: url("../../img/icon/white/star.empty.png");
 }
 
+body > #doctor > main.comment > footer > main.comment > header > footer {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 2vh;
+}
+
 body > #doctor > main.comment > footer > main.comment > main {
     position: absolute;
     top: 10vh;
     left: 0px;
     right: 0px;
     height: 10vh;
-    background-color: #444;
+    background-color: #222;
     color: white;
     background-image: url("../../img/icon/white/comment.png");
     visibility: hidden;
 }
 
+body > #doctor > main.comment > footer > main.comment > main > input {
+    text-align: right;
+    padding-right: 2vh;
+}
+
+body > #doctor > main.comment > footer > main.comment > img {
+    position: absolute;
+    height: 5vh;
+    width: 5vh;
+    right: 2.5vh;
+    bottom: 2.5vh;
+    filter: drop-shadow(5px 5px 5px white);
+    -webkit-filter: drop-shadow(0 0 5px white);
+    visibility: hidden;
+}
+
 body > #doctor > main.comment > footer > main.comment.on {
     background-color: #333;
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     background-image: none;
 }

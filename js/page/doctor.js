@@ -8,8 +8,11 @@
     const holder = document.createElement("div");
 
     const Api = window.Api;
+    const Auth = window.Auth;
     const Cache = window.Cache;
     const Param = window.Param;
+
+    var comment_already = false;
 
     self.addEventListener("hey", function () {
         Api.Core("doctor", "single", {
@@ -38,7 +41,7 @@
     });
 
     self.querySelector(":scope > main.comment > footer > main.comment").addEventListener("click", function () {
-        if (!this.classList.contains("on")) {
+        if (!this.classList.contains("on") && !comment_already) {
             this.classList.add("on");
             this.classList.add("shadow");
             this.classList.remove("click");
@@ -46,6 +49,7 @@
     });
 
     self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span").addEventListener("mouseenter", function () {
+        var count = 1;
         this.parentNode.querySelectorAll(":scope > span").exec(function () {
             this.classList.add("empty");
         });
@@ -54,7 +58,9 @@
         while (node.previousElementSibling) {
             node = node.previousElementSibling;
             node.classList.remove("empty");
+            count++;
         }
+        this.parentNode.querySelector(":scope > footer").innerHTML = "我给 " + count + " 颗星";
     });
 
     self.querySelector(":scope > main.comment > footer > main.comment > div").addEventListener("click", function (e) {
@@ -63,6 +69,24 @@
         this.parentNode.classList.add("click");
         e.stopPropagation();
     });
+
+    self.querySelector(":scope > main.comment > footer > main.comment > img").addEventListener("click", function () {
+        if (!comment_already) {
+            var data = {
+                content: self.querySelector(":scope > main.comment > footer > main.comment > main > input").value,
+                star: self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span:not(.empty)").length,
+                user_id: Auth.Current.User().id,
+                doctor_id: Param.Get("id")
+            };
+            Api.Core("comment", "create", data, function (comment) {
+                add_my_comment(comment);
+            });
+        }
+    });
+
+    function add_my_comment(comment) {
+
+    }
 
     function render(data) {
         if (data.portrait) {
@@ -102,7 +126,7 @@
             }
             self.querySelector(":scope > main.schedule > main").appendChild(schedule);
         }
-        var star = ((data.star.one + data.star.two * 2 + data.star.three * 3 + data.star.four * 4 + data.star.five * 5) / (data.star.one + data.star.two + data.star.three + data.star.four + data.star.five)).toFixed(1);
+        var star = ((data.star[1] + data.star[2] * 2 + data.star[3] * 3 + data.star[4] * 4 + data.star[5] * 5) / (data.star[1] + data.star[2] + data.star[3] + data.star[4] + data.star[5])).toFixed(1);
         self.querySelector(":scope > main.comment > header > header > span:first-child").innerHTML = star;
         for (var i = 0; i < Math.floor(star); i++) {
             self.querySelector(":scope > main.comment > header > footer").appendChild(document.createElement("span"));
