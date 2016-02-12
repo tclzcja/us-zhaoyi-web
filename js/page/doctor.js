@@ -12,12 +12,17 @@
     const Cache = window.Cache;
     const Param = window.Param;
 
-    var comment_already = false;
-
     self.addEventListener("hey", function () {
         Api.Core("doctor", "single", {
             id: Param.Get("id")
-        }, render);
+        }, reset);
+        Api.Core("comment", "filter", {
+            doctor_id: Param.Get("id")
+        }, function (data) {
+            for (var i = 0; i < data.length; i++) {
+                add_comment(data[i]);
+            }
+        });
     });
 
     self.querySelector(":scope > main.schedule > aside:nth-of-type(1)").addEventListener("click", function () {
@@ -40,14 +45,16 @@
         }
     });
 
+    // Expand the comment panel
     self.querySelector(":scope > main.comment > footer > main.comment").addEventListener("click", function () {
-        if (!this.classList.contains("on") && !comment_already) {
+        if (!this.classList.contains("on")) {
             this.classList.add("on");
             this.classList.add("shadow");
             this.classList.remove("click");
         }
     });
 
+    // Ranking the star
     self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span").addEventListener("mouseenter", function () {
         var count = 1;
         this.parentNode.querySelectorAll(":scope > span").exec(function () {
@@ -63,6 +70,7 @@
         this.parentNode.querySelector(":scope > footer").innerHTML = "我给 " + count + " 颗星";
     });
 
+    // Contract the comment panel
     self.querySelector(":scope > main.comment > footer > main.comment > div").addEventListener("click", function (e) {
         this.parentNode.classList.remove("on");
         this.parentNode.classList.remove("shadow");
@@ -70,22 +78,36 @@
         e.stopPropagation();
     });
 
+    // Add and Send the comment
     self.querySelector(":scope > main.comment > footer > main.comment > img").addEventListener("click", function () {
-        if (!comment_already) {
-            var data = {
-                content: self.querySelector(":scope > main.comment > footer > main.comment > main > input").value,
-                star: self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span:not(.empty)").length,
-                user_id: Auth.Current.User().id,
-                doctor_id: Param.Get("id")
-            };
-            Api.Core("comment", "create", data, function (comment) {
-                add_my_comment(comment);
-            });
-        }
+        var data = {
+            content: self.querySelector(":scope > main.comment > footer > main.comment > main > input").value,
+            star: self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span:not(.empty)").length,
+            user_id: Auth.Current.User().id,
+            doctor_id: Param.Get("id")
+        };
+        Api.Core("comment", "create", data, function (comment) {
+            add_comment(data);
+        });
     });
 
-    function add_my_comment(comment) {
+    function reset(data) {
+        self.querySelector(":scope > main.info > main.portrait").style.backgroundImage = "";
+        self.querySelector(":scope > main.info > main.name").innerHTML = "";
+        self.querySelectorAll(":scope > main.info > main.items > :not(template)").remove();
+        self.querySelectorAll(":scope > main.info > main.insurances > :not(template)").remove();
+        self.querySelectorAll(":scope > main.schedule > main > :not(template)").remove();
+        self.querySelectorAll(":scope > main.comment > header > footer > span").remove();
+        self.querySelectorAll(":scope > main.comment > main > :not(template)").remove();
 
+        render(data);
+    }
+
+    function add_comment(comment) {
+        holder.innerHTML = self.querySelector(":scope > main.comment > main > template").innerHTML;
+        var c = holder.firstElementChild;
+        c.innerHTML = comment.content;
+        self.querySelector(":scope > main.comment > main").insertBefore(c, self.querySelector(":scope > main.comment > main > :first-child"));
     }
 
     function render(data) {
@@ -136,6 +158,7 @@
             span.classList.add("empty");
             self.querySelector(":scope > main.comment > header > footer").insertBefore(span, self.querySelector(":scope > main.comment > header > footer > span:first-child"));
         }
+
     }
 
 }());
