@@ -312,6 +312,7 @@ body > #doctor > main.schedule > aside:hover {
 
 body > #doctor > main.comment {
     background-color: #7AF;
+    overflow-y: scroll;
 }
 
 body > #doctor > main.comment > header {

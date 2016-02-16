@@ -117,15 +117,19 @@
         self.querySelector(":scope > main.info > main.name").innerHTML = data.name;
         for (var i = 0; i < data.items.length; i++) {
             var item = Cache.Hash("item", data.items[i]);
-            var div = document.createElement("div");
-            div.innerHTML = item.name.chinese;
-            self.querySelector(":scope > main.info > main.items").appendChild(div);
+            if (item) {
+                var div = document.createElement("div");
+                div.innerHTML = item.name.chinese;
+                self.querySelector(":scope > main.info > main.items").appendChild(div);
+            }
         }
         for (var i = 0; i < data.insurances.length; i++) {
             var insurance = Cache.Hash("insurance", data.insurances[i]);
-            var div = document.createElement("div");
-            div.innerHTML = insurance.provider + " " + insurance.class + " " + insurance.subclass;
-            self.querySelector(":scope > main.info > main.insurances").appendChild(div);
+            if (insurance) {
+                var div = document.createElement("div");
+                div.innerHTML = insurance.provider + " " + insurance.class + " " + insurance.subclass;
+                self.querySelector(":scope > main.info > main.insurances").appendChild(div);
+            }
         }
         self.querySelector(":scope > main.schedule > header > span.total").innerHTML = data.schedules.length;
         for (var i = 0; i < data.schedules.length; i++) {

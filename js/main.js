@@ -11,7 +11,6 @@
 
     var fire_count = 0;
 
-    Api.Reset();
     Auth.Test(function () {
         document.querySelector("body > header").dispatchEvent(new Event("login"));
     }, Auth.Reset);
