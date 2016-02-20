@@ -1,4 +1,4 @@
-/* jshint browser: true, esnext: true */
+/* jshint browser: true, esnext: true, devel: true */
 
 (function () {
 
@@ -39,6 +39,7 @@
     self.querySelectorAll(":scope > table > thead > tr > td.star > select").addEventListener("change", filter);
 
     function filter() {
+
         current_data_filter = [];
 
         var name = self.querySelector(":scope > table > thead > tr > td.name > input").value;
@@ -46,8 +47,8 @@
 
         for (var i = 0; i < current_data.length; i++) {
             var flag = true;
-            flag = name === "" ? flag : flag && current_data[i].name.indexOf(name) >= 0;
-            flag = star === "" ? flag : flag && ((current_data[i].star[1] + current_data[i].star[2] * 2 + current_data[i].star[3] * 3 + current_data[i].star[4] * 4 + current_data[i].star[5] * 5) / (current_data[i].star[1] + current_data[i].star[2] + current_data[i].star[3] + current_data[i].star[4] + current_data[i].star[5])) >= parseFloat(star);
+            //flag = name === "" ? flag : flag && current_data[i].name.indexOf(name) >= 0;
+            flag = star === "" ? flag : flag && (((current_data[i].star[1] + current_data[i].star[2] * 2 + current_data[i].star[3] * 3 + current_data[i].star[4] * 4 + current_data[i].star[5] * 5) / (current_data[i].star[1] + current_data[i].star[2] + current_data[i].star[3] + current_data[i].star[4] + current_data[i].star[5])) >= parseFloat(star) || (current_data[i].star[1] + current_data[i].star[2] + current_data[i].star[3] + current_data[i].star[4] + current_data[i].star[5] === 0));
             if (flag) {
                 current_data_filter.push(current_data[i]);
             }
@@ -63,8 +64,8 @@
             var tr = self.querySelector(":scope > table > tbody > tr:nth-child(" + (i + 1) + ")");
             if (i + current_page * 10 < current_data_filter.length) {
                 tr.querySelectorAll(":scope > td > a").setAttribute("href", "#l=doctor&id=" + current_data_filter[i + current_page * 10].id);
-                tr.querySelector(":scope > td:nth-child(1) > a").innerHTML = current_data_filter[i + current_page * 10].name;
-                tr.querySelector(":scope > td:nth-child(2) > a").innerHTML = ((current_data[i].star[1] + current_data[i].star[2] * 2 + current_data[i].star[3] * 3 + current_data[i].star[4] * 4 + current_data[i].star[5] * 5) / (current_data[i].star[1] + current_data[i].star[2] + current_data[i].star[3] + current_data[i].star[4] + current_data[i].star[5])).toFixed(1);
+                tr.querySelector(":scope > td:nth-child(1) > a").innerHTML = current_data_filter[i + current_page * 10].name.en;
+                tr.querySelector(":scope > td:nth-child(2) > a").innerHTML = ((current_data[i].star[1] + current_data[i].star[2] * 2 + current_data[i].star[3] * 3 + current_data[i].star[4] * 4 + current_data[i].star[5] * 5) / (current_data[i].star[1] + current_data[i].star[2] + current_data[i].star[3] + current_data[i].star[4] + current_data[i].star[5]) || 0).toFixed(1);
             } else {
                 self.querySelector(":scope > aside.next").classList.add("disable");
                 tr.querySelectorAll(":scope > td > a").removeAttribute("href");

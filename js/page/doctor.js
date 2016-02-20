@@ -114,12 +114,12 @@
         if (data.portrait) {
             self.querySelector(":scope > main.info > main.portrait").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
         }
-        self.querySelector(":scope > main.info > main.name").innerHTML = data.name;
+        self.querySelector(":scope > main.info > main.name").innerHTML = data.name.en;
         for (var i = 0; i < data.items.length; i++) {
             var item = Cache.Hash("item", data.items[i]);
             if (item) {
                 var div = document.createElement("div");
-                div.innerHTML = item.name.chinese;
+                div.innerHTML = item.name["zh-Hans"];
                 self.querySelector(":scope > main.info > main.items").appendChild(div);
             }
         }
@@ -136,7 +136,7 @@
             holder.innerHTML = self.querySelector(":scope > main.schedule > main > template").innerHTML;
             var schedule = holder.firstElementChild;
             var hospital = Cache.Hash("hospital", data.schedules[i].hospital_id);
-            schedule.querySelector(":scope > main").innerHTML = hospital.name;
+            schedule.querySelector(":scope > main").innerHTML = hospital.name.en;
             /*
             schedule.querySelector(":scope > main > div.address").innerHTML = hospital.address;
             schedule.querySelector(":scope > main > div.city").innerHTML = hospital.city;
@@ -152,7 +152,7 @@
             }
             self.querySelector(":scope > main.schedule > main").appendChild(schedule);
         }
-        var star = ((data.star[1] + data.star[2] * 2 + data.star[3] * 3 + data.star[4] * 4 + data.star[5] * 5) / (data.star[1] + data.star[2] + data.star[3] + data.star[4] + data.star[5])).toFixed(1);
+        var star = ((data.star[1] + data.star[2] * 2 + data.star[3] * 3 + data.star[4] * 4 + data.star[5] * 5) / (data.star[1] + data.star[2] + data.star[3] + data.star[4] + data.star[5]) || 0).toFixed(1);
         self.querySelector(":scope > main.comment > header > header > span:first-child").innerHTML = star;
         for (var i = 0; i < Math.floor(star); i++) {
             self.querySelector(":scope > main.comment > header > footer").appendChild(document.createElement("span"));
