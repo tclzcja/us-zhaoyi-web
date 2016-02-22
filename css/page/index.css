@@ -4,9 +4,9 @@ body > #index > * {
     position: absolute;
 }
 
-body > #index > header {
-    top: 10vh;
-    bottom: calc(20vw + 5vh);
+body > #index {
+    top: 0px;
+    bottom: 0px;
     left: 0px;
     right: 0px;
     font-size: 2vh;
@@ -16,9 +16,10 @@ body > #index > header {
     text-align: left;
 }
 
-body > #index > header > main {
+body > #index > main {
     position: absolute;
-    top: 15vh;
+    top: 50%;
+    margin-top: -5vh;
     left: 10vw;
     width: 80vw;
     height: 10vh;
@@ -28,7 +29,7 @@ body > #index > header > main {
     overflow: hidden;
 }
 
-body > #index > header > main > footer {
+body > #index > main > footer {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -41,15 +42,15 @@ body > #index > header > main > footer {
     z-index: 1000;
 }
 
-body > #index > header > main > footer.on {
+body > #index > main > footer.on {
     right: 0px;
 }
 
-body > #index > header > main > footer:hover {
+body > #index > main > footer:hover {
     background-color: #36C;
 }
 
-body > #index > header > aside {
+body > #index > aside {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -58,75 +59,27 @@ body > #index > header > aside {
     background: linear-gradient(to bottom, white, transparent);
 }
 
-body > #index > header > table {
+body > #index > table {
     height: 100%;
     width: 100%;
     border-collapse: collapse;
     opacity: 0.25;
 }
 
-body > #index > header > table > tbody > tr > td {
+body > #index > table > tbody > tr > td {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-body > #index > header > table > tbody > tr > td:nth-child(2n) {
+body > #index > table > tbody > tr > td:nth-child(2n) {
     background-color: #DDD;
 }
 
-body > #index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n+1) {
+body > #index > table > tbody > tr:nth-child(2n) > td:nth-child(2n+1) {
     background-color: #CCC;
 }
 
-body > #index > header > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
+body > #index > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
     background-color: #BBB;
-}
-
-body > #index > main {
-    bottom: 5vh;
-    height: 20vw;
-    width: 20vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8vh;
-    color: white;
-}
-
-body > #index > main:after {
-    content: attr(data-title);
-    display: block;
-    position: absolute;
-    top: 65%;
-    left: 0px;
-    right: 0px;
-    font-size: 2vh;
-    line-height: 100%;
-    text-align: center;
-}
-
-body > #index > main.doctor {
-    left: 0px;
-    background-color: #FB3;
-}
-
-body > #index > main.hospital {
-    left: 20vw;
-    background-color: #F90;
-}
-
-body > #index > main.item {
-    left: 40vw;
-    background-color: #0CF;
-}
-
-body > #index > main.comment {
-    left: 60vw;
-    background-color: #0AE;
-}
-
-body > #index > main.user {
-    left: 80vw;
-    background-color: #F55;
 }

@@ -18,12 +18,10 @@
     Cache.Update("hospital", fire);
     Cache.Update("insurance", fire);
     Cache.Update("doctor", fire);
-    Cache.Count("user", fire);
-    Cache.Count("comment", fire);
 
     function fire() {
         fire_count++;
-        if (fire_count >= 6) {
+        if (fire_count >= 4) {
             window.addEventListener("hashchange", function () {
                 if (document.querySelector("body > main#" + Param.Get("l"))) {
                     document.querySelector("body > main.on").classList.remove("on");
