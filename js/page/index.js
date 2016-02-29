@@ -12,7 +12,7 @@
 
     self.addEventListener("hey", function () {
 
-        portraitize(self);
+        //portraitize(self);
 
     });
 

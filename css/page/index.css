@@ -1,19 +1,15 @@
-body > #index {}
-
-body > #index > * {
-    position: absolute;
-}
-
 body > #index {
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     font-size: 2vh;
-    background-color: #EEE;
     color: white;
-    vertical-align: top;
-    text-align: left;
+    background-image: url("../../img/image/index.jpg");
+}
+
+body > #index > * {
+    position: absolute;
 }
 
 body > #index > main {
