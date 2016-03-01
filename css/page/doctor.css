@@ -161,6 +161,7 @@ body > #doctor > main.schedule > main > section > header > table {
     height: 100%;
     width: 100%;
     border-collapse: collapse;
+    line-height: normal;
 }
 
 body > #doctor > main.schedule > main > section > header > table > thead > tr > td {

@@ -9,7 +9,9 @@
     <link type="text/css" rel="stylesheet" href="css/component/footer.css" />
     <link type="text/css" rel="stylesheet" href="css/page/index.css" />
     <link type="text/css" rel="stylesheet" href="css/page/search.doctor.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/search.hospital.css" />
     <link type="text/css" rel="stylesheet" href="css/page/doctor.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/hospital.css" />
     <link type="text/css" rel="stylesheet" href="css/page/register.css" />
     <link type="text/css" rel="stylesheet" href="css/page/login.css" />
     <link type="text/css" rel="stylesheet" href="css/page/profile.css" />
@@ -31,6 +33,19 @@
     </main>
     <main id="search-doctor" class="object">
         <horizontal-roller for="search-doctor"></horizontal-roller>
+        <header></header>
+        <main>
+            <template>
+                <div class="shadow">
+                    <header></header>
+                    <a></a>
+                </div>
+            </template>
+        </main>
+        <footer></footer>
+    </main>
+    <main id="search-hospital" class="object">
+        <horizontal-roller for="search-hospital"></horizontal-roller>
         <header></header>
         <main>
             <template>
@@ -135,6 +150,26 @@
         </main>
         <footer></footer>
     </main>
+    <main id="hospital" class="object">
+        <horizontal-roller for="hospital"></horizontal-roller>
+        <header></header>
+        <main class="shadow">
+            <main class="image"></main>
+            <main class="name icon"></main>
+            <main class="items">
+                <header class="icon">检查项目</header>
+            </main>
+        </main>
+        <main class="shadow">
+            <main class="icon address"></main>
+            <main class="icon address2"></main>
+            <main class="icon city"></main>
+            <main class="icon state"></main>
+            <main class="icon zipcode"></main>
+            <main class="iframe"></main>
+        </main>
+        <footer></footer>
+    </main>
     <main id="register">
         <main class="shadow">
             <header class="icon email">
@@ -210,7 +245,9 @@
     <script type="text/javascript" src="js/component/horizontal.roller.js"></script>
     <script type="text/javascript" src="js/page/index.js"></script>
     <script type="text/javascript" src="js/page/search.doctor.js"></script>
+    <script type="text/javascript" src="js/page/search.hospital.js"></script>
     <script type="text/javascript" src="js/page/doctor.js"></script>
+    <script type="text/javascript" src="js/page/hospital.js"></script>
     <script type="text/javascript" src="js/page/register.js"></script>
     <script type="text/javascript" src="js/page/login.js"></script>
     <script type="text/javascript" src="js/page/profile.js"></script>

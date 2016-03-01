@@ -72,6 +72,7 @@ body > #index > nav > div {
     width: 8vw;
     text-align: center;
     cursor: pointer;
+    transition: box-shadow 0.5s, background-color 0.5s;
 }
 
 body > #index > nav > div.on {

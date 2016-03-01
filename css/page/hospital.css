@@ -1,0 +1,107 @@
+body > #hospital {
+    background-image: url("../../img/image/2.jpg");
+}
+
+body > #hospital > header,
+body > #hospital > footer {
+    height: 80vh;
+}
+
+body > #hospital > main {
+    height: 80vh;
+}
+
+body > #hospital > main:nth-of-type(1) > main.image {
+    top: 0px;
+    left: 0px;
+    height: 45vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+}
+
+body > #hospital > main:nth-of-type(1) > main.name {
+    position: absolute;
+    top: 35vh;
+    left: 0px;
+    right: 0px;
+    height: 10vh;
+    color: #333;
+    font-size: 4vh;
+    padding-right: 3vh;
+    text-align: right;
+    background-image: url("../../img/icon/black/name.png");
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 6;
+}
+
+body > #hospital > main:nth-of-type(1) > main.items {
+    position: absolute;
+    top: 45vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: var(--color-item);
+    height: auto;
+}
+
+body > #hospital > main:nth-of-type(1) > main.items > header {
+    padding-right: 2vh;
+    font-size: 3vh;
+    color: white;
+    line-height: 10vh;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: url("../../img/icon/white/stethoscope.png");
+}
+
+body > #hospital > main:nth-of-type(1) > main.items > div {
+    text-align: right;
+    color: white;
+    padding-right: 2vh;
+    line-height: 100%;
+    font-size: 2vh;
+    margin-top: 1.5vh;
+}
+
+
+/* ======================================================================================= */
+
+body > #hospital > main:nth-of-type(2) > main {
+    padding-left: 10vh;
+    font-size: 2vh;
+}
+
+body > #hospital > main:nth-of-type(2) > main.address {
+    background-image: url("../../img/icon/white/address.png");
+}
+
+body > #hospital > main:nth-of-type(2) > main.address2 {
+    background-image: url("../../img/icon/white/address.png");
+}
+
+body > #hospital > main:nth-of-type(2) > main.city {
+    background-image: url("../../img/icon/white/city.png");
+}
+
+body > #hospital > main:nth-of-type(2) > main.state {
+    background-image: url("../../img/icon/white/state.png");
+}
+
+body > #hospital > main:nth-of-type(2) > main.zipcode {
+    background-image: url("../../img/icon/white/zipcode.png");
+}
+
+body > #hospital > main:nth-of-type(2) > main.iframe {
+    height: 30vh;
+}
+
+body > #hospital > main:nth-of-type(2) > main.iframe > iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}

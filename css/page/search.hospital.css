@@ -1,0 +1,59 @@
+body > #search-hospital {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../img/image/search.jpg");
+}
+
+body > #search-hospital > header,
+body > #search-hospital > footer {}
+
+body > #search-hospital > main {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    max-width: none;
+    min-width: auto;
+}
+
+body > #search-hospital > main > div {
+    background-color: #333;
+    height: 22vh;
+    width: 22vh;
+    margin-bottom: 2vh;
+    margin-right: 2vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+body > #search-hospital > main > div:nth-child(3n-2) {
+    margin-bottom: 0px;
+}
+
+body > #search-hospital > main > div > a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+body > #search-hospital > main > div > header {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 4vh;
+    color: white;
+    text-align: right;
+    padding-right: 1vh;
+}

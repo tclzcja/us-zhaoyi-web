@@ -198,6 +198,7 @@ body > main.on {
 .object > main > * {
     position: relative;
     height: 10vh;
+    line-height: 10vh;
 }
 
 .object > main > *:nth-child(2n) {
