@@ -21,6 +21,13 @@
         this.parentNode.querySelector(":scope > .shadow").classList.remove("shadow");
         this.classList.add("on");
         this.classList.add("shadow");
+        if (this.classList.contains("doctor")) {
+            self.querySelector(":scope > main > footer").classList.add("doctor");
+            self.querySelector(":scope > main > footer").classList.remove("hospital");
+        } else {
+            self.querySelector(":scope > main > footer").classList.add("hospital");
+            self.querySelector(":scope > main > footer").classList.remove("doctor");
+        }
     });
 
     self.querySelector(":scope > main > input").addEventListener("keyup", function () {

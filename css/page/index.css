@@ -30,7 +30,6 @@ body > #index > main > footer {
     top: 0px;
     bottom: 0px;
     width: 10vh;
-    background-color: #69F;
     right: -10vh;
     transition: right 0.5s, background-color 0.5s;
     background-image: url("../../img/icon/white/search.png");
@@ -38,12 +37,20 @@ body > #index > main > footer {
     z-index: 1000;
 }
 
+body > #index > main > footer.doctor {
+    background-color: var(--color-doctor);
+}
+
+body > #index > main > footer.hospital {
+    background-color: var(--color-hospital);
+}
+
 body > #index > main > footer.on {
     right: 0px;
 }
 
 body > #index > main > footer:hover {
-    background-color: #36C;
+    background-color: #FC3;
 }
 
 body > #index > aside {

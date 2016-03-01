@@ -13,40 +13,26 @@
     const Param = window.Param;
 
     self.addEventListener("hey", function () {
+
+        reset();
+
         Api.Core("doctor", "single", {
             id: Param.Get("id")
-        }, reset);
-        Api.Core("comment", "filter", {
-            doctor_id: Param.Get("id")
         }, function (data) {
-            for (var i = 0; i < data.length; i++) {
-                add_comment(data[i]);
-            }
+            render(data);
+            Api.Core("comment", "filter", {
+                doctor_id: Param.Get("id")
+            }, function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    add_comment(data[i]);
+                }
+            });
         });
-    });
 
-    self.querySelector(":scope > main:nth-of-type(2) > aside:nth-of-type(1)").addEventListener("click", function () {
-        var on = self.querySelector(":scope > main:nth-of-type(2) > main > section.on");
-        if (on.previousElementSibling && on.previousElementSibling.tagName === "SECTION") {
-            on.classList.remove("on");
-            on.previousElementSibling.classList.add("on");
-            var num = self.querySelector(":scope > main:nth-of-type(2) > header > span:nth-of-type(1)");
-            num.innerHTML = parseInt(num.innerHTML, 10) - 1;
-        }
-    });
-
-    self.querySelector(":scope > main:nth-of-type(2) > aside:nth-of-type(2)").addEventListener("click", function () {
-        var on = self.querySelector(":scope > main:nth-of-type(2) > main > section.on");
-        if (on.nextElementSibling && on.nextElementSibling.tagName === "SECTION") {
-            on.classList.remove("on");
-            on.nextElementSibling.classList.add("on");
-            var num = self.querySelector(":scope > main:nth-of-type(2) > header > span:nth-of-type(1)");
-            num.innerHTML = parseInt(num.innerHTML, 10) + 1;
-        }
     });
 
     // Expand the comment panel
-    self.querySelector(":scope > main:nth-of-type(3) > footer > main.comment").addEventListener("click", function () {
+    self.querySelector(":scope > main.comment > footer > main.comment").addEventListener("click", function () {
         if (!this.classList.contains("on")) {
             this.classList.add("on");
             this.classList.add("shadow");
@@ -55,7 +41,7 @@
     });
 
     // Ranking the star
-    self.querySelectorAll(":scope > main:nth-of-type(3) > footer > main.comment > header > span").addEventListener("mouseenter", function () {
+    self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span").addEventListener("mouseenter", function () {
         var count = 1;
         this.parentNode.querySelectorAll(":scope > span").exec(function () {
             this.classList.add("empty");
@@ -71,7 +57,7 @@
     });
 
     // Contract the comment panel
-    self.querySelector(":scope > main:nth-of-type(3) > footer > main.comment > div").addEventListener("click", function (e) {
+    self.querySelector(":scope > main.comment > footer > main.comment > div").addEventListener("click", function (e) {
         this.parentNode.classList.remove("on");
         this.parentNode.classList.remove("shadow");
         this.parentNode.classList.add("click");
@@ -79,10 +65,10 @@
     });
 
     // Add and Send the comment
-    self.querySelector(":scope > main:nth-of-type(3) > footer > main.comment > img").addEventListener("click", function () {
+    self.querySelector(":scope > main.comment > footer > main.comment > img").addEventListener("click", function () {
         var data = {
-            content: self.querySelector(":scope > main:nth-of-type(3) > footer > main.comment > main > input").value,
-            star: self.querySelectorAll(":scope > main:nth-of-type(3) > footer > main.comment > header > span:not(.empty)").length,
+            content: self.querySelector(":scope > main.comment > footer > main.comment > main > input").value,
+            star: self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span:not(.empty)").length,
             user_id: Auth.Current.User().id,
             doctor_id: Param.Get("id")
         };
@@ -91,49 +77,55 @@
         });
     });
 
-    function reset(data) {
-        self.querySelector(":scope > main:nth-of-type(1) > main.portrait").style.backgroundImage = "";
-        self.querySelector(":scope > main:nth-of-type(1) > main.name").innerHTML = "";
-        self.querySelectorAll(":scope > main:nth-of-type(1) > main.items > div").remove();
-        self.querySelectorAll(":scope > main:nth-of-type(1) > main.insurances > div").remove();
-        self.querySelectorAll(":scope > main:nth-of-type(2) > main > :not(template)").remove();
-        self.querySelectorAll(":scope > main:nth-of-type(3) > header > footer > span").remove();
-        self.querySelectorAll(":scope > main:nth-of-type(3) > main > :not(template)").remove();
-
-        render(data);
+    function reset() {
+        self.querySelector(":scope > main.info > main.portrait").style.backgroundImage = "";
+        self.querySelector(":scope > main.info > main.name").innerHTML = "";
+        self.querySelector(":scope > main.info > main.code").innerHTML = "";
+        self.querySelector(":scope > main.info > main.startyear").innerHTML = "";
+        self.querySelectorAll(":scope > main.item > main > div").remove();
+        self.querySelectorAll(":scope > main.insurance > main > div").remove();
+        self.querySelectorAll(":scope > main.schedule").remove();
+        self.querySelectorAll(":scope > main.comment > header > footer > span").remove();
+        self.querySelectorAll(":scope > main.comment > main > :not(template)").remove();
     }
 
     function add_comment(comment) {
-        holder.innerHTML = self.querySelector(":scope > main:nth-of-type(3) > main > template").innerHTML;
+        holder.innerHTML = self.querySelector(":scope > main.comment > main > template").innerHTML;
         var c = holder.firstElementChild;
         c.innerHTML = comment.content;
-        self.querySelector(":scope > main:nth-of-type(3) > main").insertBefore(c, self.querySelector(":scope > main:nth-of-type(3) > main > :first-child"));
+        self.querySelector(":scope > main.comment > main").insertBefore(c, self.querySelector(":scope > main.comment > main > :first-child"));
     }
 
     function render(data) {
+
         if (data.portrait) {
-            self.querySelector(":scope > main:nth-of-type(1) > main.portrait").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
+            self.querySelector(":scope > main.info > main.portrait").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
         }
-        self.querySelector(":scope > main:nth-of-type(1) > main.name").innerHTML = data.name.en;
+
+        self.querySelector(":scope > main.info > main.name").innerHTML = data.name.en;
+        self.querySelector(":scope > main.info > main.code").innerHTML = data.code;
+        self.querySelector(":scope > main.info > main.startyear").innerHTML = (new Date().getFullYear() - data.startyear) + "年";
+
         for (var i = 0; i < data.items.length; i++) {
             var item = Cache.Hash("item", data.items[i]);
             if (item) {
                 var div = document.createElement("div");
                 div.innerHTML = item.name["zh-Hans"];
-                self.querySelector(":scope > main:nth-of-type(1) > main.items").appendChild(div);
+                self.querySelector(":scope > main.item > main").appendChild(div);
             }
         }
+
         for (var i = 0; i < data.insurances.length; i++) {
             var insurance = Cache.Hash("insurance", data.insurances[i]);
             if (insurance) {
                 var div = document.createElement("div");
                 div.innerHTML = insurance.provider + " " + insurance.class + " " + insurance.subclass;
-                self.querySelector(":scope > main:nth-of-type(1) > main.insurances").appendChild(div);
+                self.querySelector(":scope > main.insurance > main").appendChild(div);
             }
         }
-        self.querySelector(":scope > main:nth-of-type(2) > header > span.total").innerHTML = data.schedules.length;
+
         for (var i = 0; i < data.schedules.length; i++) {
-            holder.innerHTML = self.querySelector(":scope > main:nth-of-type(2) > main > template").innerHTML;
+            holder.innerHTML = self.querySelector(":scope > template").innerHTML;
             var schedule = holder.firstElementChild;
             var hospital = Cache.Hash("hospital", data.schedules[i].hospital_id);
             schedule.querySelector(":scope > main").innerHTML = hospital.name.en;
@@ -146,21 +138,18 @@
             for (var j = 0; j < data.schedules[i].days.length; j++) {
                 schedule.querySelector(":scope > header > table > tbody > tr[data-ap='" + data.schedules[i].days[j].ap + "'] > td[data-day='" + data.schedules[i].days[j].day + "']").classList.add("on");
             }
-            if (i === 0) {
-                schedule.classList.add("on");
-                self.querySelector(":scope > main:nth-of-type(2) > header > span.now").innerHTML = 1;
-            }
-            self.querySelector(":scope > main:nth-of-type(2) > main").appendChild(schedule);
+            self.insertBefore(schedule, self.querySelector(":scope > template"));
         }
+
         var star = ((data.star[1] + data.star[2] * 2 + data.star[3] * 3 + data.star[4] * 4 + data.star[5] * 5) / (data.star[1] + data.star[2] + data.star[3] + data.star[4] + data.star[5]) || 0).toFixed(1);
-        self.querySelector(":scope > main:nth-of-type(3) > header > header > span:first-child").innerHTML = star;
+        self.querySelector(":scope > main.comment > header > header > span:first-child").innerHTML = star;
         for (var i = 0; i < Math.floor(star); i++) {
-            self.querySelector(":scope > main:nth-of-type(3) > header > footer").appendChild(document.createElement("span"));
+            self.querySelector(":scope > main.comment > header > footer").appendChild(document.createElement("span"));
         }
         if (star > Math.floor(star)) {
             var span = document.createElement("span");
             span.classList.add("empty");
-            self.querySelector(":scope > main:nth-of-type(3) > header > footer").insertBefore(span, self.querySelector(":scope > main:nth-of-type(3) > header > footer > span:first-child"));
+            self.querySelector(":scope > main.comment > header > footer").insertBefore(span, self.querySelector(":scope > main.comment > header > footer > span:first-child"));
         }
 
     }

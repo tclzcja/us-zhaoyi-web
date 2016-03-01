@@ -1,8 +1,11 @@
 :root {
     --color-doctor: #69F;
     --color-hospital: #F66;
+    --color-hospital-light: #FDD;
     --color-insurance: #F90;
-    --color-item: #6C0;
+    --color-insurance-light: #FED;
+    --color-item: #690;
+    --color-item-light: #EFD;
     --color-user: #999;
     --color-comment: #F69;
 }
@@ -182,8 +185,8 @@ body > main.on {
 
 .object > main {
     display: inline-block;
+    width: 30vw;
     min-width: 30vw;
-    max-width: 30vw;
     height: 70vh;
     background-color: #666;
     position: relative;
@@ -198,11 +201,11 @@ body > main.on {
 .object > main > * {
     position: relative;
     height: 10vh;
-    line-height: 10vh;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .object > main > *:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .object > header,
@@ -211,4 +214,37 @@ body > main.on {
     min-width: 10vh;
     height: 70vh;
     background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+/* ========================================================================================= */
+
+.list {
+    border-bottom-style: solid;
+    border-bottom-width: 1vh;
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    padding-top: 2vh;
+}
+
+.list > div {
+    height: 5vh;
+    line-height: 5vh;
+    font-size: 1.5vh;
+    padding-left: 3vh;
+    color: black;
+    position: relative;
+    border-bottom: dashed 1px;
+    border-bottom-color: inherit;
+}
+
+.list:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -0.5vh;
+    border-left: solid 1vh transparent;
+    border-right: solid 1vh transparent;
+    border-top: solid 1vh;
+    border-top-color: inherit;
 }

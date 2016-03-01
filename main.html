@@ -3,7 +3,8 @@
 
 <head>
     <title>北美找医网</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <link href="img/main.ico" rel="icon" type="image/x-icon" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
     <link type="text/css" rel="stylesheet" href="css/component/header.css" />
     <link type="text/css" rel="stylesheet" href="css/component/footer.css" />
@@ -28,11 +29,10 @@
         </nav>
         <main class="icon shadow">
             <input type="search" placeholder="输入关键字查找医生、医院、检查项目……" />
-            <footer class="icon"></footer>
+            <footer class="icon doctor"></footer>
         </main>
     </main>
     <main id="search-doctor" class="object">
-        <horizontal-roller for="search-doctor"></horizontal-roller>
         <header></header>
         <main>
             <template>
@@ -60,70 +60,67 @@
     <main id="doctor" class="object">
         <horizontal-roller for="doctor"></horizontal-roller>
         <header></header>
-        <main class="shadow info left">
+        <main class="shadow info">
             <main class="portrait"></main>
-            <main class="name icon"></main>
-            <main class="items">
-                <header class="icon">检查项目</header>
-            </main>
-            <main class="insurances">
-                <header class="icon">接受保险</header>
-            </main>
+            <main class="icon name"></main>
+            <main class="icon code"></main>
+            <main class="icon startyear"></main>
         </main>
-        <main class="shadow schedule center">
-            <header>第<span class="now">1</span>/<span class="total"></span>个日期和地点</header>
-            <aside class="icon"></aside>
-            <aside class="icon"></aside>
-            <main>
-                <template>
-                    <section>
-                        <header>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td></td>
-                                        <td>周一</td>
-                                        <td>周二</td>
-                                        <td>周三</td>
-                                        <td>周四</td>
-                                        <td>周五</td>
-                                        <td>周六</td>
-                                        <td>周日</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr data-ap="am">
-                                        <td>上午</td>
-                                        <td data-day="1"></td>
-                                        <td data-day="2"></td>
-                                        <td data-day="3"></td>
-                                        <td data-day="4"></td>
-                                        <td data-day="5"></td>
-                                        <td data-day="6"></td>
-                                        <td data-day="7"></td>
-                                    </tr>
-                                    <tr data-ap="pm">
-                                        <td>下午</td>
-                                        <td data-day="1"></td>
-                                        <td data-day="2"></td>
-                                        <td data-day="3"></td>
-                                        <td data-day="4"></td>
-                                        <td data-day="5"></td>
-                                        <td data-day="6"></td>
-                                        <td data-day="7"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </header>
-                        <main></main>
-                        <footer>
-                            <!-- iframe -->
-                        </footer>
-                    </section>
-                </template>
-            </main>
+        <main class="shadow item">
+            <header class="icon">检查项目</header>
+            <main class="list"></main>
         </main>
-        <main class="shadow comment scrollbar right">
+        <main class="shadow insurance">
+            <header class="icon">接受保险</header>
+            <main class="list"></main>
+        </main>
+        <template>
+            <main class="shadow schedule">
+                <header>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>周一</td>
+                                <td>周二</td>
+                                <td>周三</td>
+                                <td>周四</td>
+                                <td>周五</td>
+                                <td>周六</td>
+                                <td>周日</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ap="am">
+                                <td>上午</td>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                                <td data-day="6"></td>
+                                <td data-day="7"></td>
+                            </tr>
+                            <tr data-ap="pm">
+                                <td>下午</td>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                                <td data-day="6"></td>
+                                <td data-day="7"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </header>
+                <main></main>
+                <footer>
+                    <!-- iframe -->
+                </footer>
+            </main>
+        </template>
+        <main class="shadow comment">
             <header>
                 <header><span></span><span>/5.0</span></header>
                 <footer></footer>

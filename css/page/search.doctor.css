@@ -6,35 +6,32 @@ body > #search-doctor {
 }
 
 body > #search-doctor > header,
-body > #search-doctor > footer {}
+body > #search-doctor > footer {
+    display: block;
+    flex: 1;
+}
 
 body > #search-doctor > main {
     background-color: transparent;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
-    max-width: none;
-    min-width: auto;
+    width: 150vh;
+    overflow: scroll;
 }
 
 body > #search-doctor > main > div {
     background-color: #333;
-    height: 22vh;
-    width: 22vh;
-    margin-bottom: 2vh;
-    margin-right: 2vh;
+    height: 25vh;
+    width: 25vh;
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     cursor: pointer;
-}
-
-body > #search-doctor > main > div:nth-child(3n-2) {
-    margin-bottom: 0px;
+    position: relative;
 }
 
 body > #search-doctor > main > div > a {
