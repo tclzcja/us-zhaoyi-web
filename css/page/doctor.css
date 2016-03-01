@@ -2,6 +2,11 @@ body > #doctor {
     background-image: url("../../img/image/2.jpg");
 }
 
+body > #doctor > header,
+body > #doctor > footer {
+    height: 80vh;
+}
+
 body > #doctor > main {
     height: 80vh;
 }

@@ -55,27 +55,33 @@ body > #index > aside {
     background: linear-gradient(to bottom, white, transparent);
 }
 
-body > #index > table {
+body > #index > nav {
+    display: block;
+    position: absolute;
+    height: 8vh;
+    bottom: 55vh;
+    left: 10vw;
+}
+
+body > #index > nav > div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
     height: 100%;
-    width: 100%;
-    border-collapse: collapse;
-    opacity: 0.25;
+    width: 8vw;
+    text-align: center;
+    cursor: pointer;
 }
 
-body > #index > table > tbody > tr > td {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+body > #index > nav > div.on {
+    background-color: white;
 }
 
-body > #index > table > tbody > tr > td:nth-child(2n) {
-    background-color: #DDD;
+body > #index > nav > div.doctor {
+    color: var(--color-doctor);
 }
 
-body > #index > table > tbody > tr:nth-child(2n) > td:nth-child(2n+1) {
-    background-color: #CCC;
-}
-
-body > #index > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
-    background-color: #BBB;
+body > #index > nav > div.hospital {
+    color: var(--color-hospital);
 }

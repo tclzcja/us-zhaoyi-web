@@ -25,7 +25,7 @@
     });
 
     self.querySelector(":scope > main > footer").addEventListener("click", function () {
-        location.hash = "#l=search";
+        location.hash = "#l=search-doctor";
     });
 
     function portraitize(self) {
