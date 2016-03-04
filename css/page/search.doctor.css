@@ -1,9 +1,4 @@
-body > #search-doctor {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../img/image/search.jpg");
-}
+body > #search-doctor {}
 
 body > #search-doctor > header,
 body > #search-doctor > footer {

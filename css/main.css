@@ -26,7 +26,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color: #CCC;
     overflow: hidden;
     -moz-user-select: none;
     -khtml-user-select: none;
@@ -95,6 +95,73 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* ============================================================================================================= */
 
+body > header {
+    position: fixed;
+    height: 6vh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    color: white;
+    background-color: #69F;
+}
+
+body > header > * {
+    position: absolute;
+}
+
+body > header > header {
+    padding-left: 6vh;
+    padding-right: 2vh;
+    font-size: 3vh;
+    line-height: 6vh;
+    width: auto;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 4vh 4vh;
+    background-position: 1vh center;
+    background-image: url("../img/icon/white/state.png");
+}
+
+body > header > header > a > span:first-child {}
+
+body > header > header > a > span:last-child {
+    color: white;
+}
+
+body > header > footer {
+    right: 2vh;
+    line-height: 6vh;
+    font-size: 2vh;
+    color: white;
+    width: 50%;
+    text-align: right;
+}
+
+body > header > footer > a {
+    padding-left: 3vh;
+}
+
+body > header > footer > a[href="#l=login"] {
+    color: #F90;
+    display: none;
+}
+
+body > header > footer > a[href="#l=login"].on {
+    display: inline-block;
+}
+
+body > header > footer > a[href="#l=profile"] {
+    display: none;
+}
+
+body > header > footer > a[href="#l=profile"].on {
+    display: inline-block;
+}
+
+
+/* ============================================================================================================= */
+
 body > main {
     display: block;
     position: fixed;
@@ -106,9 +173,6 @@ body > main {
     opacity: 0;
     z-index: 4;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 body > main.on {
@@ -149,7 +213,7 @@ body > main.on {
 /* ========================================================================================= */
 
 .shadow {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 

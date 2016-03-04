@@ -5,7 +5,6 @@ body > #index {
     right: 0px;
     font-size: 2vh;
     color: white;
-    background-image: url("../../img/image/index.jpg");
 }
 
 body > #index > * {
@@ -51,15 +50,6 @@ body > #index > main > footer.on {
 
 body > #index > main > footer:hover {
     background-color: #FC3;
-}
-
-body > #index > aside {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    background: linear-gradient(to bottom, white, transparent);
 }
 
 body > #index > nav {
