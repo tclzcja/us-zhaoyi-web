@@ -30,6 +30,7 @@
         }
     });
 
+    /*
     self.querySelector(":scope > main > input").addEventListener("keyup", function () {
         if (this.value !== "") {
             self.querySelector(":scope > main > footer").classList.add("on");
@@ -46,12 +47,6 @@
         }
 
     });
-
-    function portraitize(self) {
-        var sl = self.querySelectorAll(":scope > table > tbody > tr > td");
-        for (var i = 0; i < sl.length; i++) {
-            sl[i].style.backgroundImage = "url('img/portrait/doctor/" + Math.randomRange(1, 14) + ".jpg')";
-        }
-    }
+    */
 
 }());

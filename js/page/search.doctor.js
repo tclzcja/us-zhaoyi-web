@@ -46,9 +46,9 @@
             holder.innerHTML = self.querySelector(":scope > main > template").innerHTML;
             var div = holder.firstElementChild;
             if (current_data_filter[i].portrait && current_data_filter[i].portrait.id) {
-                div.style.backgroundImage = "url('" + Api.Storage(current_data_filter[i].portrait.id, current_data_filter[i].portrait.extension) + "')";
+                div.querySelector(":scope > div.portrait").style.backgroundImage = "url('" + Api.Storage(current_data_filter[i].portrait.id, current_data_filter[i].portrait.extension) + "')";
             }
-            div.querySelector(":scope > header").innerHTML = current_data_filter[i].name.en;
+            div.querySelector(":scope > div.name").innerHTML = current_data_filter[i].name.en;
             div.querySelector(":scope > a").href = "#l=doctor&id=" + current_data_filter[i].id;
             self.querySelector(":scope > main").appendChild(div);
         }

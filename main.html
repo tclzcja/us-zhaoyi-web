@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <link href="img/main.ico" rel="icon" type="image/x-icon" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
-    <link type="text/css" rel="stylesheet" href="css/component/footer.css" />
     <link type="text/css" rel="stylesheet" href="css/page/index.css" />
     <link type="text/css" rel="stylesheet" href="css/page/search.doctor.css" />
     <link type="text/css" rel="stylesheet" href="css/page/search.hospital.css" />
@@ -21,28 +20,38 @@
     <!-- Page -->
     <main class="on"></main>
     <main id="index">
-        <nav>
-            <div class="on shadow doctor">医生</div>
-            <div class="hospital">医院</div>
-        </nav>
-        <main class="icon shadow">
-            <input type="search" placeholder="输入关键字查找医生、医院、检查项目……" />
-            <footer class="icon doctor"></footer>
+        <main class="shadow">
+            <main class="icon">
+                我在找 医生/医院 关键字是 关键字
+            </main>
+            <footer>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </footer>
         </main>
     </main>
-    <main id="search-doctor" class="object">
-        <header></header>
+    <main id="search-doctor">
+        <nav class="shadow">
+            <section class="icon name"></section>
+            <section class="icon item"></section>
+            <section class="icon insurance"></section>
+            <section class="icon distance"></section>
+            <section class="icon today"></section>
+            <section class="refresh"></section>
+        </nav>
         <main>
             <template>
                 <div class="shadow">
-                    <header></header>
+                    <div class="portrait"></div>
+                    <div class="name"></div>
                     <a></a>
                 </div>
             </template>
         </main>
-        <footer></footer>
     </main>
-    <main id="search-hospital" class="object">
+    <main id="search-hospital">
         <horizontal-roller for="search-hospital"></horizontal-roller>
         <header></header>
         <main>
@@ -55,26 +64,26 @@
         </main>
         <footer></footer>
     </main>
-    <main id="doctor" class="object">
-        <horizontal-roller for="doctor"></horizontal-roller>
-        <header></header>
-        <main class="shadow info">
-            <main class="portrait"></main>
-            <main class="icon name"></main>
-            <main class="icon code"></main>
-            <main class="icon startyear"></main>
-        </main>
-        <main class="shadow item">
-            <header class="icon">检查项目</header>
-            <main class="list"></main>
-        </main>
-        <main class="shadow insurance">
-            <header class="icon">接受保险</header>
-            <main class="list"></main>
-        </main>
-        <template>
-            <main class="shadow schedule">
-                <header>
+    <main id="doctor">
+        <header class="shadow">
+            <section class="portrait">
+                <main></main>
+            </section>
+            <section class="name" data-title="姓名"></section>
+            <section class="gender" data-title="性别"></section>
+            <section class="code" data-title="行医编号"></section>
+            <section class="startyear" data-title="行医年份"></section>
+            <section class="items" data-title="科目"></section>
+            <section class="insurances" data-title="保险"></section>
+            <section class="languages" data-title="语言">
+                <span>普通话</span><span>粤语</span><span>英语</span><span>西班牙语</span>
+            </section>
+            <section class="telephone" data-title="电话">347-634-7159</section>
+            <section class="email" data-title="电子邮件">lzsoft.cja@gmail.com</section>
+        </header>
+        <footer>
+            <template>
+                <main class="shadow schedule">
                     <table>
                         <thead>
                             <tr>
@@ -111,41 +120,39 @@
                             </tr>
                         </tbody>
                     </table>
-                </header>
-                <main></main>
-                <footer>
-                    <!-- iframe -->
-                </footer>
-            </main>
-        </template>
-        <main class="shadow comment">
+                    <main>
+                        <header></header>
+                        <div class="address"></div>
+                        <div class="address2"></div>
+                        <div class="city"></div>
+                        <div class="state-zipcode"></div>
+                    </main>
+                    <footer>
+                        <!-- iframe -->
+                    </footer>
+                </main>
+            </template>
+        </footer>
+        <main class="shadow">
             <header>
-                <header><span></span><span>/5.0</span></header>
+                <header><span></span>/5.0</header>
                 <footer></footer>
             </header>
-            <main>
-                <template>
-                    <div></div>
-                </template>
-            </main>
-            <footer>
-                <main class="click icon like"></main>
-                <main class="click icon comment">
-                    <div class="icon"></div>
-                    <header>
-                        <span></span><span></span><span></span><span></span><span></span>
-                        <footer></footer>
-                    </header>
-                    <main class="icon">
-                        <input type="text" placeholder="您的评价" />
-                    </main>
-                    <img src="img/icon/white/tick.png" />
+            <nav>
+                <span>撰写评论</span>
+            </nav>
+            <main>目前没有任何评论</main>
+            <template>
+                <main>
+                    <main></main>
+                    <header></header>
+                    <footer></footer>
                 </main>
-            </footer>
+            </template>
         </main>
-        <footer></footer>
     </main>
-    <main id="hospital" class="object">
+    <main id="comment"></main>
+    <main id="hospital">
         <horizontal-roller for="hospital"></horizontal-roller>
         <header></header>
         <main class="shadow">
@@ -190,7 +197,7 @@
             <footer class="icon">登陆</footer>
         </main>
     </main>
-    <main id="profile" class="threed">
+    <main id="profile">
         <main class="shadow info left">
             <main class="icon email"></main>
             <main class="icon name">
@@ -216,7 +223,7 @@
         <footer class="shadow logout">登出</footer>
     </main>
     <!-- Header & Footer -->
-    <header class="shadow">
+    <header>
         <header>
             <a href="#l=index">
                 <span>北美</span><span>找医网</span>
@@ -237,7 +244,6 @@
     <script type="text/javascript" src="js/lib/template.js"></script>
     <script type="text/javascript" src="js/component/header.js"></script>
     <script type="text/javascript" src="js/component/footer.js"></script>
-    <script type="text/javascript" src="js/component/horizontal.roller.js"></script>
     <script type="text/javascript" src="js/page/index.js"></script>
     <script type="text/javascript" src="js/page/search.doctor.js"></script>
     <script type="text/javascript" src="js/page/search.hospital.js"></script>

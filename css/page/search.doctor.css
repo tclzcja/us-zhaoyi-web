@@ -1,32 +1,33 @@
 body > #search-doctor {}
 
-body > #search-doctor > header,
-body > #search-doctor > footer {
-    display: block;
-    flex: 1;
+body > #search-doctor > nav {
+    position: fixed;
+    top: 10vh;
+    left: 5vh;
+    right: 70vw;
+    margin-right: 10vh;
+    bottom: 10vh;
+    background-color: white;
 }
 
 body > #search-doctor > main {
-    background-color: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 150vh;
-    overflow: scroll;
+    position: absolute;
+    top: 10vh;
+    right: 5vh;
+    margin-bottom: 10vh;
+    width: 70vw;
 }
 
 body > #search-doctor > main > div {
-    background-color: #333;
+    background-color: white;
     height: 25vh;
-    width: 25vh;
-    color: white;
+    width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 25vh 25vh;
+    background-position: left center;
     cursor: pointer;
     position: relative;
+    margin-bottom: 20px;
 }
 
 body > #search-doctor > main > div > a {
@@ -37,15 +38,30 @@ body > #search-doctor > main > div > a {
     bottom: 0px;
 }
 
-body > #search-doctor > main > div > header {
+body > #search-doctor > main > div > div.portrait {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 4vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    line-height: 4vh;
-    color: white;
-    text-align: right;
-    padding-right: 1vh;
+    top: 2vh;
+    left: 2vh;
+    height: 21vh;
+    width: 21vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    background-image: url("../../img/portrait/doctor/0.png");
+}
+
+body > #search-doctor > main > div > div.name {
+    position: absolute;
+    top: 2vh;
+    left: 25vh;
+    font-size: 3vh;
+    line-height: 100%;
+    padding-left: 5vh;
+    color: black;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 3vh;
+    background-image: url("../../img/icon/black/name.png");
 }

@@ -6,8 +6,8 @@
     --color-insurance-light: #FED;
     --color-item: #690;
     --color-item-light: #EFD;
-    --color-user: #999;
-    --color-comment: #F69;
+    --color-user: #F69;
+    --color-comment: #999;
 }
 
 
@@ -19,7 +19,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
-    font-family: "Segoe UI", "Microsoft Yahei";
+    font-family: "Arial", "Microsoft Yahei";
 }
 
 html,
@@ -38,9 +38,10 @@ body {
 }
 
 a {
-    display: inline-block;
-    line-height: inherit;
     height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     z-index: 999;
     color: inherit;
     text-decoration: none;
@@ -97,49 +98,45 @@ input[type="search"]::-webkit-search-results-decoration {
 
 body > header {
     position: fixed;
-    height: 6vh;
+    height: 5vh;
     top: 0px;
     left: 0px;
     right: 0px;
-    z-index: 10;
-    color: white;
-    background-color: #69F;
+    z-index: 10000;
+    color: #69F;
+    font-size: 2vh;
+    background: linear-gradient(to right, #69F, white 30%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 body > header > * {
     position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
 }
 
 body > header > header {
+    color: white;
+    left: 0px;
+    justify-content: flex-start;
     padding-left: 6vh;
-    padding-right: 2vh;
-    font-size: 3vh;
-    line-height: 6vh;
-    width: auto;
-    height: 100%;
     background-repeat: no-repeat;
     background-size: 4vh 4vh;
     background-position: 1vh center;
     background-image: url("../img/icon/white/state.png");
 }
 
-body > header > header > a > span:first-child {}
-
-body > header > header > a > span:last-child {
-    color: white;
-}
-
 body > header > footer {
-    right: 2vh;
-    line-height: 6vh;
-    font-size: 2vh;
-    color: white;
-    width: 50%;
-    text-align: right;
+    justify-content: flex-end;
+    right: 0px;
 }
 
 body > header > footer > a {
-    padding-left: 3vh;
+    padding-right: 2vh;
 }
 
 body > header > footer > a[href="#l=login"] {
@@ -148,7 +145,7 @@ body > header > footer > a[href="#l=login"] {
 }
 
 body > header > footer > a[href="#l=login"].on {
-    display: inline-block;
+    display: flex;
 }
 
 body > header > footer > a[href="#l=profile"] {
@@ -156,14 +153,13 @@ body > header > footer > a[href="#l=profile"] {
 }
 
 body > header > footer > a[href="#l=profile"].on {
-    display: inline-block;
+    display: flex;
 }
 
 
 /* ============================================================================================================= */
 
 body > main {
-    display: block;
     position: fixed;
     left: 0px;
     right: 0px;
@@ -172,7 +168,8 @@ body > main {
     transition: opacity 0.5s;
     opacity: 0;
     z-index: 4;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body > main.on {
@@ -181,134 +178,13 @@ body > main.on {
 }
 
 
-/* ============================================================================================================= */
-
-.icon {
-    background-size: 0px 0px;
-    line-height: 10vh;
-}
-
-.icon > input,
-.icon > textarea,
-.icon > select {
-    padding-left: 10vh;
-}
-
-.icon:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 10vh;
-    width: 10vh;
-    background-repeat: no-repeat;
-    background-size: 4vh;
-    background-position: center;
-    background-image: inherit;
-    z-index: 999;
-}
-
-
 /* ========================================================================================= */
 
 .shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-
-/* ========================================================================================= */
-
-.click {
-    opacity: 1;
-    transition: opacity 0.2s;
-    cursor: pointer;
-}
-
-.click:hover {
-    opacity: 0.85;
-}
-
-.click:active {
-    opacity: 0.75;
-}
-
-
-/* ========================================================================================= */
-
-.object {
-    box-sizing: content-box;
-    overflow-y: visible;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-.object > main {
-    display: inline-block;
-    width: 30vw;
-    min-width: 30vw;
-    height: 70vh;
-    background-color: #666;
-    position: relative;
-    color: white;
-    margin-left: 2vh;
-}
-
-.object > main:last-of-type {
-    margin-right: 2vh;
-}
-
-.object > main > * {
-    position: relative;
-    height: 10vh;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.object > main > *:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.object > header,
-.object > footer {
-    display: inline-block;
-    min-width: 10vh;
-    height: 70vh;
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-
-/* ========================================================================================= */
-
-.list {
-    border-bottom-style: solid;
-    border-bottom-width: 1vh;
-    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-    padding-top: 2vh;
-}
-
-.list > div {
-    height: 5vh;
-    line-height: 5vh;
-    font-size: 1.5vh;
-    padding-left: 3vh;
-    color: black;
-    position: relative;
-    border-bottom: dashed 1px;
-    border-bottom-color: inherit;
-}
-
-.list:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    margin-left: -0.5vh;
-    border-left: solid 1vh transparent;
-    border-right: solid 1vh transparent;
-    border-top: solid 1vh;
-    border-top-color: inherit;
+.shadow:active {
+    box-shadow: none;
+    transform: translateY(1px);
 }

@@ -1,354 +1,267 @@
-body > #doctor {
-    flex-wrap: nowrap;
+body > #doctor {}
+
+body > #doctor > header {
+    background-color: white;
+    position: absolute;
+    top: 10vh;
+    left: 5vh;
+    width: 30vw;
+    padding-bottom: 1.5vh;
+    border-bottom: solid 1vh #69F;
 }
 
-body > #doctor > main.info > main.portrait {
-    top: 0px;
+body > #doctor > header > section {
+    text-align: right;
+    line-height: 100%;
+    font-size: 2vh;
+    padding-top: 2.5vh;
+    padding-bottom: 1vh;
+    padding-left: 8vh;
+    border-bottom: dashed 1px #ACF;
+    border-top: solid 1px transparent;
+    position: relative;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+body > #doctor > header > section:last-child {
+    border-bottom: none;
+}
+
+body > #doctor > header > section:before {
+    content: attr(data-title);
+    font-size: 1.4vh;
+    line-height: 100%;
+    position: absolute;
     left: 0px;
-    height: 40vh;
-    width: 100%;
+    bottom: 1vh;
+    color: #69F;
+}
+
+body > #doctor > header > section.portrait {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    height: 25vh;
+    background-color: #69F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > #doctor > header > section.portrait > main {
+    height: 20vh;
+    width: 20vh;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("../../img/portrait/doctor/0.png");
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-body > #doctor > main.info > main.name {
-    font-size: 4vh;
-    padding-right: 3vh;
-    text-align: right;
-    background-image: url("../../img/icon/white/name.png");
+body > #doctor > header > section.name {
+    font-size: 3vh;
 }
 
-body > #doctor > main.info > main.code {
-    font-size: 2vh;
-    padding-right: 3vh;
-    text-align: right;
-    background-image: url("../../img/icon/white/code.png");
+body > #doctor > header > section.items > span {
+    display: inline-block;
+    margin-left: 1vh;
+    font-size: 1.8vh;
 }
 
-body > #doctor > main.info > main.startyear {
-    font-size: 2vh;
-    padding-right: 3vh;
-    text-align: right;
-    background-image: url("../../img/icon/white/calendar.png");
+body > #doctor > header > section.insurances > span {
+    display: inline-block;
+    margin-left: 1vh;
+    font-size: 1.8vh;
 }
 
-
-/* ============================================================================================= */
-
-body > #doctor > main.item > header {
-    background-color: var(--color-item);
-    background-image: url("../../img/icon/white/stethoscope.png");
-    padding-left: 10vh;
+body > #doctor > header > section.languages > span {
+    display: inline-block;
+    margin-left: 1vh;
+    font-size: 1.8vh;
 }
 
-body > #doctor > main.item > main {
-    height: 60vh;
-    background-color: var(--color-item-light);
-    border-color: var(--color-item);
+body > #doctor > footer {
+    position: absolute;
+    top: 10vh;
+    left: 30vw;
+    margin-left: 10vh;
+    width: 30vw;
 }
 
-
-/* ============================================================================================= */
-
-body > #doctor > main.insurance > header {
-    background-color: var(--color-insurance);
-    background-image: url("../../img/icon/white/insurance.png");
-    padding-left: 10vh;
+body > #doctor > footer > main {
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom: solid 1vh var(--color-hospital);
 }
 
-body > #doctor > main.insurance > main {
-    height: 60vh;
-    background-color: var(--color-insurance-light);
-    border-color: var(--color-insurance);
-}
-
-
-/* ============================================================================================= */
-
-
-/* Schedule */
-
-body > #doctor > main.schedule > header {
+body > #doctor > footer > main > table {
+    width: 100%;
+    border-collapse: collapse;
     height: 11.25vw;
 }
 
-body > #doctor > main.schedule > header > table {
-    height: 100%;
-    width: 100%;
-    border-collapse: collapse;
-    line-height: normal;
-}
-
-body > #doctor > main.schedule > header > table > thead > tr > td {
+body > #doctor > footer > main > table > thead > tr > td {
     height: 3.75vw;
+    width: 3.75vw;
     background-color: #666;
-    color: white;
     text-align: center;
-}
-
-body > #doctor > main.schedule > header > table > thead > tr > td:nth-child(2n) {
-    background-color: #555;
-}
-
-body > #doctor > main.schedule > header > table > tbody > tr > td {
     color: white;
+}
+
+body > #doctor > footer > main > table > thead > tr > td:nth-child(2n) {
+    background-color: #555;
+}
+
+body > #doctor > footer > main > table > tbody > tr > td {
+    background-color: #555;
     text-align: center;
+    color: white;
 }
 
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(1) > td {
-    height: 3.75vw;
-    background-color: #555;
-}
-
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(1) > td:nth-child(2n) {
+body > #doctor > footer > main > table > tbody > tr > td:nth-child(2n) {
     background-color: #666;
 }
 
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(2) > td {
-    height: 3.75vw;
+body > #doctor > footer > main > table > tbody > tr:nth-child(2n) > td {
     background-color: #666;
 }
 
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(2) > td:nth-child(2n) {
+body > #doctor > footer > main > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
     background-color: #555;
 }
 
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(1) > td.on {
-    background-color: #6C0;
+body > #doctor > footer > main > table > tbody > tr > td.on {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
-    background-image: url("../../img/icon/white/tick.png");
+    background-image: url("../../img/icon/green/tick.png");
 }
 
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(1) > td:nth-child(2n).on {
-    background-color: #5B0;
-}
-
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(2) > td.on {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-    background-color: #5B0;
-    background-image: url("../../img/icon/white/tick.png");
-}
-
-body > #doctor > main.schedule > header > table > tbody > tr:nth-child(2) > td:nth-child(2n).on {
-    background-color: #6C0;
-}
-
-body > #doctor > main.schedule > main {
-    background-color: #444;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: 3vh;
+body > #doctor > footer > main > main {
     height: 20vh;
-    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
-}
-
-body > #doctor > main.schedule > footer {
-    height: calc(100% - 20vh - 11.25vw);
-}
-
-body > #doctor > main.schedule > footer > iframe {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-}
-
-
-/* Comment */
-
-body > #doctor > main.comment {
-    background-color: #7AF;
-    overflow-y: scroll;
-}
-
-body > #doctor > main.comment > header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 10vh;
-    z-index: 15;
-    background-color: transparent;
-}
-
-body > #doctor > main.comment > header > header {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
-    padding-left: 3vh;
-    line-height: 10vh;
-    color: #FFF;
-    font-size: 4vh;
-}
-
-body > #doctor > main.comment > header > header > span:last-child {
-    opacity: 0.5;
-}
-
-body > #doctor > main.comment > header > footer {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 3vh;
-}
-
-body > #doctor > main.comment > header > footer > span {
-    display: inline-block;
-    height: 100%;
-    width: 4vh;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-    background-image: url("../../img/icon/white/star.png");
-}
-
-body > #doctor > main.comment > header > footer > span.empty {
-    background-image: url("../../img/icon/white/star.empty.png");
-}
-
-body > #doctor > main.comment > main {
-    position: absolute;
-    top: 10vh;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-color: transparent;
-    height: auto;
-}
-
-body > #doctor > main.comment > main > div {
-    height: 5vh;
-    line-height: 5vh;
-    overflow: hidden;
-    white-space: nowrap;
-    padding-left: 3vh;
-    color: white;
-}
-
-body > #doctor > main.comment > main > div:nth-child(2n+1) {
-    background-color: #69F;
-}
-
-body > #doctor > main.comment > footer {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
-
-body > #doctor > main.comment > footer > main {
-    position: absolute;
-    bottom: 0px;
-    width: 10vh;
-    height: 10vh;
-    cursor: pointer;
-    transition: opacity 0.2s, height 0.5s, width 0.5s, background-color 0.5s;
-}
-
-body > #doctor > main.comment > footer > main.like {
-    right: 10vh;
-    background-image: url("../../img/icon/white/like.png");
-    z-index: 1;
-}
-
-body > #doctor > main.comment > footer > main.comment {
-    right: 0px;
-    background-image: url("../../img/icon/white/comment.png");
-    z-index: 5;
-}
-
-body > #doctor > main.comment > footer > main.comment > div {
-    background-image: url("../../img/icon/white/delete.png");
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 10vh;
-    width: 10vh;
-    visibility: hidden;
-}
-
-body > #doctor > main.comment > footer > main.comment > header {
-    position: absolute;
-    height: 10vh;
-    left: 0px;
-    right: 0px;
-    bottom: 10vh;
-    padding-left: 3vh;
-    visibility: hidden;
-    background-color: #111;
-    z-index: 1000;
-}
-
-body > #doctor > main.comment > footer > main.comment > header > span {
-    display: inline-block;
-    height: 100%;
-    width: 4vh;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-    background-image: url("../../img/icon/white/star.png");
-}
-
-body > #doctor > main.comment > footer > main.comment > header > span.empty {
-    background-image: url("../../img/icon/white/star.empty.png");
-}
-
-body > #doctor > main.comment > footer > main.comment > header > footer {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    display: inline-flex;
-    align-items: flex-end;
+    background-color: white;
+    color: #333;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+body > #doctor > footer > main > main > header {
+    font-size: 3vh;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+body > #doctor > footer > main > main > div {
+    font-size: 2vh;
+    line-height: 100%;
+    text-align: right;
+    width: 100%;
     padding-right: 2vh;
 }
 
-body > #doctor > main.comment > footer > main.comment > main {
-    position: absolute;
+body > #doctor > footer > main > footer {
+    height: 30vh;
+}
+
+body > #doctor > footer > main > footer > iframe {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+body > #doctor > main {
+    background-color: white;
+    position: fixed;
     top: 10vh;
+    right: 5vh;
+    left: 60vw;
+    margin-left: 15vh;
+}
+
+body > #doctor > main > header {
+    height: 3.75vw;
+    position: relative;
+}
+
+body > #doctor > main > header > header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 2vh;
+    font-size: 2.5vh;
+    color: #CCC;
+}
+
+body > #doctor > main > header > header > span {
+    font-size: 4vh;
+    line-height: 100%;
+    color: #333;
+}
+
+body > #doctor > main > header > footer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-right: 2vh;
+}
+
+body > #doctor > main > header > footer > span {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url("../../img/icon/orange/star.png");
+    height: 2vw;
+    width: 2vw;
+}
+
+body > #doctor > main > header > footer > span.empty {
+    background-image: url("../../img/icon/orange/star.empty.png");
+}
+
+body > #doctor > main > nav {
+    background-color: var(--color-comment);
+    height: 11vh;
+    background-repeat: no-repeat;
+    background-size: auto 5vh;
+    background-position: center 2vh;
+    background-image: url("../../img/icon/white/comment.png");
+    position: relative;
+}
+
+body > #doctor > main > nav > span {
+    position: absolute;
     left: 0px;
     right: 0px;
-    height: 10vh;
-    background-color: #222;
+    font-size: 1.5vh;
+    line-height: 100%;
+    top: 8vh;
+    text-align: center;
     color: white;
-    background-image: url("../../img/icon/white/comment.png");
-    visibility: hidden;
+    display: block;
 }
 
-body > #doctor > main.comment > footer > main.comment > main > input {
-    text-align: right;
-    padding-right: 2vh;
+body > #doctor > main > main {
+    padding: 2vh;
 }
 
-body > #doctor > main.comment > footer > main.comment > img {
-    position: absolute;
-    height: 5vh;
-    width: 5vh;
-    right: 2.5vh;
-    bottom: 2.5vh;
-    filter: drop-shadow(5px 5px 5px white);
-    -webkit-filter: drop-shadow(0 0 5px white);
-    visibility: hidden;
-}
-
-body > #doctor > main.comment > footer > main.comment.on {
-    background-color: #333;
-    height: 40vh;
-    width: 100%;
-    background-image: none;
-}
-
-body > #doctor > main.comment > footer > main.comment.on > * {
-    visibility: visible;
+body > #doctor > main > main:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.05);
 }
