@@ -13,9 +13,7 @@
     const Param = window.Param;
 
     self.addEventListener("hey", function () {
-
         reset();
-
         Api.Core("doctor", "single", {
             id: Param.Get("id")
         }, function (data) {
@@ -23,63 +21,17 @@
             Api.Core("comment", "filter", {
                 doctor_id: Param.Get("id")
             }, function (data) {
-                if (data.length > 0) {
-                    self.querySelector(":scope > main > main").remove();
-                }
+                self.querySelector(":scope > main > footer > span").innerHTML = data.length;
                 for (var i = 0; i < data.length; i++) {
                     add_comment(data[i]);
                 }
             });
         });
-
     });
 
-    // Expand the comment panel
-    /*
-    self.querySelector(":scope > main.comment > footer > main.comment").addEventListener("click", function () {
-        if (!this.classList.contains("on")) {
-            this.classList.add("on");
-            this.classList.add("shadow");
-            this.classList.remove("click");
-        }
+    self.querySelector(":scope > main > nav").addEventListener("click", function () {
+        document.querySelector("body > #comment").classList.add("on");
     });
-    // Ranking the star
-    self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span").addEventListener("mouseenter", function () {
-        var count = 1;
-        this.parentNode.querySelectorAll(":scope > span").exec(function () {
-            this.classList.add("empty");
-        });
-        this.classList.remove("empty");
-        var node = this;
-        while (node.previousElementSibling) {
-            node = node.previousElementSibling;
-            node.classList.remove("empty");
-            count++;
-        }
-        this.parentNode.querySelector(":scope > footer").innerHTML = "我给 " + count + " 颗星";
-    });
-
-    // Contract the comment panel
-    self.querySelector(":scope > main.comment > footer > main.comment > div").addEventListener("click", function (e) {
-        this.parentNode.classList.remove("on");
-        this.parentNode.classList.remove("shadow");
-        this.parentNode.classList.add("click");
-        e.stopPropagation();
-    });
-
-    // Add and Send the comment
-    self.querySelector(":scope > main.comment > footer > main.comment > img").addEventListener("click", function () {
-        var data = {
-            content: self.querySelector(":scope > main.comment > footer > main.comment > main > input").value,
-            star: self.querySelectorAll(":scope > main.comment > footer > main.comment > header > span:not(.empty)").length,
-            user_id: Auth.Current.User().id,
-            doctor_id: Param.Get("id")
-        };
-        Api.Core("comment", "create", data, function (comment) {
-            add_comment(data);
-        });
-    });
-    */
 
     function reset() {
         self.scrollTop = 0;
@@ -103,11 +55,11 @@
     }
 
     function add_comment(comment) {
-        holder.innerHTML = self.querySelector(":scope > main > template").innerHTML;
+
+        holder.innerHTML = self.querySelector(":scope > main > main > template[data-star='" + comment.star + "']").innerHTML;
         var c = holder.firstElementChild;
-        c.querySelector(":scope > main").innerHTML = comment.content;
-        console.log(comment);
-        self.querySelector(":scope > main").appendChild(c);
+        c.innerHTML = comment.content;
+        self.querySelector(":scope > main > main").appendChild(c);
     }
 
     function render(data) {

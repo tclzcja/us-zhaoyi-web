@@ -1,4 +1,4 @@
-/* jshint browser: true, esnext: true, devel: true */
+/* jshint browser: true, esnext: true, devel: true, shadow: true */
 
 (function () {
 
@@ -46,9 +46,31 @@
             holder.innerHTML = self.querySelector(":scope > main > template").innerHTML;
             var div = holder.firstElementChild;
             if (current_data_filter[i].portrait && current_data_filter[i].portrait.id) {
-                div.querySelector(":scope > div.portrait").style.backgroundImage = "url('" + Api.Storage(current_data_filter[i].portrait.id, current_data_filter[i].portrait.extension) + "')";
+                div.querySelector(":scope > header").style.backgroundImage = "url('" + Api.Storage(current_data_filter[i].portrait.id, current_data_filter[i].portrait.extension) + "')";
             }
-            div.querySelector(":scope > div.name").innerHTML = current_data_filter[i].name.en;
+            div.querySelector(":scope > section.name").innerHTML = "Dr. " + current_data_filter[i].name.en;
+            var star = ((current_data_filter[i].star[1] + current_data_filter[i].star[2] * 2 + current_data_filter[i].star[3] * 3 + current_data_filter[i].star[4] * 4 + current_data_filter[i].star[5] * 5) / (current_data_filter[i].star[1] + current_data_filter[i].star[2] + current_data_filter[i].star[3] + current_data_filter[i].star[4] + current_data_filter[i].star[5]) || 0).toFixed(1);
+            star = star <= 0 ? 1 : star;
+            for (var j = 0; j < Math.floor(star); j++) {
+                div.querySelector(":scope > section.star").appendChild(document.createElement("span"));
+            }
+            if (star > Math.floor(star)) {
+                var span = document.createElement("span");
+                span.classList.add("empty");
+                div.querySelector(":scope > section.star").appendChild(span);
+            }
+            for (var item_id of current_data_filter[i].items) {
+                var item = Cache.Hash("item", item_id);
+                var span = document.createElement("span");
+                span.innerHTML = item.name["zh-Hans"];
+                div.querySelector(":scope > section.items").appendChild(span);
+            }
+            for (var insurance_id of current_data_filter[i].insurances) {
+                var insurance = Cache.Hash("insurance", insurance_id);
+                var span = document.createElement("span");
+                span.innerHTML = insurance.provider + "/" + insurance.class + "/" + insurance.subclass;
+                div.querySelector(":scope > section.insurances").appendChild(span);
+            }
             div.querySelector(":scope > a").href = "#l=doctor&id=" + current_data_filter[i].id;
             self.querySelector(":scope > main").appendChild(div);
         }

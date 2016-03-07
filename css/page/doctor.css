@@ -1,41 +1,17 @@
-body > #doctor {}
-
 body > #doctor > header {
     background-color: white;
     position: absolute;
     top: 10vh;
     left: 5vh;
     width: 30vw;
-    padding-bottom: 1.5vh;
-    border-bottom: solid 1vh #69F;
-}
-
-body > #doctor > header > section {
-    text-align: right;
-    line-height: 100%;
-    font-size: 2vh;
-    padding-top: 2.5vh;
-    padding-bottom: 1vh;
-    padding-left: 8vh;
-    border-bottom: dashed 1px #ACF;
-    border-top: solid 1px transparent;
-    position: relative;
-    margin-left: 2vh;
-    margin-right: 2vh;
-}
-
-body > #doctor > header > section:last-child {
-    border-bottom: none;
+    border-bottom: solid 1vh;
+    border-color: var(--color-doctor);
+    color: var(--color-doctor);
+    margin-bottom: 5vh;
 }
 
 body > #doctor > header > section:before {
-    content: attr(data-title);
-    font-size: 1.4vh;
-    line-height: 100%;
-    position: absolute;
-    left: 0px;
-    bottom: 1vh;
-    color: #69F;
+    color: var(--color-doctor);
 }
 
 body > #doctor > header > section.portrait {
@@ -70,6 +46,12 @@ body > #doctor > header > section.items > span {
     font-size: 1.8vh;
 }
 
+body > #doctor > header > section.services > span {
+    display: inline-block;
+    margin-left: 1vh;
+    font-size: 1.8vh;
+}
+
 body > #doctor > header > section.insurances > span {
     display: inline-block;
     margin-left: 1vh;
@@ -88,10 +70,11 @@ body > #doctor > footer {
     left: 30vw;
     margin-left: 10vh;
     width: 30vw;
+    margin-bottom: 3vh;
 }
 
 body > #doctor > footer > main {
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
     background-color: white;
     border-bottom: solid 1vh var(--color-hospital);
 }
@@ -177,11 +160,12 @@ body > #doctor > footer > main > footer > iframe {
 
 body > #doctor > main {
     background-color: white;
-    position: fixed;
+    position: absolute;
     top: 10vh;
     right: 5vh;
     left: 60vw;
     margin-left: 15vh;
+    margin-bottom: 5vh;
 }
 
 body > #doctor > main > header {
@@ -207,7 +191,7 @@ body > #doctor > main > header > header {
 body > #doctor > main > header > header > span {
     font-size: 4vh;
     line-height: 100%;
-    color: #333;
+    color: #F90;
 }
 
 body > #doctor > main > header > footer {
@@ -244,6 +228,12 @@ body > #doctor > main > nav {
     background-position: center 2vh;
     background-image: url("../../img/icon/white/comment.png");
     position: relative;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+body > #doctor > main > nav:hover {
+    background-color: #F90;
 }
 
 body > #doctor > main > nav > span {
@@ -258,10 +248,24 @@ body > #doctor > main > nav > span {
     display: block;
 }
 
-body > #doctor > main > main {
-    padding: 2vh;
+body > #doctor > main > footer {
+    text-align: center;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE;
 }
 
-body > #doctor > main > main:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.05);
+body > #doctor > main > footer > span {
+    vertical-align: middle;
+    font-size: 100%;
+}
+
+body > #doctor > main > main {
+    border-color: #F90;
+}
+
+body > #doctor > main > main > section:before {
+    color: #F90;
 }

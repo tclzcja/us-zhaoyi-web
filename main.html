@@ -10,6 +10,7 @@
     <link type="text/css" rel="stylesheet" href="css/page/search.doctor.css" />
     <link type="text/css" rel="stylesheet" href="css/page/search.hospital.css" />
     <link type="text/css" rel="stylesheet" href="css/page/doctor.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/comment.css" />
     <link type="text/css" rel="stylesheet" href="css/page/hospital.css" />
     <link type="text/css" rel="stylesheet" href="css/page/register.css" />
     <link type="text/css" rel="stylesheet" href="css/page/login.css" />
@@ -33,19 +34,57 @@
         </main>
     </main>
     <main id="search-doctor">
-        <nav class="shadow">
-            <section class="icon name"></section>
-            <section class="icon item"></section>
-            <section class="icon insurance"></section>
-            <section class="icon distance"></section>
-            <section class="icon today"></section>
-            <section class="refresh"></section>
+        <nav class="shadow list-left">
+            <section class="name" data-title="姓名">
+                <input type="text" placeholder="姓名关键字" />
+            </section>
+            <section class="star" data-title="星级">
+                <select dir="rtl">
+                    <option value="0">任意星级</option>
+                    <option value="1">至少1星级</option>
+                    <option value="2">至少2星级</option>
+                    <option value="3">至少3星级</option>
+                    <option value="4">至少4星级</option>
+                    <option value="5">至少5星级</option>
+                </select>
+            </section>
+            <section class="item" data-title="科目">
+                <input type="text" placeholder="医疗科目关键字" />
+            </section>
+            <section class="insurance" data-title="保险">
+                <input type="text" placeholder="保险提供商、等级或关键字" />
+            </section>
+            <section class="distance" data-title="距离">
+                <select dir="rtl">
+                    <option value="9999">任意距离</option>
+                    <option value="10">10英里内</option>
+                    <option value="20">20英里内</option>
+                    <option value="50">50英里内</option>
+                    <option value="100">100英里内</option>
+                    <option value="200">200英里内</option>
+                </select>
+            </section>
+            <section class="today" data-title="行程">
+                <select dir="rtl">
+                    <option>今天上班</option>
+                    <option>明天上班</option>
+                    <option>未来三天上班</option>
+                    <option>未来一周上班</option>
+                </select>
+            </section>
         </nav>
         <main>
+            <header class="shadow">共找到 14 位医生符合要求</header>
             <template>
                 <div class="shadow">
-                    <div class="portrait"></div>
-                    <div class="name"></div>
+                    <header></header>
+                    <section class="name"></section>
+                    <section class="star"></section>
+                    <section class="items"></section>
+                    <section class="services">
+                        <span>Abscess Incision and Drainage,</span><span>EKG (Electrocardiogram, ECG),</span><span>Immunization Joint Injection,</span><span>Mole Removal,</span><span>Pap Smear,</span></span>Pelvic Exams,</span><span>Physical Examination,</span><span>Skin Biopsy Vaccination,</span>
+                    </section>
+                    <section class="insurances"></section>
                     <a></a>
                 </div>
             </template>
@@ -65,7 +104,7 @@
         <footer></footer>
     </main>
     <main id="doctor">
-        <header class="shadow">
+        <header class="shadow list-left">
             <section class="portrait">
                 <main></main>
             </section>
@@ -74,6 +113,9 @@
             <section class="code" data-title="行医编号"></section>
             <section class="startyear" data-title="行医年份"></section>
             <section class="items" data-title="科目"></section>
+            <section class="services" data-title="服务">
+                <span>Abscess Incision and Drainage,</span><span>EKG (Electrocardiogram, ECG),</span><span>Immunization Joint Injection,</span><span>Mole Removal,</span><span>Pap Smear,</span></span>Pelvic Exams,</span><span>Physical Examination,</span><span>Skin Biopsy Vaccination,</span>
+            </section>
             <section class="insurances" data-title="保险"></section>
             <section class="languages" data-title="语言">
                 <span>普通话</span><span>粤语</span><span>英语</span><span>西班牙语</span>
@@ -141,17 +183,43 @@
             <nav>
                 <span>撰写评论</span>
             </nav>
-            <main>目前没有任何评论</main>
-            <template>
-                <main>
-                    <main></main>
-                    <header></header>
-                    <footer></footer>
-                </main>
-            </template>
+            <footer>共<span></span>条评论</footer>
+            <main class="list-right">
+                <template data-star="1">
+                    <section data-title="&#9733;"></section>
+                </template>
+                <template data-star="2">
+                    <section data-title="&#9733;&#9733;"></section>
+                </template>
+                <template data-star="3">
+                    <section data-title="&#9733;&#9733;&#9733;"></section>
+                </template>
+                <template data-star="4">
+                    <section data-title="&#9733;&#9733;&#9733;&#9733;"></section>
+                </template>
+                <template data-star="5">
+                    <section data-title="&#9733;&#9733;&#9733;&#9733;&#9733;"></section>
+                </template>
+            </main>
         </main>
     </main>
-    <main id="comment"></main>
+    <main id="comment">
+        <main>
+            <header>
+                <select>
+                    <option value="5">我给5颗星，这位医生的服务很棒</option>
+                    <option value="4">我给4颗星，这位医生的服务还不错</option>
+                    <option value="3">我给3颗星，这位医生的服务一般</option>
+                    <option value="2">我给2颗星，这位医生的服务让我不满意</option>
+                    <option value="1">我给1颗星，这位医生的服务极其糟糕</option>
+                </select>
+            </header>
+            <main>
+                <textarea placeholder="留下您的评价"></textarea>
+            </main>
+            <footer>提交</footer>
+        </main>
+    </main>
     <main id="hospital">
         <horizontal-roller for="hospital"></horizontal-roller>
         <header></header>
@@ -248,6 +316,7 @@
     <script type="text/javascript" src="js/page/search.doctor.js"></script>
     <script type="text/javascript" src="js/page/search.hospital.js"></script>
     <script type="text/javascript" src="js/page/doctor.js"></script>
+    <script type="text/javascript" src="js/page/comment.js"></script>
     <script type="text/javascript" src="js/page/hospital.js"></script>
     <script type="text/javascript" src="js/page/register.js"></script>
     <script type="text/javascript" src="js/page/login.js"></script>

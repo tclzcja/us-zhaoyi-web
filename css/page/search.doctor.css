@@ -1,13 +1,16 @@
-body > #search-doctor {}
-
 body > #search-doctor > nav {
     position: fixed;
     top: 10vh;
     left: 5vh;
-    right: 70vw;
+    right: 60vw;
     margin-right: 10vh;
-    bottom: 10vh;
     background-color: white;
+    border-top: solid 1vh var(--color-doctor);
+    border-bottom: solid 1vh var(--color-doctor);
+}
+
+body > #search-doctor > nav input {
+    text-align: right;
 }
 
 body > #search-doctor > main {
@@ -15,7 +18,17 @@ body > #search-doctor > main {
     top: 10vh;
     right: 5vh;
     margin-bottom: 10vh;
-    width: 70vw;
+    width: 60vw;
+}
+
+body > #search-doctor > main > header {
+    background-color: var(--color-doctor);
+    height: 5vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+    align-items: center;
 }
 
 body > #search-doctor > main > div {
@@ -27,7 +40,7 @@ body > #search-doctor > main > div {
     background-position: left center;
     cursor: pointer;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 1vh;
 }
 
 body > #search-doctor > main > div > a {
@@ -38,7 +51,7 @@ body > #search-doctor > main > div > a {
     bottom: 0px;
 }
 
-body > #search-doctor > main > div > div.portrait {
+body > #search-doctor > main > div > header {
     position: absolute;
     top: 2vh;
     left: 2vh;
@@ -52,16 +65,56 @@ body > #search-doctor > main > div > div.portrait {
     background-image: url("../../img/portrait/doctor/0.png");
 }
 
-body > #search-doctor > main > div > div.name {
-    position: absolute;
-    top: 2vh;
-    left: 25vh;
+body > #search-doctor > main > div > section {
+    display: block;
+    position: relative;
+    margin-left: 25vh;
+    margin-bottom: 1vh;
+    margin-right: 1vh;
+}
+
+body > #search-doctor > main > div > section.name {
     font-size: 3vh;
     line-height: 100%;
-    padding-left: 5vh;
     color: black;
+    padding-top: 2vh;
+}
+
+body > #search-doctor > main > div > section.star {
+    height: 2vh;
+}
+
+body > #search-doctor > main > div > section.star > span {
+    display: inline-block;
+    height: 2vh;
+    width: 2vh;
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 3vh;
-    background-image: url("../../img/icon/black/name.png");
+    background-size: 100%;
+    background-position: center;
+    background-image: url("../../img/icon/orange/star.png");
+}
+
+body > #search-doctor > main > div > section.star > span.empty {
+    background-image: url("../../img/icon/orange/star.empty.png");
+}
+
+body > #search-doctor > main > div > section.items > span {
+    display: inline-block;
+    margin-right: 1vh;
+}
+
+body > #search-doctor > main > div > section.insurances > span {
+    display: inline-block;
+    margin-right: 1vh;
+}
+
+body > #search-doctor > main > div > section.services {
+    border-top: dashed 1px var(--color-item);
+    border-bottom: dashed 1px var(--color-item);
+    padding: 1vh;
+}
+
+body > #search-doctor > main > div > section.services > span {
+    display: inline-block;
+    margin-right: 1vh;
 }
