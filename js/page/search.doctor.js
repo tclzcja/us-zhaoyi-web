@@ -14,7 +14,7 @@
     var current_data_filter = [];
 
     self.addEventListener("hey", function () {
-        self.querySelectorAll(":scope > main > div").remove();
+        self.querySelectorAll(":scope > aside > div").remove();
         current_data = Cache.Get("doctor");
         filter();
     });
@@ -43,7 +43,7 @@
 
     function jump() {
         for (var i = 0; i < current_data_filter.length; i++) {
-            holder.innerHTML = self.querySelector(":scope > main > template").innerHTML;
+            holder.innerHTML = self.querySelector(":scope > aside > template").innerHTML;
             var div = holder.firstElementChild;
             if (current_data_filter[i].portrait && current_data_filter[i].portrait.id) {
                 div.querySelector(":scope > header").style.backgroundImage = "url('" + Api.Storage(current_data_filter[i].portrait.id, current_data_filter[i].portrait.extension) + "')";
@@ -72,7 +72,7 @@
                 div.querySelector(":scope > section.insurances").appendChild(span);
             }
             div.querySelector(":scope > a").href = "#l=doctor&id=" + current_data_filter[i].id;
-            self.querySelector(":scope > main").appendChild(div);
+            self.querySelector(":scope > aside").appendChild(div);
         }
     }
 

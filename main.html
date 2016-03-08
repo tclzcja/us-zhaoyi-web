@@ -34,49 +34,51 @@
         </main>
     </main>
     <main id="search-doctor">
-        <nav class="shadow list">
-            <section class="name" data-title="姓名">
-                <input type="text" placeholder="姓名关键字" />
-            </section>
-            <section class="star" data-title="星级">
-                <select>
-                    <option value="0">任意星级</option>
-                    <option value="1">至少1星级</option>
-                    <option value="2">至少2星级</option>
-                    <option value="3">至少3星级</option>
-                    <option value="4">至少4星级</option>
-                    <option value="5">至少5星级</option>
-                </select>
-            </section>
-            <section class="item" data-title="科目">
-                <input type="text" placeholder="医疗科目关键字" />
-            </section>
-            <section class="insurance" data-title="保险">
-                <input type="text" placeholder="保险提供商、等级或关键字" />
-            </section>
-            <section class="distance" data-title="距离">
-                <select>
-                    <option value="9999">任意距离</option>
-                    <option value="10">10英里内</option>
-                    <option value="20">20英里内</option>
-                    <option value="50">50英里内</option>
-                    <option value="100">100英里内</option>
-                    <option value="200">200英里内</option>
-                </select>
-            </section>
-            <section class="today" data-title="行程">
-                <select>
-                    <option>今天上班</option>
-                    <option>明天上班</option>
-                    <option>未来三天上班</option>
-                    <option>未来一周上班</option>
-                </select>
-            </section>
+        <nav>
+            <main class="shadow list">
+                <section class="name" data-title="姓名">
+                    <input type="text" placeholder="姓名关键字" />
+                </section>
+                <section class="star" data-title="星级">
+                    <select>
+                        <option value="0">任意星级</option>
+                        <option value="1">至少1星级</option>
+                        <option value="2">至少2星级</option>
+                        <option value="3">至少3星级</option>
+                        <option value="4">至少4星级</option>
+                        <option value="5">至少5星级</option>
+                    </select>
+                </section>
+                <section class="item" data-title="科目">
+                    <input type="text" placeholder="医疗科目关键字" />
+                </section>
+                <section class="insurance" data-title="保险">
+                    <input type="text" placeholder="保险提供商、等级或关键字" />
+                </section>
+                <section class="distance" data-title="距离">
+                    <select>
+                        <option value="9999">任意距离</option>
+                        <option value="10">10英里内</option>
+                        <option value="20">20英里内</option>
+                        <option value="50">50英里内</option>
+                        <option value="100">100英里内</option>
+                        <option value="200">200英里内</option>
+                    </select>
+                </section>
+                <section class="today" data-title="行程">
+                    <select>
+                        <option>今天上班</option>
+                        <option>明天上班</option>
+                        <option>未来三天上班</option>
+                        <option>未来一周上班</option>
+                    </select>
+                </section>
+            </main>
         </nav>
-        <main>
+        <aside>
             <header class="shadow">共找到 14 位医生符合要求</header>
             <template>
-                <div class="shadow">
+                <main class="shadow">
                     <header></header>
                     <section class="name"></section>
                     <section class="star"></section>
@@ -86,9 +88,9 @@
                     </section>
                     <section class="insurances"></section>
                     <a></a>
-                </div>
+                </main>
             </template>
-        </main>
+        </aside>
     </main>
     <main id="search-hospital">
         <horizontal-roller for="search-hospital"></horizontal-roller>
@@ -104,26 +106,28 @@
         <footer></footer>
     </main>
     <main id="doctor">
-        <header class="shadow list">
-            <header class="portrait">
-                <main></main>
-            </header>
-            <section class="name" data-title="姓名"></section>
-            <section class="gender" data-title="性别"></section>
-            <section class="code" data-title="行医编号"></section>
-            <section class="startyear" data-title="行医年份"></section>
-            <section class="items" data-title="科目"></section>
-            <section class="services" data-title="服务">
-                <span>Abscess Incision and Drainage,</span><span>EKG (Electrocardiogram, ECG),</span><span>Immunization Joint Injection,</span><span>Mole Removal,</span><span>Pap Smear,</span></span>Pelvic Exams,</span><span>Physical Examination,</span><span>Skin Biopsy Vaccination,</span>
-            </section>
-            <section class="insurances" data-title="保险"></section>
-            <section class="languages" data-title="语言">
-                <span>普通话</span><span>粤语</span><span>英语</span><span>西班牙语</span>
-            </section>
-            <section class="telephone" data-title="电话">347-634-7159</section>
-            <section class="email" data-title="电子邮件">lzsoft.cja@gmail.com</section>
+        <header>
+            <main class="shadow list">
+                <header class="portrait">
+                    <main></main>
+                </header>
+                <section class="name" data-title="姓名"></section>
+                <section class="gender" data-title="性别"></section>
+                <section class="code" data-title="行医编号"></section>
+                <section class="startyear" data-title="行医年份"></section>
+                <section class="items" data-title="科目"></section>
+                <section class="services" data-title="服务">
+                    <span>Abscess Incision and Drainage,</span><span>EKG (Electrocardiogram, ECG),</span><span>Immunization Joint Injection,</span><span>Mole Removal,</span><span>Pap Smear,</span></span>Pelvic Exams,</span><span>Physical Examination,</span><span>Skin Biopsy Vaccination,</span>
+                </section>
+                <section class="insurances" data-title="保险"></section>
+                <section class="languages" data-title="语言">
+                    <span>普通话</span><span>粤语</span><span>英语</span><span>西班牙语</span>
+                </section>
+                <section class="telephone" data-title="电话">347-634-7159</section>
+                <section class="email" data-title="电子邮件">lzsoft.cja@gmail.com</section>
+            </main>
         </header>
-        <footer>
+        <main>
             <template>
                 <main class="shadow schedule">
                     <header>工作地点 #<span></span></header>
@@ -175,37 +179,39 @@
                     </footer>
                 </main>
             </template>
-        </footer>
-        <main class="shadow">
-            <header>
-                <header><span></span>/5.0</header>
-                <footer></footer>
-            </header>
-            <nav>
-                <span>撰写评论</span>
-            </nav>
-            <footer>共<span></span>条评论</footer>
-            <main class="list">
-                <template data-star="1">
-                    <section data-title="&#9733;"></section>
-                </template>
-                <template data-star="2">
-                    <section data-title="&#9733;&#9733;"></section>
-                </template>
-                <template data-star="3">
-                    <section data-title="&#9733;&#9733;&#9733;"></section>
-                </template>
-                <template data-star="4">
-                    <section data-title="&#9733;&#9733;&#9733;&#9733;"></section>
-                </template>
-                <template data-star="5">
-                    <section data-title="&#9733;&#9733;&#9733;&#9733;&#9733;"></section>
-                </template>
-            </main>
         </main>
+        <footer>
+            <main class="shadow">
+                <header>
+                    <header><span></span>/5.0</header>
+                    <footer></footer>
+                </header>
+                <nav>
+                    <span>撰写评论</span>
+                </nav>
+                <footer>共<span></span>条评论</footer>
+                <main class="list">
+                    <template data-star="1">
+                        <section data-title="&#9733;"></section>
+                    </template>
+                    <template data-star="2">
+                        <section data-title="&#9733;&#9733;"></section>
+                    </template>
+                    <template data-star="3">
+                        <section data-title="&#9733;&#9733;&#9733;"></section>
+                    </template>
+                    <template data-star="4">
+                        <section data-title="&#9733;&#9733;&#9733;&#9733;"></section>
+                    </template>
+                    <template data-star="5">
+                        <section data-title="&#9733;&#9733;&#9733;&#9733;&#9733;"></section>
+                    </template>
+                </main>
+            </main>
+        </footer>
     </main>
     <main id="comment">
-        <main>
+        <article>
             <header>
                 <select>
                     <option value="5">我给5颗星，这位医生的服务很棒</option>
@@ -219,7 +225,7 @@
                 <textarea placeholder="留下您的评价"></textarea>
             </main>
             <footer>提交</footer>
-        </main>
+        </article>
     </main>
     <main id="hospital">
         <horizontal-roller for="hospital"></horizontal-roller>

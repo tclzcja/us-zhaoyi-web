@@ -1,83 +1,69 @@
-body > #doctor > header {
-    position: absolute;
-    top: 10vh;
-    left: 5vh;
-    width: 30vw;
+body > #doctor > header > main {
     background-color: var(--color-doctor);
     border-bottom: solid 1vh var(--color-doctor);
-    color: var(--color-doctor);
-    margin-bottom: 5vh;
 }
 
-body > #doctor > header > section:before {
+body > #doctor > header > main > section:before {
     color: var(--color-doctor);
 }
 
-body > #doctor > header > header {
-    margin: 0px;
+body > #doctor > header > main > header {
     padding: 0px;
-    border: none;
     height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body > #doctor > header > header > main {
+body > #doctor > header > main > header > main {
     height: 20vh;
     width: 20vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    background-image: url("../../img/portrait/doctor/0.png");
+    background-image: url("../../img/icon/white/doctor.png");
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-body > #doctor > header > section.name {
+body > #doctor > header > main > section.name {
     font-size: 3vh;
 }
 
-body > #doctor > header > section.items > span {
+body > #doctor > header > main > section.items > span {
     display: inline-block;
     margin-right: 1vh;
     font-size: 1.8vh;
 }
 
-body > #doctor > header > section.services > span {
+body > #doctor > header > main > section.services > span {
     display: inline-block;
     margin-right: 1vh;
     font-size: 1.8vh;
 }
 
-body > #doctor > header > section.insurances > span {
+body > #doctor > header > main > section.insurances > span {
     display: inline-block;
     margin-right: 1vh;
     font-size: 1.8vh;
 }
 
-body > #doctor > header > section.languages > span {
+body > #doctor > header > main > section.languages > span {
     display: inline-block;
     margin-right: 1vh;
     font-size: 1.8vh;
 }
 
-body > #doctor > footer {
-    position: absolute;
-    top: 10vh;
-    left: 30vw;
-    margin-left: 10vh;
-    width: 30vw;
-    margin-bottom: 3vh;
-}
 
-body > #doctor > footer > main {
+/* Main */
+
+body > #doctor > main > main {
     margin-bottom: 2vh;
     background-color: white;
     border-bottom: solid 1vh var(--color-hospital);
 }
 
-body > #doctor > footer > main > header {
+body > #doctor > main > main > header {
     height: 5vh;
     display: flex;
     justify-content: flex-start;
@@ -87,13 +73,13 @@ body > #doctor > footer > main > header {
     background-color: var(--color-hospital);
 }
 
-body > #doctor > footer > main > table {
+body > #doctor > main > main > table {
     width: 100%;
     border-collapse: collapse;
     height: 11.25vw;
 }
 
-body > #doctor > footer > main > table > thead > tr > td {
+body > #doctor > main > main > table > thead > tr > td {
     height: 3.75vw;
     width: 3.75vw;
     background-color: #666;
@@ -101,36 +87,36 @@ body > #doctor > footer > main > table > thead > tr > td {
     color: white;
 }
 
-body > #doctor > footer > main > table > thead > tr > td:nth-child(2n) {
+body > #doctor > main > main > table > thead > tr > td:nth-child(2n) {
     background-color: #555;
 }
 
-body > #doctor > footer > main > table > tbody > tr > td {
+body > #doctor > main > main > table > tbody > tr > td {
     background-color: #555;
     text-align: center;
     color: white;
 }
 
-body > #doctor > footer > main > table > tbody > tr > td:nth-child(2n) {
+body > #doctor > main > main > table > tbody > tr > td:nth-child(2n) {
     background-color: #666;
 }
 
-body > #doctor > footer > main > table > tbody > tr:nth-child(2n) > td {
+body > #doctor > main > main > table > tbody > tr:nth-child(2n) > td {
     background-color: #666;
 }
 
-body > #doctor > footer > main > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
+body > #doctor > main > main > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
     background-color: #555;
 }
 
-body > #doctor > footer > main > table > tbody > tr > td.on {
+body > #doctor > main > main > table > tbody > tr > td.on {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
     background-image: url("../../img/icon/green/tick.png");
 }
 
-body > #doctor > footer > main > main {
+body > #doctor > main > main > main {
     height: 20vh;
     background-color: white;
     color: #333;
@@ -141,14 +127,14 @@ body > #doctor > footer > main > main {
     flex-wrap: wrap;
 }
 
-body > #doctor > footer > main > main > header {
+body > #doctor > main > main > main > header {
     font-size: 3vh;
     text-align: center;
     width: 100%;
     margin-bottom: 2vh;
 }
 
-body > #doctor > footer > main > main > div {
+body > #doctor > main > main > main > div {
     font-size: 2vh;
     line-height: 100%;
     text-align: right;
@@ -156,33 +142,30 @@ body > #doctor > footer > main > main > div {
     padding-right: 2vh;
 }
 
-body > #doctor > footer > main > footer {
+body > #doctor > main > main > footer {
     height: 30vh;
 }
 
-body > #doctor > footer > main > footer > iframe {
+body > #doctor > main > main > footer > iframe {
     height: 100%;
     width: 100%;
     display: block;
 }
 
-body > #doctor > main {
+
+/* Footer */
+
+body > #doctor > footer > main {
     background-color: white;
-    position: absolute;
-    top: 10vh;
-    right: 5vh;
-    left: 60vw;
-    margin-left: 15vh;
-    margin-bottom: 5vh;
     border-bottom: solid 1vh #F90;
 }
 
-body > #doctor > main > header {
+body > #doctor > footer > main > header {
     height: 3.75vw;
     position: relative;
 }
 
-body > #doctor > main > header > header {
+body > #doctor > footer > main > header > header {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -197,13 +180,13 @@ body > #doctor > main > header > header {
     color: #CCC;
 }
 
-body > #doctor > main > header > header > span {
+body > #doctor > footer > main > header > header > span {
     font-size: 4vh;
     line-height: 100%;
     color: #F90;
 }
 
-body > #doctor > main > header > footer {
+body > #doctor > footer > main > header > footer {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -216,7 +199,7 @@ body > #doctor > main > header > footer {
     padding-right: 2vh;
 }
 
-body > #doctor > main > header > footer > span {
+body > #doctor > footer > main > header > footer > span {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -225,11 +208,11 @@ body > #doctor > main > header > footer > span {
     width: 2vw;
 }
 
-body > #doctor > main > header > footer > span.empty {
+body > #doctor > footer > main > header > footer > span.empty {
     background-image: url("../../img/icon/orange/star.empty.png");
 }
 
-body > #doctor > main > nav {
+body > #doctor > footer > main > nav {
     background-color: var(--color-comment);
     height: 11vh;
     background-repeat: no-repeat;
@@ -241,11 +224,11 @@ body > #doctor > main > nav {
     transition: background-color 0.5s;
 }
 
-body > #doctor > main > nav:hover {
+body > #doctor > footer > main > nav:hover {
     background-color: #F90;
 }
 
-body > #doctor > main > nav > span {
+body > #doctor > footer > main > nav > span {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -257,7 +240,7 @@ body > #doctor > main > nav > span {
     display: block;
 }
 
-body > #doctor > main > footer {
+body > #doctor > footer > main > footer {
     text-align: center;
     height: 5vh;
     display: flex;
@@ -266,15 +249,15 @@ body > #doctor > main > footer {
     background-color: #EEE;
 }
 
-body > #doctor > main > footer > span {
+body > #doctor > footer > main > footer > span {
     vertical-align: middle;
     font-size: 100%;
 }
 
-body > #doctor > main > main {
+body > #doctor > footer > main > main {
     background-color: #F90;
 }
 
-body > #doctor > main > main > section:before {
+body > #doctor > footer > main > main > section:before {
     color: #F90;
 }

@@ -5,12 +5,12 @@ body > #comment {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-body > #comment > main {
+body > #comment > article {
     width: 40vw;
     background-color: white;
 }
 
-body > #comment > main > header {
+body > #comment > article > header {
     position: relative;
     padding-left: 2vh;
     border-bottom: dashed 1px #F90;
@@ -22,21 +22,21 @@ body > #comment > main > header {
     transition: background-color 0.5s;
 }
 
-body > #comment > main > header:hover {
+body > #comment > article > header:hover {
     background-color: rgba(255, 153, 0, 0.5);
 }
 
-body > #comment > main > main {
+body > #comment > article > main {
     height: 25vh;
     position: relative;
 }
 
-body > #comment > main > main > textarea {
+body > #comment > article > main > textarea {
     padding-top: 2vh;
     padding-left: 2vh;
 }
 
-body > #comment > main > footer {
+body > #comment > article > footer {
     height: 10vh;
     background-color: #F90;
     color: #333;

@@ -173,6 +173,51 @@ body > main.on {
 
 /* ========================================================================================= */
 
+body > main > * {
+    position: absolute;
+    top: 5vh;
+    margin-top: 2.5vw;
+    width: 30vw;
+    margin-bottom: 2.5vw;
+}
+
+body > main > * > main {
+    width: 100%;
+    display: block;
+    margin-bottom: 1vw;
+}
+
+body > main > header {
+    left: 2.5vw;
+}
+
+body > main > main {
+    left: 50%;
+    margin-left: -15vw;
+}
+
+body > main > footer {
+    right: 2.5vw;
+}
+
+body > main > nav {
+    left: 2.5vw;
+}
+
+body > main > aside {
+    width: 60vw;
+    right: 2.5vw;
+}
+
+body > main > article {
+    position: relative;
+    margin: 0px;
+    top: auto;
+}
+
+
+/* ========================================================================================= */
+
 .shadow {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
