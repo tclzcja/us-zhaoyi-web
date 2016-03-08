@@ -1,11 +1,8 @@
 :root {
     --color-doctor: #69F;
-    --color-hospital: #F66;
-    --color-hospital-light: #FDD;
+    --color-hospital: #F88;
     --color-insurance: #F90;
-    --color-insurance-light: #FED;
     --color-item: #690;
-    --color-item-light: #EFD;
     --color-user: #F69;
     --color-comment: #999;
 }
@@ -70,7 +67,6 @@ textarea {
 }
 
 select {
-    margin-left: -4px;
     appearance: none;
     -webkit-appearance: none;
 }
@@ -189,66 +185,26 @@ body > main.on {
 
 /* ========================================================================================= */
 
-.list-left > section {
-    text-align: right;
+.list > section {
     line-height: 100%;
     font-size: 2vh;
-    padding-top: 3vh;
-    padding-bottom: 1vh;
-    padding-left: 8vh;
-    border-bottom: dashed 1px;
-    border-bottom-color: inherit;
-    border-top: solid 1px transparent;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    padding-left: 2vh;
     position: relative;
-    margin-left: 2vh;
-    margin-right: 2vh;
     color: black;
+    background-color: white;
 }
 
-.list-left select {
-    margin-left: 0px;
-    margin-right: -4px;
+.list > section:nth-of-type(2n) {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
-.list-left > section:last-of-type {
-    margin-bottom: 4vh;
-}
-
-.list-left > section:before {
+.list > section:before {
     content: attr(data-title);
     font-size: 1.4vh;
     line-height: 100%;
     position: absolute;
-    left: 0px;
-    bottom: 1vh;
-}
-
-
-/* ========================================================================================= */
-
-.list-right > section {
-    line-height: 100%;
-    font-size: 2vh;
-    padding-top: 3vh;
-    padding-bottom: 1vh;
-    border-bottom: dashed 1px;
-    border-bottom-color: inherit;
-    border-top: solid 1px transparent;
-    position: relative;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    color: black;
-}
-
-.list-right > section:last-of-type {
-    margin-bottom: 2vh;
-}
-
-.list-right > section:before {
-    content: attr(data-title);
-    font-size: 1.4vh;
-    line-height: 100%;
-    position: absolute;
-    right: 0px;
-    bottom: 1vh;
+    left: 2vh;
+    top: 2vh;
 }

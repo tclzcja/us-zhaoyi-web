@@ -34,12 +34,12 @@
         </main>
     </main>
     <main id="search-doctor">
-        <nav class="shadow list-left">
+        <nav class="shadow list">
             <section class="name" data-title="姓名">
                 <input type="text" placeholder="姓名关键字" />
             </section>
             <section class="star" data-title="星级">
-                <select dir="rtl">
+                <select>
                     <option value="0">任意星级</option>
                     <option value="1">至少1星级</option>
                     <option value="2">至少2星级</option>
@@ -55,7 +55,7 @@
                 <input type="text" placeholder="保险提供商、等级或关键字" />
             </section>
             <section class="distance" data-title="距离">
-                <select dir="rtl">
+                <select>
                     <option value="9999">任意距离</option>
                     <option value="10">10英里内</option>
                     <option value="20">20英里内</option>
@@ -65,7 +65,7 @@
                 </select>
             </section>
             <section class="today" data-title="行程">
-                <select dir="rtl">
+                <select>
                     <option>今天上班</option>
                     <option>明天上班</option>
                     <option>未来三天上班</option>
@@ -104,10 +104,10 @@
         <footer></footer>
     </main>
     <main id="doctor">
-        <header class="shadow list-left">
-            <section class="portrait">
+        <header class="shadow list">
+            <header class="portrait">
                 <main></main>
-            </section>
+            </header>
             <section class="name" data-title="姓名"></section>
             <section class="gender" data-title="性别"></section>
             <section class="code" data-title="行医编号"></section>
@@ -126,6 +126,7 @@
         <footer>
             <template>
                 <main class="shadow schedule">
+                    <header>工作地点 #<span></span></header>
                     <table>
                         <thead>
                             <tr>
@@ -184,7 +185,7 @@
                 <span>撰写评论</span>
             </nav>
             <footer>共<span></span>条评论</footer>
-            <main class="list-right">
+            <main class="list">
                 <template data-star="1">
                     <section data-title="&#9733;"></section>
                 </template>

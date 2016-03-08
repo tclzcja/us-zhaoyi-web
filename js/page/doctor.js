@@ -35,7 +35,7 @@
 
     function reset() {
         self.scrollTop = 0;
-        self.querySelector(":scope > header > section.portrait > main").removeAttribute("style");
+        self.querySelector(":scope > header > header > main").removeAttribute("style");
         self.querySelector(":scope > header > section.gender").innerHTML = "";
         self.querySelector(":scope > header > section.name").innerHTML = "";
         self.querySelector(":scope > header > section.code").innerHTML = "";
@@ -65,7 +65,7 @@
     function render(data) {
 
         if (data.portrait.id) {
-            self.querySelector(":scope > header > section.portrait > main").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
+            self.querySelector(":scope > header > header > main").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
         }
         self.querySelector(":scope > header > section.name").innerHTML = "Dr. " + data.name.en;
         self.querySelector(":scope > header > section.gender").innerHTML = data.gender ? "男性" : "女性";
@@ -94,6 +94,7 @@
             holder.innerHTML = self.querySelector(":scope > footer > template").innerHTML;
             var schedule = holder.firstElementChild;
             var hospital = Cache.Hash("hospital", data.schedules[i].hospital_id);
+            schedule.querySelector(":scope > header > span").innerHTML = (i + 1);
             schedule.querySelector(":scope > main > header").innerHTML = hospital.name.en;
             schedule.querySelector(":scope > main > div.address").innerHTML = hospital.address;
             schedule.querySelector(":scope > main > div.address2").innerHTML = hospital.address2;

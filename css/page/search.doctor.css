@@ -4,13 +4,13 @@ body > #search-doctor > nav {
     left: 5vh;
     right: 60vw;
     margin-right: 10vh;
-    background-color: white;
+    background-color: var(--color-doctor);
     border-top: solid 1vh var(--color-doctor);
     border-bottom: solid 1vh var(--color-doctor);
 }
 
-body > #search-doctor > nav input {
-    text-align: right;
+body > #search-doctor > nav > section:before {
+    color: var(--color-doctor);
 }
 
 body > #search-doctor > main {

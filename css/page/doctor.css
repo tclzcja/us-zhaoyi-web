@@ -1,11 +1,10 @@
 body > #doctor > header {
-    background-color: white;
     position: absolute;
     top: 10vh;
     left: 5vh;
     width: 30vw;
-    border-bottom: solid 1vh;
-    border-color: var(--color-doctor);
+    background-color: var(--color-doctor);
+    border-bottom: solid 1vh var(--color-doctor);
     color: var(--color-doctor);
     margin-bottom: 5vh;
 }
@@ -14,18 +13,17 @@ body > #doctor > header > section:before {
     color: var(--color-doctor);
 }
 
-body > #doctor > header > section.portrait {
+body > #doctor > header > header {
     margin: 0px;
     padding: 0px;
     border: none;
     height: 25vh;
-    background-color: #69F;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body > #doctor > header > section.portrait > main {
+body > #doctor > header > header > main {
     height: 20vh;
     width: 20vh;
     background-repeat: no-repeat;
@@ -42,25 +40,25 @@ body > #doctor > header > section.name {
 
 body > #doctor > header > section.items > span {
     display: inline-block;
-    margin-left: 1vh;
+    margin-right: 1vh;
     font-size: 1.8vh;
 }
 
 body > #doctor > header > section.services > span {
     display: inline-block;
-    margin-left: 1vh;
+    margin-right: 1vh;
     font-size: 1.8vh;
 }
 
 body > #doctor > header > section.insurances > span {
     display: inline-block;
-    margin-left: 1vh;
+    margin-right: 1vh;
     font-size: 1.8vh;
 }
 
 body > #doctor > header > section.languages > span {
     display: inline-block;
-    margin-left: 1vh;
+    margin-right: 1vh;
     font-size: 1.8vh;
 }
 
@@ -77,6 +75,16 @@ body > #doctor > footer > main {
     margin-bottom: 2vh;
     background-color: white;
     border-bottom: solid 1vh var(--color-hospital);
+}
+
+body > #doctor > footer > main > header {
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2vh;
+    color: white;
+    background-color: var(--color-hospital);
 }
 
 body > #doctor > footer > main > table {
@@ -166,6 +174,7 @@ body > #doctor > main {
     left: 60vw;
     margin-left: 15vh;
     margin-bottom: 5vh;
+    border-bottom: solid 1vh #F90;
 }
 
 body > #doctor > main > header {
@@ -263,7 +272,7 @@ body > #doctor > main > footer > span {
 }
 
 body > #doctor > main > main {
-    border-color: #F90;
+    background-color: #F90;
 }
 
 body > #doctor > main > main > section:before {
