@@ -184,7 +184,11 @@ body > main.on {
 
 /* ========================================================================================= */
 
-body > main > * {
+body > main > header,
+body > main > main,
+body > main > footer,
+body > main > nav,
+body > main > aside {
     position: absolute;
     top: 5vh;
     margin-top: 2.5vw;
@@ -192,7 +196,11 @@ body > main > * {
     margin-bottom: 2.5vw;
 }
 
-body > main > * > main {
+body > main > header > main,
+body > main > main > main,
+body > main > footer > main,
+body > main > nav > main,
+body > main > aside > main {
     width: 100%;
     display: block;
     margin-bottom: 1vw;
@@ -218,12 +226,6 @@ body > main > nav {
 body > main > aside {
     width: 60vw;
     right: 2.5vw;
-}
-
-body > main > article {
-    position: relative;
-    margin: 0px;
-    top: auto;
 }
 
 
