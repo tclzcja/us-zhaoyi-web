@@ -57,11 +57,17 @@ a {
 input,
 select,
 textarea {
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    line-height: 6vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
     background-color: transparent;
     color: inherit;
-    font-size: inherit;
+    font-size: 2vh;
     cursor: pointer;
     z-index: 999;
 }
@@ -76,6 +82,7 @@ select > option {
 }
 
 textarea {
+    height: auto;
     resize: none;
 }
 
@@ -84,6 +91,10 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
+}
+
+template {
+    display: none !important;
 }
 
 
@@ -230,7 +241,8 @@ body > main > article {
 
 /* ========================================================================================= */
 
-.list > section {
+.list > * {
+    display: block;
     line-height: 100%;
     font-size: 2vh;
     padding-top: 4vh;
@@ -239,13 +251,14 @@ body > main > article {
     position: relative;
     color: black;
     background-color: white;
+    min-height: 8vh;
 }
 
-.list > section:nth-of-type(2n) {
+.list > *:nth-of-type(2n) {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.list > section:before {
+.list > *:before {
     content: attr(data-title);
     font-size: 1.4vh;
     line-height: 100%;

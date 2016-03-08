@@ -13,6 +13,7 @@ body > #doctor > header > main > header {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-doctor);
 }
 
 body > #doctor > header > main > header > main {

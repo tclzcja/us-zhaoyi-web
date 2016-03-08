@@ -49,7 +49,8 @@
 
         self.querySelectorAll(":scope > footer > main.insurance > main > div").remove();
         */
-        self.querySelectorAll(":scope > main > main > main").remove();
+        self.querySelectorAll(":scope > main > main").remove();
+        self.querySelectorAll(":scope > footer > main > main > section").remove();
         self.querySelectorAll(":scope > footer > main > header > footer > span").remove();
     }
 
