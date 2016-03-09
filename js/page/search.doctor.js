@@ -65,6 +65,12 @@
                 span.innerHTML = item.name["zh-Hans"];
                 div.querySelector(":scope > section.items").appendChild(span);
             }
+            for (var service_id of current_data_filter[i].services) {
+                var service = Cache.Hash("service", service_id);
+                var span = document.createElement("span");
+                span.innerHTML = service.name["zh-Hans"];
+                div.querySelector(":scope > section.services").appendChild(span);
+            }
             for (var insurance_id of current_data_filter[i].insurances) {
                 var insurance = Cache.Hash("insurance", insurance_id);
                 var span = document.createElement("span");

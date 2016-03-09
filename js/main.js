@@ -15,13 +15,14 @@
         document.querySelector("body > header").dispatchEvent(new Event("login"));
     }, Auth.Reset);
     Cache.Update("item", fire);
+    Cache.Update("service", fire);
     Cache.Update("hospital", fire);
     Cache.Update("insurance", fire);
     Cache.Update("doctor", fire);
 
     function fire() {
         fire_count++;
-        if (fire_count >= 4) {
+        if (fire_count >= 5) {
             window.addEventListener("hashchange", function () {
                 if (document.querySelector("body > main#" + Param.Get("l"))) {
                     document.querySelector("body > main.on").classList.remove("on");

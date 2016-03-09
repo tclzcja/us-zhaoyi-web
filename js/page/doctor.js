@@ -41,6 +41,7 @@
         self.querySelector(":scope > header > main > section.code").innerHTML = "";
         self.querySelector(":scope > header > main > section.startyear").innerHTML = "";
         self.querySelectorAll(":scope > header > section.items > span").remove();
+        self.querySelectorAll(":scope > header > section.services > span").remove();
         self.querySelectorAll(":scope > header > section.insurances > span").remove();
         /*
         self.querySelectorAll(":scope > header > section.languages > span").remove();
@@ -77,6 +78,15 @@
                 var span = document.createElement("span");
                 span.innerHTML = item.name["zh-Hans"];
                 self.querySelector(":scope > header > main > section.items").appendChild(span);
+            }
+        }
+
+        for (var i = 0; i < data.services.length; i++) {
+            var service = Cache.Hash("service", data.services[i]);
+            if (service) {
+                var span = document.createElement("span");
+                span.innerHTML = service.name["zh-Hans"];
+                self.querySelector(":scope > header > main > section.services").appendChild(span);
             }
         }
 

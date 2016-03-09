@@ -224,7 +224,8 @@ body > main > nav {
 }
 
 body > main > aside {
-    width: 60vw;
+    width: auto;
+    left: 35vw;
     right: 2.5vw;
 }
 

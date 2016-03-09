@@ -13,7 +13,7 @@
         self.classList.remove("on");
     });
 
-    self.querySelector(":scope > main").addEventListener("click", function (e) {
+    self.querySelector(":scope > article").addEventListener("click", function (e) {
         e.stopPropagation();
     });
 
