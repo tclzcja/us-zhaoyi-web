@@ -60,18 +60,17 @@ body > #doctor > header > main > section.languages > span {
 
 body > #doctor > main > main {
     margin-bottom: 2vh;
-    background-color: white;
-    border-bottom: solid 1vh var(--color-hospital);
+    background-color: var(--color-hospital);
 }
 
 body > #doctor > main > main > header {
-    height: 5vh;
+    height: 3.75vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 2vh;
     color: white;
-    background-color: var(--color-hospital);
+    font-size: 2.5vh;
 }
 
 body > #doctor > main > main > table {
@@ -118,29 +117,31 @@ body > #doctor > main > main > table > tbody > tr > td.on {
 }
 
 body > #doctor > main > main > main {
-    height: 20vh;
-    background-color: white;
+    padding: 2vh;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top: solid 1vh var(--color-hospital);
+    border-bottom: solid 1vh var(--color-hospital);
+    position: relative;
 }
 
-body > #doctor > main > main > main > header {
-    font-size: 3vh;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 2vh;
+body > #doctor > main > main > main:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    height: 0px;
+    width: 0px;
+    margin-left: -1vh;
+    border-top: solid 2vh var(--color-hospital);
+    border-left: solid 2vh transparent;
+    border-right: solid 2vh transparent;
 }
 
 body > #doctor > main > main > main > div {
     font-size: 2vh;
-    line-height: 100%;
+    line-height: 3vh;
     text-align: right;
-    width: 100%;
-    padding-right: 2vh;
 }
 
 body > #doctor > main > main > footer {
@@ -157,13 +158,14 @@ body > #doctor > main > main > footer > iframe {
 /* Footer */
 
 body > #doctor > footer > main {
-    background-color: white;
-    border-bottom: solid 1vh #F90;
+    background-color: var(--color-comment);
+    border-bottom: solid 1vh var(--color-comment);
 }
 
 body > #doctor > footer > main > header {
     height: 3.75vw;
     position: relative;
+    background-color: var(--color-comment);
 }
 
 body > #doctor > footer > main > header > header {
@@ -184,7 +186,7 @@ body > #doctor > footer > main > header > header {
 body > #doctor > footer > main > header > header > span {
     font-size: 4vh;
     line-height: 100%;
-    color: #F90;
+    color: white;
 }
 
 body > #doctor > footer > main > header > footer {
@@ -204,17 +206,17 @@ body > #doctor > footer > main > header > footer > span {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    background-image: url("../../img/icon/orange/star.png");
+    background-image: url("../../img/icon/white/star.png");
     height: 2vw;
     width: 2vw;
 }
 
 body > #doctor > footer > main > header > footer > span.empty {
-    background-image: url("../../img/icon/orange/star.empty.png");
+    background-image: url("../../img/icon/white/star.empty.png");
 }
 
 body > #doctor > footer > main > nav {
-    background-color: var(--color-comment);
+    background-color: rgba(255, 255, 255, 0.5);
     height: 11vh;
     background-repeat: no-repeat;
     background-size: auto 5vh;
@@ -241,24 +243,10 @@ body > #doctor > footer > main > nav > span {
     display: block;
 }
 
-body > #doctor > footer > main > footer {
-    text-align: center;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EEE;
-}
-
-body > #doctor > footer > main > footer > span {
-    vertical-align: middle;
-    font-size: 100%;
-}
-
 body > #doctor > footer > main > main {
-    background-color: #F90;
+    background-color: var(--color-comment);
 }
 
 body > #doctor > footer > main > main > section:before {
-    color: #F90;
+    color: var(--color-comment);
 }

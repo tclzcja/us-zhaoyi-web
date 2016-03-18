@@ -21,7 +21,6 @@
             Api.Core("comment", "filter", {
                 doctor_id: Param.Get("id")
             }, function (data) {
-                self.querySelector(":scope > footer > main > footer > span").innerHTML = data.length;
                 for (var i = 0; i < data.length; i++) {
                     add_comment(data[i]);
                 }
@@ -103,8 +102,7 @@
             holder.innerHTML = self.querySelector(":scope > main > template").innerHTML;
             var schedule = holder.firstElementChild;
             var hospital = Cache.Hash("hospital", data.schedules[i].hospital_id);
-            schedule.querySelector(":scope > header > span").innerHTML = (i + 1);
-            schedule.querySelector(":scope > main > header").innerHTML = hospital.name.en;
+            schedule.querySelector(":scope > header").innerHTML = hospital.name.en;
             schedule.querySelector(":scope > main > div.address").innerHTML = hospital.address;
             schedule.querySelector(":scope > main > div.address2").innerHTML = hospital.address2;
             schedule.querySelector(":scope > main > div.city").innerHTML = hospital.city;

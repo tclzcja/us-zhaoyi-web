@@ -4,7 +4,8 @@
     --color-insurance: #F90;
     --color-item: #690;
     --color-user: #F69;
-    --color-comment: #999;
+    --color-comment: #96C;
+    --color-light: #EEE;
 }
 
 
@@ -23,7 +24,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background-color: #CCC;
+    background-color: #DDD;
     overflow: hidden;
     -moz-user-select: none;
     -khtml-user-select: none;
@@ -102,62 +103,94 @@ template {
 
 body > header {
     position: fixed;
-    height: 5vh;
+    height: 8vh;
     top: 0px;
     left: 0px;
     right: 0px;
     z-index: 10000;
-    color: #69F;
+    color: white;
+    background-color: white;
     font-size: 2vh;
-    background: linear-gradient(to right, #69F, white 30%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
-body > header > * {
+body > header > header {
     position: absolute;
     top: 0px;
     bottom: 0px;
     width: 50%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
+    left: 0px;
 }
 
-body > header > header {
-    color: white;
-    left: 0px;
-    justify-content: flex-start;
-    padding-left: 6vh;
+body > header > header > a > nav {
+    position: absolute;
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    background-color: #69F;
     background-repeat: no-repeat;
-    background-size: 4vh 4vh;
-    background-position: 1vh center;
+    background-position: center;
+    background-size: auto 110%;
     background-image: url("../img/icon/white/state.png");
+    top: 1vh;
+    left: 2.5vw;
+}
+
+body > header > header > a > header {
+    left: 6vh;
+    margin-left: 3vw;
+    position: absolute;
+    color: #69F;
+    top: 1.5vh;
+    line-height: 100%;
+    font-size: 3vh;
+}
+
+body > header > header > a > footer {
+    left: 6vh;
+    margin-left: 3vw;
+    position: absolute;
+    color: #999;
+    bottom: 1.5vh;
+    font-size: 1.5vh;
+    padding-left: 1px;
+}
+
+body > header > nav {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 6vh;
+    margin-right: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+body > header > nav > a {
+    margin-right: 1.5vw;
+    color: #69F;
+    font-size: 1.5vh;
 }
 
 body > header > footer {
-    justify-content: flex-end;
-    right: 0px;
-}
-
-body > header > footer > a {
-    padding-right: 2vh;
-}
-
-body > header > footer > a[href="#l=login"] {
-    color: #F90;
-    display: none;
-}
-
-body > header > footer > a[href="#l=login"].on {
+    position: absolute;
+    height: 6vh;
+    width: 6vh;
+    right: 2.5vw;
+    top: 1vh;
+    border-radius: 50%;
+    background-color: var(--color-light);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vh;
+    cursor: pointer;
+    transition: background-color 0.5s, background-image 0.5s;
 }
 
-body > header > footer > a[href="#l=profile"] {
-    display: none;
-}
-
-body > header > footer > a[href="#l=profile"].on {
-    display: flex;
+body > header > footer:hover {
+    background-color: #FC3;
 }
 
 
@@ -190,7 +223,7 @@ body > main > footer,
 body > main > nav,
 body > main > aside {
     position: absolute;
-    top: 5vh;
+    top: 8vh;
     margin-top: 2.5vw;
     width: 30vw;
     margin-bottom: 2.5vw;
@@ -233,12 +266,17 @@ body > main > aside {
 /* ========================================================================================= */
 
 .shadow {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .shadow:active {
     box-shadow: none;
     transform: translateY(1px);
+}
+
+.shadow.solid {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(0px);
 }
 
 
