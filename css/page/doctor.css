@@ -119,23 +119,23 @@ body > #doctor > main > main > table > tbody > tr > td.on {
 body > #doctor > main > main > main {
     padding: 2vh;
     color: #333;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-top: solid 1vh var(--color-hospital);
-    border-bottom: solid 1vh var(--color-hospital);
     position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: dashed 1px var(--color-hospital);
+    border-bottom: solid 1vh var(--color-hospital);
 }
 
 body > #doctor > main > main > main:before {
     content: "";
     position: absolute;
-    top: 0px;
+    bottom: 0px;
     left: 50%;
     height: 0px;
     width: 0px;
     margin-left: -1vh;
-    border-top: solid 2vh var(--color-hospital);
-    border-left: solid 2vh transparent;
-    border-right: solid 2vh transparent;
+    border-bottom: solid 1vh var(--color-hospital);
+    border-left: solid 1vh transparent;
+    border-right: solid 1vh transparent;
 }
 
 body > #doctor > main > main > main > div {
@@ -146,6 +146,7 @@ body > #doctor > main > main > main > div {
 
 body > #doctor > main > main > footer {
     height: 30vh;
+    z-index: 555;
 }
 
 body > #doctor > main > main > footer > iframe {

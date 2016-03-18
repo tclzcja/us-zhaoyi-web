@@ -1,6 +1,6 @@
 :root {
     --color-doctor: #69F;
-    --color-hospital: #F88;
+    --color-hospital: #F66;
     --color-insurance: #F90;
     --color-item: #690;
     --color-user: #F69;
@@ -96,6 +96,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 template {
     display: none !important;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 

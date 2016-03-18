@@ -1,85 +1,81 @@
-body > #index {
-    top: 0px;
+body > #index > article {
+    position: fixed;
+    top: 8vh;
+    left: 0px;
+    right: 0px;
+    bottom: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../img/image/index.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > #index > article > main {
+    height: 10vh;
+    width: 60vw;
+    background-color: rgba(153, 192, 255, 0.75);
+    border-bottom: solid 5px #69F;
+    position: relative;
+}
+
+body > #index > div {
+    position: fixed;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    font-size: 2vh;
-    color: white;
-}
-
-body > #index > * {
-    position: absolute;
-}
-
-body > #index > main {
-    position: absolute;
-    top: 50%;
-    margin-top: -5vh;
-    left: 10vw;
-    width: 80vw;
-    height: 10vh;
+    height: 40vh;
     background-color: white;
-    background-image: url("../../img/icon/black/search.png");
-    color: #333;
-    overflow: hidden;
-}
-
-body > #index > main > footer {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 10vh;
-    right: -10vh;
-    transition: right 0.5s, background-color 0.5s;
-    background-image: url("../../img/icon/white/search.png");
-    cursor: pointer;
-    z-index: 1000;
-}
-
-body > #index > main > footer.doctor {
-    background-color: var(--color-doctor);
-}
-
-body > #index > main > footer.hospital {
-    background-color: var(--color-hospital);
-}
-
-body > #index > main > footer.on {
-    right: 0px;
-}
-
-body > #index > main > footer:hover {
-    background-color: #FC3;
-}
-
-body > #index > nav {
-    display: block;
-    position: absolute;
-    height: 8vh;
-    bottom: 55vh;
-    left: 10vw;
-}
-
-body > #index > nav > div {
-    display: inline-flex;
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vh;
-    height: 100%;
-    width: 8vw;
+}
+
+body > #index > div > div {
+    height: 30vh;
+    width: 18vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+body > #index > div > div > img {
+    height: 15vh;
+    width: 15vh;
+}
+
+body > #index > div > div > header {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    display: block;
+    width: 100%;
+    font-size: 3vh;
+    line-height: 100%;
+    color: inherit;
     text-align: center;
-    cursor: pointer;
-    transition: box-shadow 0.5s, background-color 0.5s;
 }
 
-body > #index > nav > div.on {
-    background-color: white;
+body > #index > div > div > footer {
+    width: 100%;
+    color: #999;
+    font-size: 1.5vh;
 }
 
-body > #index > nav > div.doctor {
+body > #index > div > div:nth-of-type(1) {
+    color: #333;
+}
+
+body > #index > div > div:nth-of-type(2) {
     color: var(--color-doctor);
 }
 
-body > #index > nav > div.hospital {
-    color: var(--color-hospital);
+body > #index > div > div:nth-of-type(3) {
+    color: #F90;
 }
