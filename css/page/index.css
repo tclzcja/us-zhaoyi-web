@@ -16,9 +16,31 @@ body > #index > article {
 body > #index > article > main {
     height: 10vh;
     width: 60vw;
-    background-color: rgba(153, 192, 255, 0.75);
-    border-bottom: solid 5px #69F;
+    background-color: white;
     position: relative;
+    border: solid 1vh #69F;
+    border-right: none;
+}
+
+body > #index > article > main > input {
+    height: 100%;
+    width: 100%;
+    font-size: 2vh;
+}
+
+body > #index > article > main > footer {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 10vh;
+    background-color: #69F;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    background-image: url("../../img/icon/white/search.png");
+    z-index: 9999;
+    cursor: pointer;
 }
 
 body > #index > div {
