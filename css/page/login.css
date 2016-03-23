@@ -2,50 +2,28 @@ body > #login {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
-body > #login > main {
-    height: 30vh;
-    width: 50vh;
-}
-
-body > #login > main > * {
-    display: block;
-    height: 10vh;
+body > #login > article {
+    width: 30vw;
+    background-color: var(--color-doctor);
     position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding-left: 10vh;
+}
+
+body > #login > article > section:before {
+    color: var(--color-doctor);
+}
+
+body > #login > article > footer {
+    text-align: center;
+    background-color: var(--color-doctor);
     color: white;
-    transition: background-color 0.5s;
+    padding-bottom: 4vh;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
 
-body > #login > main > header:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-body > #login > main > header:hover {
-    background-color: #69F;
-}
-
-body > #login > main > header.email {
-    background-image: url("../../img/icon/white/email.png");
-}
-
-body > #login > main > header.password {
-    background-image: url("../../img/icon/white/password.png");
-}
-
-body > #login > main > footer {
-    background-color: #FC3;
-    color: #333;
-    background-image: url("../../img/icon/black/go.png");
-    line-height: 10vh;
-}
-
-body > #login > main > footer:hover {
-    background-color: #F90;
+body > #login > article > footer:hover {
+    background-color: var(--color-insurance);
 }

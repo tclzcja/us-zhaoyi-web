@@ -18,14 +18,13 @@ body > #index > article > main {
     width: 60vw;
     background-color: white;
     position: relative;
-    border: solid 1vh #69F;
-    border-right: none;
 }
 
 body > #index > article > main > input {
     height: 100%;
     width: 100%;
     font-size: 2vh;
+    padding-left: 4vh;
 }
 
 body > #index > article > main > footer {

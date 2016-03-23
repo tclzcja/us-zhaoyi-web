@@ -9,21 +9,27 @@
     const Api = window.Api;
     const Auth = window.Auth;
 
-    function init() {
-        self.querySelector(":scope > main > footer").addEventListener("click", function () {
-            var footer = this;
-            footer.classList.add("processing");
-            var data = {
-                email: self.querySelector(":scope > main > header.email > input").value,
-                password: self.querySelector(":scope > main > header.password > input").value
-            };
-            Api.Core("user", "login", data, function (info) {
-                Auth.Login(info.token, info);
-                location.hash = "#l=profile";
-            });
+    self.querySelector(":scope > article > footer").addEventListener("click", function () {
+        var footer = this;
+        footer.classList.add("processing");
+        var data = {
+            email: self.querySelector(":scope > article > section.email > input").value,
+            password: self.querySelector(":scope > article > section.password > input").value
+        };
+        Api.Core("user", "login", data, function (info) {
+            Auth.Login(info.token, info);
+            self.classList.remove("on");
+            location.hash = "#l=profile";
         });
-    }
+    });
 
-    init();
+    self.addEventListener("click", function () {
+        self.classList.remove("on");
+    });
+
+    self.querySelector(":scope > article").addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+
 
 }());

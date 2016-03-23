@@ -1,4 +1,4 @@
-/* jshint browser: true, esnext: true */
+/* jshint browser: true, esnext: true, devel: true */
 
 (function () {
 
@@ -28,13 +28,11 @@
             sessionStorage.setItem(Session_Name_Pass, "1");
             sessionStorage.setItem(Session_Name_Current_Token, "Bearer " + token);
             sessionStorage.setItem(Session_Name_Current_User, JSON.stringify(info));
-            document.querySelector("body > header").dispatchEvent(new Event("login"));
         },
         Logout: function () {
             sessionStorage.removeItem(Session_Name_Pass);
             sessionStorage.removeItem(Session_Name_Current_Token);
             sessionStorage.removeItem(Session_Name_Current_User);
-            document.querySelector("body > header").dispatchEvent(new Event("logout"));
         },
         Current: {
             //Get the current Header
@@ -47,5 +45,9 @@
             }
         }
     };
+
+    document.querySelector("body > header > footer").addEventListener("click", function () {
+        document.querySelector("body > #login").classList.add("on");
+    });
 
 }());
