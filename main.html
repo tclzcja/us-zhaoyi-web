@@ -7,8 +7,7 @@
     <link href="img/icon/blue/usa.png" rel="icon" type="image/x-icon" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
     <link type="text/css" rel="stylesheet" href="css/page/index.css" />
-    <link type="text/css" rel="stylesheet" href="css/page/search.doctor.css" />
-    <link type="text/css" rel="stylesheet" href="css/page/search.hospital.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/search.css" />
     <link type="text/css" rel="stylesheet" href="css/page/doctor.css" />
     <link type="text/css" rel="stylesheet" href="css/page/comment.css" />
     <link type="text/css" rel="stylesheet" href="css/page/hospital.css" />
@@ -44,7 +43,7 @@
             </div>
         </div>
     </main>
-    <main id="search-doctor">
+    <main id="search">
         <nav>
             <main class="shadow list">
                 <section class="name" data-title="姓名">
@@ -100,19 +99,6 @@
                 </main>
             </template>
         </aside>
-    </main>
-    <main id="search-hospital">
-        <horizontal-roller for="search-hospital"></horizontal-roller>
-        <header></header>
-        <main>
-            <template>
-                <div class="shadow">
-                    <header></header>
-                    <a></a>
-                </div>
-            </template>
-        </main>
-        <footer></footer>
     </main>
     <main id="doctor">
         <header>
@@ -264,7 +250,7 @@
                 <section class="password2" data-title="确认密码">
                     <input type="password" placeholder="确认您的密码" />
                 </section>
-                <main>点击下方的“注册”代表您同意我们的<a href="#l=principle">用户条款</a></main>
+                <main class="shadow">点击下方的“注册”代表您同意我们的<a href="#l=principle">用户条款</a></main>
                 <footer>注册</footer>
             </main>
         </article>
@@ -305,8 +291,8 @@
             </main>
         </footer>
         <div class="shadowup">
-            <section class="update"></section>
-            <section class="logout"></section>
+            <section class="shadow update">更新</section>
+            <section class="shadow logout">退出</section>
         </div>
     </main>
     <!-- Header & Footer -->
@@ -321,7 +307,7 @@
             </a>
         </header>
         <nav>
-            <a href="#l=principle">条款</a><a href="#l=search-doctor">搜索</a><a href="#l=about">关于我们</a><a href="#l=register">注册</a>
+            <a href="#l=principle">条款</a><a href="#l=search">搜索</a><a href="#l=about">关于我们</a><a href="#l=register">注册</a>
         </nav>
         <footer>登录</footer>
     </header>
@@ -335,8 +321,7 @@
     <script type="text/javascript" src="js/lib/template.js"></script>
     <script type="text/javascript" src="js/component/header.js"></script>
     <script type="text/javascript" src="js/page/index.js"></script>
-    <script type="text/javascript" src="js/page/search.doctor.js"></script>
-    <script type="text/javascript" src="js/page/search.hospital.js"></script>
+    <script type="text/javascript" src="js/page/search.js"></script>
     <script type="text/javascript" src="js/page/doctor.js"></script>
     <script type="text/javascript" src="js/page/comment.js"></script>
     <script type="text/javascript" src="js/page/hospital.js"></script>

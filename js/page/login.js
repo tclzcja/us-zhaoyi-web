@@ -31,5 +31,4 @@
         e.stopPropagation();
     });
 
-
 }());

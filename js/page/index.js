@@ -11,7 +11,7 @@
     const Cache = window.Cache;
 
     self.querySelector(":scope > article > main > footer").addEventListener("click", function () {
-        window.location.href = "#l=search-doctor";
+        window.location.href = "#l=search";
     });
 
 }());

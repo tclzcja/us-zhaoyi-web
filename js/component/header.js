@@ -16,4 +16,12 @@
         });
     });
 
+    self.addEventListener("login", function () {
+        self.querySelector(":scope > footer").classList.add("on");
+    });
+
+    self.addEventListener("logout", function () {
+        self.querySelector(":scope > footer").classList.remove("on");
+    });
+
 }());

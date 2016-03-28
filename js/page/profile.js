@@ -16,6 +16,11 @@
         });
     });
 
+    self.querySelector(":scope > div > section.logout").addEventListener("click", function () {
+        Auth.Logout();
+        window.location.href = "#l=index";
+    });
+
     function init() {
         const user = Auth.Current.User();
         const insurances = Cache.Get("insurance");

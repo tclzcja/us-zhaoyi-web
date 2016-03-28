@@ -4,7 +4,7 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #search-doctor");
+    const self = document.querySelector("body > #search");
     const holder = document.createElement("div");
 
     const Api = window.Api;

@@ -2,6 +2,7 @@ body > #login {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 body > #login > article {
@@ -14,10 +15,12 @@ body > #login > article > section:before {
 }
 
 body > #login > article > footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
     background-color: var(--color-doctor);
     color: white;
-    padding-bottom: 4vh;
     cursor: pointer;
     transition: background-color 0.5s;
 }
