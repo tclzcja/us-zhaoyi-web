@@ -12,8 +12,10 @@
         // Test if the user already logged in
         Test: function (success, fail) {
             if (sessionStorage.getItem(Session_Name_Pass) === "1") {
+                document.querySelector("body > header > footer").classList.add("on");
                 success();
             } else {
+                document.querySelector("body > header > footer").classList.remove("on");
                 fail();
             }
         },
@@ -28,11 +30,13 @@
             sessionStorage.setItem(Session_Name_Pass, "1");
             sessionStorage.setItem(Session_Name_Current_Token, "Bearer " + token);
             sessionStorage.setItem(Session_Name_Current_User, JSON.stringify(info));
+            document.querySelector("body > header > footer").classList.add("on");
         },
         Logout: function () {
             sessionStorage.removeItem(Session_Name_Pass);
             sessionStorage.removeItem(Session_Name_Current_Token);
             sessionStorage.removeItem(Session_Name_Current_User);
+            document.querySelector("body > header > footer").classList.remove("on");
         },
         Current: {
             //Get the current Header
@@ -45,9 +49,5 @@
             }
         }
     };
-
-    document.querySelector("body > header > footer").addEventListener("click", function () {
-        document.querySelector("body > #login").classList.add("on");
-    });
 
 }());

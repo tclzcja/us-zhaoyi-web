@@ -8,35 +8,26 @@
 
     const Api = window.Api;
     const Auth = window.Auth;
+    const Cache = window.Cache;
 
-    function init() {
-        var user = Auth.Current.User();
-        self.querySelector(":scope > main.info > main.email").innerHTML = user.email;
-        self.querySelector(":scope > main.info > main.name > input").value = user.name;
-    }
-
-    function event() {
-        self.querySelector(":scope > footer.update").addEventListener("click", function () {
-            var user = {
-                email: Auth.Current.User().email,
-                name: self.querySelector(":scope > main.info > main.name > input").value
-            };
-            Api.Core("user", "update", user, function () {
-                alert("good");
-            }, function () {});
+    self.addEventListener("hey", function () {
+        Auth.Test(init, function () {
+            window.location.href = "#l=login";
         });
-
-        self.querySelector(":scope > footer.logout").addEventListener("click", Auth.Logout);
-    }
-
-    window.addEventListener("hashchange", function () {
-        if (location.hash === "#" + self.id) {
-            Auth.Test(init, function () {
-                location.hash = "#login";
-            });
-        }
     });
 
-    event();
+    function init() {
+        const user = Auth.Current.User();
+        const insurances = Cache.Get("insurance");
+        self.querySelector(":scope > header > main > section.email").innerHTML = user.email;
+        self.querySelector(":scope > header > main > section.name > input").value = user.name;
+        self.querySelectorAll(":scope > main > main > section > select > option:not([value='0'])").remove();
+        for (var i = 0; i < insurances.length; i++) {
+            var option = document.createElement("option");
+            option.value = insurances[i].id;
+            option.innerText = insurances[i].provider + "/" + insurances[i].class + "/" + insurances[i].subclass;
+            self.querySelector(":scope > main > main > section > select").appendChild(option);
+        }
+    }
 
 }());

@@ -2,13 +2,11 @@ body > #login {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.75);
 }
 
 body > #login > article {
     width: 30vw;
     background-color: var(--color-doctor);
-    position: relative;
 }
 
 body > #login > article > section:before {

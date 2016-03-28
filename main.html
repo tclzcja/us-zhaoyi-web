@@ -19,7 +19,6 @@
 
 <body>
     <!-- Page -->
-    <main class="on"></main>
     <main id="index">
         <article>
             <main class="shadow">
@@ -27,7 +26,7 @@
                 <footer></footer>
             </main>
         </article>
-        <div>
+        <div class="shadowup">
             <div>
                 <img src="img/icon/black/search.png" />
                 <header>智能搜索</header>
@@ -254,18 +253,21 @@
         <footer></footer>
     </main>
     <main id="register">
-        <main class="shadow">
-            <header class="icon email">
-                <input type="email" placeholder="您的邮箱" />
-            </header>
-            <header class="icon password">
-                <input type="password" placeholder="您的密码" />
-            </header>
-            <header class="icon password2">
-                <input type="password" placeholder="确认您的密码" />
-            </header>
-            <footer class="icon">注册成为用户</footer>
-        </main>
+        <article>
+            <main class="shadow list">
+                <section class="email" data-title="邮箱">
+                    <input type="email" placeholder="输入您的邮箱" />
+                </section>
+                <section class="password" data-title="密码">
+                    <input type="password" placeholder="您的密码" />
+                </section>
+                <section class="password2" data-title="确认密码">
+                    <input type="password" placeholder="确认您的密码" />
+                </section>
+                <main>点击下方的“注册”代表您同意我们的<a href="#l=principle">用户条款</a></main>
+                <footer>注册</footer>
+            </main>
+        </article>
     </main>
     <main id="login">
         <article class="shadow list">
@@ -279,29 +281,33 @@
         </article>
     </main>
     <main id="profile">
-        <main class="shadow info left">
-            <main class="icon email"></main>
-            <main class="icon name">
-                <input type="text" />
+        <header>
+            <main class="shadow list">
+                <section class="email" data-title="邮箱"></section>
+                <section class="name" data-title="姓名">
+                    <input type="text" placeholder="您的姓名" />
+                </section>
+            </main>
+        </header>
+        <main>
+            <main class="shadow list">
+                <section data-title="我的保险">
+                    <select>
+                        <option value="0">我没有保险</option>
+                    </select>
+                </section>
             </main>
         </main>
-        <main class="shadow insurance center">
-            <main class="icon insurance">
-                <select>
-                    <option value="none" selected="true">没有保险公司</option>
-                    <option value="obamacare">Obamacare</option>
-                </select>
+        <footer>
+            <main class="shadow list">
+                <header data-title="我的医生收藏"></header>
+                <footer>暂时没有收藏过医生</footer>
             </main>
-            <main class="icon sub">
-                <select>
-                    <option value="none" selected="true">没有保险</option>
-                    <option value="obamacare">Obamacare v1.4</option>
-                </select>
-            </main>
-        </main>
-        <main class="shadow operation right"></main>
-        <footer class="shadow update">更新信息</footer>
-        <footer class="shadow logout">登出</footer>
+        </footer>
+        <div class="shadowup">
+            <section class="update"></section>
+            <section class="logout"></section>
+        </div>
     </main>
     <!-- Header & Footer -->
     <header class="shadow solid">
@@ -327,6 +333,7 @@
     <script type="text/javascript" src="js/lib/api.js"></script>
     <script type="text/javascript" src="js/lib/cache.js"></script>
     <script type="text/javascript" src="js/lib/template.js"></script>
+    <script type="text/javascript" src="js/component/header.js"></script>
     <script type="text/javascript" src="js/page/index.js"></script>
     <script type="text/javascript" src="js/page/search.doctor.js"></script>
     <script type="text/javascript" src="js/page/search.hospital.js"></script>

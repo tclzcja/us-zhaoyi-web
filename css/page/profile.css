@@ -1,25 +1,63 @@
-body > #profile {
+body > #profile > header > main {
+    background-color: var(--color-doctor);
+    color: var(--color-doctor);
+    border-top: solid 1vh var(--color-doctor);
+    border-bottom: solid 1vh var(--color-doctor);
 }
 
-body > #profile > main.info > main.email {
-    padding-left: 10vh;
-    color: black;
-    background-image: url("../../img/icon/black/email.png");
-    background-color: #EEE;
+body > #profile > header > main > *:before {
+    color: var(--color-doctor);
 }
 
-body > #profile > main.info > main.name {
-    color: black;
-    background-image: url("../../img/icon/black/name.png");
+body > #profile > main > main {
+    background-color: var(--color-insurance);
+    color: var(--color-insurance);
+    border-top: solid 1vh var(--color-insurance);
+    border-bottom: solid 1vh var(--color-insurance);
+}
+
+body > #profile > main > main > *:before {
+    color: var(--color-insurance);
+}
+
+body > #profile > footer > main {
+    background-color: var(--color-doctor);
+    color: var(--color-doctor);
+    border-top: solid 1vh var(--color-doctor);
+    border-bottom: solid 1vh var(--color-doctor);
+}
+
+body > #profile > footer > main > *:before {
+    color: var(--color-doctor);
+}
+
+body > #profile > footer > main > footer {
+    text-align: center;
+    color: #9CF;
+}
+
+body > #profile > div {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 8vh;
     background-color: white;
 }
 
-body > #profile > main.insurance > main.insurance {
-    background-color: white;
-    background-image: url("../../img/icon/black/insurance.png");
+body > #profile > div > section {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
 }
 
-body > #profile > main.insurance > main.sub {
-    background-color: #EEE;
-    background-image: url("../../img/icon/black/insurance.png");
+body > #profile > div > section.update {
+    left: 0px;
+    background-color: #F90;
+}
+
+body > #profile > div > section.logout {
+    right: 0px;
+    background-color: #F66;
 }

@@ -62,7 +62,7 @@ textarea {
     display: block;
     bottom: 0px;
     left: 0px;
-    right: 0px;
+    width: 100%;
     line-height: 6vh;
     padding-left: 2vh;
     padding-right: 2vh;
@@ -139,12 +139,12 @@ body > header > header > a > nav {
     background-size: auto 110%;
     background-image: url("../img/icon/white/state.png");
     top: 1vh;
-    left: 2.5vw;
+    left: 1vw;
 }
 
 body > header > header > a > header {
     left: 6vh;
-    margin-left: 3vw;
+    margin-left: 1.75vw;
     position: absolute;
     color: #69F;
     top: 1.5vh;
@@ -154,7 +154,7 @@ body > header > header > a > header {
 
 body > header > header > a > footer {
     left: 6vh;
-    margin-left: 3vw;
+    margin-left: 1.75vw;
     position: absolute;
     color: #999;
     bottom: 1.5vh;
@@ -167,7 +167,7 @@ body > header > nav {
     top: 0px;
     bottom: 0px;
     right: 6vh;
-    margin-right: 2.5vw;
+    margin-right: 1vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -183,7 +183,7 @@ body > header > footer {
     position: absolute;
     height: 6vh;
     width: 6vh;
-    right: 2.5vw;
+    right: 1vw;
     top: 1vh;
     border-radius: 50%;
     background-color: var(--color-light);
@@ -192,11 +192,20 @@ body > header > footer {
     align-items: center;
     font-size: 1.5vh;
     cursor: pointer;
-    transition: background-color 0.5s, background-image 0.5s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    transition: background-color 0.5s, background-image 0.5s, color 0.5s;
 }
 
 body > header > footer:hover {
     background-color: #FC3;
+}
+
+body > header > footer.on {
+    background-color: var(--color-item);
+    color: transparent;
+    background-image: url("../img/icon/white/tick.png");
 }
 
 
@@ -230,49 +239,52 @@ body > main > nav,
 body > main > aside {
     position: absolute;
     top: 8vh;
-    margin-top: 2.5vw;
-    width: 30vw;
-    margin-bottom: 2.5vw;
-}
-
-body > main > header > main,
-body > main > main > main,
-body > main > footer > main,
-body > main > nav > main,
-body > main > aside > main {
-    width: 100%;
-    display: block;
+    margin-top: 1vw;
+    width: 32vw;
     margin-bottom: 1vw;
 }
 
+body > main > header > *,
+body > main > main > *,
+body > main > footer > *,
+body > main > nav > *,
+body > main > aside > * {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+}
+
 body > main > header {
-    left: 2.5vw;
+    left: 1vw;
 }
 
 body > main > main {
-    left: 50%;
-    margin-left: -15vw;
+    left: 34vw;
 }
 
 body > main > footer {
-    right: 2.5vw;
+    right: 1vw;
 }
 
 body > main > nav {
-    left: 2.5vw;
+    left: 1vw;
 }
 
 body > main > aside {
     width: auto;
-    left: 35vw;
-    right: 2.5vw;
+    left: 34vw;
+    right: 1vw;
+}
+
+body > main > article {
+    position: relative;
 }
 
 
 /* ========================================================================================= */
 
 .shadow {
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .shadow:active {
@@ -281,14 +293,21 @@ body > main > aside {
 }
 
 .shadow.solid {
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     transform: translateY(0px);
 }
 
 
 /* ========================================================================================= */
 
-.list > * {
+.shadowup {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================================================================= */
+
+.list > section {
     display: block;
     line-height: 100%;
     font-size: 2vh;
@@ -299,13 +318,14 @@ body > main > aside {
     color: black;
     background-color: white;
     min-height: 8vh;
+    height: 8vh;
 }
 
-.list > *:nth-of-type(2n) {
+.list > section:nth-child(2n) {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.list > *:before {
+.list > section:before {
     content: attr(data-title);
     font-size: 1.4vh;
     line-height: 100%;

@@ -59,12 +59,11 @@ body > #doctor > header > main > section.languages > span {
 /* Main */
 
 body > #doctor > main > main {
-    margin-bottom: 2vh;
     background-color: var(--color-hospital);
 }
 
 body > #doctor > main > main > header {
-    height: 3.75vw;
+    height: 8vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -76,12 +75,12 @@ body > #doctor > main > main > header {
 body > #doctor > main > main > table {
     width: 100%;
     border-collapse: collapse;
-    height: 11.25vw;
+    height: 12vw;
 }
 
 body > #doctor > main > main > table > thead > tr > td {
-    height: 3.75vw;
-    width: 3.75vw;
+    height: 4vw;
+    width: 4vw;
     background-color: #666;
     text-align: center;
     color: white;
@@ -164,7 +163,7 @@ body > #doctor > footer > main {
 }
 
 body > #doctor > footer > main > header {
-    height: 3.75vw;
+    height: 8vh;
     position: relative;
     background-color: var(--color-comment);
 }
