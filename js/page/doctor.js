@@ -31,6 +31,9 @@
     self.querySelector(":scope > footer > main > nav").addEventListener("click", function () {
         Auth.Test(function () {
             document.querySelector("body > #comment").classList.add("on");
+        }, function () {
+            self.querySelector(":scope > footer > main > nav").innerHTML = "您必须登录后才能撰写评论";
+            self.querySelector(":scope > footer > main > nav").classList.add("off");
         });
     });
 
@@ -105,11 +108,11 @@
             var schedule = holder.firstElementChild;
             var hospital = Cache.Hash("hospital", data.schedules[i].hospital_id);
             schedule.querySelector(":scope > header").innerHTML = hospital.name.en;
-            schedule.querySelector(":scope > main > div.address").innerHTML = hospital.address;
-            schedule.querySelector(":scope > main > div.address2").innerHTML = hospital.address2;
-            schedule.querySelector(":scope > main > div.city").innerHTML = hospital.city;
-            schedule.querySelector(":scope > main > div.state-zipcode").innerHTML = hospital.state + " " + hospital.zipcode;
-            schedule.querySelector(":scope > footer").innerHTML = hospital.iframe;
+            schedule.querySelector(":scope > main").innerHTML = hospital.iframe;
+            schedule.querySelector(":scope > footer > div.address").innerHTML = hospital.address;
+            schedule.querySelector(":scope > footer > div.address2").innerHTML = hospital.address2;
+            schedule.querySelector(":scope > footer > div.city").innerHTML = hospital.city;
+            schedule.querySelector(":scope > footer > div.state-zipcode").innerHTML = hospital.state + " " + hospital.zipcode;
             for (var j = 0; j < data.schedules[i].days.length; j++) {
                 schedule.querySelector(":scope > table > tbody > tr[data-ap='" + data.schedules[i].days[j].ap + "'] > td[data-day='" + data.schedules[i].days[j].day + "']").classList.add("on");
             }

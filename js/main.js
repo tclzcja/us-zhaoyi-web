@@ -25,9 +25,7 @@
         if (fire_count >= 5) {
             window.addEventListener("hashchange", function () {
                 if (document.querySelector("body > main#" + Param.Get("l"))) {
-                    if (document.querySelector("body > main.on")) {
-                        document.querySelector("body > main.on").classList.remove("on");
-                    }
+                    document.querySelectorAll("body > main.on").removeClass("on");
                     document.querySelector("body > main#" + Param.Get("l")).dispatchEvent(new Event("hey"));
                     document.querySelector("body > main#" + Param.Get("l")).classList.add("on");
                 }

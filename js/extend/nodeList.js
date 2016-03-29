@@ -34,4 +34,16 @@
         }
     };
 
+    NodeList.prototype.addClass = function (name) {
+        for (var i = 0; i < this.length; i++) {
+            this[i].classList.add(name);
+        }
+    };
+
+    NodeList.prototype.removeClass = function (name) {
+        for (var i = 0; i < this.length; i++) {
+            this[i].classList.remove(name);
+        }
+    };
+
 }());

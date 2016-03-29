@@ -126,15 +126,25 @@ body > #doctor > main > main > table > tbody > tr > td.on {
 }
 
 body > #doctor > main > main > main {
+    height: 30vh;
+}
+
+body > #doctor > main > main > main > iframe {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+body > #doctor > main > main > footer {
     padding: 2vh;
     color: #333;
     position: relative;
     z-index: 7;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
     border-bottom: solid 1vh var(--color-hospital);
 }
 
-body > #doctor > main > main > main:before {
+body > #doctor > main > main > footer:before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -147,20 +157,10 @@ body > #doctor > main > main > main:before {
     border-right: solid 1vh transparent;
 }
 
-body > #doctor > main > main > main > div {
+body > #doctor > main > main > footer > div {
     font-size: 2vh;
     line-height: 3vh;
     text-align: right;
-}
-
-body > #doctor > main > main > footer {
-    height: 30vh;
-}
-
-body > #doctor > main > main > footer > iframe {
-    height: 100%;
-    width: 100%;
-    display: block;
 }
 
 
@@ -239,12 +239,18 @@ body > #doctor > footer > main > nav {
     align-items: flex-end;
     font-size: 1.5vh;
     padding-bottom: 2vh;
-    transition: background-color 0.5s;
+    transition: height 0.2s, background-color 0.2s, background-image 0.2s, color 0.2s;
     color: #333;
 }
 
 body > #doctor > footer > main > nav:hover {
-    background-color: #F90;
+    height: 15vh;
+}
+
+body > #doctor > footer > main > nav.off {
+    color: white;
+    background-color: #888;
+    background-image: url("../../img/icon/white/comment.png");
 }
 
 body > #doctor > footer > main > nav > span {
