@@ -14,6 +14,7 @@ body > #doctor > header > main > header {
     justify-content: center;
     align-items: center;
     background-color: var(--color-doctor);
+    z-index: 2;
 }
 
 body > #doctor > header > main > header > main {
@@ -25,6 +26,10 @@ body > #doctor > header > main > header > main {
     border-radius: 50%;
     background-image: url("../../img/icon/white/doctor.png");
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+body > #doctor > header > main > section {
+    z-index: 1;
 }
 
 body > #doctor > header > main > section.name {
@@ -60,6 +65,7 @@ body > #doctor > header > main > section.languages > span {
 
 body > #doctor > main > main {
     background-color: var(--color-hospital);
+    position: relative;
 }
 
 body > #doctor > main > main > header {
@@ -76,36 +82,40 @@ body > #doctor > main > main > table {
     width: 100%;
     border-collapse: collapse;
     height: 12vw;
+    position: relative;
+    z-index: 5;
+    --color-td: white;
+    --color-td-dark: #EEE;
 }
 
 body > #doctor > main > main > table > thead > tr > td {
     height: 4vw;
     width: 4vw;
-    background-color: #666;
+    background-color: var(--color-td);
     text-align: center;
-    color: white;
+    color: #333;
 }
 
 body > #doctor > main > main > table > thead > tr > td:nth-child(2n) {
-    background-color: #555;
+    background-color: var(--color-td-dark);
 }
 
 body > #doctor > main > main > table > tbody > tr > td {
-    background-color: #555;
+    background-color: var(--color-td-dark);
     text-align: center;
-    color: white;
+    color: #333;
 }
 
 body > #doctor > main > main > table > tbody > tr > td:nth-child(2n) {
-    background-color: #666;
+    background-color: var(--color-td);
 }
 
 body > #doctor > main > main > table > tbody > tr:nth-child(2n) > td {
-    background-color: #666;
+    background-color: var(--color-td);
 }
 
 body > #doctor > main > main > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
-    background-color: #555;
+    background-color: var(--color-td-dark);
 }
 
 body > #doctor > main > main > table > tbody > tr > td.on {
@@ -119,8 +129,8 @@ body > #doctor > main > main > main {
     padding: 2vh;
     color: #333;
     position: relative;
+    z-index: 7;
     background-color: rgba(255, 255, 255, 0.8);
-    border-top: dashed 1px var(--color-hospital);
     border-bottom: solid 1vh var(--color-hospital);
 }
 
@@ -145,7 +155,6 @@ body > #doctor > main > main > main > div {
 
 body > #doctor > main > main > footer {
     height: 30vh;
-    z-index: 555;
 }
 
 body > #doctor > main > main > footer > iframe {
@@ -216,15 +225,22 @@ body > #doctor > footer > main > header > footer > span.empty {
 }
 
 body > #doctor > footer > main > nav {
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 11vh;
+    height: 12vh;
+    background-color: white;
     background-repeat: no-repeat;
     background-size: auto 5vh;
-    background-position: center 2vh;
-    background-image: url("../../img/icon/white/comment.png");
+    background-position: center top 2vh;
+    background-image: url("../../img/icon/black/comment.png");
     position: relative;
+    z-index: 5;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.5vh;
+    padding-bottom: 2vh;
     transition: background-color 0.5s;
+    color: #333;
 }
 
 body > #doctor > footer > main > nav:hover {

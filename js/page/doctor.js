@@ -29,7 +29,9 @@
     });
 
     self.querySelector(":scope > footer > main > nav").addEventListener("click", function () {
-        document.querySelector("body > #comment").classList.add("on");
+        Auth.Test(function () {
+            document.querySelector("body > #comment").classList.add("on");
+        });
     });
 
     function reset() {

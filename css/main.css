@@ -124,7 +124,7 @@ body > header > header {
     position: absolute;
     top: 0px;
     bottom: 0px;
-    width: 50%;
+    width: 25%;
     left: 0px;
 }
 
@@ -252,6 +252,7 @@ body > main > aside > * {
     width: 100%;
     display: block;
     margin-bottom: 5px;
+    overflow: hidden;
 }
 
 body > main > header {
@@ -304,6 +305,10 @@ body > main > article {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
 }
 
+.shadowboth {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 -2px 4px rgba(0, 0, 0, 0.15);
+}
+
 
 /* ========================================================================================= */
 
@@ -318,7 +323,6 @@ body > main > article {
     color: black;
     background-color: white;
     min-height: 8vh;
-    height: 8vh;
 }
 
 .list > section:nth-child(2n) {

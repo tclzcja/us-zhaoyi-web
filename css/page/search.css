@@ -15,13 +15,9 @@ body > #search > nav > main > section:before {
 
 /* Aside */
 
-body > #search > aside > header {
-    background-color: var(--color-doctor);
-    height: 5vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body > #search > aside {
+    border-top: solid 1vh var(--color-doctor);
+    border-bottom: solid 1vh var(--color-doctor);
 }
 
 body > #search > aside > main {

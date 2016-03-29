@@ -10,7 +10,6 @@
     <link type="text/css" rel="stylesheet" href="css/page/search.css" />
     <link type="text/css" rel="stylesheet" href="css/page/doctor.css" />
     <link type="text/css" rel="stylesheet" href="css/page/comment.css" />
-    <link type="text/css" rel="stylesheet" href="css/page/hospital.css" />
     <link type="text/css" rel="stylesheet" href="css/page/register.css" />
     <link type="text/css" rel="stylesheet" href="css/page/login.css" />
     <link type="text/css" rel="stylesheet" href="css/page/profile.css" />
@@ -86,7 +85,6 @@
             </main>
         </nav>
         <aside>
-            <header class="shadow">共找到 14 位医生符合要求</header>
             <template>
                 <main class="shadow">
                     <header></header>
@@ -103,10 +101,10 @@
     <main id="doctor">
         <header>
             <main class="shadow list">
-                <header class="portrait">
+                <header>
                     <main></main>
                 </header>
-                <section class="name" data-title="姓名"></section>
+                <section class="name shadowup" data-title="姓名"></section>
                 <section class="gender" data-title="性别"></section>
                 <section class="code" data-title="行医编号"></section>
                 <section class="startyear" data-title="行医年份"></section>
@@ -124,7 +122,7 @@
             <template>
                 <main class="shadow schedule">
                     <header></header>
-                    <table>
+                    <table class="shadowboth">
                         <thead>
                             <tr>
                                 <td></td>
@@ -163,7 +161,7 @@
                     <footer>
                         <!-- iframe -->
                     </footer>
-                    <main>
+                    <main class="shadowup">
                         <div class="address"></div>
                         <div class="address2"></div>
                         <div class="city"></div>
@@ -178,9 +176,7 @@
                     <header><span></span>/5.0</header>
                     <footer></footer>
                 </header>
-                <nav>
-                    <span>撰写评论</span>
-                </nav>
+                <nav class="shadowboth">撰写评价</nav>
                 <main class="list">
                     <template data-star="1">
                         <section data-title="&#9733;"></section>
@@ -291,7 +287,6 @@
             </main>
         </footer>
         <div class="shadowup">
-            <section class="shadow update">更新</section>
             <section class="shadow logout">退出</section>
         </div>
     </main>
@@ -312,13 +307,11 @@
         <footer>登录</footer>
     </header>
     <!-- -->
-    <script type="text/javascript" src="js/extend/math.js"></script>
     <script type="text/javascript" src="js/extend/nodeList.js"></script>
     <script type="text/javascript" src="js/lib/param.js"></script>
     <script type="text/javascript" src="js/lib/auth.js"></script>
     <script type="text/javascript" src="js/lib/api.js"></script>
     <script type="text/javascript" src="js/lib/cache.js"></script>
-    <script type="text/javascript" src="js/lib/template.js"></script>
     <script type="text/javascript" src="js/component/header.js"></script>
     <script type="text/javascript" src="js/page/index.js"></script>
     <script type="text/javascript" src="js/page/search.js"></script>
