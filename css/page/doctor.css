@@ -249,7 +249,7 @@ body > #doctor > footer > main > nav:hover {
 
 body > #doctor > footer > main > nav.off {
     color: white;
-    background-color: #888;
+    background-color: #555;
     background-image: url("../../img/icon/white/comment.png");
 }
 

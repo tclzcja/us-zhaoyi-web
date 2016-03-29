@@ -13,35 +13,38 @@
     var current_data = [];
     var current_data_filter = [];
 
+    var current_type = "doctor";
+
     self.addEventListener("hey", function () {
         self.querySelectorAll(":scope > aside > div").remove();
         current_data = Cache.Get("doctor");
-        filter();
+        current_data_filter = current_data;
+        render();
     });
 
-    //self.querySelectorAll(":scope > table > thead > tr > td.name > input").addEventListener("keyup", filter);
-    //self.querySelectorAll(":scope > table > thead > tr > td.star > select").addEventListener("change", filter);
+    self.querySelectorAll(":scope > div > section.doctor").addEventListener("click", function () {
+        this.parentNode.querySelectorAll(":scope > section.hospital").removeClass("shadow");
+        this.parentNode.querySelectorAll(":scope > section.hospital").removeClass("on");
+        this.classList.add("on");
+        this.classList.add("shadow");
+        self.querySelectorAll(":scope > *.doctor").addClass("on");
+        self.querySelectorAll(":scope > *.hospital").removeClass("on");
+        self.scrollTop = 0;
+        current_type = "doctor";
+    });
 
-    function filter() {
+    self.querySelectorAll(":scope > div > section.hospital").addEventListener("click", function () {
+        this.parentNode.querySelectorAll(":scope > section.doctor").removeClass("shadow");
+        this.parentNode.querySelectorAll(":scope > section.doctor").removeClass("on");
+        this.classList.add("on");
+        this.classList.add("shadow");
+        self.querySelectorAll(":scope > *.doctor").removeClass("on");
+        self.querySelectorAll(":scope > *.hospital").addClass("on");
+        self.scrollTop = 0;
+        current_type = "hospital";
+    });
 
-        current_data_filter = [];
-
-        //var name = self.querySelector(":scope > table > thead > tr > td.name > input").value;
-        //var star = self.querySelector(":scope > table > thead > tr > td.star > select").value;
-
-        for (var i = 0; i < current_data.length; i++) {
-            var flag = true;
-            //flag = name === "" ? flag : flag && current_data[i].name.indexOf(name) >= 0;
-            //flag = star === "" ? flag : flag && (((current_data[i].star[1] + current_data[i].star[2] * 2 + current_data[i].star[3] * 3 + current_data[i].star[4] * 4 + current_data[i].star[5] * 5) / (current_data[i].star[1] + current_data[i].star[2] + current_data[i].star[3] + current_data[i].star[4] + current_data[i].star[5])) >= parseFloat(star) || (current_data[i].star[1] + current_data[i].star[2] + current_data[i].star[3] + current_data[i].star[4] + current_data[i].star[5] === 0));
-            if (flag) {
-                current_data_filter.push(current_data[i]);
-            }
-        }
-
-        jump();
-    }
-
-    function jump() {
+    function render() {
         for (var i = 0; i < current_data_filter.length; i++) {
             holder.innerHTML = self.querySelector(":scope > aside > template").innerHTML;
             var div = holder.firstElementChild;

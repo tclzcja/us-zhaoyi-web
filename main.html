@@ -43,7 +43,11 @@
         </div>
     </main>
     <main id="search">
-        <nav>
+        <div>
+            <section class="doctor on shadow">医生</section>
+            <section class="hospital">医院</section>
+        </div>
+        <nav class="doctor on">
             <main class="shadow list">
                 <section class="name" data-title="姓名">
                     <input type="text" placeholder="姓名关键字" />
@@ -84,7 +88,27 @@
                 </section>
             </main>
         </nav>
-        <aside>
+        <nav class="hospital">
+            <main class="shadow list">
+                <section class="name" data-title="名称">
+                    <input type="text" placeholder="名称关键字" />
+                </section>
+                <section class="item" data-title="科目">
+                    <input type="text" placeholder="医疗科目关键字" />
+                </section>
+                <section class="distance" data-title="距离">
+                    <select>
+                        <option value="9999">任意距离</option>
+                        <option value="10">10英里内</option>
+                        <option value="20">20英里内</option>
+                        <option value="50">50英里内</option>
+                        <option value="100">100英里内</option>
+                        <option value="200">200英里内</option>
+                    </select>
+                </section>
+            </main>
+        </nav>
+        <aside class="doctor on">
             <template>
                 <main class="shadow">
                     <header></header>
@@ -97,6 +121,7 @@
                 </main>
             </template>
         </aside>
+        <aside class="hospital"></aside>
     </main>
     <main id="doctor">
         <header>

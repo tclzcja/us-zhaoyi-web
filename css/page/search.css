@@ -1,23 +1,102 @@
-body > #search > nav {
+body > #search > div {
     position: fixed;
+    top: 8vh;
+    margin-top: 1vw;
+    width: 32vw;
+    height: 8vh;
+    left: 1vw;
 }
 
-body > #search > nav > main {
+body > #search > div > section {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.25;
+    z-index: 1;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+body > #search > div > section:hover {
+    opacity: 0.5;
+}
+
+body > #search > div > section.on {
+    opacity: 1;
+    z-index: 5;
+}
+
+body > #search > div > section.doctor {
+    left: 0px;
+    background-color: var(--color-doctor);
+}
+
+body > #search > div > section.hospital {
+    right: 0px;
+    background-color: var(--color-hospital);
+}
+
+
+/* Nav */
+
+body > #search > nav {
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s;
+    top: 16vh;
+}
+
+body > #search > nav.on {
+    opacity: 1;
+    z-index: 5;
+}
+
+body > #search > nav.doctor > main {
     background-color: var(--color-doctor);
     border-top: solid 1vh var(--color-doctor);
     border-bottom: solid 1vh var(--color-doctor);
 }
 
-body > #search > nav > main > section:before {
+body > #search > nav.doctor > main > section:before {
     color: var(--color-doctor);
+}
+
+body > #search > nav.hospital > main {
+    background-color: var(--color-hospital);
+    border-top: solid 1vh var(--color-hospital);
+    border-bottom: solid 1vh var(--color-hospital);
+}
+
+body > #search > nav.hospital > main > section:before {
+    color: var(--color-hospital);
 }
 
 
 /* Aside */
 
 body > #search > aside {
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s;
+}
+
+body > #search > aside.on {
+    opacity: 1;
+    z-index: 5;
+}
+
+body > #search > aside.doctor {
     border-top: solid 1vh var(--color-doctor);
-    border-bottom: solid 1vh var(--color-doctor);
+}
+
+body > #search > aside.hospital {
+    border-top: solid 1vh var(--color-hospital);
 }
 
 body > #search > aside > main {
