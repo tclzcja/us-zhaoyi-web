@@ -19,22 +19,25 @@ body > #comment > article > section.content {
 }
 
 body > #comment > article > footer {
-    height: 8vh;
     background-color: var(--color-comment);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vh;
+    align-content: center;
     cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 50%;
-    background-image: url("../../img/icon/white/comment.png");
-    padding-left: 10vh;
-    color: white;
-    transition: background-color 0.2s;
+    flex-wrap: wrap;
 }
 
-body > #comment > article > footer:hover {
-    background-color: mediumpurple;
+body > #comment > article > footer > svg {
+    height: 4vw;
+    width: 4vw;
+    fill: white;
+    margin: 2vh;
+}
+
+body > #comment > article > footer > span {
+    display: block;
+    font-size: 2vh;
+    line-height: 100%;
+    color: white;
 }

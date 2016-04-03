@@ -100,6 +100,16 @@ table {
     border-collapse: collapse;
 }
 
+svg {
+    position: relative;
+}
+
+svg > use {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 
 /* ============================================================================================================= */
 
@@ -130,12 +140,17 @@ body > header > header > a > nav {
     width: 6vh;
     border-radius: 50%;
     background-color: #69F;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 110%;
-    background-image: url("../img/icon/white/state.png");
     top: 1vh;
     left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > header > header > a > nav > svg {
+    height: 110%;
+    width: 110%;
+    fill: white;
 }
 
 body > header > header > a > header {
@@ -182,26 +197,45 @@ body > header > footer {
     right: 1vw;
     top: 1vh;
     border-radius: 50%;
-    background-color: var(--color-light);
+    background-color: #FC3;
+    font-size: 1.5vh;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5vh;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-    transition: background-color 0.5s, background-image 0.5s, color 0.5s;
-}
-
-body > header > footer:hover {
-    background-color: #FC3;
 }
 
 body > header > footer.on {
     background-color: var(--color-item);
-    color: transparent;
-    background-image: url("../img/icon/white/tick.png");
+}
+
+body > header > footer > div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+body > header > footer.on > div {
+    opacity: 0;
+}
+
+body > header > footer > svg {
+    height: 50%;
+    width: 50%;
+    fill: white;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+body > header > footer.on > svg {
+    opacity: 1;
 }
 
 
@@ -315,9 +349,9 @@ body > main > article {
     padding-top: 4vh;
     padding-bottom: 2vh;
     padding-left: 2vh;
+    padding-right: 2vh;
     color: black;
     background-color: white;
-    min-height: 8vh;
     position: relative;
 }
 

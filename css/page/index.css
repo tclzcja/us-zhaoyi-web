@@ -34,12 +34,17 @@ body > #index > article > main > footer {
     right: 0px;
     width: 10vh;
     background-color: #69F;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-    background-image: url("../../img/icon/white/search.png");
     z-index: 9999;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > #index > article > main > footer > svg {
+    height: 50%;
+    width: 50%;
+    fill: white;
 }
 
 body > #index > div {
@@ -66,7 +71,7 @@ body > #index > div > div {
     margin-right: 3vw;
 }
 
-body > #index > div > div > img {
+body > #index > div > div > svg {
     height: 15vh;
     width: 15vh;
 }
@@ -90,12 +95,15 @@ body > #index > div > div > footer {
 
 body > #index > div > div:nth-of-type(1) {
     color: #333;
+    fill: #333;
 }
 
 body > #index > div > div:nth-of-type(2) {
     color: var(--color-doctor);
+    fill: var(--color-doctor);
 }
 
 body > #index > div > div:nth-of-type(3) {
     color: #F90;
+    fill: #F90;
 }

@@ -4,7 +4,7 @@
 <head>
     <title>北美找医网</title>
     <meta charset="UTF-8" />
-    <link href="img/icon/blue/usa.png" rel="icon" type="image/x-icon" />
+    <link href="img/icon/usa.svg" rel="icon" type="image/x-icon" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
     <link type="text/css" rel="stylesheet" href="css/page/index.css" />
     <link type="text/css" rel="stylesheet" href="css/page/search.css" />
@@ -21,22 +21,32 @@
         <article>
             <main class="shadow">
                 <input type="search" placeholder="在这里输入您想搜索的医生信息" />
-                <footer></footer>
+                <footer>
+                    <svg>
+                        <use xlink:href="img/icon/search.svg#search"></use>
+                    </svg>
+                </footer>
             </main>
         </article>
         <div class="shadowup">
             <div>
-                <img src="img/icon/black/search.png" />
+                <svg>
+                    <use xlink:href="img/icon/search.svg#search"></use>
+                </svg>
                 <header>智能搜索</header>
                 <footer>您可以在上方的搜索栏填入任何您想搜索的信息来找到符合的医生，例如姓名关键字、邮编、电话、医学科目等等。</footer>
             </div>
             <div>
-                <img src="img/icon/blue/doctor.png" />
+                <svg>
+                    <use xlink:href="img/icon/doctor.svg#doctor"></use>
+                </svg>
                 <header>找到医生</header>
                 <footer>只要几步操作，您就可以找到离您最近的、评价最高的、甚至是看起来最好看的医生。您可以看到医生的任何详细信息。</footer>
             </div>
             <div>
-                <img src="img/icon/orange/comment.png" />
+                <svg>
+                    <use xlink:href="img/icon/comment.svg#comment"></use>
+                </svg>
                 <header>查看评价</header>
                 <footer>看看别的用户对医生的评价，获得最真实可信的就医体验。</footer>
             </div>
@@ -111,12 +121,33 @@
         <aside class="doctor on">
             <template>
                 <main class="shadow">
-                    <header></header>
-                    <section class="name"></section>
-                    <section class="star"></section>
-                    <section class="items"></section>
-                    <section class="services"></section>
-                    <section class="insurances"></section>
+                    <nav>
+                        <svg>
+                            <use xlink:href="img/icon/doctor.svg#doctor"></use>
+                        </svg>
+                    </nav>
+                    <header class="list">
+                        <section class="name" data-title="姓名"></section>
+                        <section class="phone" data-title="电话"></section>
+                        <section class="email" data-title="电子邮件"></section>
+                    </header>
+                    <footer class="list">
+                        <section class="star" data-title="星级">
+                            <template class="star">
+                                <svg>
+                                    <use xlink:href="img/icon/star.svg#star"></use>
+                                </svg>
+                            </template>
+                            <template class="star-empty">
+                                <svg>
+                                    <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
+                                </svg>
+                            </template>
+                        </section>
+                        <section class="items" data-title="项目"></section>
+                        <section class="services" data-title="服务"></section>
+                        <section class="insurances" data-title="保险"></section>
+                    </footer>
                     <a></a>
                 </main>
             </template>
@@ -127,7 +158,9 @@
         <header>
             <main class="shadow list">
                 <header>
-                    <main></main>
+                    <svg>
+                        <use xlink:href="img/icon/doctor.svg#doctor"></use>
+                    </svg>
                 </header>
                 <section class="name shadowup" data-title="姓名"></section>
                 <section class="gender" data-title="性别"></section>
@@ -183,6 +216,11 @@
                             </tr>
                         </tbody>
                     </table>
+                    <template>
+                        <svg>
+                            <use xlink:href="img/icon/tick.svg#tick"></use>
+                        </svg>
+                    </template>
                     <main>
                         <!-- iframe -->
                     </main>
@@ -199,9 +237,25 @@
             <main class="shadow">
                 <header>
                     <header><span></span>/5.0</header>
-                    <footer></footer>
+                    <footer>
+                        <template class="star">
+                            <svg>
+                                <use xlink:href="img/icon/star.svg#star"></use>
+                            </svg>
+                        </template>
+                        <template class="star-empty">
+                            <svg>
+                                <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
+                            </svg>
+                        </template>
+                    </footer>
                 </header>
-                <nav class="shadowboth">撰写评价</nav>
+                <nav class="shadowboth">
+                    <svg>
+                        <use xlink:href="img/icon/comment.svg#comment"></use>
+                    </svg>
+                    <span>撰写评价</span>
+                </nav>
                 <main class="list">
                     <template data-star="1">
                         <section data-title="&#9733;"></section>
@@ -236,7 +290,12 @@
             <section class="content shadow" data-title="评价">
                 <textarea placeholder="留下您的评价"></textarea>
             </section>
-            <footer>提交</footer>
+            <footer>
+                <svg>
+                    <use xlink:href="img/icon/comment.svg#comment"></use>
+                </svg>
+                <span>提交</span>
+            </footer>
         </article>
     </main>
     <main id="hospital">
@@ -319,7 +378,11 @@
     <header class="shadow solid">
         <header>
             <a href="#l=index">
-                <nav></nav>
+                <nav>
+                    <svg>
+                        <use xlink:href="img/icon/usa.svg#usa"></use>
+                    </svg>
+                </nav>
                 <header>
                     <span>北美</span><span>找医网</span>
                 </header>
@@ -329,7 +392,12 @@
         <nav>
             <a href="#l=principle">条款</a><a href="#l=search">搜索</a><a href="#l=about">关于我们</a><a href="#l=register">注册</a>
         </nav>
-        <footer>登录</footer>
+        <footer>
+            <div>登陆</div>
+            <svg>
+                <use xlink:href="img/icon/tick.svg#tick"></use>
+            </svg>
+        </footer>
     </header>
     <!-- -->
     <script type="text/javascript" src="js/extend/nodeList.js"></script>

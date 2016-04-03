@@ -32,14 +32,14 @@
         Auth.Test(function () {
             document.querySelector("body > #comment").classList.add("on");
         }, function () {
-            self.querySelector(":scope > footer > main > nav").innerHTML = "您必须登录后才能撰写评论";
+            self.querySelector(":scope > footer > main > nav > span").innerHTML = "您必须登录后才能撰写评论";
             self.querySelector(":scope > footer > main > nav").classList.add("off");
         });
     });
 
     function reset() {
         self.scrollTop = 0;
-        self.querySelector(":scope > header > main > header > main").removeAttribute("style");
+        self.querySelector(":scope > header > main > header > svg").removeAttribute("style");
         self.querySelector(":scope > header > main > section.gender").innerHTML = "";
         self.querySelector(":scope > header > main > section.name").innerHTML = "";
         self.querySelector(":scope > header > main > section.code").innerHTML = "";
@@ -56,7 +56,7 @@
         */
         self.querySelectorAll(":scope > main > main").remove();
         self.querySelectorAll(":scope > footer > main > main > section").remove();
-        self.querySelectorAll(":scope > footer > main > header > footer > span").remove();
+        self.querySelectorAll(":scope > footer > main > header > footer > svg").remove();
     }
 
     function add_comment(comment) {
@@ -69,7 +69,7 @@
     function render(data) {
 
         if (data.portrait.id) {
-            self.querySelector(":scope > header > main > header > main").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
+            self.querySelector(":scope > header > main > header > svg").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
         }
         self.querySelector(":scope > header > main > section.name").innerHTML = "Dr. " + data.name.en;
         self.querySelector(":scope > header > main > section.gender").innerHTML = data.gender ? "男性" : "女性";
@@ -114,20 +114,24 @@
             schedule.querySelector(":scope > footer > div.city").innerHTML = hospital.city;
             schedule.querySelector(":scope > footer > div.state-zipcode").innerHTML = hospital.state + " " + hospital.zipcode;
             for (var j = 0; j < data.schedules[i].days.length; j++) {
-                schedule.querySelector(":scope > table > tbody > tr[data-ap='" + data.schedules[i].days[j].ap + "'] > td[data-day='" + data.schedules[i].days[j].day + "']").classList.add("on");
+                holder.innerHTML = schedule.querySelector(":scope > template").innerHTML;
+                var svg = holder.firstElementChild;
+                schedule.querySelector(":scope > table > tbody > tr[data-ap='" + data.schedules[i].days[j].ap + "'] > td[data-day='" + data.schedules[i].days[j].day + "']").appendChild(svg);
             }
             self.querySelector(":scope > main").insertBefore(schedule, self.querySelector(":scope > main > template"));
         }
 
         var star = ((data.star[1] + data.star[2] * 2 + data.star[3] * 3 + data.star[4] * 4 + data.star[5] * 5) / (data.star[1] + data.star[2] + data.star[3] + data.star[4] + data.star[5]) || 0).toFixed(1);
         self.querySelector(":scope > footer > main > header > header > span").innerHTML = star;
-        for (var i = 0; i < Math.floor(star); i++) {
-            self.querySelector(":scope > footer > main > header > footer").appendChild(document.createElement("span"));
-        }
         if (star > Math.floor(star)) {
-            var span = document.createElement("span");
-            span.classList.add("empty");
-            self.querySelector(":scope > footer > main > header > footer").insertBefore(span, self.querySelector(":scope > footer > main > header > footer > span:first-child"));
+            holder.innerHTML = self.querySelector(":scope > footer > main > header > footer > template.star-empty").innerHTML;
+            var svg = holder.firstElementChild;
+            self.querySelector(":scope > footer > main > header > footer").appendChild(svg);
+        }
+        for (var i = 0; i < Math.floor(star); i++) {
+            holder.innerHTML = self.querySelector(":scope > footer > main > header > footer > template.star").innerHTML;
+            var svg = holder.firstElementChild;
+            self.querySelector(":scope > footer > main > header > footer").appendChild(svg);
         }
 
     }
