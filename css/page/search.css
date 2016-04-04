@@ -48,13 +48,15 @@ body > #search > nav {
     position: fixed;
     opacity: 0;
     z-index: 1;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
     top: 16vh;
+    transform: translateX(-32vw);
 }
 
 body > #search > nav.on {
     opacity: 1;
     z-index: 5;
+    transform: translateX(0px);
 }
 
 body > #search > nav.doctor > main {
@@ -83,12 +85,14 @@ body > #search > nav.hospital > main > section:before {
 body > #search > aside {
     opacity: 0;
     z-index: 1;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateX(70vw);
 }
 
 body > #search > aside.on {
     opacity: 1;
     z-index: 5;
+    transform: translateX(0px);
 }
 
 body > #search > aside > main {
@@ -134,6 +138,8 @@ body > #search > aside > main > nav > svg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #999;
+    fill: white;
 }
 
 body > #search > aside > main > nav > svg[style] > use {
@@ -146,13 +152,27 @@ body > #search > aside > main > header {
 }
 
 body > #search > aside > main > header > section:before {
-    color: var(--color-doctor);
     left: 0px;
 }
 
+body > #search > aside.doctor > main > header > section:before {
+    color: var(--color-doctor);
+}
+
+body > #search > aside.hospital > main > header > section:before {
+    color: var(--color-hospital);
+}
+
 body > #search > aside > main > header > section {
-    border-bottom: dashed 1px var(--color-doctor);
     padding-left: 0px;
+}
+
+body > #search > aside.doctor > main > header > section {
+    border-bottom: dashed 1px var(--color-doctor);
+}
+
+body > #search > aside.hospital > main > header > section {
+    border-bottom: dashed 1px var(--color-hospital);
 }
 
 body > #search > aside > main > header > section:last-child {
@@ -172,8 +192,15 @@ body > #search > aside > main > footer > section {
     text-align: right;
     white-space: normal;
     flex-wrap: wrap;
-    border-bottom: dashed 1px var(--color-doctor);
     padding-right: 0px;
+}
+
+body > #search > aside.doctor > main > footer > section {
+    border-bottom: dashed 1px var(--color-doctor);
+}
+
+body > #search > aside.hospital > main > footer > section {
+    border-bottom: dashed 1px var(--color-hospital);
 }
 
 body > #search > aside > main > footer > section:last-child {
@@ -183,7 +210,14 @@ body > #search > aside > main > footer > section:last-child {
 body > #search > aside > main > footer > section:before {
     left: auto;
     right: 0px;
+}
+
+body > #search > aside.doctor > main > footer > section:before {
     color: var(--color-doctor);
+}
+
+body > #search > aside.hospital > main > footer > section:before {
+    color: var(--color-hospital);
 }
 
 body > #search > aside > main > footer > section > span {
