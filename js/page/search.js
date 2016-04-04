@@ -62,6 +62,10 @@
     self.querySelectorAll(":scope > nav.doctor > main > section.insurance > input").addEventListener("keyup", filter_doctor);
     self.querySelectorAll(":scope > nav.doctor > main > section.distance > select").addEventListener("change", filter_doctor);
 
+    self.querySelectorAll(":scope > nav.hospital > main > section.name > input").addEventListener("keyup", filter_hospital);
+    self.querySelectorAll(":scope > nav.hospital > main > section.service > input").addEventListener("keyup", filter_hospital);
+    self.querySelectorAll(":scope > nav.hospital > main > section.distance > select").addEventListener("change", filter_hospital);
+
     function name_checker(name, keyword) {
         if (keyword !== "") {
             for (var n in name) {
@@ -79,6 +83,19 @@
         if (keyword !== "") {
             for (var item_id in items) {
                 if (name_checker(Cache.Hash("item", items[item_id]).name, keyword)) {
+                    return true;
+                }
+            }
+        } else {
+            return true;
+        }
+        return false;
+    }
+
+    function service_checker(services, keyword) {
+        if (keyword !== "") {
+            for (var service_id in services) {
+                if (name_checker(Cache.Hash("service", services[service_id].id).name, keyword)) {
                     return true;
                 }
             }
@@ -189,6 +206,19 @@
     function filter_hospital() {
         self.scrollTop = 0;
         current_data_filter_hospital = [];
+        var name = self.querySelector(":scope > nav.hospital > main > section.name > input").value;
+        var service = self.querySelector(":scope > nav.hospital > main > section.service > input").value;
+        var distance = parseInt(self.querySelector(":scope > nav.hospital > main > section.distance > select > option:checked").value, 10);
+        //
+        for (var i = 0; i < current_data_hospital.length; i++) {
+            if (name_checker(current_data_hospital[i].name, name)) {
+                if (service_checker(current_data_hospital[i].services, service)) {
+                    if (Math.calculateDistance(current_latitude, current_longitude, parseFloat(current_data_hospital[i].latitude), parseFloat(current_data_hospital[i].longitude)) <= distance) {
+                        current_data_filter_hospital.push(current_data_hospital[i]);
+                    }
+                }
+            }
+        }
         render_hospital();
     }
 
