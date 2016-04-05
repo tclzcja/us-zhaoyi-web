@@ -4,13 +4,13 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #hospital");
-    const holder = document.createElement("div");
+    var self = document.querySelector("body > #hospital");
+    var holder = document.createElement("div");
 
-    const Api = window.Api;
-    const Auth = window.Auth;
-    const Cache = window.Cache;
-    const Param = window.Param;
+    var Api = window.Api;
+    var Auth = window.Auth;
+    var Cache = window.Cache;
+    var Param = window.Param;
 
     self.addEventListener("hey", function () {
         Api.Core("hospital", "single", {
@@ -31,7 +31,7 @@
         }
         self.querySelector(":scope > main:nth-of-type(1) > main.name").innerHTML = data.name.en;
         for (var i = 0; i < data.items.length; i++) {
-            var item = Cache.Hash("item", data.items[i].id);
+            var item = Cache.Hash("item", data.items[i].service_id);
             if (item) {
                 var div = document.createElement("div");
                 div.innerHTML = item.name["zh-Hans"] + " $" + data.items[i].money;

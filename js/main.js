@@ -4,10 +4,10 @@
 
     'use strict';
 
-    const Api = window.Api;
-    const Auth = window.Auth;
-    const Cache = window.Cache;
-    const Param = window.Param;
+    var Api = window.Api;
+    var Auth = window.Auth;
+    var Cache = window.Cache;
+    var Param = window.Param;
 
     var fire_count = 0;
 

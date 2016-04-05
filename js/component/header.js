@@ -4,9 +4,9 @@
 
     'use strict';
 
-    const self = document.querySelector("body > header");
+    var self = document.querySelector("body > header");
 
-    const Auth = window.Auth;
+    var Auth = window.Auth;
 
     self.querySelector(":scope > footer").addEventListener("click", function () {
         Auth.Test(function () {

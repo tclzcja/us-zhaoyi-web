@@ -4,11 +4,11 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #search");
-    const holder = document.createElement("div");
+    var self = document.querySelector("body > #search");
+    var holder = document.createElement("div");
 
-    const Api = window.Api;
-    const Cache = window.Cache;
+    var Api = window.Api;
+    var Cache = window.Cache;
 
     var current_data_doctor = [];
     var current_data_filter_doctor = [];
@@ -95,7 +95,7 @@
     function service_checker(services, keyword) {
         if (keyword !== "") {
             for (var service_id in services) {
-                if (name_checker(Cache.Hash("service", services[service_id].id).name, keyword)) {
+                if (name_checker(Cache.Hash("service", services[service_id].service_id).name, keyword)) {
                     return true;
                 }
             }
@@ -236,7 +236,7 @@
             main.querySelector(":scope > header > section.address > div.state").innerHTML = current_data_filter_hospital[i].state + " " + current_data_filter_hospital[i].zipcode;
             main.querySelector(":scope > header > section.description").innerHTML = current_data_filter_hospital[i].description;
             for (var service_id in current_data_filter_hospital[i].services) {
-                var service = Cache.Hash("service", current_data_filter_hospital[i].services[service_id].id);
+                var service = Cache.Hash("service", current_data_filter_hospital[i].services[service_id].service_id);
                 var div = document.createElement("div");
                 div.innerHTML = service.name["zh-Hans"] + " $" + current_data_filter_hospital[i].services[service_id].money;
                 main.querySelector(":scope > footer > section.services").appendChild(div);

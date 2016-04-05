@@ -4,11 +4,11 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #index");
+    var self = document.querySelector("body > #index");
 
-    const Api = window.Api;
-    const Auth = window.Auth;
-    const Cache = window.Cache;
+    var Api = window.Api;
+    var Auth = window.Auth;
+    var Cache = window.Cache;
 
     self.querySelector(":scope > article > main > footer").addEventListener("click", function () {
         window.location.href = "#l=search";

@@ -4,13 +4,13 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #doctor");
-    const holder = document.createElement("div");
+    var self = document.querySelector("body > #doctor");
+    var holder = document.createElement("div");
 
-    const Api = window.Api;
-    const Auth = window.Auth;
-    const Cache = window.Cache;
-    const Param = window.Param;
+    var Api = window.Api;
+    var Auth = window.Auth;
+    var Cache = window.Cache;
+    var Param = window.Param;
 
     self.addEventListener("hey", function () {
         reset();

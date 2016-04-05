@@ -4,11 +4,11 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #comment");
+    var self = document.querySelector("body > #comment");
 
-    const Api = window.Api;
-    const Auth = window.Auth;
-    const Param = window.Param;
+    var Api = window.Api;
+    var Auth = window.Auth;
+    var Param = window.Param;
 
     self.addEventListener("click", function () {
         self.classList.remove("on");

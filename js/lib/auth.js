@@ -4,9 +4,9 @@
 
     'use strict';
 
-    const Session_Name_Pass = "auth pass";
-    const Session_Name_Current_Token = "auth current token";
-    const Session_Name_Current_User = "auth current user";
+    var Session_Name_Pass = "auth pass";
+    var Session_Name_Current_Token = "auth current token";
+    var Session_Name_Current_User = "auth current user";
 
     window.Auth = {
         // Test if the user already logged in

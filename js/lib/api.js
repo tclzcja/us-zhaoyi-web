@@ -4,10 +4,10 @@
 
     'use strict';
 
-    const Auth = window.Auth;
+    var Auth = window.Auth;
 
-    const Api_Address = window.location.href.indexOf("localhost") > -1 ? "http://localhost:1337" : "http://52.91.68.202:8080";
-    const Storage_Address = "https://s3.amazonaws.com/storage.uszhaoyi.com/";
+    var Api_Address = window.location.href.indexOf("localhost") > -1 ? "http://localhost:1337" : "http://52.91.68.202:8080";
+    var Storage_Address = "https://s3.amazonaws.com/storage.uszhaoyi.com/";
 
     window.Api = {
         Core: function (target, action, data, callback_correct) {

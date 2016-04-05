@@ -4,7 +4,7 @@
 
     'use strict';
 
-    const list = {
+    var list = {
         "doctor": [],
         "hospital": [],
         "item": [],
@@ -13,7 +13,7 @@
         "comment": []
     };
 
-    const hash = {
+    var hash = {
         "doctor": [],
         "hospital": [],
         "item": [],
@@ -21,7 +21,7 @@
         "user": []
     };
 
-    const Api = window.Api;
+    var Api = window.Api;
 
     window.Cache = {
         Update: function (type, callback) {

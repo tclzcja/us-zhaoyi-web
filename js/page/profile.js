@@ -4,11 +4,11 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #profile");
+    var self = document.querySelector("body > #profile");
 
-    const Api = window.Api;
-    const Auth = window.Auth;
-    const Cache = window.Cache;
+    var Api = window.Api;
+    var Auth = window.Auth;
+    var Cache = window.Cache;
 
     self.addEventListener("hey", function () {
         Auth.Test(init, function () {
@@ -22,8 +22,8 @@
     });
 
     function init() {
-        const user = Auth.Current.User();
-        const insurances = Cache.Get("insurance");
+        var user = Auth.Current.User();
+        var insurances = Cache.Get("insurance");
         self.querySelector(":scope > header > main > section.email").innerHTML = user.email;
         self.querySelector(":scope > header > main > section.name > input").value = user.name;
         self.querySelectorAll(":scope > main > main > section > select > option:not([value='0'])").remove();
@@ -33,6 +33,11 @@
             option.innerText = insurances[i].provider + "/" + insurances[i].class + "/" + insurances[i].subclass;
             self.querySelector(":scope > main > main > section > select").appendChild(option);
         }
+    }
+
+    function update() {
+        var user = Auth.Current.User();
+        user.name = self.querySelector(":scope > header > main > section.name > input").value;
     }
 
 }());

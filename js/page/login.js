@@ -4,10 +4,10 @@
 
     'use strict';
 
-    const self = document.querySelector("body > #login");
+    var self = document.querySelector("body > #login");
 
-    const Api = window.Api;
-    const Auth = window.Auth;
+    var Api = window.Api;
+    var Auth = window.Auth;
 
     self.querySelector(":scope > article > footer").addEventListener("click", function () {
         var footer = this;
