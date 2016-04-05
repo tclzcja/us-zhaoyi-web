@@ -21,9 +21,14 @@
         window.location.href = "#l=index";
     });
 
+    self.querySelector(":scope > header > main > section.name > input").addEventListener("change", update);
     self.querySelector(":scope > main > main > section.insurance > select").addEventListener("change", update);
 
     function init() {
+        render();
+    }
+
+    function render() {
         var user = Auth.Current.User();
         var insurances = Cache.Get("insurance");
         self.querySelector(":scope > header > main > section.email").innerHTML = user.email;
@@ -43,6 +48,8 @@
         user.name = self.querySelector(":scope > header > main > section.name > input").value;
         user.insurance_id = self.querySelector(":scope > main > main > section.insurance > select > option:checked").value;
         Api.Core("user", "update", user, function () {
+            Auth.Login(user.token, user);
+            render();
             self.querySelector(":scope > span").classList.add("on");
             window.setTimeout(function () {
                 self.querySelector(":scope > span").classList.remove("on");

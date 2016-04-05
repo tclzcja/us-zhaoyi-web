@@ -83,7 +83,7 @@ body > #profile > span {
     right: 0px;
     background-color: rgba(64, 218, 0, 0.5);
     color: green;
-    transition: opacity 0.2s;
+    transition: opacity 0.5s;
     opacity: 0;
 }
 
