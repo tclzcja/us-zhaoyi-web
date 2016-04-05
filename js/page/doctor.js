@@ -39,7 +39,7 @@
 
     function reset() {
         self.scrollTop = 0;
-        self.querySelector(":scope > header > main > header > svg").removeAttribute("style");
+        self.querySelector(":scope > header > main > header > svg.portrait").removeAttribute("style");
         self.querySelector(":scope > header > main > section.gender").innerHTML = "";
         self.querySelector(":scope > header > main > section.name").innerHTML = "";
         self.querySelector(":scope > header > main > section.code").innerHTML = "";
@@ -69,7 +69,7 @@
     function render(data) {
 
         if (data.portrait.id) {
-            self.querySelector(":scope > header > main > header > svg").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
+            self.querySelector(":scope > header > main > header > svg.portrait").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";
         }
         self.querySelector(":scope > header > main > section.name").innerHTML = "Dr. " + data.name.en;
         self.querySelector(":scope > header > main > section.gender").innerHTML = data.gender ? "男性" : "女性";

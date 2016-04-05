@@ -14,7 +14,8 @@ body > #doctor > header > main > header {
     justify-content: center;
     align-items: center;
     background-color: var(--color-doctor);
-    z-index: 2;
+    z-index: 1;
+    position: relative;
 }
 
 body > #doctor > header > main > header > svg {
@@ -30,6 +31,34 @@ body > #doctor > header > main > header > svg {
 
 body > #doctor > header > main > header > svg[style] > use {
     display: none;
+}
+
+body > #doctor > header > main > header > div.favorite {
+    height: 4vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 2vh;
+    background-color: white;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    margin-top: -2vh;
+    color: var(--color-doctor);
+    font-size: 1.5vh;
+    cursor: pointer;
+}
+
+body > #doctor > header > main > header > div.favorite > svg {
+    height: 2vh;
+    width: 2vh;
+    fill: var(--color-doctor);
+    margin-left: 2vh;
+    margin-right: 1vh;
+}
+
+body > #doctor > header > main > header > div.favorite > span {
+    margin-right: 2vh;
 }
 
 body > #doctor > header > main > section {
