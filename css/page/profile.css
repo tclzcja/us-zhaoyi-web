@@ -71,3 +71,22 @@ body > #profile > div > section.logout {
     right: 1vh;
     background-color: #F66;
 }
+
+body > #profile > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20vh;
+    height: 10vh;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(64, 218, 0, 0.5);
+    color: green;
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+body > #profile > span.on {
+    opacity: 1;
+}
