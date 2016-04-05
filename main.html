@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/page/index.css" />
     <link type="text/css" rel="stylesheet" href="css/page/search.css" />
     <link type="text/css" rel="stylesheet" href="css/page/doctor.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/hospital.css" />
     <link type="text/css" rel="stylesheet" href="css/page/comment.css" />
     <link type="text/css" rel="stylesheet" href="css/page/register.css" />
     <link type="text/css" rel="stylesheet" href="css/page/login.css" />
@@ -315,24 +316,35 @@
         </article>
     </main>
     <main id="hospital">
-        <horizontal-roller for="hospital"></horizontal-roller>
-        <header></header>
-        <main class="shadow">
-            <main class="image"></main>
-            <main class="name icon"></main>
-            <main class="items">
-                <header class="icon">检查项目</header>
+        <header>
+            <main class="shadow list">
+                <header>
+                    <svg>
+                        <use xlink:href="img/icon/hospital.svg#hospital"></use>
+                    </svg>
+                </header>
+                <section class="name shadowup" data-title="名称"></section>
+                <section class="address" data-title="地址"></section>
+                <section class="address2" data-title="地址"></section>
+                <section class="city" data-title="城市"></section>
+                <section class="state" data-title="州"></section>
+                <section class="zipcode" data-title="邮编"></section>
+            </main>
+        </header>
+        <main>
+            <main class="shadow list">
+                <section class="iframe">没有地图信息</section>
             </main>
         </main>
-        <main class="shadow">
-            <main class="icon address"></main>
-            <main class="icon address2"></main>
-            <main class="icon city"></main>
-            <main class="icon state"></main>
-            <main class="icon zipcode"></main>
-            <main class="iframe"></main>
-        </main>
-        <footer></footer>
+        <footer>
+            <main class="shadow list">
+                <section class="services" data-title="服务">
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </section>
+            </main>
+        </footer>
     </main>
     <main id="register">
         <article>
