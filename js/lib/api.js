@@ -6,7 +6,7 @@
 
     var Auth = window.Auth;
 
-    var Api_Address = window.location.href.indexOf("localhost") > -1 ? "http://localhost:1337" : "http://52.91.68.202:8080";
+    var Api_Address = window.location.href.indexOf("localhost") > -1 ? "http://localhost:1337" : "http://54.183.228.12:8080";
     var Storage_Address = "https://s3.amazonaws.com/storage.uszhaoyi.com/";
 
     window.Api = {
