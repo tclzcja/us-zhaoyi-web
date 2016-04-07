@@ -49,6 +49,10 @@ body > #doctor > header > main > header > div.favorite {
     cursor: pointer;
 }
 
+body > #doctor > header > main > header > div.favorite.off {
+    display: none;
+}
+
 body > #doctor > header > main > header > div.favorite > svg {
     height: 2vh;
     width: 2vh;

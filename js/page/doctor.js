@@ -26,6 +26,11 @@
                 }
             });
         });
+        Auth.Test(function () {
+            self.querySelector(":scope > header > main > header > div").classList.remove("off");
+        }, function () {
+            self.querySelector(":scope > header > main > header > div").classList.add("off");
+        });
     });
 
     self.querySelector(":scope > footer > main > nav").addEventListener("click", function () {
