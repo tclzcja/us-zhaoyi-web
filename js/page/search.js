@@ -22,6 +22,10 @@
     var current_type = "doctor";
 
     self.addEventListener("hey", function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            current_latitude = position.coords.latitude;
+            current_longitude = position.coords.longitude;
+        });
         self.querySelectorAll(":scope > aside > div").remove();
         current_data_doctor = Cache.Get("doctor");
         current_data_hospital = Cache.Get("hospital");
@@ -246,10 +250,5 @@
             self.querySelector(":scope > aside.hospital").appendChild(main);
         }
     }
-
-    navigator.geolocation.getCurrentPosition(function (position) {
-        current_latitude = position.coords.latitude;
-        current_longitude = position.coords.longitude;
-    });
 
 }());

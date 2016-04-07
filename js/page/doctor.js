@@ -10,10 +10,28 @@
     var Api = window.Api;
     var Auth = window.Auth;
     var Cache = window.Cache;
+    var Const = window.Const;
     var Param = window.Param;
 
     self.addEventListener("hey", function () {
-        reset();
+
+        self.scrollTop = 0;
+        self.querySelector(":scope > header > main > header > svg.portrait").removeAttribute("style");
+        self.querySelector(":scope > header > main > section.gender").innerHTML = "";
+        self.querySelector(":scope > header > main > section.name").innerHTML = "";
+        self.querySelector(":scope > header > main > section.code").innerHTML = "";
+        self.querySelector(":scope > header > main > section.startyear").innerHTML = "";
+        self.querySelectorAll(":scope > header > section.items > span").remove();
+        self.querySelectorAll(":scope > header > section.services > span").remove();
+        self.querySelectorAll(":scope > header > section.insurances > span").remove();
+        self.querySelectorAll(":scope > header > section.languages > span").remove();
+        self.querySelector(":scope > header > main > section.phone").innerHTML = "";
+        self.querySelector(":scope > header > main > section.email").innerHTML = "";
+        self.querySelectorAll(":scope > main > main").remove();
+        self.querySelectorAll(":scope > footer > main > main > section").remove();
+        self.querySelectorAll(":scope > footer > main > header > footer > svg").remove();
+
+        // Render Doctor and Comments
         Api.Core("doctor", "single", {
             id: Param.Get("id")
         }, function (data) {
@@ -22,15 +40,36 @@
                 doctor_id: Param.Get("id")
             }, function (data) {
                 for (var i = 0; i < data.length; i++) {
-                    add_comment(data[i]);
+                    comment(data[i]);
                 }
             });
         });
+
+        // Check whether already Favorited
         Auth.Test(function () {
             self.querySelector(":scope > header > main > header > div").classList.remove("off");
+            var user = Auth.Current.User();
+            user.favorite_doctor_list = user.favorite_doctor_list || [];
+            console.log(user.favorite_doctor_list);
+            if (user.favorite_doctor_list.indexOf(Param.Get("id")) > -1) {
+                self.querySelector(":scope > header > main > header > div").classList.add("favorited");
+                self.querySelector(":scope > header > main > header > div > span").innerHTML = "已收藏";
+            }
         }, function () {
             self.querySelector(":scope > header > main > header > div").classList.add("off");
         });
+
+    });
+
+    self.querySelector(":scope > header > main > header > div.favorite").addEventListener("click", function () {
+
+        var data = {
+            user_id: Auth.Current.User().id,
+            doctor_id: Param.Get("id")
+        };
+
+        Api.Core();
+
     });
 
     self.querySelector(":scope > footer > main > nav").addEventListener("click", function () {
@@ -42,32 +81,10 @@
         });
     });
 
-    function reset() {
-        self.scrollTop = 0;
-        self.querySelector(":scope > header > main > header > svg.portrait").removeAttribute("style");
-        self.querySelector(":scope > header > main > section.gender").innerHTML = "";
-        self.querySelector(":scope > header > main > section.name").innerHTML = "";
-        self.querySelector(":scope > header > main > section.code").innerHTML = "";
-        self.querySelector(":scope > header > main > section.startyear").innerHTML = "";
-        self.querySelectorAll(":scope > header > section.items > span").remove();
-        self.querySelectorAll(":scope > header > section.services > span").remove();
-        self.querySelectorAll(":scope > header > section.insurances > span").remove();
-        /*
-        self.querySelectorAll(":scope > header > section.languages > span").remove();
-        self.querySelector(":scope > header > main > section.telephone").innerHTML = "";
-        self.querySelector(":scope > header > main > section.email").innerHTML = "";
-
-        self.querySelectorAll(":scope > footer > main.insurance > main > div").remove();
-        */
-        self.querySelectorAll(":scope > main > main").remove();
-        self.querySelectorAll(":scope > footer > main > main > section").remove();
-        self.querySelectorAll(":scope > footer > main > header > footer > svg").remove();
-    }
-
-    function add_comment(comment) {
-        holder.innerHTML = self.querySelector(":scope > footer > main > main > template[data-star='" + comment.star + "']").innerHTML;
+    function comment(cmt) {
+        holder.innerHTML = self.querySelector(":scope > footer > main > main > template[data-star='" + cmt.star + "']").innerHTML;
         var c = holder.firstElementChild;
-        c.innerHTML = comment.content;
+        c.innerHTML = cmt.content;
         self.querySelector(":scope > footer > main > main").appendChild(c);
     }
 
@@ -80,6 +97,8 @@
         self.querySelector(":scope > header > main > section.gender").innerHTML = data.gender ? "男性" : "女性";
         self.querySelector(":scope > header > main > section.code").innerHTML = data.code;
         self.querySelector(":scope > header > main > section.startyear").innerHTML = (new Date().getFullYear() - data.startyear) + "年";
+        self.querySelector(":scope > header > main > section.email").innerHTML = data.email;
+        self.querySelector(":scope > header > main > section.phone").innerHTML = data.phone;
 
         for (var i = 0; i < data.items.length; i++) {
             var item = Cache.Hash("item", data.items[i]);
@@ -106,6 +125,12 @@
                 span.innerHTML = insurance.provider + "/" + insurance.class + "/" + insurance.subclass;
                 self.querySelector(":scope > header > main > section.insurances").appendChild(span);
             }
+        }
+
+        for (var i = 0; i < data.languages.length; i++) {
+            var span = document.createElement("span");
+            span.innerHTML = Const.Language.Spoken[data.languages[i]]["zh-Hans"];
+            self.querySelector(":scope > header > main > section.languages").appendChild(span);
         }
 
         for (var i = 0; i < data.schedules.length; i++) {

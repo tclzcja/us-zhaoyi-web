@@ -13,13 +13,7 @@
     var Param = window.Param;
 
     self.addEventListener("hey", function () {
-        reset();
-        Api.Core("hospital", "single", {
-            id: Param.Get("id")
-        }, render);
-    });
 
-    function reset() {
         self.scrollTop = 0;
         self.querySelector(":scope > header > main > header > svg").removeAttribute("style");
         self.querySelector(":scope > header > main > section.name").innerHTML = "";
@@ -30,7 +24,12 @@
         self.querySelector(":scope > header > main > section.zipcode").innerHTML = "";
         self.querySelector(":scope > main > main > section.iframe").innerHTML = "没有地图数据";
         self.querySelector(":scope > footer > main > section.services > table > tbody").innerHTML = "";
-    }
+
+        Api.Core("hospital", "single", {
+            id: Param.Get("id")
+        }, render);
+
+    });
 
     function render(data) {
         if (data.image.id) {

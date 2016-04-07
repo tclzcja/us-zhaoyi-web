@@ -11,7 +11,7 @@
     var Cache = window.Cache;
 
     self.addEventListener("hey", function () {
-        Auth.Test(init, function () {
+        Auth.Test(render, function () {
             window.location.href = "#l=login";
         });
     });
@@ -23,10 +23,6 @@
 
     self.querySelector(":scope > header > main > section.name > input").addEventListener("change", update);
     self.querySelector(":scope > main > main > section.insurance > select").addEventListener("change", update);
-
-    function init() {
-        render();
-    }
 
     function render() {
         var user = Auth.Current.User();
