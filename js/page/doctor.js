@@ -36,25 +36,12 @@
             id: Param.Get("id")
         }, function (data) {
             render(data);
-            Api.Core("comment", "filter", {
-                doctor_id: Param.Get("id")
-            }, function (data) {
-                for (var i = 0; i < data.length; i++) {
-                    comment(data[i]);
-                }
-            });
         });
 
         // Check whether already Favorited
         Auth.Test(function () {
             self.querySelector(":scope > header > main > header > div").classList.remove("off");
-            var user = Auth.Current.User();
-            user.favorite_doctor_list = user.favorite_doctor_list || [];
-            console.log(user.favorite_doctor_list);
-            if (user.favorite_doctor_list.indexOf(Param.Get("id")) > -1) {
-                self.querySelector(":scope > header > main > header > div").classList.add("favorited");
-                self.querySelector(":scope > header > main > header > div > span").innerHTML = "已收藏";
-            }
+            test_favorited();
         }, function () {
             self.querySelector(":scope > header > main > header > div").classList.add("off");
         });
@@ -62,14 +49,19 @@
     });
 
     self.querySelector(":scope > header > main > header > div.favorite").addEventListener("click", function () {
-
-        var data = {
-            user_id: Auth.Current.User().id,
-            doctor_id: Param.Get("id")
-        };
-
-        Api.Core();
-
+        if (!this.classList.contains("favorited")) {
+            var user_id = Auth.Current.User().id;
+            var doctor_id = Param.Get("id");
+            var user = Auth.Current.User();
+            user.favorite_doctor_list = user.favorite_doctor_list || [];
+            if (user.favorite_doctor_list.indexOf(doctor_id) < 0) {
+                user.favorite_doctor_list.push(doctor_id);
+            }
+            Api.Core("user", "update", user, function () {
+                Auth.Login(user.token, user);
+                test_favorited();
+            }, function () {});
+        }
     });
 
     self.querySelector(":scope > footer > main > nav").addEventListener("click", function () {
@@ -81,7 +73,19 @@
         });
     });
 
-    function comment(cmt) {
+    function test_favorited() {
+        var user = Auth.Current.User();
+        user.favorite_doctor_list = user.favorite_doctor_list || [];
+        if (user.favorite_doctor_list.indexOf(Param.Get("id")) > -1) {
+            self.querySelector(":scope > header > main > header > div").classList.add("favorited");
+            self.querySelector(":scope > header > main > header > div > span").innerHTML = "已收藏";
+        } else {
+            self.querySelector(":scope > header > main > header > div").classList.remove("favorited");
+            self.querySelector(":scope > header > main > header > div > span").innerHTML = "收藏";
+        }
+    }
+
+    function add_comment(cmt) {
         holder.innerHTML = self.querySelector(":scope > footer > main > main > template[data-star='" + cmt.star + "']").innerHTML;
         var c = holder.firstElementChild;
         c.innerHTML = cmt.content;
@@ -89,6 +93,14 @@
     }
 
     function render(data) {
+
+        Api.Core("comment", "filter", {
+            doctor_id: Param.Get("id")
+        }, function (comments) {
+            for (var i = 0; i < comments.length; i++) {
+                add_comment(comments[i]);
+            }
+        });
 
         if (data.portrait.id) {
             self.querySelector(":scope > header > main > header > svg.portrait").style.backgroundImage = "url(" + Api.Storage(data.portrait.id, data.portrait.extension) + ")";

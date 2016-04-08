@@ -4,6 +4,8 @@
 
     'use strict';
 
+    var Api = window.Api;
+
     var Session_Name_Pass = "auth pass";
     var Session_Name_Current_Token = "auth current token";
     var Session_Name_Current_User = "auth current user";
