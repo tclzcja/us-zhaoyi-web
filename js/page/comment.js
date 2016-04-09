@@ -19,7 +19,7 @@
     });
 
     self.querySelector(":scope > article > footer").addEventListener("click", function () {
-        Auth.Test(function () {
+        if (Auth.Test()) {
             Api.Core("comment", "create", {
                 content: self.querySelector(":scope > article > section.content > textarea").value,
                 star: parseInt(self.querySelector(":scope > article > section.star > select > option:checked").value, 10),
@@ -28,7 +28,7 @@
             }, function () {
                 window.location.reload();
             });
-        }, function () {});
+        }
     });
 
 }());

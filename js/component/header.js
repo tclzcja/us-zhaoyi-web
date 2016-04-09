@@ -9,11 +9,11 @@
     var Auth = window.Auth;
 
     self.querySelector(":scope > footer").addEventListener("click", function () {
-        Auth.Test(function () {
+        if (Auth.Test()) {
             window.location.href = "#l=profile";
-        }, function () {
+        } else {
             document.querySelector("body > #login").classList.add("on");
-        });
+        }
     });
 
     self.addEventListener("login", function () {

@@ -11,9 +11,7 @@
 
     var fire_count = 0;
 
-    Auth.Test(function () {
-        document.querySelector("body > header").dispatchEvent(new Event("login"));
-    }, Auth.Reset);
+    Auth.Test();
     Cache.Update("item", fire);
     Cache.Update("service", fire);
     Cache.Update("hospital", fire);

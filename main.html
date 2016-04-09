@@ -179,8 +179,14 @@
                         <use xlink:href="img/icon/doctor.svg#doctor"></use>
                     </svg>
                     <div class="favorite shadow">
-                        <svg>
+                        <svg class="favorite">
                             <use xlink:href="img/icon/favorite.svg#favorite"></use>
+                        </svg>
+                        <svg class="favorited">
+                            <use xlink:href="img/icon/tick.svg#tick"></use>
+                        </svg>
+                        <svg class="unfavorite">
+                            <use xlink:href="img/icon/delete.svg#delete"></use>
                         </svg>
                         <span>收藏</span>
                     </div>
@@ -373,19 +379,26 @@
                 <input type="email" placeholder="您的邮箱" value="test@uszhaoyi.com" />
             </section>
             <section class="password shadow" data-title="密码">
-                <input type="password" placeholder="您的密码" value="12345678" />
+                <input type="password" placeholder="您的密码" value="1234" />
             </section>
             <footer>登陆</footer>
         </article>
     </main>
     <main id="profile">
         <header>
-            <main class="shadow list">
+            <main class="shadow list info">
                 <section class="email" data-title="邮箱"></section>
                 <section class="name" data-title="姓名">
                     <input type="text" placeholder="您的姓名" />
                 </section>
+                <section class="phone" data-title="电话">
+                    <input type="text" placeholder="您的联系电话" />
+                </section>
+                <section class="email" data-title="电子邮件">
+                    <input type="email" placeholder="您的电子邮件" />
+                </section>
             </main>
+            <main class="shadow logout">退出登录</main>
         </header>
         <main>
             <main class="shadow list">
@@ -398,13 +411,20 @@
         </main>
         <footer>
             <main class="shadow list">
-                <header data-title="我的医生收藏"></header>
-                <footer>暂时没有收藏过医生</footer>
+                <section data-title="我收藏的医生">
+                    <span>共 11 位</span>
+                </section>
             </main>
+            <template>
+                <div class="shadow">
+                    <svg>
+                        <use xlink:href="img/icon/doctor.svg#doctor"></use>
+                    </svg>
+                    <header></header>
+                    <a></a>
+                </div>
+            </template>
         </footer>
-        <div class="shadowup">
-            <section class="shadow logout">退出</section>
-        </div>
         <span>更新完成</span>
     </main>
     <!-- Header & Footer -->

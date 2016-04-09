@@ -45,20 +45,46 @@ body > #doctor > header > main > header > div.favorite {
     top: 50%;
     margin-top: -2vh;
     color: var(--color-doctor);
+    fill: var(--color-doctor);
     font-size: 1.5vh;
     cursor: pointer;
+    transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, color 0.5s;
 }
 
 body > #doctor > header > main > header > div.favorite.off {
     display: none;
 }
 
+body > #doctor > header > main > header > div.favorite.favorited {
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    fill: white;
+}
+
 body > #doctor > header > main > header > div.favorite > svg {
     height: 2vh;
     width: 2vh;
-    fill: var(--color-doctor);
     margin-left: 2vh;
     margin-right: 1vh;
+    transition: fill 0.5s;
+    display: none;
+}
+
+body > #doctor > header > main > header > div.favorite > svg.on {
+    display: block;
+}
+
+body > #doctor > header > main > header > div.favorite.favorited:hover {
+    background-color: #F66;
+}
+
+body > #doctor > header > main > header > div.favorite.favorited:hover > svg.favorited {
+    display: none;
+}
+
+body > #doctor > header > main > header > div.favorite.favorited:hover > svg.unfavorite {
+    display: block;
 }
 
 body > #doctor > header > main > header > div.favorite > span {

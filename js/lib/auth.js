@@ -12,13 +12,14 @@
 
     window.Auth = {
         // Test if the user already logged in
-        Test: function (success, fail) {
+        Test: function () {
             if (sessionStorage.getItem(Session_Name_Pass) === "1") {
                 document.querySelector("body > header > footer").classList.add("on");
-                success();
+                return true;
             } else {
                 document.querySelector("body > header > footer").classList.remove("on");
-                fail();
+                this.Reset();
+                return false;
             }
         },
         // Reset all the status
@@ -39,6 +40,7 @@
             sessionStorage.removeItem(Session_Name_Current_Token);
             sessionStorage.removeItem(Session_Name_Current_User);
             document.querySelector("body > header").dispatchEvent(new Event("logout"));
+            window.location.href = "#l=index";
         },
         Current: {
             //Get the current Header

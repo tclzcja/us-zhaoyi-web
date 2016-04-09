@@ -1,12 +1,22 @@
-body > #profile > header > main {
-    background-color: var(--color-doctor);
-    color: var(--color-doctor);
-    border-top: solid 1vh var(--color-doctor);
-    border-bottom: solid 1vh var(--color-doctor);
+body > #profile > header > main.info {
+    background-color: var(--color-user);
+    color: var(--color-user);
+    border-top: solid 1vh var(--color-user);
+    border-bottom: solid 1vh var(--color-user);
 }
 
-body > #profile > header > main > *:before {
-    color: var(--color-doctor);
+body > #profile > header > main.info > *:before {
+    color: var(--color-user);
+}
+
+body > #profile > header > main.logout {
+    background-color: #F66;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
 }
 
 body > #profile > main > main {
@@ -20,20 +30,63 @@ body > #profile > main > main > *:before {
     color: var(--color-insurance);
 }
 
+body > #profile > footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
 body > #profile > footer > main {
-    background-color: var(--color-doctor);
-    color: var(--color-doctor);
     border-top: solid 1vh var(--color-doctor);
-    border-bottom: solid 1vh var(--color-doctor);
+    margin-bottom: 1vh;
 }
 
 body > #profile > footer > main > *:before {
     color: var(--color-doctor);
 }
 
-body > #profile > footer > main > footer {
-    text-align: center;
-    color: #9CF;
+body > #profile > footer > div {
+    height: 10vw;
+    width: calc((100% - 1vh) / 2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-doctor);
+    position: relative;
+    margin-bottom: 1vh;
+}
+
+body > #profile > footer > div > a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+body > #profile > footer > div > svg {
+    height: 5vw;
+    width: 5vw;
+    fill: white;
+}
+
+body > #profile > footer > div > header {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    line-height: 3vh;
+    font-size: 1.5vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding-right: 1vh;
+    color: white;
 }
 
 body > #profile > div {
@@ -42,7 +95,6 @@ body > #profile > div {
     right: 0px;
     bottom: 0px;
     height: 8vh;
-    background-color: white;
 }
 
 body > #profile > div > section {
