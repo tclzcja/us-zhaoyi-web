@@ -56,7 +56,7 @@
     function update() {
         var user = Auth.Current.User();
         user.name = self.querySelector(":scope > header > main.info > section.name > input").value;
-        user.insurance_id = self.querySelector(":scope > main > main.info > section.insurance > select > option:checked").value;
+        user.insurance_id = self.querySelector(":scope > main > main > section.insurance > select > option:checked").value;
         Api.Core("user", "update", user, function () {
             Auth.Login(user.token, user);
             render();
