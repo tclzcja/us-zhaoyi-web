@@ -5,7 +5,7 @@
     'use strict';
 
     // RFC-5646 = ISO 639-1 & ISO 15924, this is the fundament for spoken_language and states
-    const written_language = {
+    var written_language = {
         "en": {
             "en": "English",
             "zh-Hans": "英语",
@@ -24,7 +24,7 @@
     };
 
     // RFC-5646 = ISO 639-1 & ISO 15924
-    const spoken_language = {
+    var spoken_language = {
         "en": {
             "en": "English",
             "zh-Hans": "英语",
@@ -42,7 +42,7 @@
         }
     };
 
-    const states = {
+    var states = {
         "AL": {
             name: {
                 "en": "Alabama",

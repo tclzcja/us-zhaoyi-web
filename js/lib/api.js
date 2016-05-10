@@ -12,7 +12,7 @@
     window.Api = {
         Core: function (target, action, data, callback_correct) {
             data = data || {};
-            let xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
             xhr.open("POST", Api_Address + "/" + target + "/" + action, true);
             xhr.responseType = "json";
             xhr.setRequestHeader("Content-Type", "application/json");
@@ -27,8 +27,8 @@
             xhr.send(JSON.stringify(data));
         },
         File: function (area, type, action, file, callback) {
-            let fd = new FormData();
-            let xhr = new XMLHttpRequest();
+            var fd = new FormData();
+            var xhr = new XMLHttpRequest();
             fd.append("file", file);
             xhr.responseType = "json";
             xhr.setRequestHeader("Content-Type", "application/json");
