@@ -1,58 +1,44 @@
-/* jshint browser: true, esnext: true */
+/* jshint browser: true, esversion: 6 */
 
 (function () {
 
     'use strict';
 
-    var list = {
-        "doctor": [],
-        "hospital": [],
-        "item": [],
-        "insurance": [],
-        "user": [],
-        "comment": []
-    };
-
-    var hash = {
-        "doctor": [],
-        "hospital": [],
-        "item": [],
-        "insurance": [],
-        "user": []
-    };
+    var key = ['doctor', 'hospital', 'subject', 'service', 'insurance'];
 
     var Api = window.Api;
 
     window.Cache = {
-        Update: function (type, callback) {
-            Api.Core(type, "multiple", null, function (data) {
-                list[type] = data;
-                if (data.length) {
-                    hash[type] = [];
+        Fetch: function (callback) {
+            var fire_counter = 0;
+            for (var i = 0; i < key.length; i++) {
+                sessionStorage.removeItem('cache ' + key[i]);
+                sessionStorage.removeItem('cache ' + key[i] + ' hash');
+                Fire(key[i]);
+            }
+
+            function Fire(resource) {
+                Api.Core('/' + resource + '/read', null, function (data) {
+                    sessionStorage.setItem('cache ' + resource, JSON.stringify(data));
+                    var hash = {};
                     for (var i = 0; i < data.length; i++) {
-                        hash[type][data[i].id] = data[i];
+                        hash[data[i]._id] = data[i];
                     }
-                }
-                if (callback) {
-                    callback();
-                }
-            });
-            return;
+                    sessionStorage.setItem('cache ' + resource + ' hash', JSON.stringify(hash));
+                    fire_counter++;
+                    if (fire_counter >= key.length) {
+                        if (callback) {
+                            callback();
+                        }
+                    }
+                });
+            }
         },
         Get: function (type) {
-            return list[type];
+            return JSON.parse(sessionStorage.getItem('cache ' + type));
         },
-        Hash: function (type, id) {
-            return hash[type][id];
-        },
-        Count: function (type, callback) {
-            Api.Core(type, "count", null, function (data) {
-                list[type] = data;
-                if (callback) {
-                    callback();
-                }
-            });
-            return;
+        Hash: function (type) {
+            return JSON.parse(sessionStorage.getItem('cache ' + type + ' hash'));
         }
     };
 

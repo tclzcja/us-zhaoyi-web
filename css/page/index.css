@@ -1,33 +1,29 @@
-body > #index > article {
-    position: fixed;
-    top: 8vh;
-    left: 0px;
-    right: 0px;
-    bottom: 40vh;
+body > nav {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url("../../img/image/index.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-body > #index > article > main {
+body > nav > section {
     height: 10vh;
     width: 60vw;
     background-color: white;
     position: relative;
 }
 
-body > #index > article > main > input {
+body > nav > section > input {
     height: 100%;
     width: 100%;
     font-size: 2vh;
     padding-left: 4vh;
 }
 
-body > #index > article > main > footer {
+body > nav > section > footer {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -41,69 +37,136 @@ body > #index > article > main > footer {
     align-items: center;
 }
 
-body > #index > article > main > footer > svg {
+body > nav > section > footer > svg {
     height: 50%;
     width: 50%;
     fill: white;
 }
 
-body > #index > div {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+
+/* */
+
+body > main {
     height: 40vh;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body > #index > div > div {
-    height: 30vh;
-    width: 18vw;
+body > main > header {
+    font-size: 4vh;
+    width: 30vw;
+    text-align: right;
+    margin-right: 5vw;
+    height: 8vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-body > #index > div > div > svg {
-    height: 15vh;
-    width: 15vh;
+body > main > footer {
+    width: 30vw;
+    text-align: left;
+    margin-left: 5vw;
+    height: 8vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-body > #index > div > div > header {
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-    display: block;
-    width: 100%;
+body > main > svg {
+    width: 10vw;
+    height: 10vw;
+}
+
+body > main:nth-of-type(2n-1) {
+    background-color: #DEF;
+}
+
+body > main:nth-of-type(2n-1):before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    border-top: solid 10px white;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    margin-left: -10px;
+}
+
+body > main:nth-of-type(2n) {
+    background-color: white;
+}
+
+body > main:nth-of-type(2n):before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    border-top: solid 10px #DEF;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    margin-left: -10px;
+}
+
+body > main:nth-of-type(1):before {
+    display: none;
+}
+
+
+/* */
+
+body > main.search > footer > section {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s;
     font-size: 3vh;
-    line-height: 100%;
-    color: inherit;
-    text-align: center;
 }
 
-body > #index > div > div > footer {
-    width: 100%;
-    color: #999;
-    font-size: 1.5vh;
+body > main.search > footer > section > svg {
+    height: 6vh;
+    width: 6vh;
+    margin-right: 1vw;
 }
 
-body > #index > div > div:nth-of-type(1) {
-    color: #333;
-    fill: #333;
+body > main.search > footer > section > span {
+    color: #666;
 }
 
-body > #index > div > div:nth-of-type(2) {
-    color: var(--color-doctor);
+body > main.search > footer > section.on {
+    opacity: 1;
+}
+
+body > main.search > footer > section.name {
     fill: var(--color-doctor);
+    color: var(--color-doctor);
 }
 
-body > #index > div > div:nth-of-type(3) {
-    color: #F90;
-    fill: #F90;
+body > main.search > footer > section.geo {
+    fill: var(--color-hospital);
+    color: var(--color-hospital);
+}
+
+body > main.search > footer > section.subject {
+    fill: var(--color-subject);
+    color: var(--color-subject);
+}
+
+body > main.search > footer > section.service {
+    fill: var(--color-service);
+    color: var(--color-service);
+}
+
+body > main.search > footer > section.comment {
+    fill: var(--color-comment);
+    color: var(--color-comment);
 }

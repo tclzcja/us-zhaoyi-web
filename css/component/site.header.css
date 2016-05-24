@@ -1,0 +1,124 @@
+site-header {
+    height: 8vh;
+    width: 100%;
+    z-index: 10000;
+    color: white;
+    background-color: white;
+    font-size: 2vh;
+    overflow: hidden;
+    position: relative;
+}
+
+site-header > header {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    left: 0px;
+}
+
+site-header > header > a > nav {
+    position: absolute;
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    background-color: #69F;
+    top: 1vh;
+    left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+site-header > header > a > nav > svg {
+    height: 110%;
+    width: 110%;
+    fill: white;
+}
+
+site-header > header > a > header {
+    left: 6vh;
+    margin-left: 1.75vw;
+    position: absolute;
+    color: #69F;
+    top: 1.5vh;
+    line-height: 100%;
+    font-size: 3vh;
+}
+
+site-header > header > a > footer {
+    left: 6vh;
+    margin-left: 1.75vw;
+    position: absolute;
+    color: #999;
+    bottom: 1.5vh;
+    font-size: 1.5vh;
+    padding-left: 1px;
+    white-space: nowrap;
+}
+
+site-header > nav {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 6vh;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+site-header > nav > a {
+    margin-right: 1.5vw;
+    color: #69F;
+    font-size: 1.5vh;
+    word-break: keep-all;
+}
+
+site-header > footer {
+    position: absolute;
+    height: 6vh;
+    width: 6vh;
+    right: 1vw;
+    top: 1vh;
+    border-radius: 50%;
+    background-color: #FC3;
+    font-size: 1.5vh;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+site-header > footer.on {
+    background-color: var(--color-item);
+}
+
+site-header > footer > div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+site-header > footer.on > div {
+    opacity: 0;
+}
+
+site-header > footer > svg {
+    height: 50%;
+    width: 50%;
+    fill: white;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+site-header > footer.on > svg {
+    opacity: 1;
+}

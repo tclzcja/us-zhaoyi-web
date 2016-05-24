@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>北美找医网</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+    <link href="img/icon/usa.svg" rel="icon" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="css/lib/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/site.header.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/site.footer.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/index.css" />
+    <link rel="import" href="component/site.header.html" data-template="site-header">
+    <link rel="import" href="component/site.footer.html" data-template="site-footer">
+</head>
+
+<body>
+    <site-header class="outline"></site-header>
+    <nav>
+        <section class="outline">
+            <input type="search" placeholder="在这里输入您想搜索的医生和医院信息，例如姓名、科目、邮编……" />
+            <footer>
+                <svg>
+                    <use xlink:href="img/icon/search.svg#search"></use>
+                </svg>
+            </footer>
+        </section>
+    </nav>
+    <main class="outline search">
+        <header>方便的搜索功能</header>
+        <svg>
+            <use xlink:href="img/icon/search.svg#search"></use>
+        </svg>
+        <footer>
+            <section class="name on">
+                <svg>
+                    <use xlink:href="img/icon/name.svg#name"></use>
+                </svg>按姓名<span>查找您需要的医生和医院</span>
+            </section>
+            <section class="geo">
+                <svg>
+                    <use xlink:href="img/icon/map.svg#map"></use>
+                </svg>按地理信息<span>查找您需要的医生和医院</span>
+            </section>
+            <section class="subject">
+                <svg>
+                    <use xlink:href="img/icon/subject.svg#subject"></use>
+                </svg>按医学科目<span>查找您需要的医生和医院</span>
+            </section>
+            <section class="service">
+                <svg>
+                    <use xlink:href="img/icon/service.svg#service"></use>
+                </svg>按服务项目<span>查找您需要的医生和医院</span>
+            </section>
+            <section class="comment">
+                <svg>
+                    <use xlink:href="img/icon/comment.svg#comment"></use>
+                </svg>按用户评价<span>查找您需要的医生和医院</span>
+            </section>
+        </footer>
+    </main>
+    <main class="database">
+        <header>庞大的数据库</header>
+    </main>
+    <main class="language">
+        <header>多语种</header>
+    </main>
+    <site-footer class="outline"></site-footer>
+    <!-- -->
+    <script type="text/javascript" src="js/extend/math.js"></script>
+    <script type="text/javascript" src="js/extend/nodeList.js"></script>
+    <script type="text/javascript" src="js/lib/param.js"></script>
+    <script type="text/javascript" src="js/lib/auth.js"></script>
+    <script type="text/javascript" src="js/lib/api.js"></script>
+    <script type="text/javascript" src="js/lib/cache.js"></script>
+    <script type="text/javascript" src="js/lib/const.js"></script>
+    <script type="text/javascript" src="js/component/site.header.js"></script>
+    <script type="text/javascript" src="js/component/site.footer.js"></script>
+    <script type="text/javascript" src="js/page/index.js"></script>
+</body>
+
+</html>

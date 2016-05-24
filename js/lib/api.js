@@ -1,4 +1,4 @@
-/* jshint browser: true, esnext: true */
+/* jshint browser: true, esnext: true, devel: true */
 
 (function () {
 
@@ -6,40 +6,39 @@
 
     var Auth = window.Auth;
 
-    var Api_Address = window.location.href.indexOf("localhost") > -1 ? "http://localhost:8080" : "http://54.208.43.195:8080";
+    var Api_Address = window.location.href.indexOf("localhost") > -1 ? "http://localhost:8080" : "https://uszhaoyi.mod.bz";
+
     var Storage_Address = "https://s3.amazonaws.com/storage.uszhaoyi.com/";
 
     window.Api = {
-        Core: function (target, action, data, callback_correct) {
+        Core: function (resource, data, callback_correct) {
             data = data || {};
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", Api_Address + "/" + target + "/" + action, true);
-            xhr.responseType = "json";
+            xhr.open('POST', Api_Address + resource, true);
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.setRequestHeader("Authorization", Auth.Current.Token());
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    callback_correct(xhr.response);
+                    callback_correct(xhr.response ? JSON.parse(xhr.response) : null);
                 } else if (xhr.status !== 200) {
-                    // Centralized error processing component
+                    // A centralized error processing component here
                 }
             };
             xhr.send(JSON.stringify(data));
         },
-        File: function (area, type, action, file, callback) {
-            var fd = new FormData();
+        File: function (resource, file, callback_correct) {
+            file = file || {};
             var xhr = new XMLHttpRequest();
-            fd.append("file", file);
-            xhr.responseType = "json";
-            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.open('POST', Api_Address + resource, true);
             xhr.setRequestHeader("Authorization", Auth.Current.Token());
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    callback(xhr.response);
+                    callback_correct(xhr.response ? JSON.parse(xhr.response) : null);
+                } else if (xhr.status !== 200) {
+                    // A centralized error processing component here
                 }
             };
-            xhr.open("POST", Api_Address + "/api/" + area.toLowerCase() + "/" + type.toLowerCase() + "/" + action.toLowerCase());
-            xhr.send(fd);
+            xhr.send(file);
         },
         Storage: function (id, extension) {
             return Storage_Address + id + "." + extension;

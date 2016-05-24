@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>北美找医网</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+    <link href="img/icon/usa.svg" rel="icon" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="css/lib/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/site.header.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/site.footer.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/search.css" />
+    <link rel="import" href="component/site.header.html" data-template="site-header">
+    <link rel="import" href="component/site.footer.html" data-template="site-footer">
+</head>
+
+<body>
+    <site-header class="outline"></site-header>
+    <aside>
+        <div class="doctor on">
+            <svg>
+                <use xlink:href="img/icon/doctor.svg#doctor"></use>
+            </svg>医生</div>
+        <div class="hospital">
+            <svg>
+                <use xlink:href="img/icon/hospital.svg#hospital"></use>
+            </svg>医院</div>
+    </aside>
+    <nav class="list outline doctor on">
+        <footer></footer>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="name">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/name.svg#name"></use>
+                            </svg>
+                        </header>
+                        <input type="text" placeholder="姓名关键字" />
+                    </td>
+                    <td class="star">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/star.svg#star"></use>
+                            </svg>
+                        </header>
+                        <select>
+                            <option value="0">任意星级</option>
+                            <option value="1">至少1星级</option>
+                            <option value="2">至少2星级</option>
+                            <option value="3">至少3星级</option>
+                            <option value="4">至少4星级</option>
+                            <option value="5">至少5星级</option>
+                        </select>
+                    </td>
+                    <td class="subject">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/subject.svg#subject"></use>
+                            </svg>
+                        </header>
+                        <input type="text" placeholder="医疗科目关键字" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="distance">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/distance.svg#distance"></use>
+                            </svg>
+                        </header>
+                        <select>
+                            <option value="9999">任意距离</option>
+                            <option value="10">10英里内</option>
+                            <option value="20">20英里内</option>
+                            <option value="50">50英里内</option>
+                            <option value="100">100英里内</option>
+                            <option value="200">200英里内</option>
+                        </select>
+                    </td>
+                    <td class="service">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/service.svg#service"></use>
+                            </svg>
+                        </header>
+                        <input type="text" placeholder="服务项目关键字" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="insurance">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/insurance.svg#insurance"></use>
+                            </svg>
+                        </header>
+                        <input type="text" placeholder="保险提供商、等级或关键字" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </nav>
+    <nav class="list outline hospital">
+        <footer></footer>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="name">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/name.svg#name"></use>
+                            </svg>
+                        </header>
+                        <input type="text" placeholder="名称关键字" />
+                    </td>
+                    <td class="distance">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/distance.svg#distance"></use>
+                            </svg>
+                        </header>
+                        <select>
+                            <option value="9999">任意距离</option>
+                            <option value="10">10英里内</option>
+                            <option value="20">20英里内</option>
+                            <option value="50">50英里内</option>
+                            <option value="100">100英里内</option>
+                            <option value="200">200英里内</option>
+                        </select>
+                    </td>
+                    <td class="service">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/service.svg#service"></use>
+                            </svg>
+                        </header>
+                        <input type="text" placeholder="医疗服务关键字" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </nav>
+    <main class="list doctor on">
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <template>
+            <a>
+                <nav>
+                    <svg>
+                        <use xlink:href="img/icon/doctor.svg#doctor"></use>
+                    </svg>
+                </nav>
+                <header>
+                    <header></header>
+                    <nav></nav>
+                    <footer>
+                        <template class="star">
+                            <svg>
+                                <use xlink:href="img/icon/star.svg#star"></use>
+                            </svg>
+                        </template>
+                        <template class="star-empty">
+                            <svg>
+                                <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
+                            </svg>
+                        </template>
+                    </footer>
+                    <section class="phone">
+                        <div></div>
+                        <svg>
+                            <use xlink:href="img/icon/phone.svg#phone"></use>
+                        </svg>
+                    </section>
+                    <section class="email">
+                        <div></div>
+                        <svg>
+                            <use xlink:href="img/icon/email.svg#email"></use>
+                        </svg>
+                    </section>
+                    <section></section>
+                </header>
+                <footer>
+                    <section class="subject">
+                        <svg>
+                            <use xlink:href="img/icon/subject.svg#subject"></use>
+                        </svg>
+                    </section>
+                    <section class="service">
+                        <svg>
+                            <use xlink:href="img/icon/service.svg#service"></use>
+                        </svg>
+                    </section>
+                    <section class="insurance">
+                        <svg>
+                            <use xlink:href="img/icon/insurance.svg#insurance"></use>
+                        </svg>
+                    </section>
+                </footer>
+            </a>
+        </template>
+    </main>
+    <main class="list hospital">
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <template>
+            <a>
+                <nav>
+                    <svg>
+                        <use xlink:href="img/icon/hospital.svg#hospital"></use>
+                    </svg>
+                </nav>
+                <header>
+                    <header></header>
+                    <nav></nav>
+                    <section class="description" data-title="描述"></section>
+                    <section class="address" data-title="地址">
+                        <div class="address"></div>
+                        <div class="address2"></div>
+                        <div class="city"></div>
+                        <div class="state"></div>
+                    </section>
+                </header>
+                <footer></footer>
+            </a>
+        </template>
+    </main>
+    <site-footer class="outline"></site-footer>
+    <!-- -->
+    <script type="text/javascript" src="js/extend/math.js"></script>
+    <script type="text/javascript" src="js/extend/nodeList.js"></script>
+    <script type="text/javascript" src="js/lib/param.js"></script>
+    <script type="text/javascript" src="js/lib/auth.js"></script>
+    <script type="text/javascript" src="js/lib/api.js"></script>
+    <script type="text/javascript" src="js/lib/cache.js"></script>
+    <script type="text/javascript" src="js/lib/const.js"></script>
+    <script type="text/javascript" src="js/component/site.header.js"></script>
+    <script type="text/javascript" src="js/component/site.footer.js"></script>
+    <script type="text/javascript" src="js/page/search.js"></script>
+</body>
+
+</html>
