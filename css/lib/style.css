@@ -144,6 +144,7 @@ body > * {
 
 .outline {
     outline: solid 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 
@@ -161,11 +162,11 @@ body > * {
 
 .list > table {
     height: auto;
-    width: auto;
     border-collapse: separate;
     border-spacing: 1.5vw;
     position: relative;
     z-index: 999;
+    width: 93vw;
 }
 
 .list > table > tbody > tr > td {
@@ -228,6 +229,7 @@ body > * {
     align-items: center;
     padding-top: 6vh;
     padding-bottom: 6vh;
+    overflow: hidden;
 }
 
 .mist > table {
@@ -237,6 +239,7 @@ body > * {
     border-spacing: 1.5vw;
     position: relative;
     z-index: 999;
+    width: 96vw;
 }
 
 .mist > table > tbody > tr > td {
@@ -248,6 +251,10 @@ body > * {
     overflow: hidden;
     padding-left: 6vh;
     position: relative;
+}
+
+.mist > table > tbody > tr > td[colspan="2"] {
+    width: 61.5vw;
 }
 
 .mist > table > tbody > tr > td > * {

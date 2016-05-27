@@ -78,21 +78,28 @@
         // Description
         document.querySelector("body > main.info > table > tbody > tr > td.description > div").innerHTML = doctor.description;
 
-        // Star
-        var star = doctor.star.total / doctor.star.amount || 1;
-        if (star > Math.floor(star)) {
-            document.querySelector("body > main.info > table > tbody > tr > td.star").innerHTML += document.querySelector("body > main.info > table > tbody > tr > td.star > template.star-empty").innerHTML;
-        }
-        for (var j = 0; j < Math.floor(star); j++) {
-            document.querySelector("body > main.info > table > tbody > tr > td.star").innerHTML += document.querySelector("body > main.info > table > tbody > tr > td.star > template.star").innerHTML;
-        }
-        document.querySelector("body > main.info > table > tbody > tr > td.star > div").innerHTML = star.toFixed(1) + '<span>/5.0</span>';
+        // Code
+        document.querySelector("body > main.info > table > tbody > tr > td.code > div").innerHTML = doctor.code;
+
+        // Startyear
+        document.querySelector("body > main.info > table > tbody > tr > td.startyear > div > span").innerHTML = doctor.startyear;
 
         // Email
         document.querySelector("body > main.info > table > tbody > tr > td.email > div").innerHTML = doctor.email;
 
         // Phone
         document.querySelector("body > main.info > table > tbody > tr > td.phone > div").innerHTML = doctor.phone;
+
+        // Star
+        var star = doctor.star.total / doctor.star.amount || 1;
+        for (var i = 1; i <= 5; i++) {
+            if (star >= i) {
+                document.querySelector("body > main.comment > table > tbody > tr > td.star > footer").innerHTML += document.querySelector("body > main.comment > table > tbody > tr > td.star > footer > template.star").innerHTML;
+            } else {
+                document.querySelector("body > main.comment > table > tbody > tr > td.star > footer").innerHTML += document.querySelector("body > main.comment > table > tbody > tr > td.star > footer > template.star-empty").innerHTML;
+            }
+        }
+        document.querySelector("body > main.comment > table > tbody > tr > td.star > div").innerHTML = star.toFixed(1) + '<span>/5.0</span>';
     }
 
     load(render);

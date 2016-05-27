@@ -15,14 +15,12 @@ body > main.info > footer {
 
 body > main.info > table > tbody > tr > td {
     color: var(--color-doctor);
-}
-
-body > main.info > table > tbody > tr > td > header {
     fill: var(--color-doctor);
 }
 
-
-/* ======================= */
+body > main.info > table > tbody > tr > td > header {
+    fill: inherit;
+}
 
 body > main.info > table > tbody > tr > td.portrait {
     background-repeat: no-repeat;
@@ -53,6 +51,11 @@ body > main.info > table > tbody > tr > td.star > div {
     width: auto;
     color: orange;
     padding-right: 1.5vh;
+    font-size: 3vh;
+}
+
+body > main.info > table > tbody > tr > td.star > div > span {
+    opacity: 0.25;
 }
 
 body > main.info > table > tbody > tr > td.star > svg {
@@ -64,4 +67,104 @@ body > main.info > table > tbody > tr > td.description > div {
     align-items: flex-start;
     font-size: 2vh;
     padding-top: 1vh;
+}
+
+body > main.info > table > tbody > tr > td.startyear > div {
+    color: #999;
+    font-size: 1.5vh;
+}
+
+body > main.info > table > tbody > tr > td.startyear > div > span {
+    font-size: 3vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--color-doctor);
+}
+
+body > main.info > table > tbody > tr > td.description {
+    fill: #666;
+    color: #666;
+}
+
+body > main.info > table > tbody > tr > td.description > div {
+    font-size: 1.5vh;
+}
+
+
+/* =================================== */
+
+body > main.comment {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../img/image/cloud.jpg");
+}
+
+body > main.comment > table > tbody > tr > td {
+    background-color: rgba(192, 128, 255, 0.25);
+    outline: solid 5px rgba(192, 128, 255, 0.15);
+    height: 30vw;
+}
+
+body > main.comment > table > tbody > tr > td.star {
+    padding: 0px;
+    color: var(--color-comment);
+    fill: var(--color-comment);
+}
+
+body > main.comment > table > tbody > tr > td.star > div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    font-size: 15vh;
+}
+
+body > main.comment > table > tbody > tr > td.star > div > span {
+    font-size: 4vh;
+    opacity: 0.5;
+}
+
+body > main.comment > table > tbody > tr > td.star > footer {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 75%;
+    height: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+body > main.comment > table > tbody > tr > td.star > footer > svg {
+    height: 2vh;
+    width: 2vh;
+}
+
+body > main.comment > table > tbody > tr > td.new {}
+
+
+/* =================================== */
+
+body > main.schedule > footer {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+    background-image: url('../../img/image/hospital.jpg');
 }
