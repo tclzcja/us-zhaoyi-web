@@ -155,8 +155,8 @@ body > * {
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding-top: 8vh;
-    padding-bottom: 8vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
 }
 
 .list > table {
@@ -180,6 +180,10 @@ body > * {
     position: relative;
 }
 
+.list > table > tbody > tr > td > * {
+    vertical-align: middle;
+}
+
 .list > table > tbody > tr > td:empty {
     outline: none;
     opacity: 0;
@@ -195,11 +199,10 @@ body > * {
     max-width: 6vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .list > table > tbody > tr > td > header > svg {
-    margin-top: 1.5vh;
     height: 3vh;
     width: 3vh;
     fill: white;
@@ -215,76 +218,71 @@ body > * {
 }
 
 
-/* */
+/* ========================================================================================= */
 
-.array > table > tbody > tr > td.add {
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    padding: 0px;
-    overflow: visible;
-    cursor: pointer;
+.mist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
 }
 
-.array > table > tbody > tr > td.add:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    border-top: solid 10px;
-    border-left: solid 10px transparent;
-    border-right: solid 10px transparent;
-    left: 50%;
-    margin-left: -10px;
-}
-
-.array > table > tbody > tr > td.l {
-    padding: 0px;
-}
-
-.array > table > tbody > tr > td.l > div {
-    height: 6vh;
-    width: 100%;
+.mist > table {
+    height: auto;
+    width: auto;
+    border-collapse: separate;
+    border-spacing: 1.5vw;
     position: relative;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    z-index: 999;
 }
 
-.array > table > tbody > tr > td.l > div:nth-child(2n) {
-    background-color: rgba(255, 255, 255, 0.1);
+.mist > table > tbody > tr > td {
+    position: relative;
+    height: 6vh;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: solid 5px rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    padding-left: 6vh;
+    position: relative;
 }
 
-.array > table > tbody > tr > td.l > div:before {
-    content: attr(data-left);
+.mist > table > tbody > tr > td > * {
+    vertical-align: middle;
+}
+
+.mist > table > tbody > tr > td:empty {
+    outline: none;
+    opacity: 0;
+}
+
+.mist > table > tbody > tr > td > header {
     position: absolute;
     top: 0px;
     left: 0px;
-    bottom: 0px;
-    width: 50%;
+    width: 6vh;
+    height: 6vh;
+    min-width: 6vh;
+    max-width: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mist > table > tbody > tr > td > header > svg {
+    height: 3vh;
+    width: 3vh;
+    fill: inherit;
+}
+
+.mist > table > tbody > tr > td > div {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 2vh;
-}
-
-.array > table > tbody > tr > td.l > div:after {
-    content: attr(data-right);
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 2vh;
-}
-
-.array > table > tbody > tr > td.l > div:hover {
-    background-color: #F33;
-}
-
-.array > table > tbody > tr > td.l > div:hover:after {
-    content: "删除";
+    align-content: center;
 }

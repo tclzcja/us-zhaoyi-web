@@ -6,9 +6,6 @@
 
     var Api = window.Api;
     var Auth = window.Auth;
-    var Cache = window.Cache;
-
-    Cache.Fetch();
 
     document.querySelector("body > nav > section > footer").addEventListener("click", function () {
         window.location.href = "search.html";

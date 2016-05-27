@@ -1,323 +1,67 @@
-body > #doctor > header > main {
-    background-color: var(--color-doctor);
-    border-bottom: solid 1vh var(--color-doctor);
+body > main.info > footer {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+    background-image: url('../../img/image/doctor.jpg');
 }
 
-body > #doctor > header > main > section:before {
+body > main.info > table > tbody > tr > td {
     color: var(--color-doctor);
 }
 
-body > #doctor > header > main > header {
-    padding: 0px;
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-doctor);
-    z-index: 1;
-    position: relative;
+body > main.info > table > tbody > tr > td > header {
+    fill: var(--color-doctor);
 }
 
-body > #doctor > header > main > header > svg {
-    height: 20vh;
-    width: 20vh;
-    border-radius: 50%;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-    fill: white;
+
+/* ======================= */
+
+body > main.info > table > tbody > tr > td.portrait {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-body > #doctor > header > main > header > svg[style] > use {
-    display: none;
-}
-
-body > #doctor > header > main > header > div.favorite {
-    height: 4vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 2vh;
-    background-color: white;
-    position: absolute;
-    left: 75%;
-    top: 50%;
-    margin-top: -2vh;
-    color: var(--color-doctor);
-    fill: var(--color-doctor);
-    font-size: 1.5vh;
-    cursor: pointer;
-    transition: box-shadow 0.5s, background-color 0.5s, fill 0.5s, color 0.5s;
-}
-
-body > #doctor > header > main > header > div.favorite.off {
-    display: none;
-}
-
-body > #doctor > header > main > header > div.favorite.favorited {
-    box-shadow: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    fill: white;
-}
-
-body > #doctor > header > main > header > div.favorite > svg {
-    height: 2vh;
-    width: 2vh;
-    margin-left: 2vh;
-    margin-right: 1vh;
-    transition: fill 0.5s;
-    display: none;
-}
-
-body > #doctor > header > main > header > div.favorite > svg.on {
-    display: block;
-}
-
-body > #doctor > header > main > header > div.favorite.favorited:hover {
-    background-color: #F66;
-}
-
-body > #doctor > header > main > header > div.favorite.favorited:hover > svg.favorited {
-    display: none;
-}
-
-body > #doctor > header > main > header > div.favorite.favorited:hover > svg.unfavorite {
-    display: block;
-}
-
-body > #doctor > header > main > header > div.favorite > span {
-    margin-right: 2vh;
-}
-
-body > #doctor > header > main > section {
-    z-index: 1;
-}
-
-body > #doctor > header > main > section.name {
+body > main.info > table > tbody > tr > td.name {
     font-size: 3vh;
+    color: #36C;
 }
 
-body > #doctor > header > main > section.items > span {
-    display: inline-block;
-    margin-right: 1vh;
-    font-size: 1.8vh;
+body > main.info > table > tbody > tr > td.name > header {
+    fill: #36C;
 }
 
-body > #doctor > header > main > section.services > span {
-    display: inline-block;
-    margin-right: 1vh;
-    font-size: 1.8vh;
+body > main.info > table > tbody > tr > td.star {
+    fill: orange;
+    padding: 0px;
+    padding-left: 1.5vh;
 }
 
-body > #doctor > header > main > section.insurances > span {
-    display: inline-block;
-    margin-right: 1vh;
-    font-size: 1.8vh;
-}
-
-body > #doctor > header > main > section.languages > span {
-    display: inline-block;
-    margin-right: 1vh;
-    font-size: 1.8vh;
-}
-
-
-/* Main */
-
-body > #doctor > main > main {
-    background-color: var(--color-hospital);
-    position: relative;
-}
-
-body > #doctor > main > main > header {
-    height: 8vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 2vh;
-    color: white;
-    font-size: 2.5vh;
-}
-
-body > #doctor > main > main > table {
-    width: 100%;
-    border-collapse: collapse;
-    height: 12vw;
-    position: relative;
-    z-index: 5;
-    --color-td: white;
-    --color-td-dark: #EEE;
-}
-
-body > #doctor > main > main > table > thead > tr > td {
-    height: 4vw;
-    width: 4vw;
-    background-color: var(--color-td);
-    text-align: center;
-    color: #333;
-}
-
-body > #doctor > main > main > table > thead > tr > td:nth-child(2n) {
-    background-color: var(--color-td-dark);
-}
-
-body > #doctor > main > main > table > tbody > tr > td {
-    background-color: var(--color-td-dark);
-    color: #333;
-    fill: var(--color-item);
-    vertical-align: middle;
-    text-align: center;
-    height: 4vw;
-    width: 4vw;
-}
-
-body > #doctor > main > main > table > tbody > tr > td:nth-child(2n) {
-    background-color: var(--color-td);
-}
-
-body > #doctor > main > main > table > tbody > tr:nth-child(2n) > td {
-    background-color: var(--color-td);
-}
-
-body > #doctor > main > main > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
-    background-color: var(--color-td-dark);
-}
-
-body > #doctor > main > main > table > tbody > tr > td > svg {
-    height: 50%;
-    width: 50%;
-}
-
-body > #doctor > main > main > main {
-    height: 30vh;
-}
-
-body > #doctor > main > main > main > iframe {
-    height: 100%;
-    width: 100%;
-    display: block;
-}
-
-body > #doctor > main > main > footer {
-    padding: 2vh;
-    color: #333;
-    position: relative;
-    z-index: 7;
-    background-color: white;
-    border-bottom: solid 1vh var(--color-hospital);
-}
-
-body > #doctor > main > main > footer:before {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    height: 0px;
-    width: 0px;
-    margin-left: -1vh;
-    border-bottom: solid 1vh var(--color-hospital);
-    border-left: solid 1vh transparent;
-    border-right: solid 1vh transparent;
-}
-
-body > #doctor > main > main > footer > div {
-    font-size: 2vh;
-    line-height: 3vh;
-    text-align: right;
-}
-
-
-/* Footer */
-
-body > #doctor > footer > main {
-    background-color: var(--color-comment);
-    border-bottom: solid 1vh var(--color-comment);
-}
-
-body > #doctor > footer > main > header {
-    height: 8vh;
-    position: relative;
-    background-color: var(--color-comment);
-}
-
-body > #doctor > footer > main > header > header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding-left: 2vh;
-    font-size: 2.5vh;
-    color: #CCC;
-}
-
-body > #doctor > footer > main > header > header > span {
-    font-size: 4vh;
-    line-height: 100%;
-    color: white;
-}
-
-body > #doctor > footer > main > header > footer {
+body > main.info > table > tbody > tr > td.star > div {
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding-right: 2vh;
+    width: auto;
+    color: orange;
+    padding-right: 1.5vh;
 }
 
-body > #doctor > footer > main > header > footer > svg {
-    height: 2vw;
-    width: 2vw;
-    fill: white;
+body > main.info > table > tbody > tr > td.star > svg {
+    height: 3vh;
+    width: 3vh;
 }
 
-body > #doctor > footer > main > nav {
-    position: relative;
-    background-color: white;
-    z-index: 5;
-    cursor: pointer;
-    transition: height 0.2s, background-color 0.2s, background-image 0.2s, color 0.2s;
-    color: var(--color-comment);
-    fill: var(--color-comment);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-body > #doctor > footer > main > nav > svg {
-    height: 4vw;
-    width: 4vw;
-    margin: 2vh;
-}
-
-body > #doctor > footer > main > nav > span {
-    display: block;
-    font-size: 1.5vh;
-    line-height: 100%;
-}
-
-body > #doctor > footer > main > nav.off {
-    color: white;
-    fill: white;
-    background-color: #555;
-}
-
-body > #doctor > footer > main > main {
-    background-color: var(--color-comment);
-}
-
-body > #doctor > footer > main > main > section:before {
-    color: var(--color-comment);
+body > main.info > table > tbody > tr > td.description > div {
+    align-items: flex-start;
+    font-size: 2vh;
+    padding-top: 1vh;
 }
