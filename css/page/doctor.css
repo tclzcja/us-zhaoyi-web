@@ -1,10 +1,18 @@
+body > main.info > header {
+    width: 93vw;
+    line-height: 100%;
+    font-size: 4vh;
+    color: white;
+    z-index: 9995;
+    margin-top: calc(4vh + 1.5vw + 10px);
+}
+
 body > main.info > footer {
     position: absolute;
     top: -20px;
     left: -20px;
     right: -20px;
     bottom: -20px;
-    z-index: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -37,36 +45,15 @@ body > main.info > table > tbody > tr > td.name > header {
     fill: #36C;
 }
 
-body > main.info > table > tbody > tr > td.star {
-    fill: orange;
-    padding: 0px;
-    padding-left: 1.5vh;
-}
-
-body > main.info > table > tbody > tr > td.star > div {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: auto;
-    color: orange;
-    padding-right: 1.5vh;
-    font-size: 3vh;
-}
-
-body > main.info > table > tbody > tr > td.star > div > span {
-    opacity: 0.25;
-}
-
-body > main.info > table > tbody > tr > td.star > svg {
-    height: 3vh;
-    width: 3vh;
+body > main.info > table > tbody > tr > td.description {
+    fill: #666;
+    color: #666;
 }
 
 body > main.info > table > tbody > tr > td.description > div {
     align-items: flex-start;
-    font-size: 2vh;
-    padding-top: 1vh;
+    padding-top: 1.25vh;
+    font-size: 1.5vh;
 }
 
 body > main.info > table > tbody > tr > td.startyear > div {
@@ -81,15 +68,6 @@ body > main.info > table > tbody > tr > td.startyear > div > span {
     color: var(--color-doctor);
 }
 
-body > main.info > table > tbody > tr > td.description {
-    fill: #666;
-    color: #666;
-}
-
-body > main.info > table > tbody > tr > td.description > div {
-    font-size: 1.5vh;
-}
-
 
 /* =================================== */
 
@@ -98,6 +76,7 @@ body > main.comment {
     background-size: cover;
     background-position: center;
     background-image: url("../../img/image/cloud.jpg");
+    z-index: 5;
 }
 
 body > main.comment > table > tbody > tr > td {
@@ -106,13 +85,8 @@ body > main.comment > table > tbody > tr > td {
     height: 30vw;
 }
 
-body > main.comment > table > tbody > tr > td.star {
-    padding: 0px;
-    color: var(--color-comment);
-    fill: var(--color-comment);
-}
-
-body > main.comment > table > tbody > tr > td.star > div {
+body > main.comment > table > tbody > tr > td[data-empty]:before {
+    content: attr(data-empty-content);
     position: absolute;
     top: 0px;
     left: 0px;
@@ -123,8 +97,17 @@ body > main.comment > table > tbody > tr > td.star > div {
     align-items: center;
     align-content: center;
     flex-wrap: nowrap;
-    font-size: 15vh;
+    font-size: 3vh;
+    color: var(--color-comment);
 }
+
+body > main.comment > table > tbody > tr > td.star {
+    padding: 0px;
+    color: var(--color-comment);
+    fill: var(--color-comment);
+}
+
+body > main.comment > table > tbody > tr > td.star > div {}
 
 body > main.comment > table > tbody > tr > td.star > div > span {
     font-size: 4vh;
@@ -154,6 +137,39 @@ body > main.comment > table > tbody > tr > td.new {}
 
 /* =================================== */
 
+body > main.schedule {
+    fill: white;
+    color: white;
+    z-index: 1;
+}
+
+body > main.schedule > nav {
+    position: absolute;
+    height: 12vh;
+    width: 12vh;
+    top: 50%;
+    margin-top: -6vh;
+    background-color: rgba(255, 64, 64, 0.5);
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > main.schedule > nav > svg {
+    height: 6vh;
+    width: 6vh;
+    fill: white;
+}
+
+body > main.schedule > nav:first-of-type {
+    left: 0px;
+}
+
+body > main.schedule > nav:last-of-type {
+    right: 0px;
+}
+
 body > main.schedule > footer {
     position: absolute;
     top: -20px;
@@ -167,4 +183,44 @@ body > main.schedule > footer {
     filter: blur(40px);
     -webkit-filter: blur(40px);
     background-image: url('../../img/image/hospital.jpg');
+}
+
+body > main.schedule > main > table > tbody > tr > td {
+    background-color: rgba(0, 0, 0, 0.5);
+    outline: solid 5px rgba(0, 0, 0, 0.25);
+}
+
+body > main.schedule > main > table > tbody > tr > td.portrait {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body > main.schedule > main > table > tbody > tr > td.name {
+    font-size: 3vh;
+}
+
+body > main.schedule > main > table > tbody > tr > td.description > div {
+    align-items: flex-start;
+    padding-top: 1.25vh;
+    font-size: 1.5vh;
+}
+
+body > main.schedule > main > header,
+body > main.schedule > main > footer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
+body > main.schedule > main > header > iframe {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
 }

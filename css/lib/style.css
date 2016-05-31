@@ -137,6 +137,7 @@ body > * {
     display: block;
     position: relative;
     z-index: 10;
+    overflow: hidden;
 }
 
 
@@ -144,7 +145,6 @@ body > * {
 
 .outline {
     outline: solid 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
 
@@ -227,8 +227,6 @@ body > * {
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
     overflow: hidden;
 }
 
@@ -240,6 +238,8 @@ body > * {
     position: relative;
     z-index: 999;
     width: 96vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 
 .mist > table > tbody > tr > td {
