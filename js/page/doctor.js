@@ -69,7 +69,7 @@
         document.querySelector("body > main.schedule > nav:first-of-type").addEventListener("click", function () {
             var current = document.querySelector("body > main.schedule > main.on");
             current.classList.remove("on");
-            if (current.previousElementSibling) {
+            if (current.previousElementSibling && current.previousElementSibling.tagName === "MAIN") {
                 current.previousElementSibling.classList.add("on");
             } else {
                 document.querySelector("body > main.schedule > main:last-of-type").classList.add("on");
@@ -78,7 +78,7 @@
         document.querySelector("body > main.schedule > nav:last-of-type").addEventListener("click", function () {
             var current = document.querySelector("body > main.schedule > main.on");
             current.classList.remove("on");
-            if (current.nextElementSibling) {
+            if (current.nextElementSibling && current.nextElementSibling.tagName === "MAIN") {
                 current.nextElementSibling.classList.add("on");
             } else {
                 document.querySelector("body > main.schedule > main:first-of-type").classList.add("on");

@@ -1,20 +1,46 @@
-body > header.info {
-    background-color: var(--color-doctor);
+body > main > header {
+    color: white;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2vh;
+    font-size: 1.5vh;
+    position: relative;
+    z-index: 55;
 }
+
+body > main > header:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-top: solid 10px;
+    border-top-color: inherit;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    margin-left: -10px;
+}
+
+
+/* ====================================================================== */
 
 body > main.info {
     background-color: #DEF;
-    border-top-color: var(--color-doctor);
-    z-index: 1;
     background-position: center;
     background-size: auto;
     background-image: url("../../img/image/pattern.1.png");
 }
 
+body > main.info > header {
+    border-top-color: var(--color-doctor);
+    background-color: var(--color-doctor);
+}
+
 body > main.info > table > tbody > tr > td {
     color: var(--color-doctor);
     fill: var(--color-doctor);
-    border-bottom-color: var(--color-doctor);
 }
 
 body > main.info > table > tbody > tr > td > header {
@@ -64,17 +90,16 @@ body > main.info > table > tbody > tr > td.startyear > div > span {
 
 /* =================================== */
 
-body > header.comment {
-    background-color: var(--color-comment);
-}
-
 body > main.comment {
-    z-index: 5;
     background-color: #EDF;
-    border-top-color: var(--color-comment);
     background-position: center;
     background-size: auto;
     background-image: url("../../img/image/pattern.3.png");
+}
+
+body > main.comment > header {
+    background-color: var(--color-comment);
+    border-top-color: var(--color-comment);
 }
 
 body > main.comment > table > tbody > tr > td {
@@ -134,19 +159,18 @@ body > main.comment > table > tbody > tr > td.new {}
 
 /* =================================== */
 
-body > header.schedule {
-    background-color: var(--color-hospital);
-}
-
 body > main.schedule {
     fill: white;
     color: white;
-    z-index: 1;
-    border-top-color: var(--color-hospital);
     background-color: #FED;
     background-position: center;
     background-size: auto;
     background-image: url("../../img/image/pattern.1.png");
+}
+
+body > main.schedule > header {
+    background-color: var(--color-hospital);
+    border-top-color: var(--color-hospital);
 }
 
 body > main.schedule > nav {

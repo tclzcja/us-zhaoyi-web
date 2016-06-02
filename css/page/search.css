@@ -19,6 +19,7 @@ body > aside > div {
     font-size: 2.4vh;
     cursor: pointer;
     transition: opacity 0.5s;
+    z-index: 55;
 }
 
 body > aside > div > svg {
@@ -79,6 +80,8 @@ body > aside > div.on:after {
 body > nav.list {
     display: none;
     overflow: hidden;
+    position: relative;
+    z-index: 10;
 }
 
 body > nav.on {
@@ -87,16 +90,17 @@ body > nav.on {
 
 body > nav.list > footer {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     z-index: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     filter: blur(20px);
     -webkit-filter: blur(20px);
+    transform: scale(1.05);
 }
 
 body > nav.doctor {
@@ -144,10 +148,6 @@ body > nav.hospital > table > tbody > tr > td.service > header {
 
 body > main {
     background-color: white;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('../../img/image/cloud.jpg');
     display: none;
     z-index: 9;
 }
