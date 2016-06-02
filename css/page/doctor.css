@@ -1,29 +1,17 @@
-body > main.info > header {
-    width: 93vw;
-    line-height: 100%;
-    font-size: 4vh;
-    color: white;
-    z-index: 9995;
-    margin-top: calc(4vh + 1.5vw + 10px);
+body > header.info {
+    background-color: var(--color-doctor);
 }
 
-body > main.info > footer {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: blur(40px);
-    -webkit-filter: blur(40px);
-    background-image: url('../../img/image/doctor.jpg');
+body > main.info {
+    background-color: #DEF;
+    border-top-color: var(--color-doctor);
+    z-index: 1;
 }
 
 body > main.info > table > tbody > tr > td {
     color: var(--color-doctor);
     fill: var(--color-doctor);
+    border-bottom-color: var(--color-doctor);
 }
 
 body > main.info > table > tbody > tr > td > header {
@@ -34,6 +22,7 @@ body > main.info > table > tbody > tr > td.portrait {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border: solid 5px white;
 }
 
 body > main.info > table > tbody > tr > td.name {
@@ -52,7 +41,8 @@ body > main.info > table > tbody > tr > td.description {
 
 body > main.info > table > tbody > tr > td.description > div {
     align-items: flex-start;
-    padding-top: 1.25vh;
+    padding-top: 1.5vh;
+    padding-right: 1.5vh;
     font-size: 1.5vh;
 }
 
@@ -71,18 +61,19 @@ body > main.info > table > tbody > tr > td.startyear > div > span {
 
 /* =================================== */
 
+body > header.comment {
+    background-color: var(--color-comment);
+}
+
 body > main.comment {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../img/image/cloud.jpg");
     z-index: 5;
+    background-color: #EDF;
+    border-top-color: var(--color-comment);
 }
 
 body > main.comment > table > tbody > tr > td {
-    background-color: rgba(192, 128, 255, 0.25);
-    outline: solid 5px rgba(192, 128, 255, 0.15);
-    height: 30vw;
+    background-color: white;
+    height: 25vw;
 }
 
 body > main.comment > table > tbody > tr > td[data-empty]:before {
@@ -137,10 +128,16 @@ body > main.comment > table > tbody > tr > td.new {}
 
 /* =================================== */
 
+body > header.schedule {
+    background-color: var(--color-hospital);
+}
+
 body > main.schedule {
     fill: white;
     color: white;
     z-index: 1;
+    border-top-color: var(--color-hospital);
+    background-color: #FED;
 }
 
 body > main.schedule > nav {
@@ -149,7 +146,7 @@ body > main.schedule > nav {
     width: 12vh;
     top: 50%;
     margin-top: -6vh;
-    background-color: rgba(255, 64, 64, 0.5);
+    background-color: #555;
     z-index: 1001;
     display: flex;
     justify-content: center;
@@ -170,53 +167,96 @@ body > main.schedule > nav:last-of-type {
     right: 0px;
 }
 
-body > main.schedule > footer {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    z-index: 1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: blur(40px);
-    -webkit-filter: blur(40px);
-    background-image: url('../../img/image/hospital.jpg');
+body > main.schedule > main > table {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 body > main.schedule > main > table > tbody > tr > td {
-    background-color: rgba(0, 0, 0, 0.5);
-    outline: solid 5px rgba(0, 0, 0, 0.25);
+    color: var(--color-hospital);
+    fill: var(--color-hospital);
 }
 
 body > main.schedule > main > table > tbody > tr > td.portrait {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border: solid 5px white;
 }
 
 body > main.schedule > main > table > tbody > tr > td.name {
     font-size: 3vh;
+    color: #C60;
+    fill: #C60;
+}
+
+body > main.schedule > main > table > tbody > tr > td.description {
+    fill: #666;
+    color: #666;
 }
 
 body > main.schedule > main > table > tbody > tr > td.description > div {
     align-items: flex-start;
-    padding-top: 1.25vh;
+    padding-top: 1.5vh;
+    padding-right: 1.5vh;
     font-size: 1.5vh;
 }
 
-body > main.schedule > main > header,
-body > main.schedule > main > footer {
+body > main.schedule > main > table > tbody > tr > td.calendar {
+    padding: 0px;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main {
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
 }
 
-body > main.schedule > main > header > iframe {
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div {
+    flex-grow: 1;
+    position: relative;
+    background-color: #555;
+    opacity: 0.25;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-child(2n) {
+    background-color: #666;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div:before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 6vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-child(6) {
+    background-color: var(--color-hospital);
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div:last-child {
+    background-color: var(--color-insurance);
+}
+
+body > main.schedule > main > table > tbody > tr > td.iframe {
+    padding: 0px;
+    height: 30vh;
+}
+
+body > main.schedule > main > table > tbody > tr > td.iframe > iframe {
     display: block;
     position: absolute;
     top: 0px;

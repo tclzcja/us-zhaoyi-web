@@ -16,9 +16,9 @@
 
 <body>
     <site-header class="outline"></site-header>
+    <header class="info">医生信息</header>
     <main class="mist info">
         <footer></footer>
-        <header>医生信息</header>
         <table>
             <tbody>
                 <tr>
@@ -95,6 +95,7 @@
             </tbody>
         </table>
     </main>
+    <header class="comment">医生评价</header>
     <main class="mist comment outline">
         <table>
             <tbody>
@@ -125,6 +126,7 @@
             </tbody>
         </table>
     </main>
+    <header class="schedule">医院和日程</header>
     <main class="schedule">
         <footer></footer>
         <nav>
@@ -139,8 +141,6 @@
         </nav>
         <template>
             <main class="mist">
-                <header></header>
-                <footer></footer>
                 <table>
                     <tbody>
                         <tr>
@@ -213,6 +213,20 @@
                                 </header>
                                 <div></div>
                             </td>
+                        </tr>
+                        <tr>
+                            <td class="calendar">
+                                <main>
+                                    <div data-title="周一"></div>
+                                    <div data-title="周二"></div>
+                                    <div data-title="周三"></div>
+                                    <div data-title="周四"></div>
+                                    <div data-title="周五"></div>
+                                    <div data-title="周六"></div>
+                                    <div data-title="周日"></div>
+                                </main>
+                            </td>
+                            <td class="iframe" colspan="2">没有地图数据</td>
                         </tr>
                     </tbody>
                 </table>

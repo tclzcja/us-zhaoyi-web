@@ -1,7 +1,7 @@
 :root {
     --color-doctor: #69F;
-    --color-hospital: #F66;
-    --color-insurance: #F90;
+    --color-hospital: #F90;
+    --color-insurance: #F66;
     --color-subject: #690;
     --color-service: #360;
     --color-user: #F69;
@@ -132,7 +132,22 @@ svg > use {
 
 /* ========================================================================================= */
 
-body > * {
+body > header {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    height: 4vh;
+    background-color: #555;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5vh;
+    padding-left: 2vh;
+}
+
+body > main {
     width: 100%;
     display: block;
     position: relative;
@@ -140,11 +155,17 @@ body > * {
     overflow: hidden;
 }
 
-
-/* ========================================================================================= */
-
-.outline {
-    outline: solid 10px rgba(0, 0, 0, 0.1);
+body > main:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    border-top: solid 10px;
+    border-top-color: inherit;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    margin-left: -10px;
+    z-index: 9999;
 }
 
 
@@ -156,8 +177,6 @@ body > * {
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
 }
 
 .list > table {
@@ -167,6 +186,8 @@ body > * {
     position: relative;
     z-index: 999;
     width: 93vw;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
 }
 
 .list > table > tbody > tr > td {
@@ -234,31 +255,22 @@ body > * {
     height: auto;
     width: auto;
     border-collapse: separate;
-    border-spacing: 1.5vw;
+    border-spacing: 1vw;
     position: relative;
     z-index: 999;
-    width: 96vw;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .mist > table > tbody > tr > td {
     position: relative;
     height: 6vh;
-    width: 30vw;
-    background-color: rgba(255, 255, 255, 0.5);
-    outline: solid 5px rgba(255, 255, 255, 0.25);
+    width: 25vw;
+    background-color: white;
     overflow: hidden;
     padding-left: 6vh;
     position: relative;
-}
-
-.mist > table > tbody > tr > td[colspan="2"] {
-    width: 61.5vw;
-}
-
-.mist > table > tbody > tr > td > * {
-    vertical-align: middle;
 }
 
 .mist > table > tbody > tr > td:empty {
@@ -286,8 +298,11 @@ body > * {
 }
 
 .mist > table > tbody > tr > td > div {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 6vh;
+    right: 0px;
+    bottom: 0px;
     display: flex;
     justify-content: flex-start;
     align-items: center;

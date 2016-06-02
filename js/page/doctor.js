@@ -117,7 +117,6 @@
             Api.Core("/hospital/read", {
                 _id: doctor.schedule[i].hospital_id
             }, function (hospital) {
-                console.log(hospital[0]);
                 var main = document.createElement("div");
                 main.innerHTML = document.querySelector("body > main.schedule > template").innerHTML;
                 main = main.firstElementChild;
@@ -152,7 +151,7 @@
 
                 // Iframe
                 if (hospital[0].iframe) {
-                    main.querySelector(":scope > header").innerHTML = hospital[0].iframe;
+                    table.querySelector(":scope > tbody > tr > td.iframe").innerHTML = hospital[0].iframe;
                 }
             });
         }

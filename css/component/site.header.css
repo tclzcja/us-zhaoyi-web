@@ -1,4 +1,5 @@
 site-header {
+    display: block;
     height: 8vh;
     width: 100%;
     z-index: 10000;
