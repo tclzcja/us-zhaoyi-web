@@ -321,6 +321,14 @@ body > main.schedule > main > table > tbody > tr > td.calendar > main > div > fo
 body > main.schedule > main > table > tbody > tr > td.iframe {
     padding: 0px;
     height: 30vh;
+    text-align: center;
+    font-size: 4vh;
+    color: #F90;
+    opacity: 0.25;
+}
+
+body > main.schedule > main > table > tbody > tr > td.iframe.on {
+    opacity: 1;
 }
 
 body > main.schedule > main > table > tbody > tr > td.iframe > iframe {

@@ -181,6 +181,7 @@
                     // Iframe
                     if (hospital[0].iframe) {
                         table.querySelector(":scope > tbody > tr > td.iframe").innerHTML = hospital[0].iframe;
+                        table.querySelector(":scope > tbody > tr > td.iframe").classList.add("on");
                     }
                 });
             }
