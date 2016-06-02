@@ -16,52 +16,74 @@
 
     var comment_index = 0;
 
-    function load(callback) {
+    function load() {
 
-        var init_click = 0;
+        var fire_click = 0;
 
         Api.Core("/doctor/read", {
             _id: Param.Get("_id")
         }, function (data) {
             doctor = data[0];
-            init();
+            fire();
         });
 
         Api.Core("/hospital/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_hospital.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
         Api.Core("/subject/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_subject.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
         Api.Core("/service/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_service.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
         Api.Core("/insurance/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_insurance.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
-        function init() {
-            init_click++;
-            if (init_click >= 5) {
-                callback();
+        function fire() {
+            fire_click++;
+            if (fire_click >= 5) {
+                init();
+                render();
             }
         }
 
+    }
+
+    function init() {
+        document.querySelector("body > main.schedule > nav:first-of-type").addEventListener("click", function () {
+            var current = document.querySelector("body > main.schedule > main.on");
+            current.classList.remove("on");
+            if (current.previousElementSibling) {
+                current.previousElementSibling.classList.add("on");
+            } else {
+                document.querySelector("body > main.schedule > main:last-of-type").classList.add("on");
+            }
+        });
+        document.querySelector("body > main.schedule > nav:last-of-type").addEventListener("click", function () {
+            var current = document.querySelector("body > main.schedule > main.on");
+            current.classList.remove("on");
+            if (current.nextElementSibling) {
+                current.nextElementSibling.classList.add("on");
+            } else {
+                document.querySelector("body > main.schedule > main:first-of-type").classList.add("on");
+            }
+        });
     }
 
     function render() {
@@ -113,47 +135,62 @@
         }
 
         // Schedule
-        for (var i = 0; i < doctor.schedule.length; i++) {
-            Api.Core("/hospital/read", {
-                _id: doctor.schedule[i].hospital_id
-            }, function (hospital) {
+        for (var schedule of doctor.schedule) {
+            if (!document.querySelector("body > main.schedule > main[data-hospital-id='" + schedule.hospital_id + "']")) {
                 var main = document.createElement("div");
                 main.innerHTML = document.querySelector("body > main.schedule > template").innerHTML;
                 main = main.firstElementChild;
+                main.setAttribute("data-hospital-id", schedule.hospital_id);
                 document.querySelector("body > main.schedule").appendChild(main);
-                var table = main.querySelector(":scope > table");
-
-                // Portrait
-                if (hospital[0].portrait) {
-                    table.querySelector(":scope > tbody > tr > td.portrait").style.backgroundImage = 'url("' + Api.Storage(hospital[0].portrait._id, hospital[0].portrait.extension) + '")';
+                if (document.querySelector("body > main.schedule > main.on")) {
+                    document.querySelector("body > main.schedule > main.on").classList.remove("on");
                 }
+                main.classList.add("on");
+                Api.Core("/hospital/read", {
+                    _id: schedule.hospital_id
+                }, function (hospital) {
 
-                // Name
-                table.querySelector(":scope > tbody > tr > td.name > div").innerHTML = hospital[0].name["en"];
+                    var table = document.querySelector("body > main.schedule > main[data-hospital-id='" + hospital[0]._id + "'] > table");
 
-                // Description
-                table.querySelector(":scope > tbody > tr > td.description > div").innerHTML = hospital[0].description;
+                    // Portrait
+                    if (hospital[0].portrait) {
+                        table.querySelector(":scope > tbody > tr > td.portrait").style.backgroundImage = 'url("' + Api.Storage(hospital[0].portrait._id, hospital[0].portrait.extension) + '")';
+                    }
 
-                // Address
-                table.querySelector(":scope > tbody > tr > td.address > div").innerHTML = hospital[0].address;
+                    // Name
+                    table.querySelector(":scope > tbody > tr > td.name > div").innerHTML = hospital[0].name["en"];
 
-                // Address 2
-                table.querySelector(":scope > tbody > tr > td.address2 > div").innerHTML = hospital[0].address2;
+                    // Description
+                    table.querySelector(":scope > tbody > tr > td.description > div").innerHTML = hospital[0].description;
 
-                // City
-                table.querySelector(":scope > tbody > tr > td.city > div").innerHTML = hospital[0].city;
+                    // Address
+                    table.querySelector(":scope > tbody > tr > td.address > div").innerHTML = hospital[0].address;
 
-                // State
-                table.querySelector(":scope > tbody > tr > td.state > div").innerHTML = hospital[0].state;
+                    // Address 2
+                    table.querySelector(":scope > tbody > tr > td.address2 > div").innerHTML = hospital[0].address2;
 
-                // Zipcode
-                table.querySelector(":scope > tbody > tr > td.zipcode > div").innerHTML = hospital[0].zipcode;
+                    // City
+                    table.querySelector(":scope > tbody > tr > td.city > div").innerHTML = hospital[0].city;
 
-                // Iframe
-                if (hospital[0].iframe) {
-                    table.querySelector(":scope > tbody > tr > td.iframe").innerHTML = hospital[0].iframe;
-                }
-            });
+                    // State
+                    table.querySelector(":scope > tbody > tr > td.state > div").innerHTML = hospital[0].state;
+
+                    // Zipcode
+                    table.querySelector(":scope > tbody > tr > td.zipcode > div").innerHTML = hospital[0].zipcode;
+
+                    // Iframe
+                    if (hospital[0].iframe) {
+                        table.querySelector(":scope > tbody > tr > td.iframe").innerHTML = hospital[0].iframe;
+                    }
+                });
+            }
+            // Calendar
+            var div = document.querySelector("body > main.schedule > main[data-hospital-id='" + schedule.hospital_id + "'] > table > tbody > tr > td.calendar > main > div:nth-child(" + Math.floor(schedule.calendar) + ")");
+            if (Math.round(schedule.calendar) <= schedule.calendar) {
+                div.querySelector(":scope > header").classList.add("on");
+            } else {
+                div.querySelector(":scope > footer").classList.add("on");
+            }
         }
     }
 
@@ -161,6 +198,6 @@
 
     }
 
-    load(render);
+    load();
 
 }());

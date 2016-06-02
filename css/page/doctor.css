@@ -6,6 +6,9 @@ body > main.info {
     background-color: #DEF;
     border-top-color: var(--color-doctor);
     z-index: 1;
+    background-position: center;
+    background-size: auto;
+    background-image: url("../../img/image/pattern.1.png");
 }
 
 body > main.info > table > tbody > tr > td {
@@ -69,6 +72,9 @@ body > main.comment {
     z-index: 5;
     background-color: #EDF;
     border-top-color: var(--color-comment);
+    background-position: center;
+    background-size: auto;
+    background-image: url("../../img/image/pattern.3.png");
 }
 
 body > main.comment > table > tbody > tr > td {
@@ -138,6 +144,9 @@ body > main.schedule {
     z-index: 1;
     border-top-color: var(--color-hospital);
     background-color: #FED;
+    background-position: center;
+    background-size: auto;
+    background-image: url("../../img/image/pattern.1.png");
 }
 
 body > main.schedule > nav {
@@ -151,6 +160,12 @@ body > main.schedule > nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+
+body > main.schedule > nav:hover {
+    width: 16vh;
 }
 
 body > main.schedule > nav > svg {
@@ -165,6 +180,14 @@ body > main.schedule > nav:first-of-type {
 
 body > main.schedule > nav:last-of-type {
     right: 0px;
+}
+
+body > main.schedule > main {
+    display: none;
+}
+
+body > main.schedule > main.on {
+    display: flex;
 }
 
 body > main.schedule > main > table {
@@ -221,7 +244,7 @@ body > main.schedule > main > table > tbody > tr > td.calendar > main > div {
     flex-grow: 1;
     position: relative;
     background-color: #555;
-    opacity: 0.25;
+    color: white;
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-child(2n) {
@@ -249,6 +272,50 @@ body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div:last-child {
     background-color: var(--color-insurance);
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header,
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: calc(50% - 3vh);
+    color: transparent;
+    fill: transparent;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header > svg,
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > footer > svg {
+    width: 50%;
+    height: 4vh;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header > div,
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > footer > div {
+    width: 100%;
+    height: 1.2vh;
+    font-size: 1.2vh;
+    text-align: center;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header.on,
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > footer.on {
+    color: rgba(255, 255, 255, 0.5);
+    fill: white;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header {
+    top: 6vh;
+}
+
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div > footer {
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 body > main.schedule > main > table > tbody > tr > td.iframe {
