@@ -1,47 +1,38 @@
-body > #register {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body > main {
+    height: 80vh;
 }
 
-body > #register > article > main {
-    width: 30vw;
-    background-color: var(--color-doctor);
-    border-top: solid 1vh var(--color-doctor);
+body > main > table > tbody > tr > td > header {
+    background-color: var(--color-subject);
+    fill: white;
 }
 
-body > #register > article > main > section:before {
-    color: var(--color-doctor);
-}
-
-body > #register > article > main > main {
-    height: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body > main > table > tbody > tr > td.register {
+    padding: 0px;
+    text-align: center;
+    height: 12vh;
+    background-color: var(--color-subject);
     color: white;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--color-doctor);
-}
-
-body > #register > article > main > main > a {
-    display: inline-block;
-    position: relative;
-    height: auto;
-    text-decoration: underline;
-}
-
-body > #register > article > main > footer {
-    height: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2.5vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../img/image/pattern.3.png");
+    font-size: 3vh;
     cursor: pointer;
-    transition: background-color 0.5s;
 }
 
-body > #register > article > main > footer:hover {
-    background-color: var(--color-insurance);
+body > main > footer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    transform: scale(1.05);
+    background-image: url('../../img/image/doctor.jpg');
 }

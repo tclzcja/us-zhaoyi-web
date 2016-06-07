@@ -96,7 +96,7 @@ site-header > footer.on {
     background-color: var(--color-item);
 }
 
-site-header > footer > div {
+site-header > footer > a {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -108,7 +108,7 @@ site-header > footer > div {
     transition: opacity 0.5s;
 }
 
-site-header > footer.on > div {
+site-header > footer.on > a {
     opacity: 0;
 }
 

@@ -1,30 +1,38 @@
-body > #login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.75);
+body > main {
+    height: 80vh;
 }
 
-body > #login > article {
-    width: 30vw;
-    background-color: var(--color-doctor);
+body > main > table > tbody > tr > td > header {
+    background-color: var(--color-hospital);
+    fill: white;
 }
 
-body > #login > article > section:before {
-    color: var(--color-doctor);
-}
-
-body > #login > article > footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8vh;
-    background-color: var(--color-doctor);
+body > main > table > tbody > tr > td.login {
+    padding: 0px;
+    text-align: center;
+    height: 12vh;
+    background-color: var(--color-hospital);
     color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../img/image/pattern.3.png");
+    font-size: 3vh;
     cursor: pointer;
-    transition: background-color 0.5s;
 }
 
-body > #login > article > footer:hover {
-    background-color: var(--color-insurance);
+body > main > footer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    transform: scale(1.05);
+    background-image: url('../../img/image/doctor.jpg');
 }

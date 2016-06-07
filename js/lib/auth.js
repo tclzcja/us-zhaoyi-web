@@ -33,14 +33,14 @@
             sessionStorage.setItem(Session_Name_Pass, "1");
             sessionStorage.setItem(Session_Name_Current_Token, "Bearer " + token);
             sessionStorage.setItem(Session_Name_Current_User, JSON.stringify(info));
-            document.querySelector("body > header").dispatchEvent(new Event("login"));
+            document.querySelector("body > site-header").dispatchEvent(new Event("login"));
         },
         Logout: function () {
             sessionStorage.removeItem(Session_Name_Pass);
             sessionStorage.removeItem(Session_Name_Current_Token);
             sessionStorage.removeItem(Session_Name_Current_User);
-            document.querySelector("body > header").dispatchEvent(new Event("logout"));
-            window.location.href = "#l=index";
+            document.querySelector("body > site-header").dispatchEvent(new Event("logout"));
+            window.location.href = "index.html";
         },
         Current: {
             //Get the current Header

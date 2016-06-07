@@ -36,10 +36,6 @@ body {
 }
 
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../img/background/index.jpg");
     overflow-y: scroll;
 }
 
@@ -143,77 +139,6 @@ body > main {
 
 /* ========================================================================================= */
 
-.list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-.list > table {
-    height: auto;
-    border-collapse: separate;
-    border-spacing: 1.5vw;
-    position: relative;
-    z-index: 999;
-    width: 93vw;
-    margin-top: 6vh;
-    margin-bottom: 6vh;
-}
-
-.list > table > tbody > tr > td {
-    position: relative;
-    height: 6vh;
-    width: 30vw;
-    background-color: white;
-    outline: solid 5px rgba(0, 0, 0, 0.1);
-    transition: outline 0.1s;
-    overflow: hidden;
-    padding-left: 6vh;
-    position: relative;
-}
-
-.list > table > tbody > tr > td > * {
-    vertical-align: middle;
-}
-
-.list > table > tbody > tr > td:empty {
-    outline: none;
-    opacity: 0;
-}
-
-.list > table > tbody > tr > td > header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 6vh;
-    min-width: 6vh;
-    max-width: 6vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.list > table > tbody > tr > td > header > svg {
-    height: 3vh;
-    width: 3vh;
-    fill: white;
-}
-
-.list > table > tbody > tr > td > input,
-.list > table > tbody > tr > td > select {
-    width: 100%;
-}
-
-.list > table > tbody > tr > td:not(:empty):hover {
-    outline: solid 5px rgba(0, 0, 0, 0.05);
-}
-
-
-/* ========================================================================================= */
-
 .mist {
     display: flex;
     flex-wrap: wrap;
@@ -279,4 +204,9 @@ body > main {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+}
+
+.mist > table > tbody > tr > td > input,
+.mist > table > tbody > tr > td > select {
+    width: 100%;
 }

@@ -87,6 +87,39 @@ body > main.info > table > tbody > tr > td.startyear > div > span {
     color: var(--color-doctor);
 }
 
+body > main.info > table > tbody > tr > td.link {
+    min-height: 6vh;
+    height: auto;
+    color: white;
+    fill: white;
+    vertical-align: top;
+    padding: 0px;
+    background-color: transparent;
+}
+
+body > main.info > table > tbody > tr > td.link > span {
+    display: block;
+    font-size: 2vh;
+    line-height: 6vh;
+    padding-left: 6vh;
+}
+
+body > main.info > table > tbody > tr > td.link > span:nth-of-type(2n) {
+    opacity: 0.9;
+}
+
+body > main.info > table > tbody > tr > td.subject > span {
+    background-color: var(--color-subject);
+}
+
+body > main.info > table > tbody > tr > td.service > span {
+    background-color: var(--color-service);
+}
+
+body > main.info > table > tbody > tr > td.insurance > span {
+    background-color: var(--color-insurance);
+}
+
 
 /* =================================== */
 

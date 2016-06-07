@@ -4,30 +4,18 @@
 
     'use strict';
 
-    var self = document.querySelector("body > #login");
-
     var Api = window.Api;
     var Auth = window.Auth;
 
-    self.querySelector(":scope > article > footer").addEventListener("click", function () {
-        this.classList.add("processing");
+    document.querySelector("body > main > table > tbody > tr > td.login").addEventListener("click", function () {
         var data = {
-            email: self.querySelector(":scope > article > section.email > input").value,
-            password: self.querySelector(":scope > article > section.password > input").value
+            email: document.querySelector("body > main > table > tbody > tr > td.email > input").value,
+            password: document.querySelector("body > main > table > tbody > tr > td.password > input").value
         };
-        Api.Core("user", "login", data, function (info) {
+        Api.Core("/user/login", data, function (info) {
             Auth.Login(info.token, info);
-            self.classList.remove("on");
-            location.hash = "#l=profile";
+            window.location.href = "profile.html";
         });
-    });
-
-    self.addEventListener("click", function () {
-        self.classList.remove("on");
-    });
-
-    self.querySelector(":scope > article").addEventListener("click", function (e) {
-        e.stopPropagation();
     });
 
 }());
