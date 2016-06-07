@@ -93,7 +93,7 @@ site-header > footer {
 }
 
 site-header > footer.on {
-    background-color: var(--color-item);
+    background-color: var(--color-subject);
 }
 
 site-header > footer > a {

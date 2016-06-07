@@ -1,144 +1,38 @@
-body > #profile > header > main.info {
-    background-color: var(--color-user);
-    color: var(--color-user);
-    border-top: solid 1vh var(--color-user);
-    border-bottom: solid 1vh var(--color-user);
-}
-
-body > #profile > header > main.info > *:before {
-    color: var(--color-user);
-}
-
-body > #profile > header > main.logout {
-    background-color: #F66;
-    height: 5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-}
-
-body > #profile > main > main {
-    background-color: var(--color-insurance);
-    color: var(--color-insurance);
-    border-top: solid 1vh var(--color-insurance);
-    border-bottom: solid 1vh var(--color-insurance);
-}
-
-body > #profile > main > main > *:before {
-    color: var(--color-insurance);
-}
-
-body > #profile > footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
-}
-
-body > #profile > footer > main {
-    border-top: solid 1vh var(--color-doctor);
-    margin-bottom: 1vh;
-}
-
-body > #profile > footer > main > *:before {
-    color: var(--color-doctor);
-}
-
-body > #profile > footer > div {
-    height: 10vw;
-    width: calc((100% - 1vh) / 2);
+body > main.info {
+    background-color: #EEE;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-doctor);
-    position: relative;
-    margin-bottom: 1vh;
+    background-image: url(../../img/image/pattern.2.png);
 }
 
-body > #profile > footer > div > a {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+body > main.info > header {
+    background-color: #999;
 }
 
-body > #profile > footer > div > svg {
-    height: 5vw;
-    width: 5vw;
+body > main.info > table > tbody > tr > td {
+    fill: #666;
+}
+
+body > main.info > table > tbody > tr > td.email {
+    font-size: 2.5vh;
+    background-color: #666;
     fill: white;
-}
-
-body > #profile > footer > div > header {
-    display: block;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    line-height: 3vh;
-    font-size: 1.5vh;
-    background-color: rgba(0, 0, 0, 0.75);
-    text-align: right;
-    padding-right: 1vh;
     color: white;
 }
 
-body > #profile > div {
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    height: 8vh;
+body > main.info > table > tbody > tr > td.insurance {
+    fill: var(--color-insurance);
+    color: var(--color-insurance);
 }
 
-body > #profile > div > section {
-    position: absolute;
-    top: 1vh;
-    bottom: 1vh;
-    width: 6vh;
-    border-radius: 50%;
+body > main.archive {
+    min-height: 40vh;
+    background-color: #FEE;
     background-repeat: no-repeat;
-    background-size: 50%;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
+    background-image: url(../../img/image/pattern.2.png);
+    font-size: 6vh;
     color: white;
-    font-size: 1.5vh;
-    cursor: pointer;
-}
-
-body > #profile > div > section.update {
-    right: 8vh;
-    background-color: #F90;
-}
-
-body > #profile > div > section.logout {
-    right: 1vh;
-    background-color: #F66;
-}
-
-body > #profile > span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 20vh;
-    height: 10vh;
-    left: 0px;
-    right: 0px;
-    background-color: rgba(64, 218, 0, 0.5);
-    color: green;
-    transition: opacity 0.5s;
-    opacity: 0;
-}
-
-body > #profile > span.on {
-    opacity: 1;
 }

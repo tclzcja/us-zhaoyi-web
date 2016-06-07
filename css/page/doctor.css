@@ -1,31 +1,3 @@
-body > main > header {
-    color: white;
-    height: 5vh;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 2vh;
-    font-size: 1.5vh;
-    position: relative;
-    z-index: 55;
-}
-
-body > main > header:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    border-top: solid 10px;
-    border-top-color: inherit;
-    border-left: solid 10px transparent;
-    border-right: solid 10px transparent;
-    margin-left: -10px;
-}
-
-
-/* ====================================================================== */
-
 body > main.info {
     background-color: #DEF;
     background-position: center;
@@ -34,17 +6,12 @@ body > main.info {
 }
 
 body > main.info > header {
-    border-top-color: var(--color-doctor);
     background-color: var(--color-doctor);
 }
 
 body > main.info > table > tbody > tr > td {
     color: var(--color-doctor);
     fill: var(--color-doctor);
-}
-
-body > main.info > table > tbody > tr > td > header {
-    fill: inherit;
 }
 
 body > main.info > table > tbody > tr > td.portrait {
@@ -57,9 +24,6 @@ body > main.info > table > tbody > tr > td.portrait {
 body > main.info > table > tbody > tr > td.name {
     font-size: 3vh;
     color: #36C;
-}
-
-body > main.info > table > tbody > tr > td.name > header {
     fill: #36C;
 }
 
@@ -89,6 +53,7 @@ body > main.info > table > tbody > tr > td.startyear > div > span {
 
 body > main.info > table > tbody > tr > td.link {
     min-height: 6vh;
+    max-height: none;
     height: auto;
     color: white;
     fill: white;
@@ -99,13 +64,13 @@ body > main.info > table > tbody > tr > td.link {
 
 body > main.info > table > tbody > tr > td.link > span {
     display: block;
-    font-size: 2vh;
+    font-size: 1.5vh;
     line-height: 6vh;
     padding-left: 6vh;
 }
 
 body > main.info > table > tbody > tr > td.link > span:nth-of-type(2n) {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 body > main.info > table > tbody > tr > td.subject > span {
@@ -132,12 +97,12 @@ body > main.comment {
 
 body > main.comment > header {
     background-color: var(--color-comment);
-    border-top-color: var(--color-comment);
 }
 
 body > main.comment > table > tbody > tr > td {
     background-color: white;
     height: 25vw;
+    max-height: none;
 }
 
 body > main.comment > table > tbody > tr > td[data-empty]:before {
@@ -161,8 +126,6 @@ body > main.comment > table > tbody > tr > td.star {
     color: var(--color-comment);
     fill: var(--color-comment);
 }
-
-body > main.comment > table > tbody > tr > td.star > div {}
 
 body > main.comment > table > tbody > tr > td.star > div > span {
     font-size: 4vh;
@@ -203,7 +166,6 @@ body > main.schedule {
 
 body > main.schedule > header {
     background-color: var(--color-hospital);
-    border-top-color: var(--color-hospital);
 }
 
 body > main.schedule > nav {
@@ -265,8 +227,8 @@ body > main.schedule > main > table > tbody > tr > td.portrait {
 
 body > main.schedule > main > table > tbody > tr > td.name {
     font-size: 3vh;
-    color: #C60;
-    fill: #C60;
+    color: #900;
+    fill: #900;
 }
 
 body > main.schedule > main > table > tbody > tr > td.description {
@@ -324,11 +286,11 @@ body > main.schedule > main > table > tbody > tr > td.calendar > main > div:befo
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-child(6) {
-    background-color: var(--color-hospital);
+    background-color: var(--color-insurance);
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div:last-child {
-    background-color: var(--color-insurance);
+    background-color: var(--color-hospital);
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header,

@@ -112,20 +112,19 @@ body > nav.doctor > footer {
 }
 
 body > nav.doctor > table > tbody > tr > td > header {
-    background-color: var(--color-doctor);
-    fill: white;
+    fill: var(--color-doctor);
 }
 
 body > nav.doctor > table > tbody > tr > td.subject > header {
-    background-color: var(--color-subject);
+    fill: var(--color-subject);
 }
 
 body > nav.doctor > table > tbody > tr > td.service > header {
-    background-color: var(--color-service);
+    fill: var(--color-service);
 }
 
 body > nav.doctor > table > tbody > tr > td.insurance > header {
-    background-color: var(--color-insurance);
+    fill: var(--color-insurance);
 }
 
 body > nav.hospital {
@@ -137,11 +136,11 @@ body > nav.hospital > footer {
 }
 
 body > nav.hospital > table > tbody > tr > td > header {
-    background-color: var(--color-hospital);
+    fill: var(--color-hospital);
 }
 
 body > nav.hospital > table > tbody > tr > td.service > header {
-    background-color: var(--color-service);
+    fill: var(--color-service);
 }
 
 

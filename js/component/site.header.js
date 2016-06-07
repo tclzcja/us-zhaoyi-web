@@ -22,13 +22,12 @@
 
         self.innerHTML = document.querySelector("link[data-template='" + key + "']").import.querySelector("template").innerHTML;
 
-        self.querySelector(":scope > footer").addEventListener("click", function () {
-            if (Auth.Test()) {
-                window.location.href = "#l=profile";
-            } else {
-                document.querySelector("body > #login").classList.add("on");
-            }
-        });
+        if (Auth.Test()) {
+            self.querySelector(":scope > footer").classList.add("on");
+            self.querySelector(":scope > footer > a").href = "profile.html";
+        } else {
+            self.querySelector(":scope > footer > a").href = "login.html";
+        }
 
         self.addEventListener("login", function () {
             self.querySelector(":scope > footer").classList.add("on");

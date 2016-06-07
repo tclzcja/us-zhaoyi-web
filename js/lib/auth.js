@@ -14,10 +14,10 @@
         // Test if the user already logged in
         Test: function () {
             if (sessionStorage.getItem(Session_Name_Pass) === "1") {
-                document.querySelector("body > header > footer").classList.add("on");
+                document.querySelector("body > site-header").dispatchEvent(new Event("login"));
                 return true;
             } else {
-                document.querySelector("body > header > footer").classList.remove("on");
+                document.querySelector("body > site-header").dispatchEvent(new Event("logout"));
                 this.Reset();
                 return false;
             }
@@ -31,7 +31,9 @@
         //Put in Token and User info
         Login: function (token, info) {
             sessionStorage.setItem(Session_Name_Pass, "1");
-            sessionStorage.setItem(Session_Name_Current_Token, "Bearer " + token);
+            if (token) {
+                sessionStorage.setItem(Session_Name_Current_Token, "Bearer " + token);
+            }
             sessionStorage.setItem(Session_Name_Current_User, JSON.stringify(info));
             document.querySelector("body > site-header").dispatchEvent(new Event("login"));
         },

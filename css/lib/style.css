@@ -73,9 +73,6 @@ select {
     font-size: 2vh;
     cursor: pointer;
     z-index: 999;
-    line-height: 100%;
-    padding-left: 2vh;
-    padding-right: 2vh;
 }
 
 select {
@@ -148,6 +145,33 @@ body > main {
     overflow: hidden;
 }
 
+.mist > header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2vh;
+    z-index: 55;
+    opacity: 0.75;
+}
+
+.mist > header > div {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 6vh;
+}
+
+.mist > header > svg {
+    height: 6vh;
+    width: 6vh;
+    fill: white;
+    margin-left: 1.5vh;
+    opacity: 0.25;
+}
+
 .mist > table {
     height: auto;
     width: auto;
@@ -163,6 +187,7 @@ body > main {
 .mist > table > tbody > tr > td {
     position: relative;
     height: 6vh;
+    max-height: 6vh;
     width: 25vw;
     background-color: white;
     overflow: hidden;
@@ -186,6 +211,7 @@ body > main {
     display: flex;
     justify-content: center;
     align-items: center;
+    fill: inherit;
 }
 
 .mist > table > tbody > tr > td > header > svg {
@@ -208,5 +234,9 @@ body > main {
 
 .mist > table > tbody > tr > td > input,
 .mist > table > tbody > tr > td > select {
-    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 6vh;
+    height: calc(100%);
+    width: calc(100% - 6vh);
 }

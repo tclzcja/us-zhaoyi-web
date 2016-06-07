@@ -2,16 +2,15 @@ body > main {
     height: 80vh;
 }
 
-body > main > table > tbody > tr > td > header {
-    background-color: var(--color-hospital);
-    fill: white;
+body > main > table > tbody > tr > td {
+    fill: var(--color-subject);
 }
 
 body > main > table > tbody > tr > td.login {
     padding: 0px;
     text-align: center;
     height: 12vh;
-    background-color: var(--color-hospital);
+    background-color: var(--color-subject);
     color: white;
     background-repeat: no-repeat;
     background-position: center;

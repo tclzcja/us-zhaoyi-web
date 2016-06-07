@@ -13,7 +13,7 @@
             password: document.querySelector("body > main > table > tbody > tr > td.password > input").value
         };
         Api.Core("/user/login", data, function (info) {
-            Auth.Login(info.token, info);
+            Auth.Login(info.token, info.user);
             window.location.href = "profile.html";
         });
     });
