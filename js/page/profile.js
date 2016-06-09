@@ -31,6 +31,9 @@
 
     document.querySelector("body > main.info > table > tbody > tr > td.name > input").addEventListener("change", update);
     document.querySelector("body > main.info > table > tbody > tr > td.phone > input").addEventListener("change", update);
+    document.querySelector("body > main.info > table > tbody > tr > td.address > input").addEventListener("change", update);
+    document.querySelector("body > main.info > table > tbody > tr > td.address2 > input").addEventListener("change", update);
+    document.querySelector("body > main.info > table > tbody > tr > td.address3 > input").addEventListener("change", update);
     document.querySelector("body > main.info > table > tbody > tr > td.insurance > select").addEventListener("change", update);
 
     function render() {
@@ -46,6 +49,9 @@
         document.querySelector("body > main.info > table > tbody > tr > td.email > div").innerHTML = user.email;
         document.querySelector("body > main.info > table > tbody > tr > td.name > input").value = user.name || "";
         document.querySelector("body > main.info > table > tbody > tr > td.phone > input").value = user.phone || "";
+        document.querySelector("body > main.info > table > tbody > tr > td.address > input").value = user.address || "";
+        document.querySelector("body > main.info > table > tbody > tr > td.address2 > input").value = user.address2 || "";
+        document.querySelector("body > main.info > table > tbody > tr > td.address3 > input").value = user.address3 || "";
         document.querySelector("body > main.info > table > tbody > tr > td.insurance > select").value = user.insurance_id;
 
         if (user.archive_doctor_list && user.archive_doctor_list.length) {
@@ -59,6 +65,9 @@
         var user = Auth.Current.User();
         user.name = document.querySelector("body > main.info > table > tbody > tr > td.name > input").value;
         user.phone = document.querySelector("body > main.info > table > tbody > tr > td.phone > input").value;
+        user.address = document.querySelector("body > main.info > table > tbody > tr > td.address > input").value;
+        user.address2 = document.querySelector("body > main.info > table > tbody > tr > td.address2 > input").value;
+        user.address3 = document.querySelector("body > main.info > table > tbody > tr > td.address3 > input").value;
         user.insurance_id = document.querySelector("body > main.info > table > tbody > tr > td.insurance > select > option:checked").value;
         Api.Core("/user/update", user, function () {
             Auth.Login(null, user);

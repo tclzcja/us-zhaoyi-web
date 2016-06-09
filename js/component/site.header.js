@@ -24,18 +24,7 @@
 
         if (Auth.Test()) {
             self.querySelector(":scope > footer").classList.add("on");
-            self.querySelector(":scope > footer > a").href = "profile.html";
-        } else {
-            self.querySelector(":scope > footer > a").href = "login.html";
         }
-
-        self.addEventListener("login", function () {
-            self.querySelector(":scope > footer").classList.add("on");
-        });
-
-        self.addEventListener("logout", function () {
-            self.querySelector(":scope > footer").classList.remove("on");
-        });
 
     }
 

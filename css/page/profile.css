@@ -26,6 +26,32 @@ body > main.info > table > tbody > tr > td.insurance {
     color: var(--color-insurance);
 }
 
+body > main.info > nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+    width: 100%;
+    margin-bottom: 8vh;
+}
+
+body > main.info > nav > a {
+    height: 5vw;
+    width: 10vw;
+    background: linear-gradient(to right, transparent, var(--color-insurance) 20%, var(--color-insurance) 80%, transparent);
+    fill: white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > main.info > nav > a > svg {
+    height: 2.5vw;
+    width: 2.5vw;
+    margin-right: 0.5vw;
+}
+
 body > main.archive {
     min-height: 40vh;
     background-color: #FEE;
