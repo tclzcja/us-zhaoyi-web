@@ -1,4 +1,4 @@
-/* jshint browser: true, esnext: true */
+/* jshint browser: true, esversion: 6 */
 
 (function () {
 
