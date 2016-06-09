@@ -66,6 +66,7 @@
     }
 
     function init() {
+
         document.querySelector("body > main.schedule > nav:first-of-type").addEventListener("click", function () {
             var current = document.querySelector("body > main.schedule > main.on");
             current.classList.remove("on");
@@ -75,6 +76,7 @@
                 document.querySelector("body > main.schedule > main:last-of-type").classList.add("on");
             }
         });
+
         document.querySelector("body > main.schedule > nav:last-of-type").addEventListener("click", function () {
             var current = document.querySelector("body > main.schedule > main.on");
             current.classList.remove("on");
@@ -84,9 +86,40 @@
                 document.querySelector("body > main.schedule > main:first-of-type").classList.add("on");
             }
         });
+
+        document.querySelector("body > nav > div.favorite").addEventListener("click", function () {
+            var user = Auth.Current.User();
+            user.favorite_doctor_list.push(doctor._id);
+            Api.Core("/user/update", user, function () {
+                Auth.Login(null, user);
+                window.location.reload();
+            });
+        });
+
+        document.querySelector("body > nav > div.favorited").addEventListener("click", function () {
+            var user = Auth.Current.User();
+            user.favorite_doctor_list.splice(user.favorite_doctor_list.indexOf(doctor._id), 1);
+            Api.Core("/user/update", user, function () {
+                Auth.Login(null, user);
+                window.location.reload();
+            });
+        });
+
     }
 
     function render() {
+
+        if (!Auth.Test()) {
+            document.querySelectorAll("body > nav > div").removeClass("on");
+            document.querySelector("body > nav > div.login").classList.add("on");
+        } else {
+            var user = Auth.Current.User();
+            if (user.favorite_doctor_list && user.favorite_doctor_list.indexOf(doctor._id) > -1) {
+                document.querySelector("body > nav > div.favorited").classList.add("on");
+            } else {
+                document.querySelector("body > nav > div.favorite").classList.add("on");
+            }
+        }
 
         // Portrait
         if (doctor.portrait) {
