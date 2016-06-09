@@ -358,3 +358,70 @@ body > main.schedule > main > table > tbody > tr > td.iframe > iframe {
     height: 100%;
     width: 100%;
 }
+
+
+/* =============================================================== */
+
+body > nav {
+    position: fixed;
+    height: 8vh;
+    top: 50%;
+    margin-top: -4vh;
+    left: 0px;
+    z-index: 9999;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0 4vh 4vh 0;
+}
+
+body > nav > div {
+    display: none;
+}
+
+body > nav > div.on {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+body > nav > div > header {
+    height: 6vh;
+    width: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > nav > div > div {
+    margin-right: 1vh;
+    color: white;
+    height: 6vh;
+    line-height: 6vh;
+    border-radius: 0 3vh 3vh 0;
+    opacity: 0.8;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    font-size: 1.5vh;
+}
+
+body > nav > div > header > svg {
+    height: 50%;
+    width: 50%;
+    fill: white;
+}
+
+body > nav > div.login > * {
+    background-color: #555;
+}
+
+body > nav > div.favorite > * {
+    background-color: var(--color-hospital);
+}
+
+body > nav > div.favorited > * {
+    background-color: var(--color-subject);
+}
