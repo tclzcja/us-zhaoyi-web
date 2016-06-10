@@ -111,20 +111,24 @@ body > nav.doctor > footer {
     background-image: url('../../img/image/doctor.jpg');
 }
 
-body > nav.doctor > table > tbody > tr > td > header {
+body > nav.doctor > table > tbody > tr > td {
     fill: var(--color-doctor);
+    color: #666;
 }
 
-body > nav.doctor > table > tbody > tr > td.subject > header {
+body > nav.doctor > table > tbody > tr > td.subject {
     fill: var(--color-subject);
+    color: var(--color-subject);
 }
 
-body > nav.doctor > table > tbody > tr > td.service > header {
+body > nav.doctor > table > tbody > tr > td.service {
     fill: var(--color-service);
+    color: var(--color-service);
 }
 
-body > nav.doctor > table > tbody > tr > td.insurance > header {
+body > nav.doctor > table > tbody > tr > td.insurance {
     fill: var(--color-insurance);
+    color: var(--color-insurance);
 }
 
 body > nav.hospital {

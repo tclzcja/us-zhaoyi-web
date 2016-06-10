@@ -1,7 +1,7 @@
 :root {
     --color-doctor: #69F;
-    --color-hospital: #F90;
-    --color-insurance: #F66;
+    --color-hospital: #F66;
+    --color-insurance: #F90;
     --color-subject: #690;
     --color-service: #360;
     --color-user: #F69;
@@ -55,7 +55,6 @@ a {
 ::-webkit-input-placeholder {
     color: inherit;
     opacity: 0.5;
-    font-size: 1.75vh;
 }
 
 ::-webkit-scrollbar {
