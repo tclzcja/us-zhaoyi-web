@@ -49,7 +49,6 @@ a {
     z-index: 999;
     color: inherit;
     text-decoration: none;
-    position: relative;
 }
 
 ::-webkit-input-placeholder {
@@ -137,6 +136,9 @@ body > main {
     align-content: center;
     align-items: center;
     overflow: hidden;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top;
 }
 
 .mist > table {
@@ -206,6 +208,7 @@ body > main {
     justify-content: center;
     align-items: center;
     fill: inherit;
+    z-index: 5555;
 }
 
 .mist > table > tbody > tr > td > header > svg {

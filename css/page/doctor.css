@@ -1,7 +1,6 @@
 body > main.info {
-    background-color: #DDD;
-    background-position: center;
-    background-size: auto;
+    background-color: #DEF;
+    background-image: url("../../img/image/pattern.2.png");
 }
 
 body > main.info > table > thead > tr > td {
@@ -109,7 +108,8 @@ body > main.info > table > tbody > tr > td.insurance > span {
 body > main.schedule {
     fill: white;
     color: white;
-    background-color: #DDD;
+    background-color: #FDD;
+    background-image: url("../../img/image/pattern.2.png");
 }
 
 body > main.schedule > nav {
@@ -151,10 +151,6 @@ body > main.schedule > main {
 
 body > main.schedule > main.on {
     display: flex;
-}
-
-body > main.schedule > main > table {
-    margin-top: 0px;
 }
 
 body > main.schedule > main > table > thead > tr > td {
@@ -316,19 +312,16 @@ body > main.schedule > main > table > tbody > tr > td.iframe > iframe {
 /* =================================== */
 
 body > main.comment {
-    background-position: center;
-    background-size: auto;
+    background-color: #FEF;
+    background-image: url("../../img/image/pattern.2.png");
 }
 
 body > main.comment > table > thead > tr > td {
-    background-color: #FEF;
     fill: var(--color-comment);
     color: var(--color-comment);
-    border-top: solid 2px var(--color-comment);
 }
 
 body > main.comment > table > tbody > tr > td {
-    background-color: #FEF;
     max-height: none;
     fill: var(--color-comment);
     color: var(--color-comment);
@@ -388,13 +381,31 @@ body > main.comment > table > tbody > tr > td.score > footer > svg {
     fill: white;
 }
 
+body > main.comment > table > tbody > tr > td.t {
+    background-color: var(--color-comment);
+    color: white;
+    fill: white;
+    z-index: 10;
+    overflow: visible;
+}
+
+body > main.comment > table > tbody > tr > td.t:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 2vh;
+    border-top: solid 10px var(--color-comment);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    z-index: 10;
+}
+
 body > main.comment > table > tbody > tr > td.comment {
     padding: 0px;
     background-color: transparent;
-}
-
-body > main.comment > table > tbody > tr > td.comment.empty {
-    background-color: #FEF;
+    color: var(--color-comment);
+    fill: var(--color-comment);
+    z-index: 1;
 }
 
 body > main.comment > table > tbody > tr > td.comment > main {
@@ -409,7 +420,7 @@ body > main.comment > table > tbody > tr > td.comment > main {
 body > main.comment > table > tbody > tr > td.comment > main > div {
     display: block;
     padding: 2vh;
-    background-color: #FEF;
+    background-color: white;
     margin-bottom: 1px;
 }
 
