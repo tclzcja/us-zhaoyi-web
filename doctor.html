@@ -17,17 +17,23 @@
 <body>
     <site-header class="outline"></site-header>
     <main class="mist info">
-        <header>
-            <div>医生信息</div>
-            <svg>
-                <use xlink:href="img/icon/doctor.svg#doctor"></use>
-            </svg>
-        </header>
         <table>
+            <thead>
+                <tr>
+                    <td colspan="3">
+                        <svg>
+                            <use xlink:href="img/icon/doctor.svg#doctor"></use>
+                        </svg>
+                        <div>医生信息</div>
+                    </td>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
                     <td class="portrait" rowspan="6">
-                        <span></span>
+                        <svg>
+                            <use xlink:href="img/icon/doctor.svg#doctor"></use>
+                        </svg>
                     </td>
                     <td class="name">
                         <header>
@@ -122,95 +128,7 @@
             </tbody>
         </table>
     </main>
-    <main class="mist comment">
-        <header>
-            <div>医生评价</div>
-            <svg>
-                <use xlink:href="img/icon/comment.svg#comment"></use>
-            </svg>
-        </header>
-        <table>
-            <tbody>
-                <tr>
-                    <td class="score" rowspan="3" data-empty-content="暂时无评分">
-                        <span></span><span>/5.0</span>
-                        <footer>
-                            <template class="star">
-                                <svg>
-                                    <use xlink:href="img/icon/star.svg#star"></use>
-                                </svg>
-                            </template>
-                            <template class="star-empty">
-                                <svg>
-                                    <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
-                                </svg>
-                            </template>
-                        </footer>
-                    </td>
-                    <td class="comment" rowspan="3" data-empty-content="暂时无评价">
-                        <main>
-                            <template>
-                                <div>
-                                    <main></main>
-                                    <footer>
-                                        <template>
-                                            <svg>
-                                                <use xlink:href="img/icon/star.svg#star"></use>
-                                            </svg>
-                                        </template>
-                                    </footer>
-                                </div>
-                            </template>
-                        </main>
-                    </td>
-                    <td class="star">
-                        <header>
-                            <svg>
-                                <use xlink:href="img/icon/star.svg#star"></use>
-                            </svg>
-                            <template class="star">
-                                <svg>
-                                    <use xlink:href="img/icon/star.svg#star"></use>
-                                </svg>
-                            </template>
-                            <template class="star.empty">
-                                <svg>
-                                    <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
-                                </svg>
-                            </template>
-                        </header>
-                        <select>
-                            <option value="1">我给一颗星</option>
-                            <option value="2">我给二颗星</option>
-                            <option value="3">我给三颗星</option>
-                            <option value="4">我给四颗星</option>
-                            <option value="5">我给五颗星</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="content" data-empty-content="您必须登录后才能撰写评价">
-                        <header>
-                            <svg>
-                                <use xlink:href="img/icon/description.svg#description"></use>
-                            </svg>
-                        </header>
-                        <textarea></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="action">提交我的评价</td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
     <main class="mist schedule">
-        <header>
-            <div>医院和日程</div>
-            <svg>
-                <use xlink:href="img/icon/hospital.svg#hospital"></use>
-            </svg>
-        </header>
         <nav>
             <svg>
                 <use xlink:href="img/icon/prev.svg#prev"></use>
@@ -224,6 +142,16 @@
         <template>
             <main class="mist">
                 <table>
+                    <thead>
+                        <tr>
+                            <td colspan="3">
+                                <svg>
+                                    <use xlink:href="img/icon/hospital.svg#hospital"></use>
+                                </svg>
+                                <div>医院和日程</div>
+                            </td>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
                             <td class="portrait" rowspan="6">
@@ -405,6 +333,92 @@
                 </table>
             </main>
         </template>
+    </main>
+    <main class="mist comment">
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="3">
+                        <svg>
+                            <use xlink:href="img/icon/comment.svg#comment"></use>
+                        </svg>
+                        <div>医生评价</div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="score" rowspan="3" data-empty-content="暂时无评分">
+                        <span></span><span>/5.0</span>
+                        <footer>
+                            <template class="star">
+                                <svg>
+                                    <use xlink:href="img/icon/star.svg#star"></use>
+                                </svg>
+                            </template>
+                            <template class="star-empty">
+                                <svg>
+                                    <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
+                                </svg>
+                            </template>
+                        </footer>
+                    </td>
+                    <td class="comment" rowspan="3" data-empty-content="暂时无评价">
+                        <main>
+                            <template>
+                                <div>
+                                    <main></main>
+                                    <footer>
+                                        <template>
+                                            <svg>
+                                                <use xlink:href="img/icon/star.svg#star"></use>
+                                            </svg>
+                                        </template>
+                                    </footer>
+                                </div>
+                            </template>
+                        </main>
+                    </td>
+                    <td class="star">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/star.svg#star"></use>
+                            </svg>
+                            <template class="star">
+                                <svg>
+                                    <use xlink:href="img/icon/star.svg#star"></use>
+                                </svg>
+                            </template>
+                            <template class="star.empty">
+                                <svg>
+                                    <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
+                                </svg>
+                            </template>
+                        </header>
+                        <select>
+                            <option value="1">我给一颗星</option>
+                            <option value="2">我给二颗星</option>
+                            <option value="3">我给三颗星</option>
+                            <option value="4">我给四颗星</option>
+                            <option value="5">我给五颗星</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content" data-empty-content="您必须登录后才能撰写评价">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/description.svg#description"></use>
+                            </svg>
+                        </header>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="action">提交我的评价</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <nav>
         <div class="login">

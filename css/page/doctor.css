@@ -1,12 +1,12 @@
 body > main.info {
-    background-color: #DEF;
+    background-color: #DDD;
     background-position: center;
     background-size: auto;
-    background-image: url("../../img/image/pattern.1.png");
 }
 
-body > main.info > header {
-    background-color: var(--color-doctor);
+body > main.info > table > thead > tr > td {
+    color: var(--color-doctor);
+    fill: var(--color-doctor);
 }
 
 body > main.info > table > tbody > tr > td {
@@ -18,7 +18,12 @@ body > main.info > table > tbody > tr > td.portrait {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border: solid 5px white;
+    padding: 0px;
+    text-align: center;
+}
+
+body > main.info > table > tbody > tr > td.portrait[style] {
+    fill: transparent;
 }
 
 body > main.info > table > tbody > tr > td.name {
@@ -67,163 +72,35 @@ body > main.info > table > tbody > tr > td.link > span {
     font-size: 1.5vh;
     line-height: 6vh;
     padding-left: 6vh;
+    background-color: white;
 }
 
 body > main.info > table > tbody > tr > td.link > span:nth-of-type(2n) {
     opacity: 0.8;
 }
 
+body > main.info > table > tbody > tr > td.subject {
+    fill: var(--color-subject);
+}
+
 body > main.info > table > tbody > tr > td.subject > span {
-    background-color: var(--color-subject);
+    color: var(--color-subject);
+}
+
+body > main.info > table > tbody > tr > td.service {
+    fill: var(--color-service);
 }
 
 body > main.info > table > tbody > tr > td.service > span {
-    background-color: var(--color-service);
+    color: var(--color-service);
+}
+
+body > main.info > table > tbody > tr > td.insurance {
+    fill: var(--color-insurance);
 }
 
 body > main.info > table > tbody > tr > td.insurance > span {
-    background-color: var(--color-insurance);
-}
-
-
-/* =================================== */
-
-body > main.comment {
-    background-color: #EDF;
-    background-position: center;
-    background-size: auto;
-    background-image: url("../../img/image/pattern.3.png");
-}
-
-body > main.comment > header {
-    background-color: var(--color-comment);
-}
-
-body > main.comment > table > tbody > tr > td {
-    background-color: white;
-    max-height: none;
-    fill: var(--color-comment);
-    color: var(--color-comment);
-}
-
-body > main.comment > table > tbody > tr > td.empty:before {
-    content: attr(data-empty-content);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    font-size: 3vh;
-    color: inherit;
-}
-
-body > main.comment > table > tbody > tr > td.score {
-    height: 1px;
-    padding: 0px;
-    text-align: center;
-}
-
-body > main.comment > table > tbody > tr > td.score.empty {
-    opacity: 0.5;
-}
-
-body > main.comment > table > tbody > tr > td.score > span {
-    color: var(--color-comment);
-}
-
-body > main.comment > table > tbody > tr > td.score > span:first-of-type {
-    font-size: 12vh;
-}
-
-body > main.comment > table > tbody > tr > td.score > span:last-of-type {
-    font-size: 4vh;
-    opacity: 0.5;
-}
-
-body > main.comment > table > tbody > tr > td.score > footer {
-    position: absolute;
-    top: 70%;
-    left: 0px;
-    right: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-}
-
-body > main.comment > table > tbody > tr > td.score > footer > svg {
-    height: 2vh;
-    width: 2vh;
-}
-
-body > main.comment > table > tbody > tr > td.comment {
-    padding: 0px;
-    background-color: transparent;
-}
-
-body > main.comment > table > tbody > tr > td.comment.empty {
-    opacity: 0.5;
-    background-color: white;
-}
-
-body > main.comment > table > tbody > tr > td.comment > main {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    overflow-y: scroll;
-}
-
-body > main.comment > table > tbody > tr > td.comment > main > div {
-    display: block;
-    padding: 2vh;
-    background-color: white;
-}
-
-body > main.comment > table > tbody > tr > td.comment > main > div:nth-of-type(2n) {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-body > main.comment > table > tbody > tr > td.comment > main > div > footer {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 1vh;
-}
-
-body > main.comment > table > tbody > tr > td.comment > main > div > footer > svg {
-    height: 1.5vh;
-    width: 1.5vh;
-}
-
-body > main.comment > table > tbody > tr > td.star > header {
-    width: 100%;
-    justify-content: flex-start;
-    padding-left: 1.5vh;
-}
-
-body > main.comment > table > tbody > tr > td.content {
-    height: 30vh;
-}
-
-body > main.comment > table > tbody > tr > td.content.empty {
-    background-color: transparent;
-    opacity: 1;
-    color: white;
-}
-
-body > main.comment > table > tbody > tr > td.action {
-    padding: 0px;
-    text-align: center;
-    cursor: pointer;
+    color: var(--color-insurance);
 }
 
 
@@ -232,14 +109,7 @@ body > main.comment > table > tbody > tr > td.action {
 body > main.schedule {
     fill: white;
     color: white;
-    background-color: #FED;
-    background-position: center;
-    background-size: auto;
-    background-image: url("../../img/image/pattern.1.png");
-}
-
-body > main.schedule > header {
-    background-color: var(--color-hospital);
+    background-color: #DDD;
 }
 
 body > main.schedule > nav {
@@ -284,7 +154,12 @@ body > main.schedule > main.on {
 }
 
 body > main.schedule > main > table {
-    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+}
+
+body > main.schedule > main > table > thead > tr > td {
+    color: var(--color-hospital);
+    fill: var(--color-hospital);
 }
 
 body > main.schedule > main > table > tbody > tr > td {
@@ -296,7 +171,6 @@ body > main.schedule > main > table > tbody > tr > td.portrait {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border: solid 5px white;
 }
 
 body > main.schedule > main > table > tbody > tr > td.name {
@@ -319,6 +193,7 @@ body > main.schedule > main > table > tbody > tr > td.description > div {
 
 body > main.schedule > main > table > tbody > tr > td.calendar {
     padding: 0px;
+    background-color: transparent;
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main {
@@ -336,12 +211,13 @@ body > main.schedule > main > table > tbody > tr > td.calendar > main {
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div {
     flex-grow: 1;
     position: relative;
-    background-color: #555;
-    color: white;
+    background-color: white;
+    color: #666;
+    fill: #666;
 }
 
-body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-child(2n) {
-    background-color: #666;
+body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-of-type(2n) {
+    background-color: #EEE;
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div:before {
@@ -352,19 +228,22 @@ body > main.schedule > main > table > tbody > tr > td.calendar > main > div:befo
     left: 0px;
     right: 0px;
     height: 6vh;
-    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: inherit;
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div:nth-child(6) {
     background-color: var(--color-insurance);
+    color: white;
+    fill: white;
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div:last-child {
     background-color: var(--color-hospital);
+    color: white;
+    fill: white;
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header,
@@ -398,17 +277,17 @@ body > main.schedule > main > table > tbody > tr > td.calendar > main > div > fo
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header.on,
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div > footer.on {
-    color: rgba(255, 255, 255, 0.5);
-    fill: white;
+    color: inherit;
+    fill: inherit;
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div > header {
     top: 6vh;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 body > main.schedule > main > table > tbody > tr > td.calendar > main > div > footer {
     bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.1);
 }
 
 body > main.schedule > main > table > tbody > tr > td.iframe {
@@ -416,7 +295,7 @@ body > main.schedule > main > table > tbody > tr > td.iframe {
     height: 30vh;
     text-align: center;
     font-size: 4vh;
-    color: #F90;
+    color: var(--color-hospital);
     opacity: 0.25;
 }
 
@@ -431,6 +310,143 @@ body > main.schedule > main > table > tbody > tr > td.iframe > iframe {
     left: 0px;
     height: 100%;
     width: 100%;
+}
+
+
+/* =================================== */
+
+body > main.comment {
+    background-position: center;
+    background-size: auto;
+}
+
+body > main.comment > table > thead > tr > td {
+    background-color: #FEF;
+    fill: var(--color-comment);
+    color: var(--color-comment);
+    border-top: solid 2px var(--color-comment);
+}
+
+body > main.comment > table > tbody > tr > td {
+    background-color: #FEF;
+    max-height: none;
+    fill: var(--color-comment);
+    color: var(--color-comment);
+}
+
+body > main.comment > table > tbody > tr > td.empty:before {
+    content: attr(data-empty-content);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    font-size: 3vh;
+    color: inherit;
+}
+
+body > main.comment > table > tbody > tr > td.score {
+    height: 1px;
+    padding: 0px;
+    text-align: center;
+    background-color: var(--color-comment);
+}
+
+body > main.comment > table > tbody > tr > td.score > span {
+    color: white;
+}
+
+body > main.comment > table > tbody > tr > td.score > span:first-of-type {
+    font-size: 12vh;
+}
+
+body > main.comment > table > tbody > tr > td.score > span:last-of-type {
+    font-size: 4vh;
+    opacity: 0.5;
+}
+
+body > main.comment > table > tbody > tr > td.score > footer {
+    position: absolute;
+    top: 70%;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+body > main.comment > table > tbody > tr > td.score > footer > svg {
+    height: 2vh;
+    width: 2vh;
+    fill: white;
+}
+
+body > main.comment > table > tbody > tr > td.comment {
+    padding: 0px;
+    background-color: transparent;
+}
+
+body > main.comment > table > tbody > tr > td.comment.empty {
+    background-color: #FEF;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: scroll;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main > div {
+    display: block;
+    padding: 2vh;
+    background-color: #FEF;
+    margin-bottom: 1px;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main > div > footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main > div > footer > svg {
+    height: 1.5vh;
+    width: 1.5vh;
+}
+
+body > main.comment > table > tbody > tr > td.star > header {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 1.5vh;
+}
+
+body > main.comment > table > tbody > tr > td.content {
+    height: 30vh;
+}
+
+body > main.comment > table > tbody > tr > td.content.empty {
+    color: var(--color-comment);
+    opacity: 1;
+}
+
+body > main.comment > table > tbody > tr > td.action {
+    padding: 0px;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--color-comment);
+    color: white;
 }
 
 

@@ -151,9 +151,13 @@ body > nav.hospital > table > tbody > tr > td.service > header {
 /* */
 
 body > main {
-    background-color: white;
+    background-color: var(--color-doctor);
     display: none;
     z-index: 9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../img/image/pattern.4.png");
 }
 
 body > main.on {
@@ -164,184 +168,116 @@ body > main:not(.on) {
     display: none;
 }
 
-body > main.mist > table > tbody > tr > td {
-    padding: 0px;
-    height: 15vh;
-    width: 93vw;
-}
-
-body > main.mist > table > tbody > tr > td > a {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-    flex-wrap: nowrap;
-}
-
-body > main.mist > table > tbody > tr > td > a > nav {
-    width: 15vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: white;
-    position: relative;
-}
-
-body > main.mist > table > tbody > tr > td > a > nav:before {
-    content: "";
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    border-right: solid 10px white;
-    border-top: solid 10px transparent;
-    border-bottom: solid 10px transparent;
-    margin-top: -10px;
-}
-
-body > main.mist > table > tbody > tr > td > a > nav[style] {
-    fill: transparent;
-}
-
-body > main.mist > table > tbody > tr > td > a > nav > svg {
-    height: 8vh;
-    width: 8vh;
-}
-
 
 /* */
 
-body > main.doctor > table > tbody > tr > td > a > nav {
-    background-color: var(--color-doctor);
+body > main.doctor > a {
+    width: auto;
+    height: auto;
+    margin-top: 4vh;
 }
 
-body > main.doctor > table > tbody > tr > td > a > header {
-    width: 25vw;
-    padding: 2vh;
-    position: relative;
+body > main.doctor > a:last-of-type {
+    margin-bottom: 4vh;
 }
 
-body > main.doctor > table > tbody > tr > td > a > header > header {
-    font-size: 4vh;
-    line-height: 100%;
-    white-space: nowrap;
+body > main.doctor > a > table {
+    margin: 0px;
+    cursor: pointer;
 }
 
-body > main.doctor > table > tbody > tr > td > a > header > nav {
-    font-size: 2vh;
-    line-height: 100%;
-    margin-left: 1px;
-}
-
-body > main.doctor > table > tbody > tr > td > a > header > footer {
-    position: absolute;
-    bottom: 2vh;
-    left: 2vh;
-    height: 3vh;
-    font-size: 3vh;
-    line-height: 100%;
-}
-
-body > main.doctor > table > tbody > tr > td > a > header > footer > svg {
-    height: 1em;
-    width: 1em;
-    fill: gold;
-}
-
-body > main.doctor > table > tbody > tr > td > a > header > section {
-    position: absolute;
-    right: 2vh;
-    font-size: 1.5vh;
-    color: var(--color-doctor);
+body > main.doctor > a > table > tbody > tr > td {
     fill: var(--color-doctor);
-    line-height: 100%;
-    display: flex;
+    color: var(--color-doctor);
+}
+
+body > main.doctor > a > table > tbody > tr > td > div > span {
+    font-size: 175%;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+body > main.doctor > a > table > tbody > tr > td.portrait {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.75;
+}
+
+body > main.doctor > a > table > tbody > tr > td.portrait > svg {
+    height: 10vh;
+    width: 10vh;
+    fill: var(--color-doctor);
+}
+
+body > main.doctor > a > table > tbody > tr > td.portrait[style] {
+    opacity: 1;
+}
+
+body > main.doctor > a > table > tbody > tr > td.portrait[style] > svg {
+    fill: transparent;
+}
+
+body > main.doctor > a > table > tbody > tr > td.star > header {
+    width: auto;
+    justify-content: flex-start;
+    min-width: auto;
+    max-width: none;
+    padding-left: 2vh;
+    fill: #F90;
+}
+
+body > main.doctor > a > table > tbody > tr > td.star > header > svg {
+    height: 2vh;
+    width: 2vh;
+}
+
+body > main.doctor > a > table > tbody > tr > td.star > div {
     justify-content: flex-end;
-    align-items: center;
-    align-content: center;
+    padding-right: 1.5vh;
+    color: rgba(0, 0, 0, 0.5);
 }
 
-body > main.doctor > table > tbody > tr > td > a > header > section > svg {
-    margin-left: 1vh;
-    height: 1em;
-    width: 1em;
+body > main.doctor > a > table > tbody > tr > td.star > div > span {
+    color: #F90;
 }
 
-body > main.doctor > table > tbody > tr > td > a > header > section.email {
-    bottom: 2vh;
+body > main.doctor > a > table > tbody > tr > td.name {
+    fill: #36C;
+    color: #36C;
+    font-size: 3vh;
 }
 
-body > main.doctor > table > tbody > tr > td > a > header > section.phone {
-    bottom: 4vh;
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer {
-    width: 10px;
-    flex-grow: 1;
-    background-color: #DEF;
-    position: relative;
-    padding: 2vh;
-    display: flex;
-    justify-content: flex-start;
-    align-content: space-between;
-    flex-wrap: wrap;
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer:before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 50%;
-    border-left: solid 10px white;
-    border-top: solid 10px transparent;
-    border-bottom: solid 10px transparent;
-    margin-top: -10px;
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer > section {
-    font-size: 1.5vh;
-    line-height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    width: 100%;
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer > section > span {
-    margin-right: 1vh;
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer > section > span:after {
-    content: ",";
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer > section > span:last-of-type:after {
-    content: "";
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer > section > svg {
-    height: 3vh;
-    width: 3vh;
-    margin-right: 1vh;
-}
-
-body > main.doctor > table > tbody > tr > td > a > footer > section.subject {
-    color: var(--color-subject);
+body > main.doctor > a > table > tbody > tr > td.subject {
     fill: var(--color-subject);
+    color: rgba(0, 0, 0, 0.5);
 }
 
-body > main.doctor > table > tbody > tr > td > a > footer > section.service {
-    color: var(--color-service);
+body > main.doctor > a > table > tbody > tr > td.subject > div > span {
+    color: var(--color-subject);
+}
+
+body > main.doctor > a > table > tbody > tr > td.service {
     fill: var(--color-service);
+    color: rgba(0, 0, 0, 0.5);
 }
 
-body > main.doctor > table > tbody > tr > td > a > footer > section.insurance {
-    color: var(--color-insurance);
+body > main.doctor > a > table > tbody > tr > td.service > div > span {
+    color: var(--color-service);
+}
+
+body > main.doctor > a > table > tbody > tr > td.insurance {
     fill: var(--color-insurance);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body > main.doctor > a > table > tbody > tr > td.insurance > div > span {
+    color: var(--color-insurance);
 }
 
 

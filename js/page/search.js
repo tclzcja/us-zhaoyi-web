@@ -6,6 +6,8 @@
 
     var Api = window.Api;
 
+    var holder = document.createElement("div");
+
     var current_latitude = 0;
     var current_longitude = 0;
 
@@ -109,62 +111,52 @@
 
     function render_doctor() {
 
-        document.querySelectorAll("body > main.doctor > table > tbody > tr > td").exec(function () {
-            this.innerHTML = "";
-        });
+        document.querySelectorAll("body > main.doctor > table").remove();
 
         for (var current of result_doctor.values()) {
 
-            var td = document.querySelector("body > main.doctor > table > tbody > tr > td:empty");
+            holder.innerHTML = document.querySelector("body > main.doctor > template").innerHTML;
 
-            td.innerHTML = document.querySelector("body > main.doctor > template").innerHTML;
+            var a = holder.firstElementChild;
+            var table = a.firstElementChild;
 
             // Portrait
             if (current.portrait && current.portrait._id) {
-                td.querySelector(":scope > a > nav").style.backgroundImage = "url('" + Api.Storage(current.portrait._id, current.portrait.extension) + "')";
+                table.querySelector(":scope > tbody > tr > td.portrait").style.backgroundImage = "url('" + Api.Storage(current.portrait._id, current.portrait.extension) + "')";
             }
             // Name
-            td.querySelector(":scope > a > header > header").innerHTML = "Dr. " + current.name['en'];
+            table.querySelector(":scope > tbody > tr > td.name > div").innerHTML = "Dr. " + current.name['en'];
 
             // Title
-            td.querySelector(":scope > a > header > nav").innerHTML = current.title['en'];
+            table.querySelector(":scope > tbody > tr > td.title > div").innerHTML = current.title['en'];
 
             // Star
-            var star = current.star.total / current.star.amount || 1;
-            if (star > Math.floor(star)) {
-                td.querySelector(":scope > a > header > footer").innerHTML += td.querySelector(":scope > a > header > footer > template.star-empty").innerHTML;
-            }
+            var star = (current.star.total / current.star.amount || 1).toFixed(1);
             for (var j = 0; j < Math.floor(star); j++) {
-                td.querySelector(":scope > a > header > footer").innerHTML += td.querySelector(":scope > a > header > footer > template.star").innerHTML;
+                table.querySelector(":scope > tbody > tr > td.star > header").innerHTML += table.querySelector(":scope > tbody > tr > td.star > header > template.star").innerHTML;
             }
+            if (star > Math.floor(star)) {
+                table.querySelector(":scope > tbody > tr > td.star > header").innerHTML += table.querySelector(":scope > tbody > tr > td.star > header > template.star-empty").innerHTML;
+            }
+
+            table.querySelector(":scope > tbody > tr > td.star > div > span:first-of-type").innerHTML = star;
+            table.querySelector(":scope > tbody > tr > td.star > div > span:last-of-type").innerHTML = current.star.amount;
 
             // Subject List
-            for (var subject_id of current.subject_list) {
-                var subject = map_subject.get(subject_id);
-                var span = document.createElement("span");
-                span.innerHTML = subject.name["zh-Hans"];
-                td.querySelector(":scope > a > footer > section.subject").appendChild(span);
-            }
+            table.querySelector(":scope > tbody > tr > td.subject > div > span").innerHTML = current.subject_list.length;
 
             // Service List
-            for (var service_id of current.service_list) {
-                var service = map_service.get(service_id);
-                var span = document.createElement("span");
-                span.innerHTML = service.name["zh-Hans"];
-                td.querySelector(":scope > a > footer > section.service").appendChild(span);
-            }
+            table.querySelector(":scope > tbody > tr > td.service > div > span").innerHTML = current.service_list.length;
 
             // Insurance List
-            for (var insurance_id of current.insurance_list) {
-                var insurance = map_insurance.get(insurance_id);
-                var span = document.createElement("span");
-                span.innerHTML = insurance.provider + "/" + insurance.class + "/" + insurance.subclass;
-                td.querySelector(":scope > a > footer > section.insurance").appendChild(span);
-            }
+            table.querySelector(":scope > tbody > tr > td.insurance > div > span").innerHTML = current.insurance_list.length;
 
-            td.querySelector(":scope > a > header > section.phone > div").innerHTML = current.phone || "";
-            td.querySelector(":scope > a > header > section.email > div").innerHTML = current.email || "";
-            td.querySelector(":scope > a").href = "doctor.html?_id=" + current._id;
+            table.querySelector(":scope > tbody > tr > td.phone > div").innerHTML = current.phone || "";
+            table.querySelector(":scope > tbody > tr > td.email > div").innerHTML = current.email || "";
+            a.href = "doctor.html?_id=" + current._id;
+
+            document.querySelector("body > main.doctor").appendChild(a);
+
         }
 
     }
