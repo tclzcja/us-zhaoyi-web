@@ -17,9 +17,6 @@ body > nav > section {
 }
 
 body > nav > section > input {
-    height: 100%;
-    width: 100%;
-    font-size: 2vh;
     padding-left: 4vh;
 }
 

@@ -1,103 +1,80 @@
-body > #hospital > header > main {
-    background-color: var(--color-hospital);
-    border-bottom: solid 1vh var(--color-hospital);
+body > main.info {
+    background-color: #FEE;
+    background-image: url("../../img/image/pattern.2.png");
 }
 
-body > #hospital > header > main > section:before {
+body > main.info > table > thead > tr > td {
     color: var(--color-hospital);
+    fill: var(--color-hospital);
 }
 
-body > #hospital > header > main > header {
-    padding: 0px;
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-hospital);
-    z-index: 2;
+body > main.info > table > tbody > tr > td {
+    color: var(--color-hospital);
+    fill: var(--color-hospital);
 }
 
-body > #hospital > header > main > header > svg {
-    height: 20vh;
-    width: 20vh;
-    border-radius: 50%;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-    fill: white;
+body > main.info > table > tbody > tr > td.portrait {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 0px;
+    text-align: center;
 }
 
-body > #hospital > header > main > header > svg[style] > use {
-    display: none;
+body > main.info > table > tbody > tr > td.portrait[style] {
+    fill: transparent;
 }
 
-body > #hospital > header > main > section {
-    z-index: 1;
-}
-
-body > #hospital > header > main > section.name {
+body > main.info > table > tbody > tr > td.name {
     font-size: 3vh;
+    color: #900;
+    fill: #900;
 }
 
-
-/* Main */
-
-body > #hospital > main > main {
-    background-color: var(--color-hospital);
-    border-top: solid 1vh var(--color-hospital);
-    border-bottom: solid 1vh var(--color-hospital);
+body > main.info > table > tbody > tr > td.description {
+    fill: #666;
+    color: #666;
 }
 
-body > #hospital > main > main > section.iframe {
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.75);
-    color: var(--color-hospital);
+body > main.info > table > tbody > tr > td.description > div {
+    align-items: flex-start;
+    padding-top: 1.5vh;
+    padding-right: 1.5vh;
     font-size: 1.5vh;
 }
 
-body > #hospital > main > main > section.iframe > iframe {
+body > main.info > table > tbody > tr > td.service {
+    min-height: 6vh;
+    max-height: none;
+    height: auto;
+    color: white;
+    fill: white;
+    vertical-align: top;
+    padding: 0px;
+    background-color: transparent;
+    fill: var(--color-service);
+}
+
+body > main.info > table > tbody > tr > td.service > span:nth-of-type(2n) {
+    opacity: 0.8;
+}
+
+body > main.info > table > tbody > tr > td.service > span {
+    display: block;
+    font-size: 1.5vh;
+    line-height: 6vh;
+    padding-left: 6vh;
+    background-color: white;
+    color: var(--color-service);
+    position: relative;
+}
+
+body > main.info > table > tbody > tr > td.service > span:after {
+    content: attr(data-price);
+    color: inherit;
     position: absolute;
     top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    display: block;
-}
-
-
-/* Footer */
-
-body > #hospital > footer > main {
-    background-color: var(--color-service);
-    border-top: solid 1vh var(--color-service);
-    border-bottom: solid 1vh var(--color-service);
-}
-
-body > #hospital > footer > main > section.services > table {
-    margin-top: 1vh;
-    background-color: var(--color-service);
-}
-
-body > #hospital > footer > main > section.services > table > tbody > tr > td {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--color-service);
-    padding: 1vh;
-    font-size: 1.8vh;
-}
-
-body > #hospital > footer > main > section.services > table > tbody > tr > td:nth-child(2n) {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: right;
-}
-
-body > #hospital > footer > main > section.services > table > tbody > tr:nth-child(2n) > td {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-body > #hospital > footer > main > section.services > table > tbody > tr:nth-child(2n) > td:nth-child(2n) {
-    background-color: rgba(255, 255, 255, 0.9);
+    right: 0px;
+    bottom: 0px;
+    padding-right: 2vh;
 }

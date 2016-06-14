@@ -14,7 +14,11 @@
     var map_service = new Map();
     var map_insurance = new Map();
 
+    var comment_list = [];
+
     var comment_index = 0;
+
+    var holder = document.createElement("div");
 
     function load() {
 
@@ -25,6 +29,12 @@
         }, function (data) {
             doctor = data[0];
             fire();
+            Api.Core("/comment/read", {
+                doctor_id: doctor._id
+            }, function (comments) {
+                comment_list = comments;
+                fire();
+            });
         });
 
         Api.Core("/hospital/read", null, function (data) {
@@ -57,7 +67,7 @@
 
         function fire() {
             fire_click++;
-            if (fire_click >= 5) {
+            if (fire_click >= 6) {
                 init();
                 render();
             }
@@ -105,6 +115,24 @@
             });
         });
 
+        if (Auth.Test()) {
+            document.querySelector("body > main.comment > table > tbody > tr > td.action").addEventListener("click", function () {
+                var data = {
+                    doctor_id: doctor._id,
+                    user_id: Auth.Current.User()._id,
+                    star: parseInt(document.querySelector("body > main.comment > table > tbody > tr > td.star > select > option:checked").value, 10),
+                    content: document.querySelector("body > main.comment > table > tbody > tr > td.content > textarea").value
+                };
+                Api.Core("/comment/create", data, function () {
+                    window.location.reload();
+                });
+            });
+        } else {
+            document.querySelector("body > main.comment > table > tbody > tr > td.star").innerHTML = "";
+            document.querySelector("body > main.comment > table > tbody > tr > td.content").innerHTML = "";
+            document.querySelector("body > main.comment > table > tbody > tr > td.content").classList.add("empty");
+            document.querySelector("body > main.comment > table > tbody > tr > td.action").innerHTML = "";
+        }
     }
 
     function render() {
@@ -168,26 +196,6 @@
             document.querySelector("body > main.info > table > tbody > tr > td.insurance").appendChild(span);
         }
 
-        // Star
-        if (doctor.star.amount === 0) {
-            document.querySelectorAll("body > main.comment > table > tbody > tr > td").setAttribute("data-empty", true);
-        } else {
-            var star = doctor.star.total / doctor.star.amount;
-            document.querySelector("body > main.comment > table > tbody > tr > td.star > div").innerHTML = star.toFixed(1) + '<span>/5.0</span>';
-            for (var i = 1; i <= 5; i++) {
-                if (star >= i) {
-                    document.querySelector("body > main.comment > table > tbody > tr > td.star > footer").innerHTML += document.querySelector("body > main.comment > table > tbody > tr > td.star > footer > template.star").innerHTML;
-                } else {
-                    document.querySelector("body > main.comment > table > tbody > tr > td.star > footer").innerHTML += document.querySelector("body > main.comment > table > tbody > tr > td.star > footer > template.star-empty").innerHTML;
-                }
-            }
-            Api.Core("/comment/read", {
-                doctor_id: doctor._id
-            }, function () {
-
-            });
-        }
-
         // Schedule
         for (var schedule of doctor.schedule) {
             if (!document.querySelector("body > main.schedule > main[data-hospital-id='" + schedule.hospital_id + "']")) {
@@ -244,10 +252,38 @@
                 div.querySelector(":scope > footer").classList.add("on");
             }
         }
-    }
 
-    function fetch_comment() {
-
+        // Star & Comment
+        if (doctor.star.amount === 0) {
+            document.querySelectorAll("body > main.comment > table > tbody > tr > td.score, body > main.comment > table > tbody > tr > td.comment").addClass("empty");
+            document.querySelectorAll("body > main.comment > table > tbody > tr > td.score, body > main.comment > table > tbody > tr > td.comment").exec(function () {
+                this.innerHTML = "";
+            });
+        } else {
+            var score = (doctor.star.total / doctor.star.amount).toFixed(1);
+            document.querySelector("body > main.comment > table > tbody > tr > td.score > span:first-of-type").innerHTML = score;
+            for (var i = 1; i < score; i++) {
+                holder.innerHTML = document.querySelector("body > main.comment > table > tbody > tr > td.score > footer > template.star").innerHTML;
+                var svg = holder.firstElementChild;
+                document.querySelector("body > main.comment > table > tbody > tr > td.score > footer").appendChild(svg);
+            }
+            if (Math.floor(score) < score) {
+                holder.innerHTML = document.querySelector("body > main.comment > table > tbody > tr > td.score > footer > template.star-empty").innerHTML;
+                var svg = holder.firstElementChild;
+                document.querySelector("body > main.comment > table > tbody > tr > td.score > footer").appendChild(svg);
+            }
+            for (var comment of comment_list) {
+                holder.innerHTML = document.querySelector("body > main.comment > table > tbody > tr > td.comment > main > template").innerHTML;
+                var span = holder.firstElementChild;
+                span.querySelector(":scope > main").innerHTML = '"' + comment.content + '"';
+                document.querySelector("body > main.comment > table > tbody > tr > td.comment > main").appendChild(span);
+                for (var i = 0; i < comment.star; i++) {
+                    holder.innerHTML = span.querySelector(":scope > footer > template").innerHTML;
+                    var svg = holder.firstElementChild;
+                    span.querySelector(":scope > footer").appendChild(svg);
+                }
+            }
+        }
     }
 
     load();
