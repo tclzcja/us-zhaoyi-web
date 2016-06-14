@@ -132,9 +132,8 @@
         <table>
             <tbody>
                 <tr>
-                    <td class="star" data-empty-content="暂时无评分">
-                        <span></span>
-                        <span></span>
+                    <td class="score" rowspan="3" data-empty-content="暂时无评分">
+                        <span></span><span>/5.0</span>
                         <footer>
                             <template class="star">
                                 <svg>
@@ -148,12 +147,59 @@
                             </template>
                         </footer>
                     </td>
-                    <td class="new" data-empty-content="暂时无评价">
-                        <template></template>
+                    <td class="comment" rowspan="3" data-empty-content="暂时无评价">
+                        <main>
+                            <template>
+                                <div>
+                                    <main></main>
+                                    <footer>
+                                        <template>
+                                            <svg>
+                                                <use xlink:href="img/icon/star.svg#star"></use>
+                                            </svg>
+                                        </template>
+                                    </footer>
+                                </div>
+                            </template>
+                        </main>
                     </td>
-                    <td rowspan="2" data-empty-content="您必须登陆后才能撰写评价">
-                        <header></header>
+                    <td class="star">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/star.svg#star"></use>
+                            </svg>
+                            <template class="star">
+                                <svg>
+                                    <use xlink:href="img/icon/star.svg#star"></use>
+                                </svg>
+                            </template>
+                            <template class="star.empty">
+                                <svg>
+                                    <use xlink:href="img/icon/star.empty.svg#star.empty"></use>
+                                </svg>
+                            </template>
+                        </header>
+                        <select>
+                            <option value="1">我给一颗星</option>
+                            <option value="2">我给二颗星</option>
+                            <option value="3">我给三颗星</option>
+                            <option value="4">我给四颗星</option>
+                            <option value="5">我给五颗星</option>
+                        </select>
                     </td>
+                </tr>
+                <tr>
+                    <td class="content" data-empty-content="您必须登录后才能撰写评价">
+                        <header>
+                            <svg>
+                                <use xlink:href="img/icon/description.svg#description"></use>
+                            </svg>
+                        </header>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="action">提交我的评价</td>
                 </tr>
             </tbody>
         </table>

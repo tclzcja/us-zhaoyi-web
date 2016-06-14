@@ -101,11 +101,12 @@ body > main.comment > header {
 
 body > main.comment > table > tbody > tr > td {
     background-color: white;
-    height: 25vw;
     max-height: none;
+    fill: var(--color-comment);
+    color: var(--color-comment);
 }
 
-body > main.comment > table > tbody > tr > td[data-empty]:before {
+body > main.comment > table > tbody > tr > td.empty:before {
     content: attr(data-empty-content);
     position: absolute;
     top: 0px;
@@ -118,26 +119,37 @@ body > main.comment > table > tbody > tr > td[data-empty]:before {
     align-content: center;
     flex-wrap: nowrap;
     font-size: 3vh;
-    color: var(--color-comment);
+    color: inherit;
 }
 
-body > main.comment > table > tbody > tr > td.star {
+body > main.comment > table > tbody > tr > td.score {
+    height: 1px;
     padding: 0px;
-    color: var(--color-comment);
-    fill: var(--color-comment);
+    text-align: center;
 }
 
-body > main.comment > table > tbody > tr > td.star > div > span {
+body > main.comment > table > tbody > tr > td.score.empty {
+    opacity: 0.5;
+}
+
+body > main.comment > table > tbody > tr > td.score > span {
+    color: var(--color-comment);
+}
+
+body > main.comment > table > tbody > tr > td.score > span:first-of-type {
+    font-size: 12vh;
+}
+
+body > main.comment > table > tbody > tr > td.score > span:last-of-type {
     font-size: 4vh;
     opacity: 0.5;
 }
 
-body > main.comment > table > tbody > tr > td.star > footer {
+body > main.comment > table > tbody > tr > td.score > footer {
     position: absolute;
-    right: 0px;
+    top: 70%;
     left: 0px;
-    top: 75%;
-    height: 2vh;
+    right: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,12 +157,74 @@ body > main.comment > table > tbody > tr > td.star > footer {
     flex-wrap: nowrap;
 }
 
-body > main.comment > table > tbody > tr > td.star > footer > svg {
+body > main.comment > table > tbody > tr > td.score > footer > svg {
     height: 2vh;
     width: 2vh;
 }
 
-body > main.comment > table > tbody > tr > td.new {}
+body > main.comment > table > tbody > tr > td.comment {
+    padding: 0px;
+    background-color: transparent;
+}
+
+body > main.comment > table > tbody > tr > td.comment.empty {
+    opacity: 0.5;
+    background-color: white;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: scroll;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main > div {
+    display: block;
+    padding: 2vh;
+    background-color: white;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main > div:nth-of-type(2n) {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body > main.comment > table > tbody > tr > td.comment > main > div > footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+body > main.comment > table > tbody > tr > td.comment > main > div > footer > svg {
+    height: 1.5vh;
+    width: 1.5vh;
+}
+
+body > main.comment > table > tbody > tr > td.star > header {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 1.5vh;
+}
+
+body > main.comment > table > tbody > tr > td.content {
+    height: 30vh;
+}
+
+body > main.comment > table > tbody > tr > td.content.empty {
+    background-color: transparent;
+    opacity: 1;
+    color: white;
+}
+
+body > main.comment > table > tbody > tr > td.action {
+    padding: 0px;
+    text-align: center;
+    cursor: pointer;
+}
 
 
 /* =================================== */
