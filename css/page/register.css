@@ -2,9 +2,8 @@ body > main {
     height: 80vh;
 }
 
-body > main > table > tbody > tr > td > header {
-    background-color: var(--color-subject);
-    fill: white;
+body > main > table > tbody > tr > td {
+    fill: var(--color-subject);
 }
 
 body > main > table > tbody > tr > td.register {
