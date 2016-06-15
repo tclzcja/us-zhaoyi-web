@@ -6,7 +6,7 @@
 
     var Auth = window.Auth;
 
-    var Api_Address = (window.location.href.indexOf("localhost") > -1 || window.location.href.indexOf("127.0.0.1") > -1) ? "http://localhost:8080" : "https://uszhaoyi.mod.bz";
+    var Api_Address = (window.location.href.indexOf("localhost") > -1 || window.location.href.indexOf("127.0.0.1") > -1) ? "http://localhost:8080" : "https://us-zhaoyi-api.herokuapp.com";
 
     var Storage_Address = "https://bucketeer-5c1067eb-578a-48c9-9997-5be9426f8f0c.s3.amazonaws.com/public/";
 
