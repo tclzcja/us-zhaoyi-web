@@ -8,7 +8,7 @@
 
     var Api_Address = (window.location.href.indexOf("localhost") > -1 || window.location.href.indexOf("127.0.0.1") > -1) ? "http://localhost:8080" : "https://uszhaoyi.mod.bz";
 
-    var Storage_Address = "https://s3.amazonaws.com/us-zhaoyi-storage/";
+    var Storage_Address = "https://bucketeer-5c1067eb-578a-48c9-9997-5be9426f8f0c.s3.amazonaws.com/public/";
 
     window.Api = {
         Core: function (resource, data, callback_correct) {
