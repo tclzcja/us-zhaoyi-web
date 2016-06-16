@@ -99,6 +99,9 @@
 
         document.querySelector("body > nav > div.favorite").addEventListener("click", function () {
             var user = Auth.Current.User();
+            if (!user.favorite_doctor_list) {
+                user.favorite_doctor_list = [];
+            }
             user.favorite_doctor_list.push(doctor._id);
             Api.Core("/user/update", user, function () {
                 Auth.Login(null, user);

@@ -10,6 +10,11 @@ body > main.info > header {
     background-color: #999;
 }
 
+body > main.info > table > thead > tr > td {
+    fill: #666;
+    color: #666;
+}
+
 body > main.info > table > tbody > tr > td {
     fill: #666;
 }
@@ -50,7 +55,7 @@ body > main.info > nav > a > svg {
     margin-right: 0.5vw;
 }
 
-body > main.archive {
+body > main.favorite {
     min-height: 40vh;
     background-color: #DEF;
     background-repeat: no-repeat;
@@ -59,4 +64,69 @@ body > main.archive {
     background-image: url(../../img/image/pattern.2.png);
     font-size: 6vh;
     color: white;
+}
+
+body > main.favorite > table > tbody > tr > td {
+    padding: 0px;
+    height: 30vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    fill: var(--color-doctor);
+}
+
+body > main.favorite > table > tbody > tr > td > a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > main.favorite > table > tbody > tr > td > a > svg {
+    height: 40%;
+}
+
+body > main.favorite > table > tbody > tr > td > a[style] {
+    fill: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body > main.favorite > table > tbody > tr > td > a > footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 4vh;
+    line-height: 4vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: right;
+    padding-right: 2vh;
+    font-size: 1.5vh;
+}
+
+body > main.favorite > table > tbody > tr > td > a > div {
+    position: absolute;
+    height: 6vh;
+    width: 6vh;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    fill: white;
+    transition: background-color 0.2s;
+}
+
+body > main.favorite > table > tbody > tr > td > a > div:hover {
+    background-color: #F33;
+}
+
+body > main.favorite > table > tbody > tr > td > a > div > svg {
+    height: 50%;
 }
