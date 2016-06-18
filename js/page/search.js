@@ -159,6 +159,10 @@
 
         }
 
+        if (result_doctor.size === 0) {
+            document.querySelector("body > main.doctor").innerHTML = "没有找到符合条件的医生";
+        }
+
     }
 
     function filter_hospital() {
@@ -226,16 +230,20 @@
             document.querySelector("body > main.hospital").appendChild(a);
 
         }
+
+        if (result_hospital.size === 0) {
+            document.querySelector("body > main.hospital").innerHTML = "没有找到符合条件的医院";
+        }
     }
 
-    function get_geo() {
+    function init() {
+
         navigator.geolocation.getCurrentPosition(function (position) {
             current_latitude = position.coords.latitude;
             current_longitude = position.coords.longitude;
         });
-    }
 
-    function set_event() {
+        document.querySelector("load-mask").dispatchEvent(new Event("on"));
 
         document.querySelector("body > aside > div.doctor").addEventListener("click", function () {
             document.querySelector("body > nav.hospital").classList.remove("on");
@@ -269,55 +277,55 @@
 
     function load(callback) {
 
-        var init_click = 0;
+        var fire_click = 0;
 
         Api.Core("/doctor/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_doctor.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
         Api.Core("/hospital/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_hospital.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
         Api.Core("/subject/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_subject.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
         Api.Core("/service/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_service.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
         Api.Core("/insurance/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_insurance.set(data[i]._id, data[i]);
             }
-            init();
+            fire();
         });
 
-        function init() {
-            init_click++;
-            if (init_click >= 5) {
+        function fire() {
+            fire_click++;
+            if (fire_click >= 5) {
                 callback();
             }
         }
 
     }
 
-    get_geo();
-    set_event();
+    init();
     load(function () {
+        document.querySelector("load-mask").dispatchEvent(new Event("off"));
         filter_doctor();
         filter_hospital();
     });

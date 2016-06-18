@@ -136,6 +136,9 @@ body > main {
     background-size: 100% auto;
     background-position: top;
     background-image: url("../../img/image/pattern.2.png");
+    min-height: 16vh;
+    color: white;
+    font-size: 3vh;
 }
 
 body > main.on {
@@ -163,6 +166,7 @@ body > main > a.mist > table {
     cursor: pointer;
     outline: solid 10px rgba(0, 0, 0, 0.1);
     color: #666;
+    font-size: 2vh;
 }
 
 body > main > a.mist > table > tbody > tr > td > div > span {
