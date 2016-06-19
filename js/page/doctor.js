@@ -22,6 +22,8 @@
 
     function load() {
 
+        document.querySelector("load-mask").dispatchEvent(new Event("on"));
+
         var fire_click = 0;
 
         Api.Core("/doctor/read", {
@@ -287,6 +289,8 @@
                 }
             }
         }
+
+        document.querySelector("load-mask").dispatchEvent(new Event("off"));
     }
 
     load();

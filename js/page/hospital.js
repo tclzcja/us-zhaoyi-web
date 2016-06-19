@@ -15,6 +15,8 @@
 
     function load() {
 
+        document.querySelector("load-mask").dispatchEvent(new Event("on"));
+
         var fire_click = 0;
 
         Api.Core("/hospital/read", {
@@ -75,6 +77,8 @@
             span.setAttribute("data-price", "$" + service.price);
             document.querySelector("body > main.info > table > tbody > tr > td.service").appendChild(span);
         }
+
+        document.querySelector("load-mask").dispatchEvent(new Event("off"));
     }
 
     load();
