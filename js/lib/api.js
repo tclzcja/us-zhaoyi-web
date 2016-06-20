@@ -11,6 +11,19 @@
     var Storage_Address = "https://bucketeer-5c1067eb-578a-48c9-9997-5be9426f8f0c.s3.amazonaws.com/public/";
 
     window.Api = {
+        Local: function (path, callback_correct) {
+            var xhr = new XMLHttpRequest();
+            xhr.overrideMimeType("application/json");
+            xhr.open('GET', path, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    callback_correct(JSON.parse(xhr.responseText));
+                } else if (xhr.status !== 200) {
+                    // A centralized error processing component here
+                }
+            };
+            xhr.send(null);
+        },
         Core: function (resource, data, callback_correct) {
             data = data || {};
             var xhr = new XMLHttpRequest();

@@ -10,6 +10,7 @@
 
     var current_latitude = 0;
     var current_longitude = 0;
+    var zipcode_coordinate = null;
 
     var map_doctor = new Map();
     var map_hospital = new Map();
@@ -71,11 +72,11 @@
         return false;
     }
 
-    function distance_checker(schedules, distance) {
+    function distance_checker(schedules, distance, origin_latitude, origin_longitude) {
         if (distance !== 9999) {
             for (var schedule in schedules) {
                 var hospital = map_hospital[schedules[schedule].hospital_id];
-                if (Math.calculateDistance(current_latitude, current_longitude, parseFloat(hospital.latitude), parseFloat(hospital.longitude)) <= distance) {
+                if (Math.calculateDistance(origin_latitude, origin_longitude, parseFloat(hospital.latitude), parseFloat(hospital.longitude)) <= distance) {
                     return true;
                 }
             }
@@ -92,13 +93,20 @@
         var subject = document.querySelector("body > nav.doctor > table > tbody > tr > td.subject > input").value;
         var insurance = document.querySelector("body > nav.doctor > table > tbody > tr > td.insurance > input").value;
         var distance = parseInt(document.querySelector("body > nav.doctor > table > tbody > tr > td.distance > select > option:checked").value, 10);
+        var origin_latitude = current_latitude;
+        var origin_longitude = current_longitude;
+        var zco = zipcode_coordinate[parseInt(document.querySelector("body > nav.doctor > table > tbody > tr > td.origin > input").value, 10)];
+        if (zco) {
+            origin_latitude = zco.x;
+            origin_longitude = zco.y;
+        }
         //
         for (var d of map_doctor.values()) {
             if (name_checker(d.name, name)) {
                 if (d.star.amount === 0 || (d.star.total / d.star.amount) >= star) {
                     if (subject_checker(d.subjects, subject)) {
                         if (insurance_checker(d.insurances, insurance)) {
-                            if (distance_checker(d.schedules, distance)) {
+                            if (distance_checker(d.schedules, distance, origin_latitude, origin_longitude)) {
                                 result_doctor.set(d._id, d);
                             }
                         }
@@ -111,7 +119,8 @@
 
     function render_doctor() {
 
-        document.querySelectorAll("body > main.doctor > table").remove();
+        document.querySelectorAll("body > main.doctor > a").remove();
+        document.querySelector("body > main.doctor").classList.remove("empty");
 
         for (var current of result_doctor.values()) {
 
@@ -160,7 +169,7 @@
         }
 
         if (result_doctor.size === 0) {
-            document.querySelector("body > main.doctor").innerHTML = "没有找到符合条件的医生";
+            document.querySelector("body > main.doctor").classList.add("empty");
         }
 
     }
@@ -187,7 +196,8 @@
 
     function render_hospital() {
 
-        document.querySelectorAll("body > main.hospital > table").remove();
+        document.querySelectorAll("body > main.hospital > a").remove();
+        document.querySelector("body > main.hospital").classList.remove("empty");
 
         for (var current of result_hospital.values()) {
 
@@ -232,7 +242,7 @@
         }
 
         if (result_hospital.size === 0) {
-            document.querySelector("body > main.hospital").innerHTML = "没有找到符合条件的医院";
+            document.querySelector("body > main.hospital").classList.add("empty");
         }
     }
 
@@ -279,6 +289,12 @@
 
         var fire_click = 0;
 
+        Api.Local("/resource/zipcode.coordinate.json", function (data) {
+            zipcode_coordinate = data;
+            console.log(zipcode_coordinate);
+            fire();
+        });
+
         Api.Core("/doctor/read", null, function (data) {
             for (var i = 0; i < data.length; i++) {
                 map_doctor.set(data[i]._id, data[i]);
@@ -316,7 +332,7 @@
 
         function fire() {
             fire_click++;
-            if (fire_click >= 5) {
+            if (fire_click >= 6) {
                 callback();
             }
         }

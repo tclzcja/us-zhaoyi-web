@@ -204,6 +204,24 @@ body > main > a.mist > table > tbody > tr > td.name {
     font-size: 3vh;
 }
 
+body > main.empty {
+    height: 30vh;
+}
+
+body > main.empty:after {
+    content: attr(data-empty-title);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3vh;
+}
+
 
 /* */
 
