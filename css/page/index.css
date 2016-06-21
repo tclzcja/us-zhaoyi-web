@@ -105,7 +105,7 @@ body > main:nth-of-type(2n) > main {
 
 body > main > main > header {
     color: inherit;
-    font-size: 3vh;
+    font-size: 150%;
     line-height: 120%;
     display: block;
     width: 100%;
@@ -115,7 +115,7 @@ body > main > main > header {
 
 body > main > main > footer {
     color: #555;
-    font-size: 1.75vh;
+    font-size: 90%;
     line-height: 120%;
     display: block;
     width: 100%;

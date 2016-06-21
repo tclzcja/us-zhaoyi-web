@@ -33,6 +33,7 @@ body {
     user-select: none;
     cursor: default;
     font-weight: 100;
+    font-size: 2vmin;
 }
 
 body {
@@ -69,7 +70,7 @@ textarea {
     height: 100%;
     background-color: transparent;
     color: inherit;
-    font-size: 2vh;
+    font-size: 100%;
     cursor: pointer;
     z-index: 999;
 }
@@ -85,7 +86,7 @@ select > option {
 
 textarea {
     resize: none;
-    margin-top: 1.5vh;
+    margin-top: 1.5vmin;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -154,7 +155,7 @@ body > main {
 
 .mist > table > thead > tr > td {
     position: relative;
-    height: 8vh;
+    height: 8vmin;
     vertical-align: middle;
     text-align: left;
     white-space: nowrap;
@@ -163,27 +164,27 @@ body > main {
 
 .mist > table > thead > tr > td > div {
     color: inherit;
-    font-size: 3vh;
+    font-size: 150%;
     display: inline-block;
-    padding-left: 8vh;
+    padding-left: 8vmin;
 }
 
 .mist > table > thead > tr > td > svg {
     position: absolute;
-    top: 2vh;
-    left: 2vh;
-    height: 4vh;
-    width: 4vh;
+    top: 2vmin;
+    left: 2vmin;
+    height: 4vmin;
+    width: 4vmin;
     fill: inherit;
 }
 
 .mist > table > tbody > tr > td {
     position: relative;
-    height: 6vh;
+    height: 6vmin;
     width: 25vw;
     background-color: white;
     overflow: hidden;
-    padding-left: 6vh;
+    padding-left: 6vmin;
     position: relative;
 }
 
@@ -200,10 +201,10 @@ body > main {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 6vh;
-    height: 6vh;
-    min-width: 6vh;
-    max-width: 6vh;
+    width: 6vmin;
+    height: 6vmin;
+    min-width: 6vmin;
+    max-width: 6vmin;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,28 +213,30 @@ body > main {
 }
 
 .mist > table > tbody > tr > td > header > svg {
-    height: 3vh;
-    width: 3vh;
+    height: 3vmin;
+    width: 3vmin;
     fill: inherit;
 }
 
 .mist > table > tbody > tr > td > div {
     position: absolute;
     top: 0px;
-    left: 6vh;
+    left: 6vmin;
     right: 0px;
     bottom: 0px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .mist > table > tbody > tr > td > input,
 .mist > table > tbody > tr > td > select {
     position: absolute;
     top: 0px;
-    left: 6vh;
+    left: 6vmin;
     height: calc(100%);
-    width: calc(100% - 6vh);
+    width: calc(100% - 6vmin);
 }

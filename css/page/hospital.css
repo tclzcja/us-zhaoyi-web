@@ -25,8 +25,13 @@ body > main.info > table > tbody > tr > td.portrait[style] {
     fill: transparent;
 }
 
+body > main.info > table > tbody > tr > td.portrait > svg {
+    height: 20vmin;
+    width: 20vmin;
+}
+
 body > main.info > table > tbody > tr > td.name {
-    font-size: 3vh;
+    font-size: 125%;
     color: #900;
     fill: #900;
 }
@@ -38,13 +43,13 @@ body > main.info > table > tbody > tr > td.description {
 
 body > main.info > table > tbody > tr > td.description > div {
     align-items: flex-start;
-    padding-top: 1.5vh;
-    padding-right: 1.5vh;
-    font-size: 1.5vh;
+    padding-top: 1.5vmin;
+    padding-right: 1.5vmin;
+    font-size: 75%;
 }
 
 body > main.info > table > tbody > tr > td.service {
-    min-height: 6vh;
+    min-height: 6vmin;
     max-height: none;
     height: auto;
     color: white;
@@ -61,9 +66,9 @@ body > main.info > table > tbody > tr > td.service > span:nth-of-type(2n) {
 
 body > main.info > table > tbody > tr > td.service > span {
     display: block;
-    font-size: 1.5vh;
-    line-height: 6vh;
-    padding-left: 6vh;
+    font-size: 75%;
+    line-height: 6vmin;
+    padding-left: 6vmin;
     background-color: white;
     color: var(--color-service);
     position: relative;
@@ -76,5 +81,5 @@ body > main.info > table > tbody > tr > td.service > span:after {
     top: 0px;
     right: 0px;
     bottom: 0px;
-    padding-right: 2vh;
+    padding-right: 2vmin;
 }

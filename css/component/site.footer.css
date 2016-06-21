@@ -8,7 +8,6 @@ site-footer {
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: nowrap;
-    font-size: 2vh;
 }
 
 site-footer > div {
@@ -20,9 +19,8 @@ site-footer > div {
 site-footer > div > header {
     color: var(--color-doctor);
     margin-top: 4vh;
-    font-size: 3vh;
+    font-size: 150%;
     line-height: 100%;
-    height: 1em;
     position: relative;
 }
 
@@ -37,7 +35,7 @@ site-footer > div > header > input {
 }
 
 site-footer > div > a {
-    font-size: 1.5vh;
+    font-size: 75%;
     color: white;
     line-height: 100%;
     margin-top: 1vh;
@@ -76,7 +74,7 @@ site-footer > div > div.youtube {
 site-footer > footer {
     position: absolute;
     bottom: 2vh;
-    font-size: 1.2vh;
+    font-size: 120%;
     line-height: 100%;
     color: white;
     left: 0px;

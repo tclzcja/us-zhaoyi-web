@@ -2,12 +2,12 @@ site-header {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    height: 8vh;
+    height: 8vmin;
     width: 100%;
     z-index: 10000;
     color: white;
     background-color: white;
-    font-size: 2vh;
+    font-size: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -19,11 +19,11 @@ site-header > header {
 
 site-header > header > a > nav {
     position: absolute;
-    height: 6vh;
-    width: 6vh;
+    height: 6vmin;
+    width: 6vmin;
     border-radius: 50%;
     background-color: #69F;
-    top: 1vh;
+    top: 1vmin;
     left: 1vw;
     display: flex;
     justify-content: center;
@@ -37,22 +37,22 @@ site-header > header > a > nav > svg {
 }
 
 site-header > header > a > header {
-    left: 6vh;
+    left: 6vmin;
     margin-left: 1.75vw;
     position: absolute;
     color: #69F;
-    top: 1.5vh;
+    top: 1.5vmin;
     line-height: 100%;
-    font-size: 3vh;
+    font-size: 150%;
 }
 
 site-header > header > a > footer {
-    left: 6vh;
+    left: 6vmin;
     margin-left: 1.75vw;
     position: absolute;
     color: #999;
-    bottom: 1.5vh;
-    font-size: 1.5vh;
+    bottom: 1.5vmin;
+    font-size: 75%;
     padding-left: 1px;
     white-space: nowrap;
 }
@@ -67,16 +67,16 @@ site-header > footer {
 site-header > footer > a {
     margin-right: 1.5vw;
     color: #69F;
-    font-size: 1.5vh;
+    font-size: 75%;
     word-break: keep-all;
     width: auto;
 }
 
 site-header > footer > nav {
-    height: 6vh;
-    width: 6vh;
+    height: 6vmin;
+    width: 6vmin;
     margin-right: 1vw;
-    font-size: 1.5vh;
+    font-size: 75%;
     cursor: pointer;
     display: flex;
     justify-content: center;
