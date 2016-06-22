@@ -21,69 +21,49 @@
     var result_hospital = new Map();
 
     function name_checker(name, keyword) {
-        if (keyword !== "") {
-            for (var n in name) {
-                if (name[n].indexOf(keyword) > -1) {
-                    return true;
-                }
+        for (var n in name) {
+            if (name[n].indexOf(keyword) > -1) {
+                return true;
             }
-        } else {
-            return true;
         }
         return false;
     }
 
     function subject_checker(subjects, keyword) {
-        if (keyword !== "") {
-            for (var _id in subjects) {
-                if (name_checker(map_subject[subjects[_id]].name, keyword)) {
-                    return true;
-                }
+        for (var _id in subjects) {
+            if (name_checker(map_subject[subjects[_id]].name, keyword)) {
+                return true;
             }
-        } else {
-            return true;
         }
-        return false;
+        return keyword === "";
     }
 
     function service_checker(services, keyword) {
-        if (keyword !== "") {
-            for (var _id in services) {
-                if (name_checker(map_service[services[_id]].name, keyword)) {
-                    return true;
-                }
+        for (var _id in services) {
+            if (name_checker(map_service[services[_id]].name, keyword)) {
+                return true;
             }
-        } else {
-            return true;
         }
-        return false;
+        return keyword === "";
     }
 
     function insurance_checker(insurances, keyword) {
-        if (keyword !== "") {
-            for (var _id in insurances) {
-                if (name_checker(map_insurance[insurances[_id]], keyword)) {
-                    return true;
-                }
+        for (var _id in insurances) {
+            if (name_checker(map_insurance[insurances[_id]], keyword)) {
+                return true;
             }
-        } else {
-            return true;
         }
-        return false;
+        return keyword === "";
     }
 
     function distance_checker(schedules, distance, origin_latitude, origin_longitude) {
-        if (distance !== 9999) {
-            for (var schedule in schedules) {
-                var hospital = map_hospital[schedules[schedule].hospital_id];
-                if (Math.calculateDistance(origin_latitude, origin_longitude, parseFloat(hospital.latitude), parseFloat(hospital.longitude)) <= distance) {
-                    return true;
-                }
+        for (var schedule in schedules) {
+            var hospital = map_hospital[schedules[schedule].hospital_id];
+            if (Math.calculateDistance(origin_latitude, origin_longitude, hospital.latitude, hospital.longitude) <= distance) {
+                return true;
             }
-        } else {
-            return true;
         }
-        return false;
+        return distance === 999999;
     }
 
     function filter_doctor() {
@@ -100,10 +80,9 @@
             origin_latitude = zco.x;
             origin_longitude = zco.y;
         }
-        //
         for (var d of map_doctor.values()) {
             if (name_checker(d.name, name)) {
-                if (d.star.amount === 0 || (d.star.total / d.star.amount) >= star) {
+                if ((d.star.total / d.star.amount || 0) >= star) {
                     if (subject_checker(d.subjects, subject)) {
                         if (insurance_checker(d.insurances, insurance)) {
                             if (distance_checker(d.schedules, distance, origin_latitude, origin_longitude)) {
@@ -236,7 +215,6 @@
             table.querySelector(":scope > tbody > tr > td.state > div").innerHTML = current.state;
 
             a.href = "hospital.html?_id=" + current._id;
-
             document.querySelector("body > main.hospital").appendChild(a);
 
         }
@@ -291,7 +269,6 @@
 
         Api.Local("/resource/zipcode.coordinate.json", function (data) {
             zipcode_coordinate = data;
-            console.log(zipcode_coordinate);
             fire();
         });
 
