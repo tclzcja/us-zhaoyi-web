@@ -59,11 +59,11 @@ body > main:after {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background: linear-gradient(to right, white, transparent 40%, white 60%);
+    background: linear-gradient(to right, white, transparent 40%, white 70%);
 }
 
 body > main:nth-of-type(2n):after {
-    background: linear-gradient(to left, white, transparent 40%, white 60%);
+    background: linear-gradient(to left, white, transparent 40%, white 70%);
 }
 
 body > main > svg {
