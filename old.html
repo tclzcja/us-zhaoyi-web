@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>北美找医网</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+    <link href="img/icon/usa.svg" rel="icon" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="css/lib/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/site.header.css" />
+    <link type="text/css" rel="stylesheet" href="css/component/site.footer.css" />
+    <link type="text/css" rel="stylesheet" href="css/page/old.css" />
+    <link rel="import" href="component/site.header.html" data-template="site-header">
+    <link rel="import" href="component/site.footer.html" data-template="site-footer">
+</head>
+
+<body>
+    <site-header></site-header>
+    <nav>
+        <section>
+            <input type="text" placeholder="在这里输入您想搜索的医生和医院信息，例如姓名、科目、邮编……" />
+            <footer>
+                <svg>
+                    <use xlink:href="img/icon/search.svg#search"></use>
+                </svg>
+            </footer>
+        </section>
+    </nav>
+    <main class="search">
+        <svg>
+            <use xlink:href="img/icon/search.svg#search"></use>
+        </svg>
+        <main>
+            <header>强大的搜索功能</header>
+            <footer>
+                <p>您可以输入各种信息来查找最适合您的医生或医院。例如医生的名字、距离的远近、评分高低或者是否提供您想要的医学服务。</p>
+                <p>我们会持续更新数据库，从而确保您的搜索结果永远基于最及时、最有效的医疗市场信息。</p>
+            </footer>
+        </main>
+    </main>
+    <main class="database">
+        <svg>
+            <use xlink:href="img/icon/user.svg#user"></use>
+        </svg>
+        <main>
+            <header>完备的数据库</header>
+            <footer>
+                <p>我们的数据库覆盖了美国医疗市场上超过90%的医生、医院、服务项目、医疗保险和医疗服务。</p>
+                <p>目前我们的数据库里有 1,093 位医生, 725 家医院, 553 种服务项目和 544 种保险。</p>
+            </footer>
+        </main>
+    </main>
+    <main class="language">
+        <svg>
+            <use xlink:href="img/icon/language.svg#language"></use>
+        </svg>
+        <main>
+            <header>多语种支持</header>
+            <footer>
+                <p>我们提供英语、简体中文和繁体中文的支持，方便您更好地寻找和联络医生。</p>
+            </footer>
+        </main>
+    </main>
+    <site-footer></site-footer>
+    <!-- -->
+    <script type="text/javascript" src="js/extend/math.js"></script>
+    <script type="text/javascript" src="js/extend/nodeList.js"></script>
+    <script type="text/javascript" src="js/lib/param.js"></script>
+    <script type="text/javascript" src="js/lib/auth.js"></script>
+    <script type="text/javascript" src="js/lib/api.js"></script>
+    <script type="text/javascript" src="js/lib/const.js"></script>
+    <script type="text/javascript" src="js/component/site.header.js"></script>
+    <script type="text/javascript" src="js/component/site.footer.js"></script>
+    <script type="text/javascript" src="js/page/old.js"></script>
+</body>
+
+</html>

@@ -4,8 +4,8 @@
 
     'use strict';
 
-    document.querySelector("body > nav > section > footer").addEventListener("click", function () {
-        window.location.href = "search.html?k=" + document.querySelector("body > nav > section > input").value;
+    document.querySelector("body > main > main > div").addEventListener("click", function () {
+        window.location.href = "search.html?k=" + document.querySelector("body > main > main > input").value;
     });
 
 }());
