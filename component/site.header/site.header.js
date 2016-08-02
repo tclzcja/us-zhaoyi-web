@@ -21,8 +21,9 @@
         self.innerHTML = document.querySelector("link[data-tag='" + tag + "']").import.querySelector("template").innerHTML;
 
         window.addEventListener("hashchange", function () {
-            if (location.hash === "") {
-                location.hash = "#index";
+            if (self.querySelector("a[href='" + location.hash + "']")) {
+                self.querySelectorAll("a").removeClass("on");
+                self.querySelector("a[href='" + location.hash + "']").classList.add("on");
             }
         });
 
