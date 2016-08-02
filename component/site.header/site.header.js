@@ -20,6 +20,12 @@
 
         self.innerHTML = document.querySelector("link[data-tag='" + tag + "']").import.querySelector("template").innerHTML;
 
+        window.addEventListener("hashchange", function () {
+            if (location.hash === "") {
+                location.hash = "#index";
+            }
+        });
+
     }
 
     init();

@@ -1,11 +1,27 @@
-/* jshint browser: true, esnext: true */
+/* jshint browser: true, esversion: 6, devel: true */
 
 (function () {
 
     'use strict';
 
-    document.querySelector("body > main > main > div").addEventListener("click", function () {
-        window.location.href = "search.html?k=" + document.querySelector("body > main > main > input").value;
-    });
+    var tag = "page-index";
+
+    function init() {
+        var proto = Object.create(HTMLElement.prototype);
+        proto.createdCallback = function () {
+            active(this);
+        };
+        document.registerElement(tag, {
+            prototype: proto
+        });
+    }
+
+    function active(self) {
+
+        self.innerHTML = document.querySelector("link[data-tag='" + tag + "']").import.querySelector("template").innerHTML;
+
+    }
+
+    init();
 
 }());

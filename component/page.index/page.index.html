@@ -1,56 +1,19 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>北美找医网</title>
-    <meta charset="UTF-8" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
-    <link href="img/icon/usa.svg" rel="icon" type="image/x-icon" />
-    <link type="text/css" rel="stylesheet" href="css/page.css" />
-    <link type="text/css" rel="stylesheet" href="css/component.site.header.css" />
-    <link type="text/css" rel="stylesheet" href="css/component.site.footer.css" />
-    <link type="text/css" rel="stylesheet" href="css/page.index.css" />
-    <link rel="import" href="component/site.header.html" data-template="site-header" />
-    <link rel="import" href="component/site.footer.html" data-template="site-footer" />
-</head>
-
-<body>
-    <site-header></site-header>
-    <page-search id="search" data-keyword="hereweare"></page-search>
-    <page-index id="index"></page-index>
-    <page-register id="register"></page-register>
-    <page-login id="login"></page-login>
-    <page-profile id="profile"></page-profile>
-    <site-footer></site-footer>
-    <nav>
-    </nav>
+<template>
+    <header>
+        <div>医院</div>
+        <div>医生</div>
+        <div>科室</div>
+        <div>症状</div>
+        <div>保险</div>
+    </header>
     <main>
-        <header>
-            <div>医院</div>
-            <div>医生</div>
-            <div>科室</div>
-            <div>症状</div>
-            <div>保险</div>
-        </header>
-        <main>
-            <input type="text" placeholder="关键词 / 邮编" />
-            <div>搜索</div>
-        </main>
-        <footer>
-            <header>关键词：儿科, 胃痛, etc</header>
-            <footer>高级搜索</footer>
-        </footer>
+        <input type="text" placeholder="关键词 / 邮编" />
+        <div>搜索</div>
     </main>
-    <!-- -->
-    <script type="text/javascript" src="js/extend/math.js"></script>
-    <script type="text/javascript" src="js/extend/nodeList.js"></script>
-    <script type="text/javascript" src="js/lib/param.js"></script>
-    <script type="text/javascript" src="js/lib/auth.js"></script>
-    <script type="text/javascript" src="js/lib/api.js"></script>
-    <script type="text/javascript" src="js/lib/const.js"></script>
-    <script type="text/javascript" src="js/component/site.header.js"></script>
-    <script type="text/javascript" src="js/component/site.footer.js"></script>
-    <script type="text/javascript" src="js/page/index.js"></script>
-</body>
-
-</html>
+    <footer>
+        <header>关键词：儿科, 胃痛, etc</header>
+        <footer>高级搜索</footer>
+    </footer>
+</template>
+<link type="text/css" rel="stylesheet" href="page.index.css" />
+<script type="text/javascript" src="page.index.js"></script>

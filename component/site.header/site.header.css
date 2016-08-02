@@ -1,111 +1,28 @@
 site-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
-    height: 8vmin;
-    width: 100%;
-    z-index: 10000;
-    color: white;
-    background-color: white;
-    font-size: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-site-header > header {
-    position: relative;
-    width: 30%;
-}
-
-site-header > header > a > nav {
-    position: absolute;
-    height: 6vmin;
-    width: 6vmin;
-    border-radius: 50%;
-    background-color: #69F;
-    top: 1vmin;
-    left: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-site-header > header > a > nav > svg {
-    height: 110%;
-    width: 110%;
-    fill: white;
-}
-
-site-header > header > a > header {
-    left: 6vmin;
-    margin-left: 1.75vw;
-    position: absolute;
-    color: #69F;
-    top: 1.5vmin;
-    line-height: 100%;
-    font-size: 150%;
-}
-
-site-header > header > a > footer {
-    left: 6vmin;
-    margin-left: 1.75vw;
-    position: absolute;
-    color: #999;
-    bottom: 1.5vmin;
-    font-size: 75%;
-    padding-left: 1px;
-    white-space: nowrap;
-}
-
-site-header > footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    align-content: stretch;
     flex-wrap: nowrap;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 8vh;
+    z-index: 5;
 }
 
-site-header > footer > a {
-    margin-right: 1.5vw;
-    color: #69F;
-    font-size: 75%;
-    word-break: keep-all;
-    width: auto;
-}
-
-site-header > footer > nav {
-    height: 6vmin;
-    width: 6vmin;
-    margin-right: 1vw;
-    font-size: 75%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+site-header > a {
+    width: 20%;
+    flex-grow: 1;
     color: white;
-    fill: white;
-    border-radius: 50%;
+    background-color: #9CF;
 }
 
-site-header > footer > nav > a > svg {
-    height: 50%;
-    width: 50%;
-    fill: white;
+site-header > a.on {
+    background-color: #36C;
 }
 
-site-header > footer > nav.login {
-    background-color: #FC3;
-}
-
-site-header > footer > nav.profile {
-    background-color: var(--color-subject);
-    display: none;
-}
-
-site-header > footer.on > nav.login {
-    display: none;
-}
-
-site-header > footer.on > nav.profile {
-    display: flex;
+site-header > a:hover {
+    background-color: #36C;
 }
