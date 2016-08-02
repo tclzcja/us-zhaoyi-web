@@ -6,21 +6,23 @@
     <meta charset="UTF-8" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
     <link href="img/icon/usa.svg" rel="icon" type="image/x-icon" />
-    <link type="text/css" rel="stylesheet" href="css/lib/style.css" />
-    <link type="text/css" rel="stylesheet" href="css/component/site.header.css" />
-    <link type="text/css" rel="stylesheet" href="css/component/site.footer.css" />
-    <link type="text/css" rel="stylesheet" href="css/page/index.css" />
+    <link type="text/css" rel="stylesheet" href="css/page.css" />
+    <link type="text/css" rel="stylesheet" href="css/component.site.header.css" />
+    <link type="text/css" rel="stylesheet" href="css/component.site.footer.css" />
+    <link type="text/css" rel="stylesheet" href="css/page.index.css" />
     <link rel="import" href="component/site.header.html" data-template="site-header" />
     <link rel="import" href="component/site.footer.html" data-template="site-footer" />
 </head>
 
 <body>
+    <site-header></site-header>
+    <page-search id="search" data-keyword="hereweare"></page-search>
+    <page-index id="index"></page-index>
+    <page-register id="register"></page-register>
+    <page-login id="login"></page-login>
+    <page-profile id="profile"></page-profile>
+    <site-footer></site-footer>
     <nav>
-        <div class="on">找医生</div>
-        <div>体验价格比对</div>
-        <div>健康医疗资讯</div>
-        <div>关于我们</div>
-        <div>联系方式</div>
     </nav>
     <main>
         <header>
