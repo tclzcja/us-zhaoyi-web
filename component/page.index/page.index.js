@@ -4,27 +4,21 @@
 
     'use strict';
 
-    var key = "site-header";
-
-    var Auth = window.Auth;
+    var tag = "page-index";
 
     function init() {
         var proto = Object.create(HTMLElement.prototype);
         proto.createdCallback = function () {
             active(this);
         };
-        document.registerElement(key, {
+        document.registerElement(tag, {
             prototype: proto
         });
     }
 
     function active(self) {
 
-        self.innerHTML = document.querySelector("link[data-template='" + key + "']").import.querySelector("template").innerHTML;
-
-        if (Auth.Test()) {
-            self.querySelector(":scope > footer").classList.add("on");
-        }
+        self.innerHTML = document.querySelector("link[data-tag='" + tag + "']").import.querySelector("template").innerHTML;
 
     }
 
