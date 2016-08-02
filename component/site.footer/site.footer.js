@@ -4,23 +4,21 @@
 
     'use strict';
 
-    var key = "site-footer";
-
-    var Auth = window.Auth;
+    var tag = "site-footer";
 
     function init() {
         var proto = Object.create(HTMLElement.prototype);
         proto.createdCallback = function () {
             active(this);
         };
-        document.registerElement(key, {
+        document.registerElement(tag, {
             prototype: proto
         });
     }
 
     function active(self) {
 
-        self.innerHTML = document.querySelector("link[data-template='" + key + "']").import.querySelector("template").innerHTML;
+        self.innerHTML = document.querySelector("link[data-tag='" + tag + "']").import.querySelector("template").innerHTML;
 
     }
 
