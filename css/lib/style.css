@@ -1,0 +1,135 @@
+:root {
+    --color-doctor: #69F;
+    --color-hospital: #F66;
+    --color-insurance: #F90;
+    --color-subject: #690;
+    --color-service: #360;
+    --color-user: #F69;
+    --color-comment: #96C;
+}
+
+
+/* ============================================================================================================= */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Arial", "Microsoft Yahei";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+    font-weight: 100;
+    font-size: 2vmin;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 999;
+    color: inherit;
+    text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    display: none;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: inherit;
+    font-size: 100%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+select > option {
+    color: black;
+}
+
+textarea {
+    resize: none;
+    margin-top: 1.5vmin;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+template {
+    display: none !important;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+svg {
+    position: relative;
+}
+
+svg > use {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Page */
+
+body > *[id] {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+body > *[id]:target {
+    z-index: 1;
+    opacity: 1;
+}

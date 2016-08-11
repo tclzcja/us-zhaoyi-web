@@ -1,0 +1,46 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/resource/image/doctor.jpg");
+}
+
+body > nav {
+    position: absolute;
+    left: 10vw;
+    top: 30vh;
+    width: 20vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body > nav > section {
+    height: 6vh;
+    background-color: #9CF;
+    color: white;
+}
+
+body > nav > section:nth-child(2n) {
+    background-color: #DEF;
+    color: #333;
+}
+
+body > nav > section > * {
+    padding-left: 2vh;
+}
+
+body > main {
+    position: absolute;
+    top: 20vh;
+    left: 35vw;
+    right: 10vw;
+    background-color: white;
+}
+
+body > main > table > tbody > tr > td > a {
+    justify-content: flex-start;
+}
+
+body > main > table > tbody > tr > td:nth-child(2) > a > svg {
+    height: 2.5vmin;
+    width: 2.5vmin;
+}

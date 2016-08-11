@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>北美找医网</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/icon/usa.svg" />
+    <link rel="stylesheet" type="text/css" href="css/lib/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/component/site.header.css" />
+    <link rel="stylesheet" type="text/css" href="css/component/site.footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/page/search.css" />
+    <link rel="import" href="template/site.header.html" data-tag="site-header" />
+    <link rel="import" href="template/site.footer.html" data-tag="site-footer" />
+</head>
+
+<body>
+    <site-header data-highlight="index"></site-header>
+    <nav>
+        <section>
+            <input type="text" placeholder="关键字" />
+        </section>
+        <section>
+            <select>
+                <option value="4">至少四星</option>
+                <option value="3">至少三星</option>
+                <option value="2">至少二星</option>
+                <option value="1">至少一星</option>
+                <option value="0">任意星级</option>
+            </select>
+        </section>
+        <section>
+            <select>
+                <option>科室</option>
+            </select>
+        </section>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <td>姓名</td>
+                    <td>星级</td>
+                    <td>科室</td>
+                    <td>距离</td>
+                    <td>电话</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a>Dr. T'Soni Avalan</a>
+                    </td>
+                    <td>
+                        <a>
+                            <svg>
+                                <use xlink:href="/resource/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resource/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resource/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resource/icon/star.svg#star"></use>
+                            </svg>
+                        </a>
+                    </td>
+                    <td>
+                        <a>
+                            <span>心血管</span>
+                            <span>眼科</span>
+                            <span>外科</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a>
+                            <span></span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <site-footer></site-footer>
+    <!-- -->
+    <script type="text/javascript" src="js/extend/math.js"></script>
+    <script type="text/javascript" src="js/extend/nodeList.js"></script>
+    <script type="text/javascript" src="js/component/site.header.js"></script>
+    <script type="text/javascript" src="js/component/site.footer.js"></script>
+    <script type="text/javascript" src="js/page/search.js"></script>
+</body>
+
+</html>
