@@ -20,6 +20,8 @@
 
         self.innerHTML = document.querySelector("link[data-tag='" + tag + "']").import.querySelector("template").innerHTML;
 
+        self.querySelector(":scope > a[href='" + window.location.pathname.replace("/", "") + "']").classList.add("on");
+
     }
 
     init();
