@@ -1,0 +1,20 @@
+body > img {
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    width: 20vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body > header {
+    position: absolute;
+    top: 20vh;
+    left: 35vw;
+}
+
+body > header > * {
+    line-height: 100%;
+    padding: 2vmin;
+    margin-bottom: 1vmin;
+    background-color: #DEF;
+}
