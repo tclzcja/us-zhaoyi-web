@@ -114,22 +114,3 @@ svg > use {
     height: 100%;
     width: 100%;
 }
-
-
-/* Page */
-
-body > *[id] {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-body > *[id]:target {
-    z-index: 1;
-    opacity: 1;
-}

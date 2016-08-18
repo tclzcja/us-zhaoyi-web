@@ -1,20 +1,82 @@
+:root {
+    --td-width: 20px;
+}
+
 body > img {
     position: absolute;
     top: 20vh;
-    left: 10vw;
+    left: 5vw;
     width: 20vw;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-body > header {
-    position: absolute;
+body > nav {
+    position: fixed;
     top: 20vh;
-    left: 35vw;
+    right: 0px;
+    width: 10vw;
 }
 
-body > header > * {
+body > nav > a {
+    height: 6vh;
+    width: 100%;
+    background-color: #DEF;
+}
+
+body > nav > a.on {
+    background-color: #69F;
+    color: white;
+}
+
+body > main {
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    right: 15vw;
+    bottom: 0px;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s;
+}
+
+body > main:target {
+    opacity: 1;
+    z-index: 5;
+}
+
+body > main > * {
     line-height: 100%;
     padding: 2vmin;
     margin-bottom: 1vmin;
     background-color: #DEF;
+    display: inline-block;
+}
+
+body > main > h1 {
+    display: block;
+    font-size: 2vmin;
+    background-color: #36C;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body > main > h6,
+body > main > div {
+    font-size: 1.5vmin;
+}
+
+body > main#schedule > nav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+body > main#schedule > nav > table > tbody > tr > td {
+    height: var(--td-width);
+    width: var(--td-width);
+    min-height: var(--td-width);
+    min-width: var(--td-width);
+    max-height: var(--td-width);
+    max-width: var(--td-width);
+    background-color: var(--color-doctor);
 }
