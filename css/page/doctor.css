@@ -1,0 +1,223 @@
+body > footer {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/resource/image/doctor.jpg");
+    filter: blur(30px);
+    -webkit-filter: blur(30px);
+}
+
+body > img {
+    position: fixed;
+    top: 20vh;
+    left: 5vw;
+    width: 20vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+body > nav {
+    position: fixed;
+    top: 20vh;
+    right: 5vw;
+    width: 10vw;
+    z-index: 2;
+}
+
+body > nav > a {
+    height: 6vh;
+    width: 100%;
+    background-color: #DEF;
+}
+
+body > nav > a.on {
+    background-color: #69F;
+    color: white;
+}
+
+body > main {
+    position: fixed;
+    top: 20vh;
+    left: 30vw;
+    right: 20vw;
+    bottom: 0px;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s;
+}
+
+body > main:target {
+    opacity: 1;
+    z-index: 5;
+}
+
+body > main > * {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: 2vmin;
+    margin-bottom: 1vmin;
+    background-color: #DEF;
+    position: relative;
+    vertical-align: top;
+}
+
+body > main > h1 {
+    display: flex;
+    font-size: 2vmin;
+    background-color: #36C;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+body > main > h6,
+body > main > div {
+    font-size: 1.5vmin;
+}
+
+body > main#schedule > header {
+    display: flex;
+    font-size: 2vmin;
+    background-color: transparent;
+    color: white;
+    padding: 0px;
+}
+
+body > main#schedule > header > div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;
+    background-color: #36C;
+    padding: 2vmin;
+}
+
+body > main#schedule > header > div.on {
+    opacity: 1;
+}
+
+body > main#schedule > header > div:nth-child(6) {
+    background-color: #FC3;
+}
+
+body > main#schedule > header > div:nth-child(7) {
+    background-color: #F66;
+}
+
+body > main#schedule > h1 {
+    margin-bottom: 0px;
+}
+
+body > main#schedule > aside {
+    height: 20vh;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/resource/image/hospital.jpg");
+    z-index: 1;
+}
+
+body > main#schedule > nav {
+    height: 20vh;
+    display: block;
+    padding: 0px;
+}
+
+body > main#schedule > nav > iframe {
+    height: 100%;
+    width: 100%;
+}
+
+body > main#comment > header {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: rgba(0, 92, 255, 0.5);
+    color: white;
+}
+
+body > main#comment > header > header,
+body > main#comment > header > footer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    width: 50%;
+}
+
+body > main#comment > header > header {
+    justify-content: flex-start;
+    fill: white;
+}
+
+body > main#comment > header > header > svg {
+    height: 2vmin;
+    width: 2vmin;
+}
+
+body > main#comment > header > footer {
+    justify-content: flex-end;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body > main#comment > header > footer > span {
+    color: white;
+    font-size: 3vmin;
+}
+
+body > main#comment > div {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: #36C;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body > main#comment > div > main {
+    font-size: 2vmin;
+    line-height: 100%;
+    padding-bottom: 3vmin;
+}
+
+body > main#comment > div > footer {
+    position: absolute;
+    bottom: 2vmin;
+    left: 2vmin;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    line-height: 1.5vmin;
+}
+
+body > main#comment > div > footer > svg {
+    height: 1.5vmin;
+    width: 1.5vmin;
+    fill: white;
+}
+
+body > main#comment > div > nav {
+    position: absolute;
+    bottom: 2vmin;
+    right: 2vmin;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    line-height: 100%;
+}
