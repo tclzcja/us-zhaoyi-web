@@ -14,7 +14,7 @@ body > footer {
 }
 
 body > img {
-    position: absolute;
+    position: fixed;
     top: 20vh;
     left: 5vw;
     width: 20vw;
@@ -42,7 +42,7 @@ body > nav > a.on {
 }
 
 body > main {
-    position: absolute;
+    position: fixed;
     top: 20vh;
     left: 30vw;
     right: 20vw;
@@ -58,18 +58,16 @@ body > main:target {
 }
 
 body > main > * {
-    line-height: 100%;
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
     flex-wrap: nowrap;
-    height: 6vmin;
-    padding-left: 2vmin;
-    padding-right: 2vmin;
+    padding: 2vmin;
     margin-bottom: 1vmin;
     background-color: #DEF;
     position: relative;
+    vertical-align: top;
 }
 
 body > main > h1 {
@@ -96,12 +94,12 @@ body > main#schedule > header {
 
 body > main#schedule > header > div {
     flex-grow: 1;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0.2;
     background-color: #36C;
+    padding: 2vmin;
 }
 
 body > main#schedule > header > div.on {
@@ -141,17 +139,59 @@ body > main#schedule > nav > iframe {
     width: 100%;
 }
 
+body > main#comment > header {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: rgba(0, 92, 255, 0.5);
+    color: white;
+}
+
+body > main#comment > header > header,
+body > main#comment > header > footer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    width: 50%;
+}
+
+body > main#comment > header > header {
+    justify-content: flex-start;
+    fill: white;
+}
+
+body > main#comment > header > header > svg {
+    height: 2vmin;
+    width: 2vmin;
+}
+
+body > main#comment > header > footer {
+    justify-content: flex-end;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body > main#comment > header > footer > span {
+    color: white;
+    font-size: 3vmin;
+}
+
 body > main#comment > div {
     position: relative;
     height: auto;
     width: 100%;
+    background-color: #36C;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 body > main#comment > div > main {
     font-size: 2vmin;
     line-height: 100%;
-    padding-top: 2vmin;
-    padding-bottom: 5vmin;
+    padding-bottom: 3vmin;
 }
 
 body > main#comment > div > footer {
@@ -162,11 +202,13 @@ body > main#comment > div > footer {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
+    line-height: 1.5vmin;
 }
 
 body > main#comment > div > footer > svg {
-    height: 2vmin;
-    width: 2vmin;
+    height: 1.5vmin;
+    width: 1.5vmin;
+    fill: white;
 }
 
 body > main#comment > div > nav {
