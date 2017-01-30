@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    overflow: hidden;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+    font-size: 2vmin;
+    font-weight: 300;
+    font-family: "Roboto", "Arial", "Microsoft Yahei", "Consolas";
+    color: #333;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    z-index: 999;
+    color: inherit;
+    text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.5;
+    font-size: 100%;
+}
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    z-index: 999;
+    line-height: 150%;
+    padding-right: calc(var(--neo-td-height) / 4);
+    padding-left: var(--neo-td-height);
+    background-color: transparent;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+select > option {
+    color: black;
+}
+
+textarea {
+    resize: none;
+    padding-top: calc(var(--neo-td-height) / 4);
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+    display: none;
+}
+
+input[type='checkbox'] {
+    height: calc(var(--neo-td-height) / 2.75);
+    width: calc(var(--neo-td-height) / 2.75);
+    border: solid 1px #333;
+}
+
+template {
+    display: none !important;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+svg {
+    position: relative;
+}
+
+svg > use {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
