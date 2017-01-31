@@ -1,43 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
-    <title>北美找医网</title>
-    <meta charset="UTF-8" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="img/icon/usa.svg" />
-    <link rel="stylesheet" type="text/css" href="css/lib/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/component/site.header.css" />
-    <link rel="stylesheet" type="text/css" href="css/component/site.footer.css" />
-    <link rel="stylesheet" type="text/css" href="css/page/index.css" />
-    <link rel="import" href="template/site.header.html" data-tag="site-header" />
-    <link rel="import" href="template/site.footer.html" data-tag="site-footer" />
+    <title></title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- <meta name="lzsoft-api-url" content="https://api-uszhaoyi-com.herokuapp.com"> -->
+    <meta name="lzsoft-api-url" content="http://localhost:8080">
+    <!-- External -->
+    <link href="/external/neo/neo.css" rel="stylesheet">
+    <link href="/external/front-end-infrastructure/front-end-infrastructure.html" rel="import">
+    <link href="/external/single-page-application-router/single-page-application-router.html" rel="import">
+    <link href="/external/horizontal-accordion/horizontal-accordion.html" rel="import">
+    <!-- Local -->
+    <link href="/local/site-header/site-header.html" rel="import">
+    <link href="/local/site-footer/site-footer.html" rel="import">
+    <link href="/local/page-index/page-index.html" rel="import">
 </head>
 
 <body>
     <site-header></site-header>
-    <header>
-        <div>医院</div>
-        <div>医生</div>
-        <div>科室</div>
-        <div>症状</div>
-        <div>保险</div>
-    </header>
-    <main>
-        <input type="text" placeholder="关键词 / 邮编" />
-        <a href="search.html">搜索</a>
-    </main>
-    <footer>
-        <header>关键词：儿科, 胃痛, etc</header>
-        <footer>高级搜索</footer>
-    </footer>
+    <single-page-application-router>
+        <single-page-application-route data-pattern="/index.html" data-element="page-index"></single-page-application-route>
+        <single-page-application-route data-pattern="/" data-element="page-index"></single-page-application-route>
+    </single-page-application-router>
     <site-footer></site-footer>
-    <!-- -->
-    <script type="text/javascript" src="js/extend/math.js"></script>
-    <script type="text/javascript" src="js/extend/nodeList.js"></script>
-    <script type="text/javascript" src="js/component/site.header.js"></script>
-    <script type="text/javascript" src="js/component/site.footer.js"></script>
-    <script type="text/javascript" src="js/page/index.js"></script>
 </body>
 
 </html>

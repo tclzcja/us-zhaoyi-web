@@ -1,0 +1,16 @@
+{
+    "name": "uszhaoyi-web",
+    "homepage": "https://github.com/tclzcja/uszhaoyi-web",
+    "authors": ["JingAn Chen <lzsoft.cja@gmail.com>"],
+    "description": "",
+    "main": "",
+    "license": "MIT",
+    "private": true,
+    "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+    "dependencies": {
+        "neo": "*",
+        "front-end-infrastructure": "*",
+        "horizontal-accordion": "*",
+        "single-page-application-router": "*"
+    }
+}

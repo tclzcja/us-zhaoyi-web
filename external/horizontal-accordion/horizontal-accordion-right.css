@@ -1,0 +1,28 @@
+:root {
+    --horizontal-accordion-right-height: 4vmin;
+}
+
+horizontal-accordion-right {
+    position: fixed;
+    right: 0;
+    top: calc(50vh - var(--horizontal-accordion-right-height) / 2);
+    height: var(--horizontal-accordion-right-height);
+    width: var(--horizontal-accordion-right-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    z-index: 9999;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    opacity: 1;
+}
+
+horizontal-accordion-right:active {
+    opacity: 0.5;
+}
+
+horizontal-accordion-right > * {
+    height: calc(var(--horizontal-accordion-right-height) / 2);
+    width: calc(var(--horizontal-accordion-right-height) / 2);
+}
