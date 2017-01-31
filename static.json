@@ -1,5 +1,8 @@
 {
-    "root": "./**",
+    "root": "./",
     "encoding": "UTF-8",
-    "https_only": true
+    "https_only": true,
+    "routes": {
+        "/**": "index.html"
+    }
 }

@@ -1,0 +1,9 @@
+{
+    "name": "horizontal-accordion",
+    "description": "",
+    "authors": ["JingAn Chen"],
+    "license": "MIT",
+    "keywords": ["window", "browser", "Math", "NodeList", "web-components"],
+    "homepage": "https://github.com/lzsoft/horizontal-accordion",
+    "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests", "publish.bat", "readme.md"]
+}

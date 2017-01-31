@@ -9,6 +9,8 @@
     "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
     "dependencies": {
         "neo": "*",
-        "webcomponentsjs": "webcomponents.js#^0.7.23"
+        "front-end-infrastructure": "*",
+        "horizontal-accordion": "*",
+        "single-page-application-router": "*"
     }
 }

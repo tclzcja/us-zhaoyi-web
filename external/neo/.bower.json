@@ -1,11 +1,11 @@
 {
   "name": "neo",
   "homepage": "https://github.com/lzsoft/neo",
-  "_release": "940b93268f",
+  "_release": "481cd06ca2",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "940b93268f72964bd644f4bea592511d95c78099"
+    "commit": "481cd06ca228b03ba3bdcc350a5716c8648cd88e"
   },
   "_source": "https://github.com/lzsoft/neo.git",
   "_target": "*",

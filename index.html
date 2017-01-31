@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- <meta name="lzsoft-api-url" content="https://api-uszhaoyi-com.herokuapp.com"> -->
+    <meta name="lzsoft-api-url" content="http://localhost:8080">
+    <!-- External -->
+    <link href="/external/neo/neo.css" rel="stylesheet">
+    <link href="/external/front-end-infrastructure/front-end-infrastructure.html" rel="import">
+    <link href="/external/single-page-application-router/single-page-application-router.html" rel="import">
+    <link href="/external/horizontal-accordion/horizontal-accordion.html" rel="import">
+    <!-- Local -->
+    <link href="/local/site-header/site-header.html" rel="import">
+    <link href="/local/site-footer/site-footer.html" rel="import">
+    <link href="/local/page-index/page-index.html" rel="import">
+</head>
+
+<body>
+    <site-header></site-header>
+    <single-page-application-router>
+        <single-page-application-route data-pattern="/index.html" data-element="page-index"></single-page-application-route>
+        <single-page-application-route data-pattern="/" data-element="page-index"></single-page-application-route>
+    </single-page-application-router>
+    <site-footer></site-footer>
+</body>
+
+</html>

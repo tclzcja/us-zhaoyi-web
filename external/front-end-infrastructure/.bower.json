@@ -1,0 +1,35 @@
+{
+  "name": "front-end-infrastructure",
+  "description": "This is a custom element that extends existing window object. Providing convenient functions to window.Math, window.NodeList and so on.",
+  "authors": [
+    "JingAn Chen"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "window",
+    "browser",
+    "Math",
+    "NodeList",
+    "web-components"
+  ],
+  "homepage": "https://github.com/lzsoft/front-end-infrastructure",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "publish.bat",
+    "readme.md"
+  ],
+  "version": "1.0.1",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "fdb121d5466ff061f964b6d54a1c64a22a6fe5b1"
+  },
+  "_source": "https://github.com/lzsoft/front-end-infrastructure.git",
+  "_target": "*",
+  "_originalSource": "front-end-infrastructure"
+}
