@@ -31,6 +31,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url('image/transparent.png');
+    transition: background-image 1s;
     overflow: hidden;
 }
 
@@ -71,7 +73,6 @@ textarea {
     z-index: 999;
     line-height: 150%;
     padding-right: calc(var(--neo-td-height) / 4);
-    padding-left: var(--neo-td-height);
     background-color: transparent;
 }
 
