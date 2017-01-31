@@ -1,4 +1,36 @@
-:root {
-    --neo-td-height: 6vmin;
-    --neo-td-width: 10vmin;
+body.bg {
+    background-image: url('/resource/image/bg-1920-1080.jpeg');
+}
+
+page-index {
+    --neo-td-height: 8vh;
+    --neo-td-width: 61.8vw;
+}
+
+page-index > main {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:first-child > td,
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:last-child > td {
+    --neo-td-height: 20vh;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:first-child > td > main,
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:last-child > td > main {
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:last-child > td > main {
+    opacity: 0.5;
+    font-size: 100%;
+}
+
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr > td input.search {
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
 }

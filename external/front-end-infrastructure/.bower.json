@@ -22,12 +22,11 @@
     "publish.bat",
     "readme.md"
   ],
-  "version": "1.0.1",
-  "_release": "1.0.1",
+  "_release": "b4bba9f785",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.0.1",
-    "commit": "fdb121d5466ff061f964b6d54a1c64a22a6fe5b1"
+    "type": "branch",
+    "branch": "master",
+    "commit": "b4bba9f785ead9d229ac53fec74c099dfc578d52"
   },
   "_source": "https://github.com/lzsoft/front-end-infrastructure.git",
   "_target": "*",
