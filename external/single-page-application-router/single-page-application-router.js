@@ -1,6 +1,13 @@
+window.customElements.define('single-page-application-route', class extends HTMLElement {
+    constructor() {
+        super();
+    }
+});
 window.customElements.define('single-page-application-router', class extends HTMLElement {
     constructor() {
         super();
+    }
+    connectedCallback() {
         const map = {};
         // Suppress <a> element
         let observer = new MutationObserver(function(mutations) {
@@ -38,13 +45,8 @@ window.customElements.define('single-page-application-router', class extends HTM
                 console.log("Element not defined");
             }
         });
-        window.addEventListener("load", (e) => {
+        window.addEventListener("load", function() {
             window.dispatchEvent(new Event("popstate"));
         });
-    }
-});
-window.customElements.define('single-page-application-route', class extends HTMLElement {
-    constructor() {
-        super();
     }
 });
