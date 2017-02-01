@@ -20,7 +20,7 @@ page-index > main.hospital {
 }
 
 page-index > main.service {
-    --neo-td-theme-color: #36C;
+    --neo-td-theme-color: #690;
 }
 
 page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr > td > main > input {
