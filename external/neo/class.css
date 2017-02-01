@@ -10,10 +10,12 @@
 }
 
 table[data-neo-panel] {
+    position: relative;
     height: auto;
     width: auto;
     border-collapse: separate;
     border-spacing: var(--neo-td-spacing);
+    z-index: 9999;
 }
 
 table[data-neo-panel] > tbody > tr > td {
@@ -40,30 +42,28 @@ table[data-neo-panel] > tbody > tr > td:active {
     transform: translateY(2px);
 }
 
-table[data-neo-panel] > tbody > tr > td[colspan='2'] {
-    width: calc(var(--neo-td-width) * 2 + var(--neo-td-spacing));
-    min-width: calc(var(--neo-td-width) * 2 + var(--neo-td-spacing));
-    max-width: calc(var(--neo-td-width) * 2 + var(--neo-td-spacing));
+table[data-neo-panel] > tbody > tr > td[colspan] {
+    width: auto;
+    min-width: auto;
+    max-width: none;
 }
 
-table[data-neo-panel] > tbody > tr > td > * {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+table[data-neo-panel] > tbody > tr > td > *:first-child:last-child {
+    height: 100%;
+    width: 100%;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
 }
 
-table[data-neo-panel] > tbody > tr > td > * > * {
+table[data-neo-panel] > tbody > tr > td > *:first-child:last-child > * {
     flex-grow: 1;
     width: 1;
 }
 
-table[data-neo-panel] > tbody > tr > td > * > *:first-child:not(:last-child) {
+table[data-neo-panel] > tbody > tr > td > *:first-child:last-child > *:first-child:not(:last-child) {
     height: var(--neo-td-height);
     width: var(--neo-td-height);
     min-width: var(--neo-td-height);
@@ -75,7 +75,7 @@ table[data-neo-panel] > tbody > tr > td > * > *:first-child:not(:last-child) {
     flex-grow: 0;
 }
 
-table[data-neo-panel] > tbody > tr > td > * > *:first-child:not(:last-child) > svg {
+table[data-neo-panel] > tbody > tr > td > *:first-child:last-child > *:first-child:not(:last-child) > svg {
     height: calc(var(--neo-td-height) * 0.4);
     width: calc(var(--neo-td-height) * 0.4);
     fill: var(--neo-td-theme-color);
@@ -91,13 +91,13 @@ table[data-neo-panel] > tbody > tr > td[data-neo-list] {
     border-radius: 0;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child {
     display: block;
     overflow: scroll;
     vertical-align: top;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child > * {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
@@ -114,11 +114,11 @@ table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * {
     cursor: pointer;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > *:nth-of-type(2n) {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child > *:nth-of-type(2n) {
     background-color: #EEE;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * > * {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child > * > * {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -129,11 +129,11 @@ table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * > * {
     min-width: 10%;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * > *:empty {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child > * > *:empty {
     display: none;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * > *:first-child {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child > * > *:first-child {
     width: var(--neo-td-height);
     justify-content: center;
     padding: 0;
@@ -146,12 +146,12 @@ table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * > *:first-child {
     fill: red;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * > *:first-child > svg {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child > * > *:first-child > svg {
     height: 8px;
     width: 8px;
 }
 
-table[data-neo-panel] > tbody > tr > td[data-neo-list] > * > * > *:first-child:hover {
+table[data-neo-panel] > tbody > tr > td[data-neo-list] > *:first-child:last-child > * > *:first-child:hover {
     background-color: red;
     fill: white;
 }

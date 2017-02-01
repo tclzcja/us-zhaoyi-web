@@ -1,24 +1,36 @@
 <template>
-    <main data-neo-base>
+    <main data-neo-base class="doctor">
         <table data-neo-panel>
             <tbody>
                 <tr>
                     <td>
-                        <main>找到您需要的美国医生、医院和医疗服务</main>
+                        <main>
+                            <input placeholder="输入您想查找的信息" type="text" autofocus />
+                        </main>
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <input class="search" type="text" autofocus />
+                        <main>
+                            <select>
+                                <option value="doctor">找医生</option>
+                                <option value="hospital">找医院</option>
+                                <option value="service">找医疗服务</option>
+                            </select>
+                        </main>
                     </td>
-                </tr>
-                <tr>
-                    <td>
-                        <main>我们在美国的数据库拥有超过300,000的医生和医院资料</main>
+                    <td class="search">
+                        <main>
+                            <header>
+                                <svg>
+                                    <use xlink:href="/resource/icon/search.svg#search"></use>
+                                </svg>
+                            </header>
+                            <span></span>
+                        </main>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <div></div>
     </main>
 </template>
 <script type="text/javascript" src="page-index.js"></script>

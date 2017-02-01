@@ -8,6 +8,6 @@ site-footer {
     align-items: center;
     flex-wrap: nowrap;
     font-size: 1.5vmin;
-    padding: 2vmin;
-    color: #333;
+    padding: var(--edge-spacing);
+    opacity: 0.5;
 }

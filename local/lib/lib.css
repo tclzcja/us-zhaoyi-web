@@ -1,0 +1,10 @@
+:root {
+    --color-doctor: #69F;
+    --color-hospital: #C33;
+    --color-insurance: #F90;
+    --color-subject: #690;
+    --color-service: #360;
+    --color-user: #F69;
+    --color-comment: #96C;
+    --edge-spacing: 3vmin;
+}

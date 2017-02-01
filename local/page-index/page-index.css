@@ -1,36 +1,62 @@
-body.bg {
+body {
     background-image: url('/resource/image/bg-1920-1080.jpeg');
 }
 
 page-index {
     --neo-td-height: 8vh;
-    --neo-td-width: 61.8vw;
+    --neo-td-width: auto;
 }
 
 page-index > main {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:first-child > td,
-page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:last-child > td {
-    --neo-td-height: 20vh;
-    box-shadow: none;
-    background-color: transparent;
+page-index > main.doctor {
+    --neo-td-theme-color: #36C;
 }
 
-page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:first-child > td > main,
-page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:last-child > td > main {
-    justify-content: center;
-    align-items: center;
-    font-size: 200%;
+page-index > main.hospital {
+    --neo-td-theme-color: #903;
 }
 
-page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr:last-child > td > main {
-    opacity: 0.5;
-    font-size: 100%;
+page-index > main.service {
+    --neo-td-theme-color: #36C;
 }
 
-page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr > td input.search {
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr > td > main > input {
+    padding-left: calc(var(--neo-td-height) / 4);
+    padding-right: calc(var(--neo-td-height) / 4);
+    width: 30vw;
+}
+
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr > td > main > select {
+    padding-left: calc(var(--neo-td-height) / 4);
+    padding-right: calc(var(--neo-td-height) / 4);
+    border-top: solid 4px transparent;
+    border-bottom: solid 4px var(--neo-td-theme-color);
+    direction: rtl;
+    color: var(--neo-td-theme-color);
+    transition: color 0.2s, border-color 0.2s;
+}
+
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr > td.search {
+    width: var(--neo-td-height);
+    background-color: var(--neo-td-theme-color);
+    transition: background-color 0.2s;
+}
+
+page-index > main[data-neo-base] > table[data-neo-panel] > tbody > tr > td.search > main > header > svg {
+    --neo-td-theme-color: white;
+}
+
+page-index > main > div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 14vh;
+    margin-top: -7vh;
+    background-color: var(--neo-td-theme-color);
+    opacity: 0.1;
+    transition: background-color 0.2s;
 }

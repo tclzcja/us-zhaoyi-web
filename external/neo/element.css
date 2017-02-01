@@ -4,6 +4,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
+    line-height: 100%;
 }
 
 body,
@@ -82,6 +83,7 @@ select {
 }
 
 select > option {
+    background-color: white;
     color: black;
 }
 
@@ -111,6 +113,7 @@ table {
     height: 100%;
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 svg {

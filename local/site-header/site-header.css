@@ -6,22 +6,41 @@ site-header {
     z-index: 10000;
     display: flex;
     overflow: hidden;
-    color: #333;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-site-header > header > a {
+site-header > header {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: var(--edge-spacing);
+    padding-right: 0;
+    position: relative;
     font-size: 4vmin;
-    line-height: 100%;
-    padding: 2vmin;
 }
 
-site-header > header > a > span {
-    opacity: 0.5;
+site-header > header > a {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+site-header > header > a > footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 site-header > footer {
-    padding: 2vmin;
+    padding: var(--edge-spacing);
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+
+site-header > footer > a {
+    justify-content: flex-end;
+    width: auto;
+    margin-left: var(--edge-spacing);
 }
