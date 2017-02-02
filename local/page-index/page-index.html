@@ -1,14 +1,14 @@
 <template>
-    <main data-neo-base class="doctor">
-        <table data-neo-panel>
+    <main data-neo class="doctor">
+        <table data-neo-table>
             <tbody>
                 <tr>
-                    <td>
+                    <td data-neo-field>
                         <main>
                             <input placeholder="输入您想查找的信息" type="text" autofocus />
                         </main>
                     </td>
-                    <td>
+                    <td data-neo-field>
                         <main>
                             <select>
                                 <option value="doctor">找医生</option>
@@ -24,7 +24,6 @@
                                     <use xlink:href="/resource/icon/search.svg#search"></use>
                                 </svg>
                             </header>
-                            <span></span>
                         </main>
                     </td>
                 </tr>
