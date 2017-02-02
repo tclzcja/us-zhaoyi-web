@@ -23,6 +23,11 @@ page-index > main.service {
     --neo-td-theme-color: #690;
 }
 
+page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > span {
+    flex-grow: 0;
+    --neo-td-height: 0px;
+}
+
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > input {
     padding-left: calc(var(--neo-td-height) / 4);
     padding-right: calc(var(--neo-td-height) / 4);
@@ -40,13 +45,15 @@ page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > s
 }
 
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search {
-    width: var(--neo-td-height);
+    --neo-td-width: var(--neo-td-height);
     background-color: var(--neo-td-theme-color);
     transition: background-color 0.2s;
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search > main > header > svg {
-    --neo-td-theme-color: white;
+page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search > svg {
+    fill: white;
+    height: calc(var(--neo-td-height) / 2);
+    width: calc(var(--neo-td-height) / 2);
 }
 
 page-index > main > div {
