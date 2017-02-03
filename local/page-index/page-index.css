@@ -23,6 +23,12 @@ page-index > main.service {
     --neo-td-theme-color: #690;
 }
 
+page-index > main[data-neo] > table[data-neo-table] {
+    background-color: rgba(0, 0, 0, 0.05);
+    outline: solid 40px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20vh;
+}
+
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > span {
     flex-grow: 0;
     --neo-td-height: 0px;
@@ -31,7 +37,7 @@ page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > s
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > input {
     padding-left: calc(var(--neo-td-height) / 4);
     padding-right: calc(var(--neo-td-height) / 4);
-    width: 30vw;
+    width: 40vw;
 }
 
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > select {
@@ -56,14 +62,57 @@ page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search > s
     width: calc(var(--neo-td-height) / 2);
 }
 
-page-index > main > div {
+page-index > main > footer {
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 0;
     right: 0;
-    height: 14vh;
-    margin-top: -7vh;
-    background-color: var(--neo-td-theme-color);
-    opacity: 0.1;
-    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+page-index > main > footer > section {
+    width: 15vw;
+    text-align: center;
+    opacity: 0.25;
+    cursor: pointer;
+    transition: color 0.5s, opacity 0.5s, text-shadow 0.5s;
+}
+
+page-index > main > footer > section:hover {
+    opacity: 1;
+    color: var(--neo-td-theme-color);
+}
+
+page-index > main > footer > section.doctor {
+    --neo-td-theme-color: #36C;
+}
+
+page-index > main > footer > section.hospital {
+    --neo-td-theme-color: #903;
+}
+
+page-index > main > footer > section.service {
+    --neo-td-theme-color: #690;
+}
+
+page-index > main.doctor > footer > section.doctor,
+page-index > main.hospital > footer > section.hospital,
+page-index > main.service > footer > section.service {
+    opacity: 1;
+    color: var(--neo-td-theme-color);
+    text-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+}
+
+page-index > main > footer > section > header {
+    font-size: 200%;
+}
+
+page-index > main > footer > section > div {
+    margin-top: 20px;
+    font-size: 75%;
+    color: #666;
 }
