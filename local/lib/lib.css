@@ -1,10 +1,22 @@
 :root {
-    --color-doctor: #69F;
-    --color-hospital: #C33;
+    --color-doctor: #36C;
+    --color-hospital: #903;
     --color-insurance: #F90;
-    --color-subject: #690;
-    --color-service: #360;
+    --color-subject: #360;
+    --color-service: #690;
     --color-user: #F69;
     --color-comment: #96C;
     --edge-spacing: 3vmin;
+}
+
+body[data-type='doctor'] {
+    --neo-td-theme-color: var(--color-doctor);
+}
+
+body[data-type='hospital'] {
+    --neo-td-theme-color: var(--color-hospital);
+}
+
+body[data-type='service'] {
+    --neo-td-theme-color: var(--color-service);
 }

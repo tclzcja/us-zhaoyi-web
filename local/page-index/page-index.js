@@ -7,12 +7,10 @@ window.customElements.define('page-index', class extends HTMLElement {
     eventize() {
         let self = this;
         self.querySelector("select").addEventListener("change", function() {
-            self.querySelector(":scope > main").classList.remove("doctor", "hospital", "service");
-            self.querySelector(":scope > main").classList.add(this.value);
+            document.body.setAttribute("data-type", this.value);
         });
         self.querySelectorAll("section").addEventListener("click", function() {
-            self.querySelector(":scope > main").classList.remove("doctor", "hospital", "service");
-            self.querySelector(":scope > main").classList.add(this.getAttribute("class"));
+            document.body.setAttribute("data-type", this.getAttribute("class"));
         });
     }
 });
