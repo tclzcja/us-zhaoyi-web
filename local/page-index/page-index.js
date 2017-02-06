@@ -7,10 +7,14 @@ window.customElements.define('page-index', class extends HTMLElement {
     eventize() {
         let self = this;
         self.querySelector("select").addEventListener("change", function() {
-            document.body.setAttribute("data-type", this.value);
+            self.switchTo(self, this.value);
         });
         self.querySelectorAll("section").addEventListener("click", function() {
-            document.body.setAttribute("data-type", this.getAttribute("class"));
+            self.switchTo(self, this.getAttribute("class"));
         });
+    }
+    switchTo(self, type) {
+        document.body.setAttribute("data-type", type);
+        self.querySelector("select").value = type;
     }
 });

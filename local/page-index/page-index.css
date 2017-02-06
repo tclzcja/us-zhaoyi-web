@@ -68,11 +68,24 @@ page-index > main > footer > section {
     opacity: 0.25;
     cursor: pointer;
     transition: color 0.5s, opacity 0.5s, text-shadow 0.5s;
+    color: #333;
 }
 
 page-index > main > footer > section:hover {
     opacity: 1;
     color: var(--neo-td-theme-color);
+}
+
+page-index > main > footer > section.doctor {
+    --neo-td-theme-color: var(--color-doctor);
+}
+
+page-index > main > footer > section.hospital {
+    --neo-td-theme-color: var(--color-hospital);
+}
+
+page-index > main > footer > section.service {
+    --neo-td-theme-color: var(--color-service);
 }
 
 body[data-type='doctor'] page-index > main > footer > section.doctor,

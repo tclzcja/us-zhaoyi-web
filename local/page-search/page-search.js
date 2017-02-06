@@ -9,11 +9,6 @@ window.customElements.define('page-search', class extends HTMLElement {
         let self = this;
         let t = window.location.GetParam("t");
         let k = window.location.GetParam("k");
-        if (t && k) {} else {
-            setTimeout(function() {
-                self.querySelector(":scope > single-page-application-data > header").classList.add("on");
-            }, 500);
-        }
     }
     eventize() {
         let self = this;
