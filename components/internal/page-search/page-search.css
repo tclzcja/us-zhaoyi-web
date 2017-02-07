@@ -69,12 +69,13 @@ page-search > single-page-application-data > table > tbody > tr > td > a > main 
 
 page-search > single-page-application-data > table > tbody > tr > td > a > main > * {
     margin-top: var(--neo-td-spacing);
+    text-align: center;
 }
 
 page-search > single-page-application-data > table > tbody > tr > td > a > main > header {
     height: 15px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
 }
 
