@@ -1,9 +1,14 @@
 <template>
     <single-page-application-data data-neo data-type="doctor">
-        <nav>
+        <header>
             <div>"Otolaryngology"</div>
             <div>less than 200 miles</div>
             <div>use my insurance</div>
+        </header>
+        <nav>
+            <svg>
+                <use xlink:href="/resource/icon/prev.svg#prev"></use>
+            </svg>
         </nav>
         <table data-neo-table>
             <tbody>
@@ -130,6 +135,11 @@
                 </tr>
             </tbody>
         </table>
+        <nav>
+            <svg>
+                <use xlink:href="/resource/icon/next.svg#next"></use>
+            </svg>
+        </nav>
     </single-page-application-data>
 </template>
 <script type="text/javascript" src="page-search.js"></script>
