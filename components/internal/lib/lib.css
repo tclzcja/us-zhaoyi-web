@@ -9,6 +9,10 @@
     --edge-spacing: 3vmin;
 }
 
+body {
+    background-image: url('/resource/image/bg-1920-1080.jpeg');
+}
+
 body[data-type='doctor'] {
     --neo-td-theme-color: var(--color-doctor);
 }
