@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('/resource/image/bg-1920-1080.jpeg');
+    background-image: url('/resources/image/bg-1920-1080.jpeg');
 }
 
 body[data-type='doctor'] {

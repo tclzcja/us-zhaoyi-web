@@ -29,7 +29,7 @@ page-search > single-page-application-data > header > div:hover {
 }
 
 page-search > single-page-application-data > nav {
-    height: 20vh;
+    height: 10vh;
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.1);
     display: flex;
@@ -39,7 +39,8 @@ page-search > single-page-application-data > nav {
 }
 
 page-search > single-page-application-data > nav > svg {
-    height: 8vh;
+    height: 5vh;
+    width: 5vh;
     fill: white;
 }
 
