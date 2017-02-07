@@ -10,7 +10,7 @@
 }
 
 [data-neo-shadow] {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 table[data-neo-table] {
@@ -32,7 +32,7 @@ table[data-neo-table] td {
     max-width: var(--neo-td-width);
     background-color: white;
     transition: transform 0.1s;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 table[data-neo-table] td:empty {
