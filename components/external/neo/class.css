@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+[data-neo-shadow] {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
 table[data-neo-table] {
     position: relative;
     height: auto;
@@ -47,7 +51,7 @@ table[data-neo-table] td[colspan] {
     max-width: none;
 }
 
-table[data-neo-table] td > *:not(:first-child:last-child):before {
+table[data-neo-table] td[data-neo-field] > *:not(:first-child:last-child):before {
     content: "Table-cell can only contain one child-container element";
     color: red;
     background-color: white;

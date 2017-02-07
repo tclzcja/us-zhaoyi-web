@@ -105,6 +105,10 @@ input[type='checkbox'] {
     border: solid 1px #333;
 }
 
+input[type='range'] {
+    margin-right: calc(var(--neo-td-height) / 4);
+}
+
 template {
     display: none !important;
 }

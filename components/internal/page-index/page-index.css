@@ -36,6 +36,7 @@ page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > s
     direction: rtl;
     color: var(--neo-td-theme-color);
     transition: color 0.2s, border-color 0.2s;
+    width: 8vw;
 }
 
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search {

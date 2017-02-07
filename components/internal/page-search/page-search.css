@@ -1,0 +1,62 @@
+page-search > single-page-application-data {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+page-search > single-page-application-data > table {
+    --neo-td-height: 28vh;
+    --neo-td-width: 11vw;
+}
+
+page-search > single-page-application-data > table > tbody > tr > td {
+    vertical-align: top;
+}
+
+page-search > single-page-application-data > table > tbody > tr > td > main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+page-search > single-page-application-data > table > tbody > tr > td > main > header {
+    height: var(--neo-td-width);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+page-search > single-page-application-data > table > tbody > tr > td > main > footer {
+    flex-grow: 1;
+    height: 1%;
+    background-color: var(--neo-td-theme-color);
+    color: white;
+    position: relative;
+}
+
+page-search > single-page-application-data > table > tbody > tr > td > main > footer > header {
+    position: absolute;
+    top: var(--neo-td-spacing);
+    left: var(--neo-td-spacing);
+}
+
+page-search > single-page-application-data > table > tbody > tr > td > main > footer > header > svg {
+    height: 10px;
+    width: 10px;
+    fill: #FC3;
+}
+
+page-search > single-page-application-data > table > tbody > tr > td > main > footer > footer {
+    position: absolute;
+    right: var(--neo-td-spacing);
+    bottom: var(--neo-td-spacing);
+}
+
+
+/* Mocking */
+
+page-search > single-page-application-data > table > tbody > tr > td:nth-child(1) > main > header {
+    background-image: url("1.jpg");
+}
