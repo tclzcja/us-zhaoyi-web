@@ -68,7 +68,7 @@ page-index > main > footer > section {
     text-align: center;
     opacity: 0.25;
     cursor: pointer;
-    transition: color 0.5s, opacity 0.5s, text-shadow 0.5s;
+    transition: color 0.5s, opacity 0.5s;
     color: #333;
 }
 
@@ -94,7 +94,6 @@ body[data-type='hospital'] page-index > main > footer > section.hospital,
 body[data-type='service'] page-index > main > footer > section.service {
     opacity: 1;
     color: var(--neo-td-theme-color);
-    text-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
 }
 
 page-index > main > footer > section > header {
