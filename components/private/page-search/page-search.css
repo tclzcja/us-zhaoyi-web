@@ -1,5 +1,12 @@
-page-search > single-page-application-data {
-    background-color: rgba(255, 255, 255, 0.9);
+page-search {
+    --horizontal-accordion-left-height: calc(var(--edge-spacing) * 4);
+    --horizontal-accordion-right-height: calc(var(--edge-spacing) * 4);
+}
+
+page-search > horizontal-accordion-left,
+page-search > horizontal-accordion-right {
+    fill: #999;
+    border-radius: 50%;
 }
 
 page-search > single-page-application-data > header {
@@ -26,22 +33,6 @@ page-search > single-page-application-data > header > div {
 page-search > single-page-application-data > header > div:hover {
     background-color: var(--neo-td-theme-color);
     color: white;
-}
-
-page-search > single-page-application-data > nav {
-    height: 10vh;
-    flex-grow: 1;
-    background-color: rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-page-search > single-page-application-data > nav > svg {
-    height: 5vh;
-    width: 5vh;
-    fill: white;
 }
 
 page-search > single-page-application-data > table {

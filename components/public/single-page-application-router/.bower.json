@@ -21,15 +21,15 @@
     "readme.md"
   ],
   "dependencies": {
-    "front-end-infrastructure": "*"
+    "front-end-infrastructure": "lzsoft/front-end-infrastructure"
   },
-  "_release": "c4ee530f95",
+  "_release": "90e32d5382",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "c4ee530f9512794c7122a2e7e720fa3899de3a9e"
+    "commit": "90e32d538255dfeb86045e3bd40bfea12ace5dc1"
   },
   "_source": "https://github.com/lzsoft/single-page-application-router.git",
   "_target": "*",
-  "_originalSource": "single-page-application-router"
+  "_originalSource": "lzsoft/single-page-application-router"
 }

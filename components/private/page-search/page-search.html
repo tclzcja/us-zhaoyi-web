@@ -1,15 +1,20 @@
 <template>
+    <horizontal-accordion-left>
+        <svg>
+            <use xlink:href="/resources/icon/prev.svg#prev"></use>
+        </svg>
+    </horizontal-accordion-left>
+    <horizontal-accordion-right>
+        <svg>
+            <use xlink:href="/resources/icon/next.svg#next"></use>
+        </svg>
+    </horizontal-accordion-right>
     <single-page-application-data data-neo data-type="doctor">
         <header>
             <div>"Otolaryngology"</div>
             <div>less than 200 miles</div>
             <div>use my insurance</div>
         </header>
-        <nav>
-            <svg>
-                <use xlink:href="/resources/icon/prev.svg#prev"></use>
-            </svg>
-        </nav>
         <table data-neo-table>
             <tbody>
                 <tr>
@@ -135,11 +140,6 @@
                 </tr>
             </tbody>
         </table>
-        <nav>
-            <svg>
-                <use xlink:href="/resources/icon/next.svg#next"></use>
-            </svg>
-        </nav>
     </single-page-application-data>
 </template>
 <script type="text/javascript" src="page-search.js"></script>

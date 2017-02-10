@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
     //
     const EVENT_LEFT = "LEFT";
@@ -14,19 +14,19 @@
         eventize() {
             let self = this;
             maxPage = self.children.length - 1;
-            self.addEventListener(EVENT_LEFT, function () {
+            self.addEventListener(EVENT_LEFT, function() {
                 if (currentPage > 0) {
                     currentPage--;
                     self.style.marginLeft = (0 - currentPage * 100) + "vw";
                 }
             });
-            self.addEventListener(EVENT_RIGHT, function () {
+            self.addEventListener(EVENT_RIGHT, function() {
                 if (currentPage < maxPage) {
                     currentPage++;
                     self.style.marginLeft = (0 - currentPage * 100) + "vw";
                 }
             });
-            window.addEventListener("popstate", function () {
+            window.addEventListener("popstate", function() {
                 currentPage = 0;
                 maxPage = self.children.length - 1;
             });
@@ -36,8 +36,10 @@
     window.customElements.define('horizontal-accordion-left', class extends HTMLElement {
         constructor() {
             super();
-            this.addEventListener("click", function () {
-                document.querySelector("horizontal-accordion").dispatchEvent(new Event(EVENT_LEFT));
+            this.addEventListener("click", function() {
+                if (document.querySelector("horizontal-accordion")) {
+                    document.querySelector("horizontal-accordion").dispatchEvent(new Event(EVENT_LEFT));
+                }
             });
         }
     });
@@ -45,8 +47,10 @@
     window.customElements.define('horizontal-accordion-right', class extends HTMLElement {
         constructor() {
             super();
-            this.addEventListener("click", function () {
-                document.querySelector("horizontal-accordion").dispatchEvent(new Event(EVENT_RIGHT));
+            this.addEventListener("click", function() {
+                if (document.querySelector("horizontal-accordion")) {
+                    document.querySelector("horizontal-accordion").dispatchEvent(new Event(EVENT_RIGHT));
+                }
             });
         }
     });

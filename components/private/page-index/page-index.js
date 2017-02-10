@@ -3,6 +3,7 @@ window.customElements.define('page-index', class extends HTMLElement {
         super();
         window.Lzsoft.Import.ByTagImport(this);
         this.eventize();
+        this.switchTo(this, "doctor");
     }
     eventize() {
         let self = this;
