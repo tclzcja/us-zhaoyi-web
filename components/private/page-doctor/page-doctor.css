@@ -1,0 +1,8 @@
+page-doctor > single-page-application-data > horizontal-accordion > main > table > tbody > tr > td.portrait {
+    --neo-td-height: 30vmin;
+    --neo-td-width: 30vmin;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("4.jpg");
+}

@@ -1,0 +1,99 @@
+page-index {
+    --neo-td-height: 8vh;
+    --neo-td-width: auto;
+}
+
+page-index > main[data-neo] > table[data-neo-table] {
+    background-color: rgba(0, 0, 0, 0.05);
+    outline: solid 40px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20vh;
+}
+
+page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > span {
+    flex-grow: 0;
+    --neo-td-height: 0px;
+}
+
+page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > input {
+    padding-left: calc(var(--neo-td-height) / 4);
+    padding-right: calc(var(--neo-td-height) / 4);
+    width: 40vw;
+}
+
+page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > main > select {
+    padding-left: calc(var(--neo-td-height) / 4);
+    padding-right: calc(var(--neo-td-height) / 4);
+    border-top: solid 4px transparent;
+    border-bottom: solid 4px var(--neo-td-theme-color);
+    direction: rtl;
+    color: var(--neo-td-theme-color);
+    transition: color 0.2s, border-color 0.2s;
+    width: 8vw;
+}
+
+page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search {
+    --neo-td-width: var(--neo-td-height);
+    background-color: var(--neo-td-theme-color);
+    transition: background-color 0.2s;
+}
+
+page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search > a > svg {
+    fill: white;
+    height: calc(var(--neo-td-height) / 2);
+    width: calc(var(--neo-td-height) / 2);
+}
+
+page-index > main > footer {
+    position: absolute;
+    top: 53%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+page-index > main > footer > section {
+    width: 15vw;
+    text-align: center;
+    opacity: 0.25;
+    cursor: pointer;
+    transition: color 0.5s, opacity 0.5s;
+    color: #333;
+}
+
+page-index > main > footer > section:hover {
+    opacity: 1;
+    color: var(--neo-td-theme-color);
+}
+
+page-index > main > footer > section.doctor {
+    --neo-td-theme-color: var(--color-doctor);
+}
+
+page-index > main > footer > section.hospital {
+    --neo-td-theme-color: var(--color-hospital);
+}
+
+page-index > main > footer > section.service {
+    --neo-td-theme-color: var(--color-service);
+}
+
+body[data-type='doctor'] page-index > main > footer > section.doctor,
+body[data-type='hospital'] page-index > main > footer > section.hospital,
+body[data-type='service'] page-index > main > footer > section.service {
+    opacity: 1;
+    color: var(--neo-td-theme-color);
+}
+
+page-index > main > footer > section > header {
+    font-size: 200%;
+}
+
+page-index > main > footer > section > div {
+    margin-top: 20px;
+    font-size: 75%;
+    color: #666;
+}

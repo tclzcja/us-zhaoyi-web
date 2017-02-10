@@ -1,0 +1,36 @@
+:root {
+    --color-doctor: #36C;
+    --color-hospital: #903;
+    --color-insurance: #F90;
+    --color-subject: #360;
+    --color-service: #690;
+    --color-user: #F69;
+    --color-comment: #96C;
+    --edge-spacing: 3vmin;
+}
+
+body {
+    background-image: url('/resources/image/bg-1920-1080.jpeg');
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+body[data-type='doctor'] {
+    --neo-td-theme-color: var(--color-doctor);
+}
+
+body[data-type='hospital'] {
+    --neo-td-theme-color: var(--color-hospital);
+}
+
+body[data-type='service'] {
+    --neo-td-theme-color: var(--color-service);
+}

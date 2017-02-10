@@ -1,0 +1,63 @@
+<template>
+    <main data-neo class="doctor">
+        <table data-neo-table>
+            <tbody>
+                <tr>
+                    <td data-neo-field>
+                        <main>
+                            <span></span>
+                            <input placeholder="输入您想查找的信息" type="text" autofocus />
+                        </main>
+                    </td>
+                    <td data-neo-field>
+                        <main>
+                            <span></span>
+                            <select>
+                                <option value="doctor">找医生</option>
+                                <option value="hospital">找医院</option>
+                                <option value="service">找医疗服务</option>
+                            </select>
+                        </main>
+                    </td>
+                    <td class="search" data-neo-button>
+                        <a href="/search">
+                            <svg>
+                                <use xlink:href="/resources/icon/search.svg#search"></use>
+                            </svg>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            <section class="doctor">
+                <header>医生</header>
+                <div>姓名</div>
+                <div>头衔</div>
+                <div>地址</div>
+                <div>电话</div>
+                <div>电子邮件</div>
+                <div>邮编</div>
+                <div>...</div>
+            </section>
+            <section class="hospital">
+                <header>医院</header>
+                <div>名称</div>
+                <div>地址</div>
+                <div>电话</div>
+                <div>邮编</div>
+                <div>...</div>
+            </section>
+            <section class="service">
+                <header>医疗服务</header>
+                <div>名称</div>
+                <div>描述</div>
+                <div>费用</div>
+                <div>提供的医院</div>
+                <div>...</div>
+            </section>
+        </footer>
+    </main>
+</template>
+<script type="text/javascript" src="page-index.js"></script>
+<link rel="stylesheet" type="text/css" href="page-index.css">

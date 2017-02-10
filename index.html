@@ -2,30 +2,33 @@
 <html lang="zh-CN">
 
 <head>
-    <title></title>
+    <title>北美找医网</title>
     <base href="/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
-    <!-- <meta name="lzsoft-api-url" content="https://api-uszhaoyi-com.herokuapp.com"> -->
-    <meta name="lzsoft-api-url" content="http://localhost:8080">
-    <!-- External -->
-    <link href="/external/neo/neo.css" rel="stylesheet">
-    <link href="/external/front-end-infrastructure/front-end-infrastructure.html" rel="import">
-    <link href="/external/horizontal-accordion/horizontal-accordion.html" rel="import">
-    <link href="/external/single-page-application-router/single-page-application-router.html" rel="import">
-    <!-- Local -->
-    <link href="/local/site-header/site-header.html" rel="import">
-    <link href="/local/site-footer/site-footer.html" rel="import">
-    <link href="/local/page-index/page-index.html" rel="import">
-    <!-- -->
+    <meta name="lzsoft-api-url" content="https://uszhaoyi-api.herokuapp.com,http://localhost:8080">
+    <!-- public -->
+    <link rel="stylesheet" href="/components/public/neo/neo.css">
+    <link rel="import" href="/components/public/front-end-infrastructure/front-end-infrastructure.html">
+    <link rel="import" href="/components/public/horizontal-accordion/horizontal-accordion.html">
+    <link rel="import" href="/components/public/single-page-application-router/single-page-application-router.html">
+    <!-- private -->
+    <link rel="stylesheet" href="/components/private/lib/lib.css">
+    <link rel="import" href="/components/private/site-header/site-header.html">
+    <link rel="import" href="/components/private/site-footer/site-footer.html">
+    <link rel="import" href="/components/private/page-index/page-index.html">
+    <link rel="import" href="/components/private/page-search/page-search.html">
+    <link rel="import" href="/components/private/page-doctor/page-doctor.html">
 </head>
 
-<body>
+<body data-type='doctor'>
     <site-header></site-header>
     <single-page-application-router>
         <single-page-application-route data-pattern="/index.html" data-element="page-index"></single-page-application-route>
         <single-page-application-route data-pattern="/" data-element="page-index"></single-page-application-route>
+        <single-page-application-route data-pattern="/search" data-element="page-search"></single-page-application-route>
+        <single-page-application-route data-pattern="/doctor" data-element="page-doctor"></single-page-application-route>
     </single-page-application-router>
     <site-footer></site-footer>
 </body>
