@@ -1,0 +1,37 @@
+{
+  "name": "background-image",
+  "description": "",
+  "authors": [
+    "JingAn Chen"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "window",
+    "browser",
+    "Math",
+    "NodeList",
+    "web-components"
+  ],
+  "homepage": "https://github.com/lzsoft/background-image",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "publish.bat",
+    "readme.md"
+  ],
+  "dependencies": {
+    "front-end-infrastructure": "lzsoft/front-end-infrastructure"
+  },
+  "_release": "6a57ca0093",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6a57ca009374c215bff64cecdc0bc809ee22f4be"
+  },
+  "_source": "https://github.com/lzsoft/background-image.git",
+  "_target": "*",
+  "_originalSource": "lzsoft/background-image"
+}
