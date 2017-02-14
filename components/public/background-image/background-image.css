@@ -1,0 +1,23 @@
+background-image {
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    z-index: 0;
+    transition: background-image 1s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(transparent.png);
+    filter: blur(20px);
+}
+
+background-image > main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
