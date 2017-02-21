@@ -1,7 +1,175 @@
-page-search > single-page-application-data > table > tbody > tr > td > main > div {
+page-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+page-search > nav {
+    margin-left: var(--edge-spacing);
+    height: 75vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+page-search > nav > table > tbody > tr > td > main > div {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 20px;
     font-size: 75%;
+    opacity: 0.5;
+}
+
+page-search > nav > table > tbody > tr > td.location > main > input {
+    direction: rtl;
+}
+
+page-search > nav > table > tbody > tr > td.star,
+page-search > nav > table > tbody > tr > td.age {
+    padding-top: calc(var(--neo-td-height) * 0.2);
+    padding-bottom: calc(var(--neo-td-height) * 0.2);
+}
+
+page-search > nav > table > tbody > tr > td.star > label,
+page-search > nav > table > tbody > tr > td.age > label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: calc(var(--neo-td-height) * 0.3);
+    padding-right: calc(var(--neo-td-height) * 0.25);
+    height: calc(var(--neo-td-height) * 0.6);
+    font-size: 75%;
+    cursor: pointer;
+}
+
+page-search > nav > table > tbody > tr > td.star > label > svg,
+page-search > nav > table > tbody > tr > td.age > label > svg {
+    height: calc(var(--neo-td-height) * 0.4);
+    width: calc(var(--neo-td-height) * 0.4);
+}
+
+page-search > nav > table > tbody > tr > td.star > label > div,
+page-search > nav > table > tbody > tr > td.age > label > div {
+    margin-left: auto;
+    padding-right: calc(var(--neo-td-height) * 0.2);
+}
+
+page-search > nav > table > tbody > tr > td.star > label > input,
+page-search > nav > table > tbody > tr > td.age > label > input {
+    vertical-align: middle;
+}
+
+page-search > nav > table > tbody > tr > td.star > label > svg {
+    fill: #FC3;
+}
+
+page-search > nav > table > tbody > tr > td.age > label:nth-child(1) {
+    fill: #CCC;
+}
+
+page-search > nav > table > tbody > tr > td.age > label:nth-child(2) {
+    fill: #BBB;
+}
+
+page-search > nav > table > tbody > tr > td.age > label:nth-child(3) {
+    fill: #AAA;
+}
+
+page-search > nav > table > tbody > tr > td.age > label:nth-child(4) {
+    fill: #999;
+}
+
+page-search > nav > table > tbody > tr > td.age > label:nth-child(5) {
+    fill: #888;
+}
+
+page-search > main {
+    height: 75vh;
+    width: 50vw;
+    margin-right: var(--edge-spacing);
+    z-index: 10;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+page-search > main > section {
+    background-color: white;
+    height: 15vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    padding-left: calc(15vh + var(--neo-td-spacing));
+    padding-top: var(--neo-td-spacing);
+    padding-bottom: var(--neo-td-spacing);
+    padding-right: var(--neo-td-spacing);
+    margin-left: var(--neo-td-spacing);
+    margin-bottom: var(--neo-td-spacing);
+}
+
+page-search > main > section > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+page-search > main > section > div {
+    color: #666;
+    font-size: 125%;
+}
+
+page-search > main > section > aside {
+    font-size: 75%;
+    font-style: italic;
+    color: #69F;
+    padding-top: 5px;
+}
+
+page-search > main > section > nav {
+    font-size: 75%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+page-search > main > section > footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+page-search > main > section > footer > footer {
+    margin-left: auto;
+    font-size: 75%;
+    color: #69F;
+}
+
+page-search > main > section > footer > svg {
+    height: 1em;
+    width: 1em;
+    fill: #FC3;
+}
+
+page-search > main > section:nth-child(1) > header {
+    background-image: url("2.jpg");
+}
+
+page-search > main > section:nth-child(2) > header {
+    background-image: url("3.jpg");
+}
+
+page-search > main > section:nth-child(3) > header {
+    background-image: url("4.jpg");
 }

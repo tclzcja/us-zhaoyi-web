@@ -103,6 +103,7 @@ input[type='checkbox'] {
     height: calc(var(--neo-td-height) / 2.75);
     width: calc(var(--neo-td-height) / 2.75);
     border: solid 1px #333;
+    vertical-align: middle;
 }
 
 input[type='range'] {
