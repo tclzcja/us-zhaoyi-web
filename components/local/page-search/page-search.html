@@ -1,146 +1,258 @@
 <template>
-    <horizontal-accordion-left>
-        <svg>
-            <use xlink:href="/resources/icon/prev.svg#prev"></use>
-        </svg>
-    </horizontal-accordion-left>
-    <horizontal-accordion-right>
-        <svg>
-            <use xlink:href="/resources/icon/next.svg#next"></use>
-        </svg>
-    </horizontal-accordion-right>
-    <single-page-application-data data-neo data-type="doctor">
-        <header>
-            <div>"Otolaryngology"</div>
-            <div>less than 200 miles</div>
-            <div>use my insurance</div>
-        </header>
+    <nav>
         <table data-neo-table>
             <tbody>
                 <tr>
-                    <td>
-                        <a href="/doctor">
-                            <main>
-                                <header>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                </header>
-                                <div>Scholer Janimier Garbohozer</div>
-                                <span>Otolaryngologist</span>
-                            </main>
-                        </a>
+                    <td data-neo-field>
+                        <main>
+                            <header>
+                                <svg>
+                                    <use xlink:href="/resources/icon/insurance.svg#insurance"></use>
+                                </svg>
+                            </header>
+                            <input type="text" placeholder="搜索保险">
+                        </main>
                     </td>
-                    <td>
-                        <a href="/doctor">
-                            <main>
-                                <header>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star-empty.svg#star-empty"></use>
-                                    </svg>
-                                </header>
-                                <div>Eric Zimmererman</div>
-                                <span>Otolaryngologist</span>
-                            </main>
-                        </a>
+                </tr>
+                <tr>
+                    <td class="zipcode" data-neo-field>
+                        <main>
+                            <header>
+                                <svg>
+                                    <use xlink:href="/resources/icon/mailbox.svg#mailbox"></use>
+                                </svg>
+                            </header>
+                            <input type="text" placeholder="zipcode">
+                        </main>
                     </td>
-                    <td>
-                        <a href="/doctor">
-                            <main>
-                                <header>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star-empty.svg#star-empty"></use>
-                                    </svg>
-                                </header>
-                                <div>Catelina Josephen Melissa-Fullerton</div>
-                                <span>Chiropatric</span>
-                            </main>
-                        </a>
+                </tr>
+                <tr>
+                    <td class="distance" data-neo-field>
+                        <main>
+                            <header>
+                                <svg>
+                                    <use xlink:href="/resources/icon/distance.svg#distance"></use>
+                                </svg>
+                            </header>
+                            <select>
+                                <option>10 Miles</option>
+                            </select>
+                        </main>
                     </td>
-                    <td>
-                        <a href="/doctor">
-                            <main>
-                                <header>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star-empty.svg#star-empty"></use>
-                                    </svg>
-                                </header>
-                                <div>Ben Carson</div>
-                                <span>Surgerist</span>
-                            </main>
-                        </a>
+                </tr>
+                <tr>
+                    <td class="star">
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <div>5 star and up</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <div>4 star and up</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <div>3 star and up</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <div>2 star and up</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/star.svg#star"></use>
+                            </svg>
+                            <div>1 star and up</div>
+                            <input type="checkbox">
+                        </label>
                     </td>
-                    <td>
-                        <a href="/doctor">
-                            <main>
-                                <header>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star.svg#star"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="/resources/icon/star-empty.svg#star-empty"></use>
-                                    </svg>
-                                </header>
-                                <div>JingAn Chen</div>
-                                <span>Surgerist</span>
-                            </main>
-                        </a>
+                </tr>
+                <tr>
+                    <td data-neo-field>
+                        <main>
+                            <header>
+                                <svg>
+                                    <use xlink:href="/resources/icon/gender.svg#gender"></use>
+                                </svg>
+                            </header>
+                            <select>
+                                <option>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </main>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="age">
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <div>40 and younger</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <div>41 to 50</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <div>51 to 60</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <div>61 to 70</div>
+                            <input type="checkbox">
+                        </label>
+                        <label>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <svg>
+                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
+                            </svg>
+                            <div>71 and older</div>
+                            <input type="checkbox">
+                        </label>
                     </td>
                 </tr>
             </tbody>
         </table>
-    </single-page-application-data>
+    </nav>
+    <main>
+        <section data-neo-shadow>
+            <header></header>
+            <div>Dr. Michael Deanda, MD</div>
+            <aside>Family Medicine</aside>
+            <nav>4.4 miles away</nav>
+            <footer>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <footer>17 reviews</footer>
+            </footer>
+        </section>
+        <section data-neo-shadow>
+            <header></header>
+            <div>Dr. Catalina Rosenburg-Purlin, MD</div>
+            <aside>Family Medicine</aside>
+            <nav>4.4 miles away</nav>
+            <footer>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <footer>17 reviews</footer>
+            </footer>
+        </section>
+        <section data-neo-shadow>
+            <header></header>
+            <div>Dr. Ben Carson, MD</div>
+            <aside>Family Medicine</aside>
+            <nav>4.4 miles away</nav>
+            <footer>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="/resources/icon/star.svg#star"></use>
+                </svg>
+                <footer>17 reviews</footer>
+            </footer>
+        </section>
+    </main>
 </template>
 <script type="text/javascript" src="page-search.js"></script>
 <link rel="stylesheet" type="text/css" href="page-search.css">

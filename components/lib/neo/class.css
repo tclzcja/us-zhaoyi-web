@@ -70,10 +70,12 @@ table[data-neo-table] td[data-neo-field] > * {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
+    flex-wrap: nowrap;
 }
 
 table[data-neo-table] td[data-neo-field] > * > * {
     flex-grow: 1;
+    flex-shrink: 1;
     width: 1;
 }
 

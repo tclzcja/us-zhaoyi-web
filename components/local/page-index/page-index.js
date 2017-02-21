@@ -11,7 +11,7 @@ window.customElements.define('page-index', class extends HTMLElement {
             self.switchTo(self, this.value);
         });
         self.querySelectorAll("section").addEventListener("click", function() {
-            self.switchTo(self, this.getAttribute("class"));
+            self.switchTo(self, this.getAttribute("data-type"));
         });
     }
     switchTo(self, type) {
