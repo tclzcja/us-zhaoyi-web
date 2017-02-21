@@ -173,3 +173,15 @@ page-search > main > section:nth-child(2) > header {
 page-search > main > section:nth-child(3) > header {
     background-image: url("4.jpg");
 }
+
+page-search > main > section:nth-child(4) > header {
+    background-image: url("5.jpg");
+}
+
+page-search > main > section:nth-child(5) > header {
+    background-image: url("1.jpg");
+}
+
+page-search > main > section:nth-child(6) > header {
+    background-image: url("2.jpg");
+}
