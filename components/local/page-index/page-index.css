@@ -66,8 +66,10 @@ body[data-type='service'] page-index > main[data-neo] > table[data-neo-table] > 
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > footer {
     position: absolute;
     top: 100%;
-    left: 0;
-    margin-top: var(--neo-td-spacing);
+    left: calc(var(--neo-td-height) / 4);
+    margin-top: calc(var(--neo-td-spacing) * 2);
+    color: #999;
+    font-size: 75%;
 }
 
 page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > input {

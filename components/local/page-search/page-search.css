@@ -99,9 +99,10 @@ page-search > main {
     flex-wrap: wrap;
 }
 
-page-search > main > section {
+page-search > main > a {
     background-color: white;
     height: 15vh;
+    width: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -115,7 +116,7 @@ page-search > main > section {
     margin-bottom: var(--neo-td-spacing);
 }
 
-page-search > main > section > header {
+page-search > main > a > header {
     position: absolute;
     top: 0;
     left: 0;
@@ -126,62 +127,62 @@ page-search > main > section > header {
     background-size: cover;
 }
 
-page-search > main > section > div {
+page-search > main > a > div {
     color: #666;
     font-size: 125%;
 }
 
-page-search > main > section > aside {
+page-search > main > a > aside {
     font-size: 75%;
     font-style: italic;
     color: #69F;
     padding-top: 5px;
 }
 
-page-search > main > section > nav {
+page-search > main > a > nav {
     font-size: 75%;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-page-search > main > section > footer {
+page-search > main > a > footer {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 }
 
-page-search > main > section > footer > footer {
+page-search > main > a > footer > footer {
     margin-left: auto;
     font-size: 75%;
     color: #69F;
 }
 
-page-search > main > section > footer > svg {
+page-search > main > a > footer > svg {
     height: 1em;
     width: 1em;
     fill: #FC3;
 }
 
-page-search > main > section:nth-child(1) > header {
+page-search > main > a:nth-child(1) > header {
     background-image: url("2.jpg");
 }
 
-page-search > main > section:nth-child(2) > header {
+page-search > main > a:nth-child(2) > header {
     background-image: url("3.jpg");
 }
 
-page-search > main > section:nth-child(3) > header {
+page-search > main > a:nth-child(3) > header {
     background-image: url("4.jpg");
 }
 
-page-search > main > section:nth-child(4) > header {
+page-search > main > a:nth-child(4) > header {
     background-image: url("5.jpg");
 }
 
-page-search > main > section:nth-child(5) > header {
+page-search > main > a:nth-child(5) > header {
     background-image: url("1.jpg");
 }
 
-page-search > main > section:nth-child(6) > header {
+page-search > main > a:nth-child(6) > header {
     background-image: url("2.jpg");
 }
