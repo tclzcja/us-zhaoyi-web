@@ -1,0 +1,8 @@
+{
+    "name": "neo",
+    "authors": ["JingAn Chen <lzsoft.cja@gmail.com>"],
+    "description": "",
+    "license": "MIT",
+    "private": true,
+    "ignore": ["**/.*", "docs/", "index.html"]
+}

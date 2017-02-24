@@ -5,28 +5,21 @@
     "JingAn Chen"
   ],
   "license": "MIT",
-  "keywords": [
-    "window",
-    "browser",
-    "Math",
-    "NodeList",
-    "web-components"
-  ],
+  "keywords": [],
   "homepage": "https://github.com/lzsoft/front-end-infrastructure",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
-    "publish.bat",
+    "node_modules/",
+    "bower_components/",
+    "test/",
+    "tests/",
     "readme.md"
   ],
-  "_release": "f3be6950b3",
+  "_release": "10f4a7fc9f",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "f3be6950b337f42b4315f4411e41bad694ff1004"
+    "commit": "10f4a7fc9fbc0f010e104571a726bfeaffdb8b87"
   },
   "_source": "https://github.com/lzsoft/front-end-infrastructure.git",
   "_target": "*",

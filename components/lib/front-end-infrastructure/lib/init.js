@@ -1,6 +1,5 @@
-(function() {
-    window.Lzsoft = {};
-    window.Lzsoft.Api = {};
-    window.Lzsoft.Auth = {};
-    window.Lzsoft.Import = {};
-}());
+'use strict';
+window.Lzsoft = {};
+window.Lzsoft.Api = {};
+window.Lzsoft.Auth = {};
+window.Lzsoft.Import = {};
