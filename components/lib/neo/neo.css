@@ -1,7 +1,0 @@
-@import 'styles/element.css';
-@import 'styles/class.css';
-@import 'styles/var.css';
-@font-face {
-    font-family: 'Roboto';
-    src: url('fonts/roboto-light.ttf') format('truetype'), url('fonts/roboto-light-italic.ttf') format('truetype');
-}

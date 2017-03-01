@@ -8,7 +8,7 @@
     "private": true,
     "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
     "dependencies": {
-        "neo": "lzsoft/neo",
+        "materialize": "latest",
         "front-end-infrastructure": "lzsoft/front-end-infrastructure",
         "horizontal-accordion": "lzsoft/horizontal-accordion",
         "single-page-application-router": "lzsoft/single-page-application-router",
