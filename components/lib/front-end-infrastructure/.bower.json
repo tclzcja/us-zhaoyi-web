@@ -15,11 +15,11 @@
     "tests/",
     "readme.md"
   ],
-  "_release": "10f4a7fc9f",
+  "_release": "0a42b9c881",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "10f4a7fc9fbc0f010e104571a726bfeaffdb8b87"
+    "commit": "0a42b9c881864f9247e994593912b33e994a7410"
   },
   "_source": "https://github.com/lzsoft/front-end-infrastructure.git",
   "_target": "*",

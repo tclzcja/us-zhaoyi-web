@@ -1,35 +1,56 @@
 <template>
-    <main data-neo>
-        <table data-neo-table>
-            <tbody>
-                <tr>
-                    <td>
-                        <input placeholder="输入您想查找的信息" type="text" autofocus>
-                        <nav>
-                            <section data-type="doctor">医生</section>
-                            <section data-type="hospital">医院</section>
-                            <section data-type="service">医疗服务</section>
-                        </nav>
-                        <footer>请输入您所要找的医生信息，如医生姓名，科室，地址，邮编…</footer>
-                    </td>
-                    <td>
-                        <select>
-                            <option value="doctor">找医生</option>
-                            <option value="hospital">找医院</option>
-                            <option value="service">找医疗服务</option>
-                        </select>
-                    </td>
-                    <td class="search" data-neo-button>
-                        <a href="/search">
-                            <svg>
-                                <use xlink:href="/resources/icon/search.svg#search"></use>
-                            </svg>
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <header class="bui-row">
+        <video src="/resources/video/1.mov" autoplay loop muted preload></video>
+        <main class="bui-container">
+            <input type="text">
+        </main>
+    </header>
+    <main class="bui-container">
+        <header class="bui-row">
+            <span class="bui-col">这里是一些常见的病例</span>
+        </header>
+        <div class="bui-breaker"></div>
+        <div class="bui-row">
+            <a href="/list" class="bui-col">心脏病</a>
+            <a href="/list" class="bui-col">脊椎</a>
+            <a href="/list" class="bui-col">关节炎</a>
+            <a href="/list" class="bui-col">近视</a>
+        </div>
+        <div class="bui-row">
+            <a href="/list" class="bui-col">肠胃</a>
+            <a href="/list" class="bui-col">神经科</a>
+            <a href="/list" class="bui-col">消化内科</a>
+            <a href="/list" class="bui-col">手术</a>
+        </div>
+        <div class="bui-row">
+            <a href="/list" class="bui-col">肠胃</a>
+            <a href="/list" class="bui-col">神经科</a>
+            <a href="/list" class="bui-col">消化内科</a>
+            <a href="/list" class="bui-col">手术</a>
+        </div>
     </main>
+    <footer class="bui-container">
+        <header class="bui-row">
+            <div class="bui-col">currently we have</div>
+        </header>
+        <div class="bui-row">
+            <div class="bui-col">
+                <main>2,274</main>
+                <div class="bui-breaker"></div>
+                <footer>Doctors</footer>
+            </div>
+            <div class="bui-col">
+                <main>193</main>
+                <div class="bui-breaker"></div>
+                <footer>Hospitals</footer>
+            </div>
+            <div class="bui-col">
+                <main>665</main>
+                <div class="bui-breaker"></div>
+                <footer>Symptons</footer>
+            </div>
+        </div>
+    </footer>
 </template>
 <script type="text/javascript" src="page-index.js"></script>
 <link rel="stylesheet" type="text/css" href="page-index.css">

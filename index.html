@@ -8,8 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
     <meta name="lzsoft-api-url" content="https://uszhaoyi-api.herokuapp.com,http://localhost:8080">
+    <!-- material -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- lib -->
-    <link rel="stylesheet" href="/components/lib/neo/neo.css">
+    <link rel="stylesheet" href="/components/lib/bui/bui.css">
     <link rel="import" href="/components/lib/front-end-infrastructure/front-end-infrastructure.html">
     <link rel="import" href="/components/lib/background-image/background-image.html">
     <link rel="import" href="/components/lib/horizontal-accordion/horizontal-accordion.html">
@@ -23,16 +25,13 @@
     <link rel="import" href="/components/local/page-doctor/page-doctor.html">
 </head>
 
-<body data-type='doctor'>
-    <site-header></site-header>
-    <background-image></background-image>
+<body>
+    <site-header class="bui-row"></site-header>
     <single-page-application-router>
-        <single-page-application-route data-pattern="/index.html" data-element="page-index"></single-page-application-route>
         <single-page-application-route data-pattern="/" data-element="page-index"></single-page-application-route>
-        <single-page-application-route data-pattern="/search" data-element="page-search"></single-page-application-route>
-        <single-page-application-route data-pattern="/doctor" data-element="page-doctor"></single-page-application-route>
+        <single-page-application-route data-pattern="/list" data-element="page-list"></single-page-application-route>
     </single-page-application-router>
-    <site-footer></site-footer>
+    <site-footer class="bui-row"></site-footer>
 </body>
 
 </html>

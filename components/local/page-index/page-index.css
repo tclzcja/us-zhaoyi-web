@@ -1,102 +1,79 @@
 page-index {
-    --neo-td-height: 8vh;
-    --neo-td-width: auto;
+    display: block;
 }
 
-page-index > main[data-neo] > table[data-neo-table] {
-    background-color: rgba(0, 0, 0, 0.05);
-    outline: solid 80px rgba(0, 0, 0, 0.05);
+page-index > header {
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav {
+page-index > header > video {
+    position: relative;
+    display: block;
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 5;
+}
+
+page-index > header > main {
     position: absolute;
-    bottom: 100%;
+    top: 0;
     left: 0;
-    width: 30vw;
-    height: 4vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    padding-left: var(--neo-td-spacing);
-}
-
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section {
-    background-color: white;
-    height: 4vh;
-    width: 6vw;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: var(--neo-td-spacing);
-    font-size: 75%;
-    opacity: 0.5;
-    transition: opacity 0.2s;
-    cursor: pointer;
+    align-content: center;
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section:hover {
-    opacity: 1;
+page-index > header > main > input {
+    height: 60px;
+    width: 50vw;
+    background-color: white;
+    padding-left: 20px;
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section[data-type='doctor'] {
-    color: var(--color-doctor);
+page-index > main {
+    background: linear-gradient(to bottom, #BBDEFB, white);
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section[data-type='hospital'] {
-    color: var(--color-hospital);
+page-index > main > div > a {
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    width: 25%;
+    height: 8vh;
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section[data-type='service'] {
-    color: var(--color-service);
+page-index > main > div > a:hover {
+    background-color: #0D47A1;
+    color: white;
 }
 
-body[data-type='doctor'] page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section[data-type='doctor'] {
-    opacity: 1;
+page-index > footer {
+    background-color: white;
 }
 
-body[data-type='hospital'] page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section[data-type='hospital'] {
-    opacity: 1;
+page-index > footer > div {
+    height: 30vh;
+    text-align: center;
 }
 
-body[data-type='service'] page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > nav > section[data-type='service'] {
-    opacity: 1;
+page-index > footer > div > div.bui-col {
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > footer {
-    position: absolute;
-    top: 100%;
-    left: calc(var(--neo-td-height) / 4);
-    margin-top: calc(var(--neo-td-spacing) * 2);
-    color: #999;
-    font-size: 75%;
+page-index > footer > div > div > * {
+    width: 100%;
 }
 
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > input {
-    padding-left: calc(var(--neo-td-height) / 4);
-    padding-right: calc(var(--neo-td-height) / 4);
-    width: 40vw;
-}
-
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td > select {
-    padding-left: calc(var(--neo-td-height) / 4);
-    padding-right: calc(var(--neo-td-height) / 4);
-    border-top: solid 4px transparent;
-    border-bottom: solid 4px var(--neo-td-theme-color);
-    direction: rtl;
-    color: var(--neo-td-theme-color);
-    transition: color 0.2s, border-color 0.2s;
-    width: 8vw;
-}
-
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search {
-    --neo-td-width: var(--neo-td-height);
-    background-color: var(--neo-td-theme-color);
-    transition: background-color 0.2s;
-}
-
-page-index > main[data-neo] > table[data-neo-table] > tbody > tr > td.search > a > svg {
-    fill: white;
-    height: calc(var(--neo-td-height) / 2);
-    width: calc(var(--neo-td-height) / 2);
+page-index > footer > div > div > main {
+    font-size: 4rem;
 }

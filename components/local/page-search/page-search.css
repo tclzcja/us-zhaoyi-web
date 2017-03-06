@@ -5,13 +5,18 @@ page-search {
     flex-wrap: nowrap;
     height: 100vh;
     width: 100vw;
+    z-index: 1;
 }
 
 page-search > nav {
-    margin-left: var(--edge-spacing);
-    height: 75vh;
+    position: absolute;
+    left: 0;
+    top: 15vh;
+    bottom: 15vh;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: scroll;
+    z-index: 15;
 }
 
 page-search > nav > table > tbody > tr > td > main > div {
@@ -87,22 +92,43 @@ page-search > nav > table > tbody > tr > td.age > label:nth-child(5) {
 }
 
 page-search > main {
-    height: 75vh;
-    width: 50vw;
-    margin-right: var(--edge-spacing);
+    height: 60vh;
+    width: 70vw;
     z-index: 10;
-    flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+    margin-left: 0;
+    transition: margin-left 0.5s;
+}
+
+page-search > main > header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--edge-spacing);
+    font-size: 150%;
+}
+
+page-search > main > footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--edge-spacing);
+    font-size: 150%;
+    opacity: 0.25;
 }
 
 page-search > main > a {
     background-color: white;
     height: 15vh;
-    width: auto;
+    width: 40%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -112,8 +138,7 @@ page-search > main > a {
     padding-top: var(--neo-td-spacing);
     padding-bottom: var(--neo-td-spacing);
     padding-right: var(--neo-td-spacing);
-    margin-left: var(--neo-td-spacing);
-    margin-bottom: var(--neo-td-spacing);
+    margin: calc(var(--neo-td-spacing) / 2);
 }
 
 page-search > main > a > header {
@@ -185,4 +210,20 @@ page-search > main > a:nth-child(5) > header {
 
 page-search > main > a:nth-child(6) > header {
     background-image: url("2.jpg");
+}
+
+page-search > main > a:nth-child(7) > header {
+    background-image: url("3.jpg");
+}
+
+page-search > main > a:nth-child(8) > header {
+    background-image: url("4.jpg");
+}
+
+page-search > main > a:nth-child(9) > header {
+    background-image: url("3.jpg");
+}
+
+page-search.nav > main {
+    margin-left: 20vw;
 }
