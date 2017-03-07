@@ -1,229 +1,62 @@
 page-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
+    display: block;
 }
 
-page-search > nav {
-    position: absolute;
-    left: 0;
-    top: 15vh;
-    bottom: 15vh;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow-y: scroll;
-    z-index: 15;
-}
-
-page-search > nav > table > tbody > tr > td > main > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
-    font-size: 75%;
-    opacity: 0.5;
-}
-
-page-search > nav > table > tbody > tr > td.location > main > input {
-    direction: rtl;
-}
-
-page-search > nav > table > tbody > tr > td.star,
-page-search > nav > table > tbody > tr > td.age {
-    padding-top: calc(var(--neo-td-height) * 0.2);
-    padding-bottom: calc(var(--neo-td-height) * 0.2);
-}
-
-page-search > nav > table > tbody > tr > td.star > label,
-page-search > nav > table > tbody > tr > td.age > label {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: calc(var(--neo-td-height) * 0.3);
-    padding-right: calc(var(--neo-td-height) * 0.25);
-    height: calc(var(--neo-td-height) * 0.6);
-    font-size: 75%;
-    cursor: pointer;
-}
-
-page-search > nav > table > tbody > tr > td.star > label > svg,
-page-search > nav > table > tbody > tr > td.age > label > svg {
-    height: calc(var(--neo-td-height) * 0.4);
-    width: calc(var(--neo-td-height) * 0.4);
-}
-
-page-search > nav > table > tbody > tr > td.star > label > div,
-page-search > nav > table > tbody > tr > td.age > label > div {
-    margin-left: auto;
-    padding-right: calc(var(--neo-td-height) * 0.2);
-}
-
-page-search > nav > table > tbody > tr > td.star > label > input,
-page-search > nav > table > tbody > tr > td.age > label > input {
-    vertical-align: middle;
-}
-
-page-search > nav > table > tbody > tr > td.star > label > svg {
-    fill: #FC3;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(1) {
-    fill: #CCC;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(2) {
-    fill: #BBB;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(3) {
-    fill: #AAA;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(4) {
-    fill: #999;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(5) {
-    fill: #888;
-}
-
-page-search > main {
-    height: 60vh;
-    width: 70vw;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
+page-search > div > nav.bui-col {
+    background: linear-gradient(to bottom, var(--color-blue-lighten-5) 75%, white 100%);
+    flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    flex-wrap: wrap;
-    padding-bottom: 50px;
-    overflow-y: scroll;
-    margin-left: 0;
-    transition: margin-left 0.5s;
+    width: 25%;
+    padding-bottom: 60px;
 }
 
-page-search > main > header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: var(--edge-spacing);
-    font-size: 150%;
-}
-
-page-search > main > footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: var(--edge-spacing);
-    font-size: 150%;
-    opacity: 0.25;
-}
-
-page-search > main > a {
-    background-color: white;
-    height: 15vh;
-    width: 40%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    padding-left: calc(15vh + var(--neo-td-spacing));
-    padding-top: var(--neo-td-spacing);
-    padding-bottom: var(--neo-td-spacing);
-    padding-right: var(--neo-td-spacing);
-    margin: calc(var(--neo-td-spacing) / 2);
-}
-
-page-search > main > a > header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 15vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-page-search > main > a > div {
-    color: #666;
-    font-size: 125%;
-}
-
-page-search > main > a > aside {
-    font-size: 75%;
-    font-style: italic;
-    color: #69F;
-    padding-top: 5px;
-}
-
-page-search > main > a > nav {
-    font-size: 75%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-page-search > main > a > footer {
+page-search > div > nav > div,
+page-search > div > nav > label {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
-page-search > main > a > footer > footer {
-    margin-left: auto;
-    font-size: 75%;
-    color: #69F;
+page-search > div > nav > div > * {
+    flex-grow: 1;
 }
 
-page-search > main > a > footer > svg {
-    height: 1em;
-    width: 1em;
-    fill: #FC3;
+page-search > div > nav > label > i.material-icons {
+    color: #CCC;
 }
 
-page-search > main > a:nth-child(1) > header {
-    background-image: url("2.jpg");
+page-search > div > nav > label > i.material-icons:last-child {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
-page-search > main > a:nth-child(2) > header {
-    background-image: url("3.jpg");
+page-search > div > nav > label > i.material-icons.on {
+    color: #FC0;
 }
 
-page-search > main > a:nth-child(3) > header {
-    background-image: url("4.jpg");
+page-search > div > nav > label > input[type='checkbox'] {
+    flex-grow: 0;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-page-search > main > a:nth-child(4) > header {
-    background-image: url("5.jpg");
+page-search > div > nav > label > footer {
+    font-size: 80%;
+    margin-left: 15px;
 }
 
-page-search > main > a:nth-child(5) > header {
-    background-image: url("1.jpg");
+page-search > div > main.bui-col {
+    width: 75%;
+    flex-grow: 1;
+    background-color: var(--color-blue-lighten-4);
 }
 
-page-search > main > a:nth-child(6) > header {
-    background-image: url("2.jpg");
-}
-
-page-search > main > a:nth-child(7) > header {
-    background-image: url("3.jpg");
-}
-
-page-search > main > a:nth-child(8) > header {
-    background-image: url("4.jpg");
-}
-
-page-search > main > a:nth-child(9) > header {
-    background-image: url("3.jpg");
-}
-
-page-search.nav > main {
-    margin-left: 20vw;
+page-search > nav,
+page-search > main {
+    display: none;
 }

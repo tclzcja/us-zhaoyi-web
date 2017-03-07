@@ -1,202 +1,112 @@
 <template>
-    <nav>
-        <table data-neo-table>
-            <tbody>
-                <tr>
-                    <td data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/insurance.svg#insurance"></use>
-                                </svg>
-                            </header>
-                            <input type="text" placeholder="搜索保险">
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="zipcode" data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/mailbox.svg#mailbox"></use>
-                                </svg>
-                            </header>
-                            <input type="text" placeholder="zipcode">
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="distance" data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/distance.svg#distance"></use>
-                                </svg>
-                            </header>
-                            <select>
-                                <option>10 Miles</option>
-                            </select>
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="star">
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>5 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>4 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>3 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>2 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>1 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/gender.svg#gender"></use>
-                                </svg>
-                            </header>
-                            <select>
-                                <option>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                            </select>
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="age">
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>40 and younger</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>41 to 50</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>51 to 60</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>61 to 70</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>71 and older</div>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </nav>
+    <div class="bui-row">
+        <nav class="bui-col">
+            <header class="bui-breaker">Insurance</header>
+            <input type="text" placeholder="搜索保险">
+            <header class="bui-breaker">Distance</header>
+            <div>
+                <select>
+                    <option>10 Miles</option>
+                </select>
+                <div class="bui-col">in</div>
+                <input type="text" placeholder="zipcode">
+            </div>
+            <header class="bui-breaker">Star</header>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <header class="bui-breaker">Gender</header>
+            <select>
+                <option>Any gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <header class="bui-breaker">Age</header>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <footer>71 and older</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>61 to 70</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>51 to 60</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>41 to 50</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>40 and younger</footer>
+            </label>
+        </nav>
+        <main class="bui-col">s</main>
+    </div>
     <main>
         <header>253 results</header>
         <a href="/doctor" data-neo-shadow>
