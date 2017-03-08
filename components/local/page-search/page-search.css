@@ -52,7 +52,7 @@ page-search > div > nav > label > footer {
 
 page-search > div > main.bui-col {
     width: 75%;
-    background-color: var(--color-blue-lighten-4);
+    background: linear-gradient(to bottom, var(--color-blue-lighten-4) 75%, white 100%);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;

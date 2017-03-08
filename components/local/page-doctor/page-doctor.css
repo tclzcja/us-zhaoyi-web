@@ -1,8 +1,88 @@
-page-doctor > single-page-application-data > horizontal-accordion > main > table > tbody > tr > td.portrait {
-    --neo-td-height: 30vmin;
-    --neo-td-width: 30vmin;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("4.jpg");
+page-doctor > header {
+    background-color: var(--color-blue-lighten-5);
+}
+
+page-doctor > header > img {
+    height: 30vh;
+    width: 30vh;
+    object-fit: cover;
+}
+
+page-doctor > header > div.bui-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+page-doctor > header > div > * {
+    width: 100%;
+}
+
+page-doctor > header > div > header {
+    font-size: 2rem;
+}
+
+page-doctor > header > div > header:before {
+    content: "Dr. ";
+    opacity: 0.5;
+}
+
+page-doctor > header > div > aside {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #FC0;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+page-doctor > header > div > aside > i.material-icons:first-child {
+    margin: 0;
+}
+
+page-doctor > header > div > aside > footer {
+    font-size: 0.8rem;
+    color: var(--color-blue-darken-3);
+    margin-left: 15px;
+}
+
+page-doctor > header > div > div {
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+page-doctor > header > div > nav {
+    margin-top: auto;
+}
+
+page-doctor > header > div > nav > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+}
+
+page-doctor > header > div > footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    background-color: pink;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+page-doctor > header > div > footer > i.material-icons:first-child {
+    font-size: 30px;
+    margin-right: 5px;
 }
