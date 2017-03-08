@@ -11,6 +11,10 @@ site-header a:first-child {
     font-size: 1.2rem;
 }
 
+site-header a:first-child i {
+    color: #f44336;
+}
+
 site-header a:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }

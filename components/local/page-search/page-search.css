@@ -52,11 +52,114 @@ page-search > div > nav > label > footer {
 
 page-search > div > main.bui-col {
     width: 75%;
-    flex-grow: 1;
     background-color: var(--color-blue-lighten-4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
 }
 
-page-search > nav,
-page-search > main {
-    display: none;
+page-search > div > main > header {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 200%;
+    margin-top: 45px;
+    margin-bottom: 60px;
+}
+
+page-search > div > main > a {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+
+page-search > div > main > a > img {
+    width: 20vmin;
+    height: 20vmin;
+    object-fit: cover;
+}
+
+page-search > div > main > a > main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+page-search > div > main > a > main > header {
+    font-size: 150%;
+}
+
+page-search > div > main > a > main > aside {
+    margin-bottom: auto;
+    font-style: italic;
+    color: var(--color-blue-darken-1);
+    font-size: 80%;
+}
+
+page-search > div > main > a > main > nav {
+    margin-bottom: auto;
+}
+
+page-search > div > main > a > main > footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+page-search > div > main > a > main > footer > i.material-icons {
+    color: #FC0;
+}
+
+page-search > div > main > a > main > footer > i.material-icons:first-child {
+    margin-right: 0;
+}
+
+page-search > div > main > a > main > footer > footer {
+    margin-left: auto;
+}
+
+page-search > div > main > footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin-top: 60px;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+page-search > div > main > footer > * {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+page-search > div > main > footer > *:hover,
+page-search > div > main > footer > *.on {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+page-search > div > main > footer > nav > i.material-icons {
+    font-size: 50px;
+    margin: 0;
 }
