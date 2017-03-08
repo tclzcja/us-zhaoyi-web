@@ -25,11 +25,11 @@
   "dependencies": {
     "front-end-infrastructure": "lzsoft/front-end-infrastructure"
   },
-  "_release": "6a57ca0093",
+  "_release": "b664343f29",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "6a57ca009374c215bff64cecdc0bc809ee22f4be"
+    "commit": "b664343f2916dd009de709c32e0761de6deacdff"
   },
   "_source": "https://github.com/lzsoft/background-image.git",
   "_target": "*",

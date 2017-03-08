@@ -1,324 +1,280 @@
 <template>
-    <nav>
-        <table data-neo-table>
-            <tbody>
-                <tr>
-                    <td data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/insurance.svg#insurance"></use>
-                                </svg>
-                            </header>
-                            <input type="text" placeholder="搜索保险">
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="zipcode" data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/mailbox.svg#mailbox"></use>
-                                </svg>
-                            </header>
-                            <input type="text" placeholder="zipcode">
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="distance" data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/distance.svg#distance"></use>
-                                </svg>
-                            </header>
-                            <select>
-                                <option>10 Miles</option>
-                            </select>
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="star">
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>5 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>4 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>3 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>2 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/star.svg#star"></use>
-                            </svg>
-                            <div>1 star and up</div>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-neo-field>
-                        <main>
-                            <header>
-                                <svg>
-                                    <use xlink:href="/resources/icon/gender.svg#gender"></use>
-                                </svg>
-                            </header>
-                            <select>
-                                <option>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                            </select>
-                        </main>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="age">
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>40 and younger</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>41 to 50</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>51 to 60</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>61 to 70</div>
-                            <input type="checkbox">
-                        </label>
-                        <label>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <svg>
-                                <use xlink:href="/resources/icon/calendar.svg#calendar"></use>
-                            </svg>
-                            <div>71 and older</div>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </nav>
-    <main>
-        <section data-neo-shadow>
-            <header></header>
-            <div>Dr. Michael Deanda, MD</div>
-            <aside>Family Medicine</aside>
-            <nav>4.4 miles away</nav>
+    <div class="bui-row">
+        <nav class="bui-col">
+            <header class="bui-breaker">Insurance</header>
+            <input type="text" placeholder="搜索保险">
+            <header class="bui-breaker">Distance</header>
+            <div>
+                <select>
+                    <option>10 Miles</option>
+                </select>
+                <div class="bui-col">in</div>
+                <input type="text" placeholder="zipcode">
+            </div>
+            <header class="bui-breaker">Star</header>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+            </label>
+            <header class="bui-breaker">Gender</header>
+            <select>
+                <option>Any gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <header class="bui-breaker">Age</header>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <footer>71 and older</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>61 to 70</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>51 to 60</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>41 to 50</footer>
+            </label>
+            <label>
+                <input type="checkbox">
+                <i class="material-icons on">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <i class="material-icons">date_range</i>
+                <footer>40 and younger</footer>
+            </label>
+        </nav>
+        <main class="bui-col">
+            <header>233 doctors</header>
+            <a href="/doctor">
+                <img src="/resources/portrait/1.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/4.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.7 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>223 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/3.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/2.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/5.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/1.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/5.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/2.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/4.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
+            <a href="/doctor">
+                <img src="/resources/portrait/3.jpg">
+                <main>
+                    <header>Dr. Michael Deanda, MD</header>
+                    <aside>Family Medicine</aside>
+                    <nav>4.4 miles away</nav>
+                    <footer>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <footer>17 reviews</footer>
+                    </footer>
+                </main>
+            </a>
             <footer>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <footer>17 reviews</footer>
+                <nav>
+                    <i class="material-icons">keyboard_arrow_left</i>
+                </nav>
+                <div>1</div>
+                <div class="on">2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <nav>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </nav>
             </footer>
-        </section>
-        <section data-neo-shadow>
-            <header></header>
-            <div>Dr. Catalina Rosenburg-Purlin, MD</div>
-            <aside>Family Medicine</aside>
-            <nav>4.4 miles away</nav>
-            <footer>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <footer>17 reviews</footer>
-            </footer>
-        </section>
-        <section data-neo-shadow>
-            <header></header>
-            <div>Dr. Ben Carson, MD</div>
-            <aside>Family Medicine</aside>
-            <nav>4.4 miles away</nav>
-            <footer>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <footer>17 reviews</footer>
-            </footer>
-        </section>
-        <section data-neo-shadow>
-            <header></header>
-            <div>Dr. Jack Chen, MD</div>
-            <aside>Family Medicine</aside>
-            <nav>12.8 miles away</nav>
-            <footer>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star-empty.svg#star-empty"></use>
-                </svg>
-                <footer>172 reviews</footer>
-            </footer>
-        </section>
-        <section data-neo-shadow>
-            <header></header>
-            <div>Dr. Dave McDaniel Barthly, MD</div>
-            <aside>Family Medicine</aside>
-            <nav>29.7 miles away</nav>
-            <footer>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star-empty.svg#star-empty"></use>
-                </svg>
-                <footer>172 reviews</footer>
-            </footer>
-        </section>
-        <section data-neo-shadow>
-            <header></header>
-            <div>Dr. Tim Tillerson, MD</div>
-            <aside>Family Medicine</aside>
-            <nav>290.3 miles away</nav>
-            <footer>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <svg>
-                    <use xlink:href="/resources/icon/star.svg#star"></use>
-                </svg>
-                <footer>172 reviews</footer>
-            </footer>
-        </section>
-    </main>
+        </main>
+    </div>
 </template>
 <script type="text/javascript" src="page-search.js"></script>
 <link rel="stylesheet" type="text/css" href="page-search.css">

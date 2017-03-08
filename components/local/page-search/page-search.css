@@ -1,187 +1,165 @@
 page-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 100vh;
-    width: 100vw;
+    display: block;
 }
 
-page-search > nav {
-    margin-left: var(--edge-spacing);
-    height: 75vh;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.05);
+page-search > div > nav.bui-col {
+    background: linear-gradient(to bottom, var(--color-blue-lighten-5) 75%, white 100%);
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 25%;
+    padding-bottom: 60px;
 }
 
-page-search > nav > table > tbody > tr > td > main > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
-    font-size: 75%;
-    opacity: 0.5;
-}
-
-page-search > nav > table > tbody > tr > td.location > main > input {
-    direction: rtl;
-}
-
-page-search > nav > table > tbody > tr > td.star,
-page-search > nav > table > tbody > tr > td.age {
-    padding-top: calc(var(--neo-td-height) * 0.2);
-    padding-bottom: calc(var(--neo-td-height) * 0.2);
-}
-
-page-search > nav > table > tbody > tr > td.star > label,
-page-search > nav > table > tbody > tr > td.age > label {
+page-search > div > nav > div,
+page-search > div > nav > label {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: calc(var(--neo-td-height) * 0.3);
-    padding-right: calc(var(--neo-td-height) * 0.25);
-    height: calc(var(--neo-td-height) * 0.6);
-    font-size: 75%;
-    cursor: pointer;
+    align-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
-page-search > nav > table > tbody > tr > td.star > label > svg,
-page-search > nav > table > tbody > tr > td.age > label > svg {
-    height: calc(var(--neo-td-height) * 0.4);
-    width: calc(var(--neo-td-height) * 0.4);
-}
-
-page-search > nav > table > tbody > tr > td.star > label > div,
-page-search > nav > table > tbody > tr > td.age > label > div {
-    margin-left: auto;
-    padding-right: calc(var(--neo-td-height) * 0.2);
-}
-
-page-search > nav > table > tbody > tr > td.star > label > input,
-page-search > nav > table > tbody > tr > td.age > label > input {
-    vertical-align: middle;
-}
-
-page-search > nav > table > tbody > tr > td.star > label > svg {
-    fill: #FC3;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(1) {
-    fill: #CCC;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(2) {
-    fill: #BBB;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(3) {
-    fill: #AAA;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(4) {
-    fill: #999;
-}
-
-page-search > nav > table > tbody > tr > td.age > label:nth-child(5) {
-    fill: #888;
-}
-
-page-search > main {
-    height: 75vh;
-    width: 50vw;
-    margin-right: var(--edge-spacing);
-    z-index: 10;
+page-search > div > nav > div > * {
     flex-grow: 1;
+}
+
+page-search > div > nav > label > i.material-icons {
+    color: #CCC;
+}
+
+page-search > div > nav > label > i.material-icons:last-child {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+page-search > div > nav > label > i.material-icons.on {
+    color: #FC0;
+}
+
+page-search > div > nav > label > input[type='checkbox'] {
+    flex-grow: 0;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+page-search > div > nav > label > footer {
+    font-size: 80%;
+    margin-left: 15px;
+}
+
+page-search > div > main.bui-col {
+    width: 75%;
+    background: linear-gradient(to bottom, var(--color-blue-lighten-4) 75%, white 100%);
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
 }
 
-page-search > main > section {
+page-search > div > main > header {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 200%;
+    margin-top: 45px;
+    margin-bottom: 60px;
+}
+
+page-search > div > main > a {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
     background-color: white;
-    height: 15vh;
-    position: relative;
+}
+
+page-search > div > main > a > img {
+    width: 20vmin;
+    height: 20vmin;
+    object-fit: cover;
+}
+
+page-search > div > main > a > main {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: stretch;
-    padding-left: calc(15vh + var(--neo-td-spacing));
-    padding-top: var(--neo-td-spacing);
-    padding-bottom: var(--neo-td-spacing);
-    padding-right: var(--neo-td-spacing);
-    margin-left: var(--neo-td-spacing);
-    margin-bottom: var(--neo-td-spacing);
+    align-content: stretch;
+    flex-wrap: nowrap;
+    padding: 20px;
+    flex-grow: 1;
 }
 
-page-search > main > section > header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 15vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+page-search > div > main > a > main > header {
+    font-size: 150%;
 }
 
-page-search > main > section > div {
-    color: #666;
-    font-size: 125%;
-}
-
-page-search > main > section > aside {
-    font-size: 75%;
+page-search > div > main > a > main > aside {
+    margin-bottom: auto;
     font-style: italic;
-    color: #69F;
-    padding-top: 5px;
+    color: var(--color-blue-darken-1);
+    font-size: 80%;
 }
 
-page-search > main > section > nav {
-    font-size: 75%;
-    margin-top: auto;
+page-search > div > main > a > main > nav {
     margin-bottom: auto;
 }
 
-page-search > main > section > footer {
+page-search > div > main > a > main > footer {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
 }
 
-page-search > main > section > footer > footer {
+page-search > div > main > a > main > footer > i.material-icons {
+    color: #FC0;
+}
+
+page-search > div > main > a > main > footer > i.material-icons:first-child {
+    margin-right: 0;
+}
+
+page-search > div > main > a > main > footer > footer {
     margin-left: auto;
-    font-size: 75%;
-    color: #69F;
 }
 
-page-search > main > section > footer > svg {
-    height: 1em;
-    width: 1em;
-    fill: #FC3;
+page-search > div > main > footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin-top: 60px;
+    margin-bottom: 45px;
+    width: 100%;
 }
 
-page-search > main > section:nth-child(1) > header {
-    background-image: url("2.jpg");
+page-search > div > main > footer > * {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
-page-search > main > section:nth-child(2) > header {
-    background-image: url("3.jpg");
+page-search > div > main > footer > *:hover,
+page-search > div > main > footer > *.on {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-page-search > main > section:nth-child(3) > header {
-    background-image: url("4.jpg");
-}
-
-page-search > main > section:nth-child(4) > header {
-    background-image: url("5.jpg");
-}
-
-page-search > main > section:nth-child(5) > header {
-    background-image: url("1.jpg");
-}
-
-page-search > main > section:nth-child(6) > header {
-    background-image: url("2.jpg");
+page-search > div > main > footer > nav > i.material-icons {
+    font-size: 50px;
+    margin: 0;
 }

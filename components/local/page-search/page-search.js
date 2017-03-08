@@ -3,14 +3,15 @@ window.customElements.define('page-search', class extends HTMLElement {
         super();
         window.Lzsoft.Import.ByTagImport(this);
         this.eventize();
-        this.init();
-    }
-    init() {
-        let self = this;
-        let t = window.location.GetParam("t");
-        let k = window.location.GetParam("k");
     }
     eventize() {
         let self = this;
+        self.addEventListener("click", function(e) {
+            if (e.target.matches("page-search > main *, page-search > nav *")) {
+                self.classList.add("nav");
+            } else {
+                self.classList.remove("nav");
+            };
+        });
     }
 });

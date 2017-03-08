@@ -1,0 +1,48 @@
+.bui-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+}
+
+.bui-col {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: 15px;
+}
+
+.bui-ng {
+    flex-grow: 0;
+}
+
+.bui-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.bui-breaker {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.material-icons {
+    flex-grow: 0;
+}
+
+.material-icons:first-child {
+    margin-right: 15px;
+}
+
+.material-icons:last-child {
+    margin-left: 15px;
+}

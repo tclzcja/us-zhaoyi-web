@@ -1,46 +1,20 @@
 site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
-    display: flex;
-    overflow: hidden;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    background-color: white;
+    z-index: 500;
 }
 
-site-header > header {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: var(--edge-spacing);
-    padding-right: 0;
-    position: relative;
-    font-size: 4vmin;
+site-header a {
+    font-size: 0.8rem;
 }
 
-site-header > header > a {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+site-header a:first-child {
+    font-size: 1.2rem;
 }
 
-site-header > header > a > footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+site-header a:first-child i {
+    color: #f44336;
 }
 
-site-header > footer {
-    padding: var(--edge-spacing);
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-}
-
-site-header > footer > a {
-    justify-content: flex-end;
-    width: auto;
-    margin-left: var(--edge-spacing);
+site-header a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }

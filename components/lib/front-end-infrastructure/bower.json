@@ -3,7 +3,7 @@
     "description": "This is a custom element that extends existing window object. Providing convenient functions to window.Math, window.NodeList and so on.",
     "authors": ["JingAn Chen"],
     "license": "MIT",
-    "keywords": ["window", "browser", "Math", "NodeList", "web-components"],
+    "keywords": [],
     "homepage": "https://github.com/lzsoft/front-end-infrastructure",
-    "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests", "publish.bat", "readme.md"]
+    "ignore": ["**/.*", "node_modules/", "bower_components/", "test/", "tests/", "readme.md"]
 }

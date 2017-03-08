@@ -13,21 +13,21 @@
   "homepage": "https://github.com/lzsoft/single-page-application-router",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
+    "node_modules/",
+    "bower_components/",
+    "test/",
+    "tests/",
     "publish.bat",
     "readme.md"
   ],
   "dependencies": {
     "front-end-infrastructure": "lzsoft/front-end-infrastructure"
   },
-  "_release": "90e32d5382",
+  "_release": "f948c54187",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "90e32d538255dfeb86045e3bd40bfea12ace5dc1"
+    "commit": "f948c54187108c53387fe17013ff18f95589c76d"
   },
   "_source": "https://github.com/lzsoft/single-page-application-router.git",
   "_target": "*",
