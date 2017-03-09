@@ -1,11 +1,11 @@
 {
   "name": "bui",
   "homepage": "https://github.com/lzsoft/bui",
-  "_release": "c71295afca",
+  "_release": "b6048217b6",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "c71295afcad50f95e47ca2e8a7cf02535e8ce0f0"
+    "commit": "b6048217b6dd1dafdd4fb50d8999bb84d03980bf"
   },
   "_source": "https://github.com/lzsoft/bui.git",
   "_target": "*",
