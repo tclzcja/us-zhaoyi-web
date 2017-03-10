@@ -1,5 +1,5 @@
 page-doctor > header {
-    background-color: var(--color-blue-lighten-5);
+    background-color: var(--materialize-color-lighten-5);
 }
 
 page-doctor > header > img {
@@ -46,7 +46,7 @@ page-doctor > header > div > aside > i.material-icons:first-child {
 
 page-doctor > header > div > aside > footer {
     font-size: 0.8rem;
-    color: var(--color-blue-darken-3);
+    color: var(--materialize-color-darken-3);
     margin-left: 15px;
 }
 
@@ -83,6 +83,63 @@ page-doctor > header > div > footer {
 }
 
 page-doctor > header > div > footer > i.material-icons:first-child {
-    font-size: 30px;
     margin-right: 5px;
+}
+
+page-doctor > aside > section.bui-col {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 25%;
+}
+
+page-doctor > aside > section > header {
+    font-size: 1.5rem;
+}
+
+page-doctor > aside > section > div {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+page-doctor > footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    background-color: var(--materialize-color);
+}
+
+page-doctor > footer > iframe {
+    height: 40vh;
+    width: 100%;
+}
+
+page-doctor > footer > nav {
+    width: 100%;
+    color: white;
+}
+
+page-doctor > footer > nav > header {
+    cursor: pointer;
+    opacity: 0.25;
+    transition: opacity 0.2s;
+}
+
+page-doctor > footer > nav > header.on,
+page-doctor > footer > nav > header:hover {
+    opacity: 1;
+}
+
+page-doctor > footer > nav > header:nth-of-type(2n) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+page-doctor > footer > nav > header:nth-of-type(6) {
+    background-color: #FC0;
+}
+
+page-doctor > footer > nav > header:nth-of-type(7) {
+    background-color: var(--materialize-color);
 }

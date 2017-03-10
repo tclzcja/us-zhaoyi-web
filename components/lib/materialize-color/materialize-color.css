@@ -1,0 +1,51 @@
+:root {
+    --materialize-color-lighten-5: #EEE;
+    --materialize-color-lighten-4: #AAA;
+    --materialize-color-lighten-3: #999;
+    --materialize-color-lighten-2: #888;
+    --materialize-color-lighten-1: #777;
+    --materialize-color: #666;
+    --materialize-color-darken-1: #555;
+    --materialize-color-darken-2: #444;
+    --materialize-color-darken-3: #333;
+    --materialize-color-darken-4: #222;
+}
+
+.materialize-color-blue {
+    --materialize-color-lighten-5: #e3f2fd;
+    --materialize-color-lighten-4: #bbdefb;
+    --materialize-color-lighten-3: #90caf9;
+    --materialize-color-lighten-2: #64b5f6;
+    --materialize-color-lighten-1: #42a5f5;
+    --materialize-color: #2196f3;
+    --materialize-color-darken-1: #1e88e5;
+    --materialize-color-darken-2: #1976d2;
+    --materialize-color-darken-3: #1565c0;
+    --materialize-color-darken-4: #0d47a1;
+}
+
+.materialize-color-red {
+    --materialize-color-lighten-5: #ffebee;
+    --materialize-color-lighten-4: #ffcdd2;
+    --materialize-color-lighten-3: #ef9a9a;
+    --materialize-color-lighten-2: #e57373;
+    --materialize-color-lighten-1: #ef5350;
+    --materialize-color: #f44336;
+    --materialize-color-darken-1: #e53935;
+    --materialize-color-darken-2: #d32f2f;
+    --materialize-color-darken-3: #c62828;
+    --materialize-color-darken-4: #b71c1c;
+}
+
+.materialize-color-grass {
+    --materialize-color-lighten-5: #f1f8e9;
+    --materialize-color-lighten-4: #dcedc8;
+    --materialize-color-lighten-3: #c5e1a5;
+    --materialize-color-lighten-2: #aed581;
+    --materialize-color-lighten-1: #9ccc65;
+    --materialize-color: #8bc34a;
+    --materialize-color-darken-1: #7cb342;
+    --materialize-color-darken-2: #689f38;
+    --materialize-color-darken-3: #558b2f;
+    --materialize-color-darken-4: #33691e;
+}

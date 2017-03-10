@@ -1,0 +1,13 @@
+{
+  "name": "materialize-color",
+  "homepage": "https://github.com/lzsoft/materialize-color",
+  "_release": "73d585f79b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "73d585f79bdcc08c20b1990fd9a840421bbf6c69"
+  },
+  "_source": "https://github.com/lzsoft/materialize-color.git",
+  "_target": "*",
+  "_originalSource": "lzsoft/materialize-color"
+}

@@ -1,11 +1,24 @@
 {
   "name": "bui",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "readme.md",
+    "bower.json"
+  ],
+  "dependencies": {
+    "materialize-color": "lzsoft/materialize-color"
+  },
   "homepage": "https://github.com/lzsoft/bui",
-  "_release": "b6048217b6",
+  "_release": "361cfb45af",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "b6048217b6dd1dafdd4fb50d8999bb84d03980bf"
+    "commit": "361cfb45af51a82d9621e625ad53ce79245825e3"
   },
   "_source": "https://github.com/lzsoft/bui.git",
   "_target": "*",
