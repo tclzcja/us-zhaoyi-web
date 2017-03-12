@@ -12,7 +12,11 @@ site-header a:first-child {
 }
 
 site-header a:first-child i {
-    color: #f44336;
+    color: var(--materialize-color);
+}
+
+site-header i.material-icons {
+    font-size: 24px;
 }
 
 site-header a:hover {

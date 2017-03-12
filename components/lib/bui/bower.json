@@ -1,0 +1,8 @@
+{
+    "name": "bui",
+    "license": "MIT",
+    "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests", "readme.md", "bower.json"],
+    "dependencies": {
+        "materialize-color": "lzsoft/materialize-color"
+    }
+}

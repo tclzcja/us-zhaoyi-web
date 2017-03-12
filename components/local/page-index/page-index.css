@@ -39,7 +39,7 @@ page-index > header > main > input {
 }
 
 page-index > header > main > a {
-    background-color: var(--color-blue-darken-4);
+    background-color: var(--materialize-color-darken-4);
     color: white;
     height: 60px;
     width: 60px;
@@ -50,7 +50,7 @@ page-index > header > main > a > i.material-icons {
 }
 
 page-index > main {
-    background: linear-gradient(to bottom, var(--color-blue-lighten-4), white);
+    background: linear-gradient(to bottom, var(--materialize-color-lighten-4), white);
 }
 
 page-index > main > div > a {
@@ -62,7 +62,7 @@ page-index > main > div > a {
 }
 
 page-index > main > div > a:hover {
-    background-color: #0D47A1;
+    background-color: var(--materialize-color-darken-4);
     color: white;
 }
 

@@ -1,6 +1,9 @@
-window.customElements.define('site-footer', class extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = document.querySelector('link[href*="site-footer.html"]').import.querySelector("template").innerHTML;
-    }
-});
+{
+    const template = document.getCurrentScriptOwnerDocumentTemplateContent();
+    window.customElements.define('site-footer', class extends HTMLElement {
+        constructor() {
+            super();
+            this.innerHTML = template;
+        }
+    });
+}
