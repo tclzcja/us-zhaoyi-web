@@ -7,8 +7,8 @@
     line-height: 100%;
 }
 
-body,
-html {
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: white;
@@ -20,11 +20,6 @@ html {
     cursor: default;
     font-size: 18px;
     color: var(--materialize-color);
-}
-
-body {
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 a {

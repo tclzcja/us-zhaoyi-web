@@ -14,11 +14,11 @@
     "materialize-color": "lzsoft/materialize-color"
   },
   "homepage": "https://github.com/lzsoft/bui",
-  "_release": "361cfb45af",
+  "_release": "b4691d56f6",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "361cfb45af51a82d9621e625ad53ce79245825e3"
+    "commit": "b4691d56f64349e5e2a1ff844a43a3d10adcbd9d"
   },
   "_source": "https://github.com/lzsoft/bui.git",
   "_target": "*",

@@ -2,6 +2,16 @@
     --bui-spacing: 15px;
 }
 
+.bui-u {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: var(--bui-spacing);
+}
+
 .bui-row {
     display: flex;
     flex-wrap: nowrap;
@@ -11,14 +21,22 @@
     width: 100%;
 }
 
-.bui-col {
-    flex-grow: 1;
+.bui-row-center {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
+    width: 100%;
+}
+
+.bui-col {
+    display: flex;
     flex-wrap: nowrap;
-    padding: var(--bui-spacing);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 }
 
 .bui-ng {

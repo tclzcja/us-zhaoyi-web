@@ -4,25 +4,12 @@ page-search {
 
 page-search > div > nav.bui-col {
     background: linear-gradient(to bottom, var(--materialize-color-lighten-5) 75%, white 100%);
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
     width: 25%;
     padding-bottom: 60px;
 }
 
 page-search > div > nav > header.bui-breaker {
     margin-top: calc(var(--bui-spacing) * 3);
-}
-
-page-search > div > nav > div,
-page-search > div > nav > label {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    width: 100%;
 }
 
 page-search > div > nav > div > * {
@@ -57,11 +44,6 @@ page-search > div > nav > label > footer {
 page-search > div > main.bui-col {
     width: 75%;
     background: linear-gradient(to bottom, var(--materialize-color-lighten-4) 75%, white 100%);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
 }
 
 page-search > div > main > header {
@@ -75,87 +57,61 @@ page-search > div > main > header {
 
 page-search > div > main > a {
     margin-bottom: 15px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-    flex-wrap: nowrap;
     background-color: white;
 }
 
-page-search > div > main > a > img {
+page-search > div > main > a > img.bui-u {
     width: 20vmin;
     height: 20vmin;
     object-fit: cover;
+    flex-grow: 0;
 }
 
-page-search > div > main > a > main {
-    display: flex;
-    flex-direction: column;
+page-search > div > main > a > div.bui-u {
     justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    padding: 20px;
-    flex-grow: 1;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
-page-search > div > main > a > main > header {
+page-search > div > main > a > div > header {
     font-size: 150%;
 }
 
-page-search > div > main > a > main > aside {
+page-search > div > main > a > div > aside {
     margin-bottom: auto;
     font-style: italic;
     color: var(--materialize-color-darken-1);
     font-size: 80%;
 }
 
-page-search > div > main > a > main > nav {
+page-search > div > main > a > div > nav {
     margin-bottom: auto;
 }
 
-page-search > div > main > a > main > footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-}
-
-page-search > div > main > a > main > footer > i.material-icons {
+page-search > div > main > a > div > footer > i.material-icons {
     color: #FC0;
 }
 
-page-search > div > main > a > main > footer > i.material-icons:first-child {
+page-search > div > main > a > div > footer > i.material-icons:first-child {
     margin-right: 0;
 }
 
-page-search > div > main > a > main > footer > footer {
+page-search > div > main > a > div > footer > footer {
     margin-left: auto;
 }
 
-page-search > div > main > footer {
-    display: flex;
+page-search > div > main > footer.bui-row {
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
     margin-top: 60px;
     margin-bottom: 45px;
-    width: 100%;
 }
 
-page-search > div > main > footer > * {
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+page-search > div > main > footer > *.bui-u {
     cursor: pointer;
     border-radius: 50%;
     height: 50px;
     width: 50px;
+    flex-grow: 0;
 }
 
 page-search > div > main > footer > *:hover,

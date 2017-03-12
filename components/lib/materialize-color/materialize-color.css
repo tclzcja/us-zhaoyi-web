@@ -1,4 +1,5 @@
-:root {
+:root,
+.materialize-color-black {
     --materialize-color-lighten-5: #EEE;
     --materialize-color-lighten-4: #AAA;
     --materialize-color-lighten-3: #999;
@@ -37,7 +38,7 @@
     --materialize-color-darken-4: #b71c1c;
 }
 
-.materialize-color-grass {
+.materialize-color-light-green {
     --materialize-color-lighten-5: #f1f8e9;
     --materialize-color-lighten-4: #dcedc8;
     --materialize-color-lighten-3: #c5e1a5;
